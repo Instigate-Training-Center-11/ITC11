@@ -8,7 +8,7 @@ int main() {
     int number = 0;
 
     /*
-      Require integer number from client 
+      Require integer number from client
       Enter number while it is smaller then 1
     */
     do {

@@ -18,7 +18,7 @@ int main() {
             break;
         }
     }
-    
+
     /* Show old and new versions of strings */
     std::cout << "Old string is: " << string << std::endl;
     std::cout << "New string is: " << reverse(string, length) << std::endl;
@@ -41,7 +41,7 @@ void swap(char& a, char& b) {
 */
 char* reverse(char* string, int size) {
     for (int i = 0, j = size - 1; i < size / 2; ++i, --j) {
-            swap(string[i], string[j]);
+        swap(string[i], string[j]);
     }
 
     return string;
