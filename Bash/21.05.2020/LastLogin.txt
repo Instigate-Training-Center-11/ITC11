@@ -1,0 +1,5 @@
+Ավելացնում ենք ․bashrc ֆայլի վերջում՝
+
+lastlogin=$(last -1 -R $USER | head -1 | cut -c 20-)
+echo "last login $lastlogin"
+export PS1='\n\h:\W\$ '
