@@ -27,14 +27,9 @@ void reverseString(char* str) {
     while (str[length] != '\0') {
         ++length;
     }
-    for (int i = 0, j = length - 1; i < length, j >= length; i++, --j) {
+    for (int i = 0, j = length - 1; i < length/2; ++i, --j) {
         str[i] = str[i] ^ str[j];
         str[j] = str[i] ^ str[j];
         str[i] = str[i] ^ str[j];
-
-        /* both do the same thing, swapping characters
-        str[i] = str[i] ^ str[j];
-        str[j] = str[i] ^ str[j];
-        str[i] = str[i] ^ str[j]; */
     }
 }

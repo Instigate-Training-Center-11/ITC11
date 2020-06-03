@@ -7,12 +7,14 @@ unsigned long long int factorialR(int number);
 unsigned long long int factorialP(int number);
 
 int main() {
-    unsigned int number = 0;
+    int number = 0;
 
     do {
         std::cout << "input a positive number: ";
+        std::cin.clear();
+        std::cin.ignore(1,'\n');
         std::cin >> number;
-    } while (number < 3);
+    } while (number < 3 || std::cin.fail());
 
     std::cout << "\ncall factorialP function\n\n";
     std::cout << "input number = "<< number << "\nResult\nfactorial = " << factorialP(number) << "\n\n";
