@@ -30,6 +30,7 @@ void revers(char str[], int size) {
 }
 
 void print(char str[], int size) {
+    std::cout << "Revers string: ";
     for (int i = 0; i < size; ++i) {
         std::cout << str[i];
     }
