@@ -1,8 +1,9 @@
 #include <iostream>
 #include <string>
+#include <sstream>
 
-/* Functions I used */
-int getSize(std::string);
+/* Functions prototypes */
+int getInteger(std::string);
 int** createMatrix(int, int);
 void showMatrix(int**, int, int);
 int** getSum(int**, int**, int, int, int, int);
@@ -10,27 +11,30 @@ int** getSubtracting(int**, int**, int, int, int, int);
 int** getMul(int**, int**, int, int, int, int);
 int** mulNumber(int**, int, int, int);
 void deleteMatrix(int**, int, int);
+void initMatrix(int**, int, int);
 
 int main() {
-    /* Init fisrt matrix */
+    /* Create and initialize first matrix */
     std::cout << "*** First matrix ***" << std::endl;
-    int n1 = getSize("Row: ");
-    int m1 = getSize("Column: ");
+    int n1 = getInteger("Row: ");
+    int m1 = getInteger("Column: ");
     int** matrix1 = createMatrix(n1, m1);
+    initMatrix(matrix1, n1, m1);
 
-    /* Init second matrix */
+    /* Create and initialize second matrix */
     std::cout << "*** Second matrix ***" << std::endl;
-    int n2 = getSize("Row: ");
-    int m2 = getSize("Column: ");
+    int n2 = getInteger("Row: ");
+    int m2 = getInteger("Column: ");
     int** matrix2 = createMatrix(n2, m2);
+    initMatrix(matrix2, n2, m2);
 
-    /* Show matreces pretty */
+    /* Show matrices pretty */
     std::cout << "*** First matrix is ***" << std::endl;
     showMatrix(matrix1, n1, m1);
     std::cout << "*** Second matrix is ***" << std::endl;
     showMatrix(matrix2, n2, m2);
 
-    /* Get sum of two matreces */
+    /* Get sum of two matrices */
     int** sumMatrix = getSum(matrix1, matrix2, n1, m1, n2, m2);
 
     /* Check is sum has been successfully calculated */
@@ -38,12 +42,12 @@ int main() {
         std::cout << "Warning: Sizes are inappropriate to sum!" << std::endl;
     } else {
         /* Show and clear new matrix */
-        std::cout << "*** Matrix1 + Matrix2 ***" << std::endl;
+        std::cout << "*** Matrix 1 + Matrix 2 ***" << std::endl;
         showMatrix(sumMatrix, n2, m2);
         deleteMatrix(sumMatrix, n1, m1);
     }
 
-    /* Get subtracting of two matreces */
+    /* Get subtracting of two matrices */
     int** subMatrix = getSubtracting(matrix1, matrix2, n1, m1, n2, m2);
 
     /* Check is successfully calculated */
@@ -51,45 +55,46 @@ int main() {
         std::cout << "Warning: Sizes are inappropriate to subtract!" << std::endl;
     } else {
         /* Show and clear new matrix */
-        std::cout << "*** Matrix1 - Matrix2 ***" << std::endl;
+        std::cout << "*** Matrix 1 - Matrix 2 ***" << std::endl;
         showMatrix(subMatrix, n2, m2);
         deleteMatrix(subMatrix, n1, m1);
     }
 
-    /* Get number to multiply matreces */
-    int number = getSize("Integer number: ");
+    /* Get number to multiply matrices */
+    int number = getInteger("Integer number: ");
 
-    /* Multiply matreces to number, show and delete */
+    /* Multiply matrices to number, show and delete */
     int** mulMatrix1 = mulNumber(matrix1, n1, m1, number);
-    std::cout << "*** Matrix1 * " << number << " ***" << std::endl;
+    std::cout << "*** Matrix 1 * " << number << " ***" << std::endl;
     showMatrix(mulMatrix1, n1, m1);
     deleteMatrix(mulMatrix1, n1, m1);
 
     int** mulMatrix2 = mulNumber(matrix2, n2, m2, number);
-    std::cout << "*** Matrix2 * " << number << " ***" << std::endl;
+    std::cout << "*** Matrix 2 * " << number << " ***" << std::endl;
     showMatrix(mulMatrix2, n2, m2);
     deleteMatrix(mulMatrix2, n2, m2);
 
-    /* Multiply 2 matreces */
+    /* Multiply 2 matrices */
     int** mulMatrices = getMul(matrix1, matrix2, n1, m1, n2, m2);
 
     /* Check is successfully calculated */
     if (mulMatrices == NULL) {
         std::cout << "Warning: Sizes are inappropriate to Multiply!" << std::endl;
     } else {
-        std::cout << "*** Matrix1 * Matrix2 ***" << std::endl;
+        std::cout << "*** Matrix 1 * Matrix 2 ***" << std::endl;
         showMatrix(mulMatrices, n1, m2);
         deleteMatrix(mulMatrices, n1, m2);
     }
 
-    /* Delete 2 matreces */
+    /* Delete 2 matrices */
     deleteMatrix(matrix1, n1, m1);
     deleteMatrix(matrix2, n2, m2);
+
     return 0;
 }
 
 /* Get integer number for row or column, great then 0 */
-int getSize(std::string key) {
+int getInteger(std::string key) {
     int n = 0;
     std::cout << key;
     std::cin >> n;
@@ -105,7 +110,7 @@ int getSize(std::string key) {
     return n;
 }
 
-/* Create and initialize matrix with n row and m column */
+/* Create matrix with n rows and m columns */
 int** createMatrix(int n, int m) {
     /* Create matrix */
     int** a = new int*[n];
@@ -113,22 +118,23 @@ int** createMatrix(int n, int m) {
         a[i] = new int[m];
     }
 
+    return a;
+}
+
+/* Initialize matrix with n rows and m columns */
+void initMatrix(int** a, int n, int m) {
     /* Initialize matrix */
     for (int i = 0; i < n; ++i) {
         for (int j = 0; j < m; ++j) {
-            std::cout << "[" << i + 1 << " " << j + 1 << "] : ";
-            std::cin >> a[i][j];
-            while (std::cin.fail()) {
-                std::cin.clear();
-                std::cin.ignore(1000,'\n');
-                std::cout << "Warning: Enter only integer number!!!" << std::endl;
-                std::cout << "[" << i + 1 << " " << j + 1 << "]: ";
-                std::cin >> a[i][j];
-            }
+            std::stringstream convert;
+            convert << (i + 1);
+            std::string index1 = convert.str();
+            convert << (j + 1);
+            std::string index2 = convert.str();
+            std::string key = "[" + index1 + " " + index2 + "]: ";
+            a[i][j] = getInteger(key);
         }
     }
-
-    return a;
 }
 
 /* Print the matrix pretty */
@@ -141,16 +147,13 @@ void showMatrix(int** a, int n, int m) {
     }
 }
 
-/* get sum of two matreces */
+/* get sum of two matrices */
 int** getSum(int** a, int** b, int n1, int m1, int n2, int m2) {
     if (n1 != n2 || m1 != m2) {
         return NULL;
     }
 
-    int** c = new int* [n1];
-    for (int i = 0; i < n1; ++i) {
-        c[i] = new int[m1];
-    }
+    int** c = createMatrix(n1, m1);
 
     for (int i = 0; i < n1; ++i) {
         for (int j = 0; j < m1; ++j) {
@@ -167,10 +170,7 @@ int** getSubtracting(int** a, int** b, int n1, int m1, int n2, int m2) {
         return NULL;
     }
 
-    int** c = new int* [n1];
-    for (int i = 0; i < n1; ++i) {
-        c[i] = new int[m1];
-    }
+    int** c = createMatrix(n1, m1);
 
     for (int i = 0; i < n1; ++i) {
         for (int j = 0; j < m1; ++j) {
@@ -183,10 +183,7 @@ int** getSubtracting(int** a, int** b, int n1, int m1, int n2, int m2) {
 
 /* Multiply matrix to number */
 int** mulNumber(int** a, int n, int m, int number) {
-    int** b = new int*[n];
-    for (int i = 0; i < n; ++i) {
-        b[i] = new int[m];
-    }
+    int** b = createMatrix(n, m);
 
     for (int i = 0; i < n; ++i) {
         for (int j = 0; j < m; ++j) {
@@ -206,16 +203,13 @@ void deleteMatrix(int** a, int n, int m) {
     delete [] a;
 }
 
-/* Multiply two matreces */
+/* Multiply two matrices */
 int** getMul(int** a, int** b, int n1, int m1, int n2, int m2) {
     if (m1 != n2) {
         return NULL;
     }
 
-    int** c = new int* [n1];
-    for (int i = 0; i < n1; ++i) {
-        c[i] = new int[m2];
-    }
+    int** c = createMatrix(n1, m2);
 
     for (int i = 0; i < n1; ++i) {
         for (int j = 0; j < m2; ++j) {

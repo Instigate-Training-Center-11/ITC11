@@ -12,11 +12,10 @@ int main() {
 
     /* Get length of string */
     int length = 0;
-    for (int i = 0; i < 100; ++i) {
-        if (string[i] == '\0') {
-            length = i;
-            break;
-        }
+    int i = 0;
+    while (string[i] != '\0') {
+        length = i;
+        ++i;
     }
 
     /* Show old and new versions of strings */
