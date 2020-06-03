@@ -1,1 +1,52 @@
-This is first commit
+/***************************************************/
+/*                                                 */
+/*   Welcome to Mane Antonyan's homeworks folder   */
+/*                                                 */
+/***************************************************/
+
+
+Directory structure:
+
+.
+├── bash
+│   ├── 18.05
+│   │   ├── delComments.sh
+│   │   ├── group.sh
+│   │   ├── swap.sh
+│   │   ├── task3.sh
+│   │   └── test2.sh
+│   ├── 19.05
+│   │   ├── sort.sh
+│   │   └── task2.sh
+│   ├── 20.05
+│   │   ├── animation.sh
+│   │   ├── file.sh
+│   │   ├── proc.sh
+│   │   ├── task3.sh
+│   │   ├── task4.sh
+│   │   └── task5.sh
+│   ├── 21.05
+│   │   ├── classwork
+│   │   │   ├── cron.sh
+│   │   │   ├── env.sh
+│   │   │   ├── kill.sh
+│   │   │   ├── setNumber.sh
+│   │   │   └── var.sh
+│   │   └── homework
+│   │       ├── task2.sh
+│   │       ├── task3.sh
+│   │       └── task4.sh
+│   └── examples
+│       ├── array.sh
+│       ├── if_else.sh
+│       ├── test2.sh
+│       └── test.sh
+├── c++
+│   ├── 01.06.2020
+│   │   └── main.cpp
+│   └── 02.06.2020
+│       ├── factorial.cpp
+│       ├── matrix.cpp
+│       ├── reverse.cpp
+│       └── triangle.cpp
+└── Readme
