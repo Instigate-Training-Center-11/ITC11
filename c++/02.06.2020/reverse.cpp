@@ -8,7 +8,7 @@ int main() {
     /* Initialize string */
     char string[1000];
     std::cout << "Enter the string to reverse: ";
-    std::cin >> string;
+    std::cin.getline(string, 1000);
 
     /* Get length of string */
     int length = 0;
@@ -31,7 +31,7 @@ void swap(char& a, char& b) {
     b = temp;
 }
 
-/* 
+/*
     Get and reverse the string
     Arguments:
         string - string will be reversed

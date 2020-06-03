@@ -1,50 +1,43 @@
 #include <iostream>
-    
+
 /* Definition of functions */
-void printLine(int, int);
+void printTriangle(int);
 
 int main() {
     /* Get size of triangle's side */
     int size = 0;
-    while (size < 1) {
-        std::cout << "Enter side size: ";
+    std::cout << "Enter integer number(> 1): ";
+    std::cin >> size;
+
+    while (std::cin.fail() || size < 2) {
+        std::cin.clear();
+        std::cin.ignore(1000,'\n');
+        std::cout << "Warning: Enter only integer number and great then 1!!!" << std::endl;
+        std::cout << "Enter integer number(> 1): ";
         std::cin >> size;
     }
 
     /* Show triangle */
-    for (int i = 0; i < size; ++i) {
-        printLine(i, size);
-        std::cout << std::endl;
-    }
+    printTriangle(size);
     return 0;
 }
 
-/*
- Function print the line
- Arguments:
-  line: what kind of line to print
-  size: size of line
-*/
-void printLine(int line, int size) {
-    if (0 == line) {
-        for (int i = 0; i < size; ++i) {
-            std::cout << "* ";
+/* Print the triangle by size */
+void printTriangle(int size) {
+    for (int i = 1; i <= size; ++i) {
+        for (int j = 1; j < 2 * size - i; ++j) {
+            if (i == 1) {
+                if (1 == j % 2) {
+                    std::cout << "*";
+                } else {
+                    std::cout << " ";
+                }
+            } else if (j == i) {
+                std::cout << "*";
+            } else {
+                std::cout << " ";
+            }
         }
-    } else if (size == line + 1) {
-	for (int i = 0; i < line - 1; ++i) {
-            std::cout << " ";
-        }
-        std::cout << " *";
-    } else {
-        for (int i = 0; i < line; ++i) {
-            std::cout << " ";
-        }
-        std::cout << "*";`
-
-        int second = 2 * (size - line) - 3;
-        for (int i = 0; i < second; ++i) {
-            std::cout << " ";
-        }
-        std::cout << "*";
+        std::cout << "*" << std::endl;
     }
 }

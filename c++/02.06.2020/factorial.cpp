@@ -9,12 +9,19 @@ int main() {
 
     /*
       Require integer number from client
-      Enter number while it is smaller then 1
+      Enter number great then 0
     */
-    do {
+
+    std::cout << "Enter integer number(> 0): ";
+    std::cin >> number;
+
+    while (std::cin.fail() || number < 1) {
+        std::cin.clear();
+        std::cin.ignore(1000,'\n');
+        std::cout << "Warning: Enter only integer number and great then 0!!!" << std::endl;
         std::cout << "Enter integer number(> 0): ";
         std::cin >> number;
-    } while (number < 1);
+    }
 
     /* Print number's factorial */
     std::cout << number << " factorial using recursive method: ";
