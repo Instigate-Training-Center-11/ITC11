@@ -129,6 +129,7 @@ void initMatrix(int** a, int n, int m) {
             std::stringstream convert;
             convert << (i + 1);
             std::string index1 = convert.str();
+            convert.str("");
             convert << (j + 1);
             std::string index2 = convert.str();
             std::string key = "[" + index1 + " " + index2 + "]: ";
