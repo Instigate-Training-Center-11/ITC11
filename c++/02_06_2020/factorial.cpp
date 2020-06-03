@@ -1,6 +1,6 @@
 #include <iostream>
 
-/* 
+/*
     This function takes a number as an argument,
     recursive calculates the factorial of that number,
     and returns it.
@@ -31,13 +31,15 @@ int main() {
 
     /* Input the unsigned number */
     do {
+        std::cin.clear();
+        std::cin.ignore(1000,'\n');
         std::cout << "Please enter unsigned number: ";
         std::cin >> digit;
-    } while (digit < 0);
+    } while (digit < 0 || std::cin.fail());
 
     /* Output number of factorial */
     std::cout << "Recursive:\t" << factorial(digit) << std::endl;
     std::cout << "Interactive:\t" << factLoop(digit) << std::endl;
-    
+
     return 0;
 }

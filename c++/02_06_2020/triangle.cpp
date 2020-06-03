@@ -1,7 +1,8 @@
 #include <iostream>
+#include <stdlib.h>
 
-/* 
-    This function prints an equilateral triangle with stars
+/*
+    This function prints an equilateral triangle with stars.
     The function gets an argument - the count of '*' characters.
     This function will print a uniform triangle.
 */
@@ -19,12 +20,14 @@ void triangle(int count) {
     }
 }
 
-int main() {   
+int main() {
     int countStar = 0;
     do {
+        std::cin.clear();
+        std::cin.ignore(100,'\n');
         std::cout << "Enter n: ";
         std::cin >> countStar;
-    } while (countStar < 2);
+    } while (countStar < 2 || std::cin.fail());
 
     triangle(countStar);
 
