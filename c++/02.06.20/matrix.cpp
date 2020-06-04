@@ -2,6 +2,17 @@
 #include <cstdlib>
 #include <iomanip>
 
+/* checks input number is integer or not */
+int type(int num) {
+    while (std::cin.fail() || num < 1) {
+        std::cin.clear();
+        std::cin.ignore(100,'\n');
+        std::cout << "Enter a positive number: ";
+        std::cin >> num;
+    }
+    return num;
+}
+
 /*Create a matrix*/
 int **createMatrix(int row, int column) {
     int **arr = new int *[row];
@@ -62,34 +73,45 @@ int **subMatrix(int **fMat, int **sMat, int row1, int row2, int column1, int col
     return sub;
 }
 
-/*Multiply matrix to number*/
+/*Multiply two matrix*/
 int **mulMatrix(int **fMat, int **sMat, int row1, int row2, int column1, int column2) {
-    if (row1 != column2) {
+    if (column1 != row2) {
         return NULL;
     }
     int **mul = createMatrix(row1, column2);
-    for(int i = 0; i < row1; ++i) {
+    for(int i = 0; i < row1; i++) {
         for(int j = 0; j < column2; j++) {
             mul[i][j] = 0;
         }
     }
     for (int i = 0; i < row1; i++) {
-        for (int j = 0; j <column2; j++) {
-            for (int k = 0; k < column1; ++k) {
+        for (int j = 0; j < column2; j++) {
+            for (int k = 0; k < column1; k++) {
                 mul[i][j] += fMat[i][k] * sMat[k][j];
             }
         }
     }
-
     return mul;
 }
 
+/* Multiply matrix to number */
+int **mulNum(int **arr, int row, int column, int num) {
+    int **mulNumber = createMatrix(row, column);
+    for (int i = 0; i < row; i++) {
+        for (int j = 0; j < column; j++) {
+            mulNumber[i][j] = num * arr[i][j];
+        }
+    }
+
+    return mulNumber;
+}
 int main() {
     srand(time(NULL));
     int row1 = 0;
     int column1 = 0;
     int row2 = 0;
     int column2 = 0;
+    int num = 0;
     /*Input first matrix*/
     std::cout << "-----FIRST MATRIX-----" << std::endl;
     std::cout << "Please input number of rows: ";
@@ -126,8 +148,8 @@ int main() {
         displayMatrix(subMat, row2, column2);
         destroyMatrix(subMat, row1, column1);
     }
-    /* Multiply 2 matrices */
-    int **mulMat = mulMatrix(matrix1, matrix2, row1, row1, column2, column2);
+    /* Multiply two matrixes */
+    int **mulMat = mulMatrix(matrix1, matrix2, row1, row2, column1, column2);
     if (mulMat == NULL) {
         std::cout << "Sizes are inappropriate to multiply" << std::endl;
     } else {
@@ -136,6 +158,18 @@ int main() {
         displayMatrix(mulMat, row1, column2);
         destroyMatrix(mulMat, row1, column2);
     }
+    std::cout << "Enter a number: ";
+    std::cin >> num;
+    int input = type(num);
+    /*Multiply matrix to number */
+    int **mulMat1 = mulNum(matrix1, row1, column1, input);
+    std::cout << "----- Matrix1 * " << input << "-----" << std::endl;
+    displayMatrix(mulMat1, row1, column1);
+    destroyMatrix(mulMat1, row1, column1);
+    int **mulMat2 = mulNum(matrix2, row2, column2, input);
+    std::cout << "----- Matrix2 * " << input << "-----" << std::endl;
+    displayMatrix(mulMat2, row2, column2);
+    destroyMatrix(mulMat2, row2, column2);
     /*Delete matrix*/
     destroyMatrix(matrix1, row1, column1);
     destroyMatrix(matrix2, row2, column2);
