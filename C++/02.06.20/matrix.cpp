@@ -10,13 +10,19 @@ int** create_matrix(int, int);
 
 void insert_matrix(int**, int, int);
 
+void random_matrix(int**, int, int);
+
 void print_matrix(int**, int, int);
 
 void delete_matrix(int**, int);
 
 void scalar_mult(int**, int, int);
 
-void mult_matrix(int**, int**, int, int, int, int);
+// void mult_matrix(int**, int**, int, int, int, int);
+
+void add_matrix(int**, int**, int, int);
+
+void subtract_matrix(int** matrix1, int ** matrix2, int, int);
 
 int main() {
     std::cout << "\t\tInsert number of rows...\n ";
@@ -139,16 +145,28 @@ void logic_menu(int** matrix1, int** matrix2, int rows1, int cols1, int rows2, i
             case(2):
                 std::cout << "\t\tMatrix Multiplication..." << std::endl << std::endl;
                 if (cols1 == rows2) {
-                    mult_matrix(matrix1, matrix2, rows1, cols1, rows2, cols2);
+                    // mult_matrix(matrix1, matrix2, rows1, cols1, rows2, cols2);
                 } else {
-                    std::cout << "Matrix 1 and 2 below cannot be multiplied together(rows1 != cols2)" << std::endl;
+                    std::cout << "\t\tMatrix 1 and 2 below cannot be multiplied together(rows1 != cols2)" << std::endl;
                 }
                 break;
             case(3):
                 std::cout << "\t\tMatrix Adding..." << std::endl << std::endl;
+                if (rows1 == rows2 && cols1 == cols2) {
+                    add_matrix(matrix1, matrix2, rows1, cols1);
+                    print_matrix(matrix1, rows1, cols1);
+                } else {
+                    std::cout << "\t\tMatrix 1 and 2 below cannot be added together(rows != rows)" << std::endl;
+                }
                 break;
             case(4):
                 std::cout << "\t\tMatrix Subtracting..." << std::endl << std::endl;
+                if (rows1 == rows2 && cols1 == cols2) {
+                    subtract_matrix(matrix1, matrix2, rows1, cols1);
+                    print_matrix(matrix1, rows1, cols1);
+                } else {
+                    std::cout << "\t\tMatrix 1 and 2 below cannot be subtracted together(rows != rows)" << std::endl;
+                }
                 break;   
             case(5):
                 std::cout << "Bye...Good luck!" << std::endl;
@@ -174,9 +192,25 @@ int validation() {
     return value;
 }
 
-void mult_matrix(int** matrix1, int** matrix2, int rows1, int cols1, int rows2, int cols2) {
-    int** sum = create_matrix(rows1, cols2);
-    random_matrix(sum, rows1, cols2);
+// void mult_matrix(int** matrix1, int** matrix2, int rows1, int cols1, int rows2, int cols2) {
+//     int** sum = create_matrix(rows1, cols2);
+//     random_matrix(sum, rows1, cols2);
     
-    print_matrix(sum, rows1, cols2);
+//     print_matrix(sum, rows1, cols2);
+// }
+
+void add_matrix(int** matrix1, int ** matrix2, int rows, int cols) {
+    for (int i = 0; i < rows; ++i) {
+        for (int j = 0; j < cols; ++j) {
+            matrix1[i][j] += matrix2[i][j];
+        }
+    }
+}
+
+void subtract_matrix(int** matrix1, int ** matrix2, int rows, int cols) {
+    for (int i = 0; i < rows; ++i) {
+        for (int j = 0; j < cols; ++j) {
+            matrix1[i][j] -= matrix2[i][j];
+        }
+    }
 }
