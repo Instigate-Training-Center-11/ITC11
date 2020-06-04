@@ -38,9 +38,8 @@ void print(char str[], int size) {
 }
 
 int get_size(char str[], int size) {
-    for ( ; ; ++size) {
-        if (str[size] == '\0') {
-            return size;
-        }
+    while (str[size] != '\0') {
+        ++size;
     }
+    return size;
 }

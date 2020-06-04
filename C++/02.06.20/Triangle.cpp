@@ -1,14 +1,16 @@
 #include <iostream>
 
 int main () {
-
     int n = 0;
+    std::cout << "Please insert n: ";
+    std::cin >> n;
+    std::cout << std::endl;
+    while ((std::cin.fail() | n < 2)) {
+            std::cin.clear();
+            std::cin.ignore(1000, '\n');
+            std::cin >> n;
+    }
 
-    do {
-        std::cout << "Enter n: ";
-        std::cin >> n;
-    } while (n < 2);
-    
     char simvol = '*';
     char space = ' ';
     int start = 2;
