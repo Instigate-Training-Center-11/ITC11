@@ -20,7 +20,7 @@ int main() {
 
     /* Use the loop to go through the entire list and print all the elements of this list. */
     for (int i = 0; i < list.getsize(); i++) {
-        std::cout << list[i] <<std::endl; 
+        std::cout << list[i] << std::endl; 
     }
 
     /* Delete the entire sheet and print its size */
