@@ -45,8 +45,15 @@ Directory structure:
 │   ├── 01.06.2020
 │   │   └── main.cpp
 │   └── 02.06.2020
-│       ├── factorial.cpp
-│       ├── matrix.cpp
-│       ├── reverse.cpp
-│       └── triangle.cpp
+│   │   ├── factorial.cpp
+│   │   ├── matrix.cpp
+│   │   ├── reverse.cpp
+│   │   └── triangle.cpp
+│   └── 04.06.2020
+│       └── linkedList
+│           ├── list.cpp
+│           ├── list.hpp
+│           ├── main.cpp
+│           ├── node.cpp
+│           └── node.hpp
 └── Readme
