@@ -1,33 +1,35 @@
 #include <iostream>
 
-/* Calculate the factorial of the given positive integer number using recursive method */
-unsigned long int fact_iter(int, unsigned long int);
-/* Calculate the factorial of the given positive integer number using iterative method */
-unsigned long int fact_rec(int);
+unsigned long fact_iter(int);
+
+unsigned long fact_rec(int);
 
 int main() {
     int value = 0;
-    unsigned long int factorial = 1;
-
-    while (value < 1) {
-        std::cout << "Enter a positive integer: ";
-        std::cin >> value;
+    std::cout << "Please insert value: ";
+    std::cin >> value;
+    std::cout << std::endl;
+    while ((std::cin.fail() | value < 1)) {
+            std::cin.clear();
+            std::cin.ignore();
+            std::cin >> value;
     }
 
-    std::cout << "Fact_iter(" << value << ") = " << fact_iter(value, factorial) << std::endl;
+    std::cout << "Fact_iter(" << value << ") = " << fact_iter(value) << std::endl;
     std::cout << "Fact_rec(" << value << ") = " << fact_rec(value) << std::endl;
 
     return 0;
 }
 
-unsigned long int fact_iter(int value, unsigned long int factorial) {
+unsigned long fact_iter(int value) {
+    int fact = 1;
     for (int i = 1; i <= value; ++i) {
-        factorial *= i;
+        fact *= i;
     }
-    return factorial;
+    return fact;
 }
 
-unsigned long int fact_rec(int value) {
+unsigned long fact_rec(int value) {
     if (value > 1) {
         return value * fact_rec(value - 1);
     } else {

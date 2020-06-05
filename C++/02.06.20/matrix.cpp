@@ -212,7 +212,7 @@ int validation() {
     std::cout << std::endl;
     while ((std::cin.fail() | value < 1)) {
             std::cin.clear();
-            std::cin.ignore(1000, '\n');
+            std::cin.ignore();
             std::cin >> value;
     }
     return value;
