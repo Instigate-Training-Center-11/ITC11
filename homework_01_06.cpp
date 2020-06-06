@@ -28,13 +28,16 @@ int Sum(int a, int b) {
 int main() {
     int a = 0;
     int b = 0;
+
     //request a user to insert two integer numbers
     std::cout << "Insert a: ";
     std::cin >> a;
     std::cout << "Insert b: ";
     std::cin >> b;
+
     //display the input numbers
     std::cout << "a: " << a << "\tb: " << b << std::endl;
+
     //display the Min/Max/Sum
     std::cout << "Min: " << Min(a, b) << std::endl;
     std::cout << "Max: " << Max(a, b) << std::endl;
