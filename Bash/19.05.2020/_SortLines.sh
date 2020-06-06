@@ -24,7 +24,7 @@ for ((i=0; i <= $(($size - 2)); ++i))
     done
 
 for i in "${array[@]}"
-do 
+do
 	echo $i >> $str
 done
 

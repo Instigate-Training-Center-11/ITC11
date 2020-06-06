@@ -5,7 +5,7 @@ read -p "Enter the name of the directory where the result will be saved: " res
 if [[ $dir -eq "" ]]
 then
 	dir=~/Desktop
-fi	
+fi
 if [[ ! -d ~/Desktop/Bash ]]
 then
 	mkdir ~/Desktop/Bash

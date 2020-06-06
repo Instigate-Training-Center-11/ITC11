@@ -10,17 +10,17 @@ const int ERROR_202 = 202;
 class List {
     class Node {
         public:
-        Node* next; 
+        Node* next;
         int value;
 
         /* Constructor with default arguments for class Node */
         Node(int value = 0, Node* node = nullptr) : value(value), next(node) { }
     };
-    
+
     int size;
     Node* head;
     Node* tail;
-    
+
     public:
 
     /* Default constructor */
@@ -28,13 +28,13 @@ class List {
 
     /* Constructor with arguments(overload) */
     List(int size, int value = 0);
-    
+
     /* Destructor */
     ~List();
-    
+
     /* This method return size of list */
     int get_size() const;
-    
+
     /* This method delete all values from list */
     void clear();
 
@@ -49,25 +49,25 @@ class List {
 
     /* This function add new value in back of list */
     void push_back(int);
-    
+
     /* This method add new value in front of list */
     void push_front(int);
-    
+
     /* This method remove value from back of list */
     void pop_back();
-    
+
     /* This method remove value from front of list */
     void pop_front();
-    
+
     /* This method return maximum value of list */
     int list_max() const;
-    
+
     /* This method return minimum value of list */
     int list_min() const;
-    
+
     /* This method doing reverse */
     void reverse();
-    
+
     /* This method print all values in list */
     void print() const;
 };

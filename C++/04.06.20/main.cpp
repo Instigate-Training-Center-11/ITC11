@@ -19,6 +19,6 @@ int main() {
     list2.pop_front();
     list1.print();
     list2.print();
-    
+
     return 0;
 }

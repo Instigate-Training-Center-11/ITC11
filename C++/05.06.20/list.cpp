@@ -18,7 +18,7 @@ List::List(int size, int value) {
 
 List::~List() { clear(); }
 
-int List::get_size() const { return size; }  
+int List::get_size() const { return size; }
 
 void List::clear() {
     while (size) {
@@ -67,7 +67,7 @@ void List::remove_at_index(int index) {
 	    Node *tmp = head;
 	    for (int i = 0; i < index - 1; i++) {
 		    tmp = tmp -> next;
-	    }	
+	    }
 	    Node *Node_Delete = tmp -> next;
 	    tmp -> next = Node_Delete -> next;
 	    delete Node_Delete;

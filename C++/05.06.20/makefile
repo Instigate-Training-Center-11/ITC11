@@ -1,4 +1,4 @@
-#using compiler g++ 
+#using compiler g++
 CC=g++
 
 all:

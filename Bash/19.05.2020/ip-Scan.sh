@@ -14,7 +14,7 @@ then
 	echo Arp-scan is installed in your PC
 	echo Scanning...
 else
- 
+
 sudo apt install arp-scan &> log.tmp
 fi
 ip r l | cut -d " " -f1 > log.tmp

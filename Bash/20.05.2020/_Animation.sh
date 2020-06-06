@@ -43,11 +43,11 @@ move() {
 }
 
 main() {
-    
+
     clear
 
     for ((i=0; i < $max_x; i++))
-    do 
+    do
 		move
         sleep .05
     done
