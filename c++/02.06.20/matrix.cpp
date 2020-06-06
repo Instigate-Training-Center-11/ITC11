@@ -2,8 +2,10 @@
 #include <cstdlib>
 #include <iomanip>
 
-/* checks input number is integer or not */
+/* Checks input number is integer or not */
 int type(int num) {
+    std::cout << "Enter a positive number: ";
+    std::cin >> num;
     while (std::cin.fail() || num < 1) {
         std::cin.clear();
         std::cin.ignore(100,'\n');
@@ -13,60 +15,44 @@ int type(int num) {
     return num;
 }
 
+/*Display a matrix*/
+void displayMatrix(int **arr, int row, int column) {
+    for (int i = 0; i < row; i++) {
+        for (int j = 0; j < column; j++) {
+            std::cout << arr[i][j] << " ";
+        }
+        std::cout << std::endl;
+    }
+}
+
 /*Create a matrix*/
 int **createMatrix(int row, int column) {
     int **arr = new int *[row];
-    for(int i = 0; i < row; i++) {
+    for (int i = 0; i < row; i++) {
         arr[i] = new int [column];
-        for(int j = 0; j < column; j++) {
+        for (int j = 0; j < column; j++) {
             arr[i][j] = rand()%10;
         }
     }
     return arr;
 }
 
-/*Display a matrix*/
-void displayMatrix(int **arr, int row, int column) {
-    for(int i = 0; i < row; i++) {
-        for(int j = 0; j < column; j++) {
-            std::cout << arr[i][j] << " ";
-        }
-        std::cout << std::endl;
-    }
-    std::cout << std::endl;
-}
-
-/*Delete matrix*/
-void destroyMatrix(int **arr, int row, int column) {
-    for(int i = 0; i < row; i++) {
-        delete (arr[i]);
-    }
-    delete (arr);
-}
-
 /*Get sum of two matrixes*/
-int **addMatrix(int **fMat, int **sMat, int row1, int row2, int column1, int column2) {
-    if (row1 != row2 || column1 != column2) {
-        return NULL;
-    }
-    int **sum = createMatrix(row1, column1);
-    for(int i = 0; i < row1; ++i) {
-        for(int j = 0; j < column1; j++) {
+int **addMatrix(int **fMat, int **sMat, int row, int column) {
+    int **sum = createMatrix(row, column);
+    for (int i = 0; i < row; i++) {
+        for (int j = 0; j < column; j++) {
             sum[i][j] = fMat[i][j] + sMat[i][j];
         }
     }
     return sum;
 }
 
-
 /*Get subtracting of two matrixes*/
-int **subMatrix(int **fMat, int **sMat, int row1, int row2, int column1, int column2) {
-    if (row1 != row2 || column1 != column2) {
-        return NULL;
-    }
-    int **sub = createMatrix(row1, column1);
-    for(int i = 0; i < row1; ++i) {
-        for(int j = 0; j < column1; j++) {
+int **subMatrix(int **fMat, int **sMat, int row, int column) {
+    int **sub = createMatrix(row, column);
+    for (int i = 0; i < row; ++i) {
+        for (int j = 0; j < column; j++) {
             sub[i][j] = fMat[i][j] - sMat[i][j];
         }
     }
@@ -75,12 +61,9 @@ int **subMatrix(int **fMat, int **sMat, int row1, int row2, int column1, int col
 
 /*Multiply two matrix*/
 int **mulMatrix(int **fMat, int **sMat, int row1, int row2, int column1, int column2) {
-    if (column1 != row2) {
-        return NULL;
-    }
     int **mul = createMatrix(row1, column2);
-    for(int i = 0; i < row1; i++) {
-        for(int j = 0; j < column2; j++) {
+    for (int i = 0; i < row1; i++) {
+        for (int j = 0; j < column2; j++) {
             mul[i][j] = 0;
         }
     }
@@ -104,6 +87,14 @@ int **mulNum(int **arr, int row, int column, int num) {
     }
 
     return mulNumber;
+}
+
+/*Delete matrix*/
+void destroyMatrix(int **arr, int row, int column) {
+    for (int i = 0; i < row; i++) {
+        delete (arr[i]);
+    }
+    delete (arr);
 }
 int main() {
     srand(time(NULL));
@@ -129,39 +120,28 @@ int main() {
     int **matrix2 = createMatrix(row2, column2);
     displayMatrix(matrix2, row2, column2);
     /*Add of two matrix*/
-    int **sumMat = addMatrix(matrix1, matrix2, row1, row2, column1, column2);
-    if (sumMat == NULL) {
-        std::cout << "Sizes are inappropriate to sum" << std::endl;
-    } else {
+    if (row1 == row2 || column1 == column2) {
         std::cout << "-----SUM MATRIX-----" << std::endl;
-        std::cout << "Matrixs summa is: "<< std::endl;
-        displayMatrix(sumMat, row2, column2);
+        int **sumMat = addMatrix(matrix1, matrix2, row1, column1);
+        displayMatrix(sumMat, row1, column1);
         destroyMatrix(sumMat, row1, column1);
     }
     /*Substructing of two matrix*/
-    int **subMat = subMatrix(matrix1, matrix2, row1, row2, column1, column2);
-    if (subMat == NULL) {
-        std::cout << "Sizes are inappropriate to subtracting" << std::endl;
-    } else {
+    if (row1 == row2 || column1 == column2) {
+        int **subMat = subMatrix(matrix1, matrix2, row1, column1);
         std::cout << "-----SUB MATRIX-----" << std::endl;
-        std::cout << "Matrixs substruct is: "<< std::endl;
-        displayMatrix(subMat, row2, column2);
+        displayMatrix(subMat, row1, column1);
         destroyMatrix(subMat, row1, column1);
     }
     /* Multiply two matrixes */
-    int **mulMat = mulMatrix(matrix1, matrix2, row1, row2, column1, column2);
-    if (mulMat == NULL) {
-        std::cout << "Sizes are inappropriate to multiply" << std::endl;
-    } else {
+    if (row2 == column1) {
         std::cout << "-----MUL MATRIX-----" << std::endl;
-        std::cout << "Matrixs multiply is: "<< std::endl;
+        int **mulMat = mulMatrix(matrix1, matrix2, row1, row2, column1, column2);
         displayMatrix(mulMat, row1, column2);
         destroyMatrix(mulMat, row1, column2);
     }
-    std::cout << "Enter a number: ";
-    std::cin >> num;
-    int input = type(num);
     /*Multiply matrix to number */
+    int input = type(num);
     int **mulMat1 = mulNum(matrix1, row1, column1, input);
     std::cout << "----- Matrix1 * " << input << "-----" << std::endl;
     displayMatrix(mulMat1, row1, column1);
