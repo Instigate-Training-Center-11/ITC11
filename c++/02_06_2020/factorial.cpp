@@ -11,9 +11,9 @@ int main() {
 
     do {
         std::cout << "input a positive number: ";
-        std::cin.clear();
-        std::cin.ignore(1,'\n');
+        std::cin.ignore(1000000,'\n');
         std::cin >> number;
+        std::cin.clear();
     } while (number < 3 || std::cin.fail());
 
     std::cout << "\ncall factorialP function\n\n";
