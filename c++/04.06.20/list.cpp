@@ -1,28 +1,13 @@
-#include<iostream>
-#include"list.hpp"
+#include <iostream>
+#include "list.hpp"
 
 /*Constructor*/
-List::List(void) {
+List::List() {
     m_head = NULL;
 }
 
-/*Copy Constructor*/
-List::List(List& list) {
-    std::cout << "Copy constructor called " << std::endl;
-    int index;
-    Node* next;
-    this->m_head = NULL;
-    if (!list.isEmpty()) {
-        Node *current = list.m_head;
-        while (NULL != current) {
-            this->add(current->value, index);
-            current = current->next;
-        }
-    }
-}
-
 /*Destructor*/
-List::~List(void) {
+List::~List() {
     while (!isEmpty()) {
         remove(0);
     }
@@ -99,13 +84,17 @@ void List::printf() {
 /*Get the element by index*/
 int List::getElement(int index) {
     Node* current = m_head;
-    int count = 0;
-    while (NULL != current) {
-        if (count == index) {
-            return current->value;
+    int count = getSize();
+    if (count < index || index < 0) {
+        std::cout << "Error";
+    } else {
+        while (NULL != current) {
+            if (count == index) {
+                return current->value;
+            }
+            count++;
+            current = current->next;
         }
-        count++;
-        current = current->next;
     }
 }
 
