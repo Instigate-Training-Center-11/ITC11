@@ -6,6 +6,7 @@ int main () {
     std::cin >> n;
     std::cout << std::endl;
     while ((std::cin.fail() | n < 2)) {
+            std::cout << "Please insert positive number only: ";
             std::cin.clear();
             std::cin.ignore(1000, '\n');
             std::cin >> n;
