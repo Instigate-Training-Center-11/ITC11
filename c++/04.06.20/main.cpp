@@ -10,9 +10,8 @@ int main()
     l.add(3,3);
     l.add(4,4);
     l.printf();
-    std::cout << l.getElement(2) << std::endl;
-    List l1(l);
-    l1.printf();
+    std::cout << l.getElement(333) << std::endl;
+    std::cout << l.getElement(5) << std::endl;
     l.remove(0);
     l.printf();
     l.remove(2);
