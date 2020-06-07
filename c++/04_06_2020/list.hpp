@@ -5,7 +5,6 @@ class List{
         int value;
     };
     Node* head;
-    Node* tail;
     public:
     /* default constructor */
     List(void);

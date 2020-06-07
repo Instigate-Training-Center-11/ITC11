@@ -3,7 +3,6 @@
 
 List::List(void) {
     this -> head = nullptr;
-    this -> tail = nullptr;
     this -> size = 0;
 }
 
@@ -92,7 +91,6 @@ void List::removeAtIndex(unsigned index) {
         }
         Node* tmp = temp -> next;
         temp -> next = tmp -> next;
-        this -> tail = temp;
         delete tmp;
         tmp = nullptr;
     }
