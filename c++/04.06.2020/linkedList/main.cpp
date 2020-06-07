@@ -17,7 +17,7 @@ int main() {
     List* list = new List();
     for (int i = 0; i < size; ++i) {
         int value = getInteger("Enter element ", i + 1);
-        list->insertLast(value);
+        list->insertElement(i + 1, value);
     }
 
     /* Print created list pretty */

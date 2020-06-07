@@ -64,8 +64,7 @@ bool List::insertElement(int index, int value) {
             ++i;
         }
 
-        Node* tmp = current->getNext();
-        Node* node = new Node(value, tmp);
+        Node* node = new Node(value, current->getNext());
         current->setNext(node);
         ++length;
     }
