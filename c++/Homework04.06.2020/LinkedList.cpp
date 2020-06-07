@@ -68,8 +68,22 @@ void LinkedList::deleteElement(int index){
   
 }
 void LinkedList::empty(){
+    if(head==NULL)
+    return;
+    Node* current=head;
+    Node* next;
+    while (current!=NULL)
+    {
+        next=current->next;
+        delete(current);
+        current=next;
+    }
+
     head=NULL;
+
 }
+   
+
 void LinkedList::display() {
     if(head==NULL){
         std::cout<<"List is empty!"<<'\n';
@@ -91,9 +105,12 @@ int main(){
     list->insert(145);
     list->insert(147);
     list->insert(108);
+    list->display();
     std::cout<<"Second element is "<<list->getElementByIndex(1)<<'\n';
     list->deleteElement(1);
     std::cout<<"Linked List:"<<'\n';
+    list->display();
+    list->empty();
     list->display();
     return 0;
 }
