@@ -57,7 +57,7 @@ Directory structure:
 │   │       ├── node.cpp
 │   │       └── node.hpp
 │   └── 05.06.2020
-│       └── linkedList
+│       └── queue
 │           ├── list.cpp
 │           ├── list.hpp
 │           ├── main.cpp
