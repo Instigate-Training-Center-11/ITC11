@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cstdlib>
 
 /* Print menu in terminal */
 int menu();
