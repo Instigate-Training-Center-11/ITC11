@@ -17,6 +17,8 @@ int** createMatrix(int row, int colum);
 /* Print matrices */
 void display(int **matrix,int row,int colum);
 
+int checkValue(void);
+
 int main() {
     int** matrixOne = NULL;
     int** matrixTwo = NULL;
@@ -28,16 +30,15 @@ int main() {
     int row2 = 0;
     int colum2 = 0;
 
-    display(matrixOne,row1,colum1);
     std::cout << "Input row matrix One--> ";
-    std::cin >> row1;
+    row1 = checkValue();
     std::cout << "Input colum matrix One--> ";
-    std::cin >> colum1;
+    colum1 = checkValue();
     matrixOne = createMatrix(row1,colum1);
     std::cout << "Input row matrix Two--> ";
-    std::cin >> row2;
+    row2 = checkValue();
     std::cout << "Input colum matrix Two--> ";
-    std::cin >> colum2;
+    colum2 = checkValue();
     matrixTwo = createMatrix(row2,colum2);
     std::cout << "\t\tMatrix One\n\n";
     display(matrixOne,row1,colum1);
@@ -165,4 +166,16 @@ void display(int** matrix, int row, int colum) {
         std::cout << "\n";
     }
     return;
+}
+
+int checkValue(void) {
+    int value = 0;
+    std::cin >> value;
+    while ((std::cin.fail() | value < 1)) {
+    std::cout << "Input number > 0 ";
+    std::cin.clear();
+    std::cin.ignore();
+    std::cin >> value;
+    }
+    return value;
 }
