@@ -49,11 +49,20 @@ Directory structure:
 │   │   ├── matrix.cpp
 │   │   ├── reverse.cpp
 │   │   └── triangle.cpp
-│   └── 04.06.2020
-│       └── linkedList
-│           ├── list.cpp
-│           ├── list.hpp
-│           ├── main.cpp
-│           ├── node.cpp
-│           └── node.hpp
+│   ├── 04.06.2020
+│   │   └── linkedList
+│   │       ├── list.cpp
+│   │       ├── list.hpp
+│   │       ├── main.cpp
+│   │       ├── node.cpp
+│   │       └── node.hpp
+│   └── 05.06.2020
+│       └── linkedList
+│           ├── list.cpp
+│           ├── list.hpp
+│           ├── main.cpp
+│           ├── node.cpp
+│           ├── node.hpp
+│           ├── queue.cpp
+│           └── queue.hpp
 └── Readme
