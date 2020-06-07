@@ -8,16 +8,15 @@ int main() {
         list.pushBack(i);
     }
     /* index,value */
-    //list.setAtIndex(5,20);
     //list[5];
-    //list.insertAtIndex(5,1000);
-    //list.removeAtIndex(2);
     //list.pushBack(5);
-    //list.popBack();
-    //list.printList();
+    //list.pushFront(12);
+    //list.popFront();
     //list.clear();
+    //list.insertAtIndex(0,1000);
+    //list.setAtIndex(5,20);
+    //list.removeAtIndex(8);
     //list.printList();
     //list.getSize();
-    //list[5];
     return 0;
 }
