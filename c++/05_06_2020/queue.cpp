@@ -1,7 +1,6 @@
 #include "queue.hpp"
 #include <iostream>
 
-Queue::Queue(){};
 
 void Queue::printQ(void) {
     printList();
