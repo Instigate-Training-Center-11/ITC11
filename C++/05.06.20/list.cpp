@@ -16,9 +16,13 @@ List::List(int size, int value) {
     }
 }
 
-List::~List() { clear(); }
+List::~List() {
+    clear();
+}
 
-int List::get_size() const { return size; }
+int List::get_size() const {
+     return size;
+}
 
 void List::clear() {
     while (size) {
@@ -67,7 +71,7 @@ void List::remove_at_index(int index) {
 	    Node *tmp = head;
 	    for (int i = 0; i < index - 1; i++) {
 		    tmp = tmp -> next;
-	    }
+        }
 	    Node *Node_Delete = tmp -> next;
 	    tmp -> next = Node_Delete -> next;
 	    delete Node_Delete;
@@ -157,25 +161,6 @@ int List::get_min() const {
         tmp = tmp -> next;
     }
     return min;
-}
-
-void List::reverse() {
-    if (size == 0) {
-        std::cout << "reverse()...size = " << size << "...list is empty: error." << ERROR_202 << std::endl;
-        return;
-    }
-
-    Node* tmp = head;
-    int counter = size;
-
-    for (int i = 0; i < counter; ++i) {
-        push_front(tmp -> value);
-        tmp = tmp -> next;
-    }
-
-    for (int i = 0; i < counter; ++i) {
-        pop_back();
-    }
 }
 
 void List::print() const {

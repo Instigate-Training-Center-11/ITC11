@@ -2,4 +2,4 @@
 CC=g++
 
 all:
-	$(CC) main.cpp data.cpp list.cpp vector.cpp -o Data
+	$(CC) main.cpp list.cpp queue.cpp -o List

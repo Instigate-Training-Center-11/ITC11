@@ -1,22 +1,22 @@
 #ifndef LIST_HPP
 #define LIST_HPP
 
-#include "data.hpp"
-
 /* Error codes */
 /* 101 out of list, not find index */
 const int ERROR_101 = 101;
 /* 202 empty list */
 const int ERROR_202 = 202;
 
-class List : public Data {
+class List {
     class Node {
         public:
         Node* next;
         int value;
 
         /* Constructor with default arguments for class Node */
-        Node(int value = 0, Node* node = nullptr) : value(value), next(node) { }
+        Node(int value = 0, Node* node = nullptr) : value(value), next(node) {
+
+        }
     };
 
     int size;
@@ -66,9 +66,6 @@ class List : public Data {
 
     /* This method return minimum value of list */
     int get_min() const;
-
-    /* This method doing reverse */
-    void reverse();
 
     /* This method print all values in list */
     void print() const;

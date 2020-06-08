@@ -10,10 +10,10 @@ int main() {
     std::cin >> value;
     std::cout << std::endl;
     while ((std::cin.fail() | value < 1)) {
-            std::cout << "Please insert positive number only: ";
-            std::cin.clear();
-            std::cin.ignore(1000, '\n');
-            std::cin >> value;
+        std::cout << "Please insert positive number only: ";
+        std::cin.clear();
+        std::cin.ignore(1000, '\n');
+        std::cin >> value;
     }
 
     std::cout << "Fact_iter(" << value << ") = " << fact_iter(value) << std::endl;
