@@ -1,32 +1,43 @@
 #include <iostream>
 #include "list.hpp"
-#include "queue.hpp"
 #include "list.cpp"
-#include "queue.cpp"
-int main()
-{
-    List<int> l;
-    l.push_back(1);
-    l.push_back(5);
-    l.push_back(1);
-    l.push_back(3);
-    l.push_back(4);
-    l.printf();
-    l.pop_front();
-    l.printf();
-    l.pop_front();
-    l.printf();
 
-    Queue<double> Q;
-    Q.insertItem(50.2);
-    Q.insertItem(24.3);
-    Q.insertItem(25.1);
-    Q.insertItem(32.5);
-    Q.insertItem(10.3);
-    Q.display();
-    Q.deleteItem();
-    Q.deleteItem();
-    Q.display();
+int main() {
+    List<int> l;
+    int num = 0;
+    std::cout << "How elements do you want to push: ";
+    std::cin >> num;
+    for (int i = 0; i < num; i++) {
+        l.push_back(i);
+    }
+    l.printf();
+    std::cout << "Size = " << l.getSize() <<std::endl;
+    l.push_front(7);
+    l.push_front(9);
+    l.printf();
+    l.pop_front();
+    l.printf();
+    l.add(8,2);
+    l.printf();
+    l.clear();
+
+    List<double> l1;
+    l.push_back(5.6);
+    l1.push_back(1.2);
+    l1.push_back(5.3);
+    l1.push_back(1.4);
+    l1.push_back(3.6);
+    l1.push_back(4.9);
+    l1.printf();
+    l1.push_front(7.4);
+    l1.push_front(9.5);
+    l1.printf();
+    l1.pop_front();
+    l1.printf();
+    l1.add(8.1,2);
+    l1.printf();
+    l1.clear();
+
     return 0;
 }
 
