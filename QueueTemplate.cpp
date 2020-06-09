@@ -1,6 +1,6 @@
 #include <iostream>
 #include <cstdlib>
-using namespace std;
+
 
 
 #define SIZE 10
@@ -44,11 +44,11 @@ void queue<X>::dequeue()
 	
 	if (isEmpty())
 	{
-		cout << "UnderFlow\nProgram Terminated\n";
+		std::cout << "UnderFlow\nProgram Terminated\n";
 		exit(EXIT_FAILURE);
 	}
 
-	cout << "Removing " << arr[front] << '\n';
+	std::cout << "Removing " << arr[front] << '\n';
 
 	front = (front + 1) % capacity;
 	count--;
@@ -61,11 +61,11 @@ void queue<X>::enqueue(X item)
 	
 	if (isFull())
 	{
-		cout << "OverFlow\nProgram Terminated\n";
+		std::cout << "OverFlow\nProgram Terminated\n";
 		exit(EXIT_FAILURE);
 	}
 
-	cout << "Inserting " << item << '\n';
+	std::cout << "Inserting " << item << '\n';
 
 	rear = (rear + 1) % capacity;
 	arr[rear] = item;
@@ -77,7 +77,7 @@ X queue<X>::peek()
 {
 	if (isEmpty()) 
 	{
-		cout << "UnderFlow\nProgram Terminated\n";
+		std::cout << "UnderFlow\nProgram Terminated\n";
 		exit(EXIT_FAILURE);
 	}
 	return arr[front];
@@ -114,16 +114,16 @@ int main()
 	
 	q.enqueue("d");
 
-	cout << "Queue size is " << q.size() << endl;
+	std::cout << "Queue size is " << q.size() << endl;
 
 	q.dequeue();
 	q.dequeue();
 	q.dequeue();
 	
 	if (q.isEmpty())
-		cout << "Queue Is Empty\n";
+		std::cout << "Queue Is Empty\n";
 	else
-		cout << "Queue Is Not Empty\n";
+		std::cout << "Queue Is Not Empty\n";
 
 	return 0;
 }
