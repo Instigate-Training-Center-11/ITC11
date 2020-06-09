@@ -1,5 +1,6 @@
 #include <iostream>
 #include "list.h"
+#include "my_exception.h"
 
 /*
 By user created Nde type description.
@@ -14,20 +15,19 @@ List<T>::List() {
 /* This methog allows you to apply List elements with [] simbols. */
 template <typename T>
 T& List<T>::operator[](int index) {
-    if (index >= size) {
-        std::cout << "There is no element in the List with [";
-        std::cout << index << "] index." << std::endl;
-    } else {
-        int count = 0;
-        Node<T> *current = this->first;
-        while (current != nullptr) {
-            if (count == index) {
-                return current->data;
-            }
+    if (index >= size || index < 0) {
+        throw MyException("You can't get an element too much!!!");
+    }
 
-            current = current->ptr;
-            ++count;
+    int count = 0;
+    Node<T> *current = this->first;
+    while (current != nullptr) {
+    if (count == index) {
+            return current->data;
         }
+
+        current = current->ptr;
+        ++count;
     }
 }
 
@@ -41,6 +41,10 @@ void List<T>::pushFront(T data) {
 /* This method adds an element to the given index of the list. */
 template <typename T>
 void List<T>::insert(T data, int index) {
+    if(index > size || index < 0) {
+        throw MyException("Do not add too much element!!!");
+    }
+
     if (index == 0) {
         pushFront(data);
     } else {
@@ -58,21 +62,21 @@ void List<T>::insert(T data, int index) {
 /* This method deletes an element to the given index of the list. */
 template <typename T>
 void List<T>::remove(int index) {
-    if (size != 0) {
-        if (index == 0) {
-            popFront();
-        } else {
-            Node<T> *post = first;
-            for (int i = 0; i < index - 1; ++i) {
-                post = post->ptr;
-            }
+    if (index >= size || index < 0) {
+        throw MyException("Do not remove too much element!!!");
+    }
 
-            Node<T> *newNode = post->ptr->ptr;
-            post->ptr = newNode;
-            --List::size;
-        }
+    if (index == 0) {
+        popFront();
     } else {
-        std::cout << "This List is empty!!!" << std::endl;
+        Node<T> *post = first;
+        for (int i = 0; i < index - 1; ++i) {
+            post = post->ptr;
+        }
+
+        Node<T> *newNode = post->ptr->ptr;
+        post->ptr = newNode;
+        --List::size;
     }
 }
 
