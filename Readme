@@ -80,6 +80,7 @@
 │       │   └── linkedListOperator
 │       │       ├── list.cpp
 │       │       ├── list.hpp
+│       │       ├── Makefile
 │       │       ├── main.cpp
 │       │       ├── node.cpp
 │       │       └── node.hpp
