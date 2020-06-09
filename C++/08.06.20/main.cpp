@@ -29,11 +29,13 @@ int main() {
     list2.print();
 
     Queue<double> my_q;
+    Queue<double> my_q1(7, 777);
     my_q.push_back_queue(1.999);
     my_q.push_back_queue(2.3);
     my_q.push_back_queue(56.2);
     my_q.push_back_queue(145.25);
     my_q.print_queue();
+    my_q1.print_queue();
 
     return 0;
 }

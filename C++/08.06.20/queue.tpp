@@ -7,6 +7,11 @@ Queue<Type>::Queue() {
 }
 
 template<typename Type>
+Queue<Type>::Queue(int size, Type value):List<Type>(size, value) {
+
+}
+
+template<typename Type>
 void Queue<Type>::push_back_queue(Type value) {
     this->push_back(value);
 }

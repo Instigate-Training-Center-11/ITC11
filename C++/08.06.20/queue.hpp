@@ -8,6 +8,7 @@ template<typename Type>
 class Queue : protected List<Type> {
     public:
         Queue();
+        Queue(int, Type);
         void push_back_queue(Type);
         void pop_front_queue();
         void print_queue();
