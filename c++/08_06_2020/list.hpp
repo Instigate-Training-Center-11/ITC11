@@ -36,5 +36,5 @@ public:
     ~List(void);
 };
 
-#include "list.tpp"
+#include "list.cpp"
 #endif

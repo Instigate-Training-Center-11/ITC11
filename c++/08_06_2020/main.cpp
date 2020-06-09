@@ -4,20 +4,26 @@
 #include "queue.hpp"
 #include "list.hpp"
 
-int main()
-{
+int main() {
 
     List<int> list;
-    for (int i = 0; i < 9; ++i)
-    {
-        list.insertAtIndex(i, i);
+    Queue<int> obj(4);
+    for (int i = 0; i < 10; ++i){
+        list.insertAtIndex(i,i);
     }
+
     //std::cout << object.Size() << std::endl;
-    object.printQ();
     /* index,value */
     //list[5];
-    list.printList();
-    list.clear();
+    //list.printList();
+    list.removeAtIndex(0);
+    //list.printList();
+    //list.clear();
+    //obj.push(8);
+    //obj.show();
+    //obj.size();
+    //obj.pop();
+    //obj.show();
     //list.printList();
     //list.insertAtIndex(0,1000);
     //list.setAtIndex(5,20);
