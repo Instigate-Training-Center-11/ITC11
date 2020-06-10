@@ -1,7 +1,6 @@
 #include <iostream>
 #include <string>
 #include <stdlib.h>
-#include <time.h>
 
 /* Prototypes of functions */
 double divide(int, int);

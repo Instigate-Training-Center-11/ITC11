@@ -12,6 +12,7 @@ class Queue : protected List<T> {
         bool cleanQueue();
         void showQueue();
         bool isQueueEmpty();
+        T getElementByIndex(int);
         Queue();
         Queue(T);
         ~Queue();

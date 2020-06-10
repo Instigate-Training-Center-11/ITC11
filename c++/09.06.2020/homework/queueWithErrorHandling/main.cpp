@@ -1,8 +1,7 @@
 #include <iostream>
 
-#include "list.hpp"
+#include "queue.hpp"
 #include "myException.hpp"
-
 #include "list.cpp"
 #include "node.cpp"
 #include "queue.cpp"
@@ -88,6 +87,39 @@ int main() {
 
     /* Delete used memory */
     delete list;
+
+    /* Get size of queue */
+    size = 0;
+    while (size < 1) {
+        size = getNumber<int>("Enter integer-value queue size(> 1): ");
+    }
+
+    /* Create queue with integer values by size and initialize it */
+    Queue<int>* queue = new Queue<int>();
+    for (int i = 0; i < size; ++i) {
+        int value = getNumber<int>("Enter integer element ", i + 1);
+        queue->push(value);
+    }
+
+    /* Print created queues pretty */
+    std::cout << "******* Queue *******" << std::endl;
+    queue->showQueue();
+    std::cout << "*** Now length is: " << queue->getLength() << std::endl;
+
+    /* Get element by index from queue*/
+    index = getNumber<int>("Enter index of element: ");
+    try {
+        std::cout << "Node by index: " << queue->getElementByIndex(index) << std::endl;
+    } catch (MyException& err) {
+        std::cout << err.what() << std::endl;
+    }
+
+    std::cout << "******* Queue *******" << std::endl;
+    queue->showQueue();
+    std::cout << "*** Now length is: " << queue->getLength() << std::endl;
+
+    /* Delete used memory */
+    delete queue;
     return 0;
 }
 

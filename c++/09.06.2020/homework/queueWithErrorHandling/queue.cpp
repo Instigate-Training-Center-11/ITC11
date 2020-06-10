@@ -1,5 +1,6 @@
 #include <iostream>
 #include "queue.hpp"
+#include "myException.hpp"
 
 /* Insert new element at the end of the queue */
 template<typename T>
@@ -48,6 +49,16 @@ template<typename T>
 Queue<T>::Queue(T value) {
     this->length = 1;
 }
+
+/* Get element by index from queue */
+template<typename T>
+T Queue<T>::getElementByIndex(int index) {
+    if (index >= this->length) {
+        throw MyException("Can't get element, Index is great then length!");
+    }
+    return this->getElement(index);
+}
+
 
 /* Destructor */
 template<typename T>

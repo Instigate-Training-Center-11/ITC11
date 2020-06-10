@@ -1,4 +1,5 @@
 #include <iostream>
+
 #include "list.hpp"
 #include "myException.hpp"
 
@@ -11,7 +12,7 @@ int List<T>::getLength() {
 /* Get element by index */
 template<typename T>
 T List<T>::getElement(int index) {
-    if (index <= length) {
+    if (index < length) {
         int i = 0;
         Node<T>* current = head;
         while (i != index) {

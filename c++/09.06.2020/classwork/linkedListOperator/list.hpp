@@ -2,7 +2,6 @@
 #define LIST_HPP
 
 #include "node.hpp"
-#include <ostream>
 
 class List {
     private:

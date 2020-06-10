@@ -44,11 +44,11 @@
 ├── c++
 │   ├── 01.06.2020
 │   │   └── main.cpp
-│   └── 02.06.2020
-│   │   ├── factorial.cpp
-│   │   ├── matrix.cpp
-│   │   ├── reverse.cpp
-│   │   └── triangle.cpp
+│   ├── 02.06.2020
+│   │   ├── factorial.cpp
+│   │   ├── matrix.cpp
+│   │   ├── reverse.cpp
+│   │   └── triangle.cpp
 │   ├── 04.06.2020
 │   │   └── linkedList
 │   │       ├── list.cpp
@@ -56,43 +56,45 @@
 │   │       ├── main.cpp
 │   │       ├── node.cpp
 │   │       └── node.hpp
-│   ├── 05.06.2020
-│   │   └── queue
-│   │       ├── list.cpp
-│   │       ├── list.hpp
-│   │       ├── main.cpp
-│   │       ├── node.cpp
-│   │       ├── node.hpp
-│   │       ├── queue.cpp
-│   │       └── queue.hpp
-│   ├── 08.06.2020
-│   │   └── queueWithTemplates
-│   │       ├── list.cpp
-│   │       ├── list.hpp
-│   │       ├── main.cpp
-│   │       ├── node.cpp
-│   │       ├── node.hpp
-│   │       ├── queue.cpp
-│   │       └── queue.hpp
-│   └── 09.06.2020
-│       ├── classwork
-│       │   ├── exaptionHandle.cpp
-│       │   └── linkedListOperator
-│       │       ├── list.cpp
-│       │       ├── list.hpp
+│   ├── 05.06.2020
+│   │   └── queue
+│   │       ├── list.cpp
+│   │       ├── list.hpp
+│   │       ├── main.cpp
+│   │       ├── node.cpp
+│   │       ├── node.hpp
+│   │       ├── queue.cpp
+│   │       └── queue.hpp
+│   ├── 08.06.2020
+│   │   └── queueWithTemplates
+│   │       ├── list.cpp
+│   │       ├── list.hpp
+│   │       ├── main.cpp
+│   │       ├── node.cpp
+│   │       ├── node.hpp
+│   │       ├── queue.cpp
+│   │       └── queue.hpp
+│   └── 09.06.2020
+│       ├── classwork
+│       │   ├── exaptionHandle.cpp
+│       │   └── linkedListOperator
+│       │       ├── list.cpp
+│       │       ├── list.hpp
+│       │       ├── main.cpp
 │       │       ├── Makefile
-│       │       ├── main.cpp
-│       │       ├── node.cpp
-│       │       └── node.hpp
-│       └── homework
-│           └── queueWithErrorHandling
-│               ├── list.cpp
-│               ├── list.hpp
-│               ├── main.cpp
-│               ├── myException.cpp
-│               ├── myException.hpp
-│               ├── node.cpp
-│               ├── node.hpp
-│               ├── queue.cpp
-│               └── queue.hpp
+│       │       ├── make.out
+│       │       ├── node.cpp
+│       │       └── node.hpp
+│       └── homework
+│           └── queueWithErrorHandling
+│               ├── list.cpp
+│               ├── list.hpp
+│               ├── main.cpp
+│               ├── Makefile
+│               ├── myException.cpp
+│               ├── myException.hpp
+│               ├── node.cpp
+│               ├── node.hpp
+│               ├── queue.cpp
+│               └── queue.hpp
 └── Readme

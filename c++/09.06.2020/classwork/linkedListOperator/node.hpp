@@ -1,8 +1,6 @@
 #ifndef NODE_HPP
 #define NODE_HPP
 
-#include <ostream>
-
 class Node {
     private:
         int value;
