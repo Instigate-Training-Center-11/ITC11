@@ -14,10 +14,11 @@ int main() {
 
     //std::cout << object.Size() << std::endl;
     /* index,value */
-    //list[5];
+        list[8000];
+        //std::cerr << "An array exception occurred (" << exception.getError() << ")\n";
     //list.printList();
     list.removeAtIndex(0);
-    //list.printList();
+    list.printList();
     //list.clear();
     //obj.push(8);
     //obj.show();

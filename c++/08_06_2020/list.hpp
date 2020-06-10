@@ -1,10 +1,11 @@
 #ifndef _LIST_H_
 #define _LIST_H_
 
+#include "exception.hpp"
+
 template <typename Type>
 
-class List
-{
+class List {
 private:
     unsigned int size;
     struct Node

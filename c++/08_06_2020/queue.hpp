@@ -2,6 +2,7 @@
 #define _QUEUE_H
 
 #include "list.hpp"
+#include "exception.hpp"
 
 template <typename Type>
 
