@@ -1,19 +1,22 @@
-#ifndef QUEUE_H
-#define QUEUE_H
+#ifndef _QUEUE_H
+#define _QUEUE_H
 
 #include "list.hpp"
+#include "exception.hpp"
 
-class Queue : protected List {
-    public:
-    /* Remove the last item from the Q */
-    void popFrontQ(void);
-    /* Push the new item at the end of the Q */
-    void pushBackQ(int);
-    /* Print the whole list */
-    void printQ(void);
-    /* Remove all elements from the Q */
-    void clearQ();
+template <typename Type>
+
+class Queue : protected List<Type> {
+public:
+    Queue();
+    Queue(int);
+    void show(void);
+    void size(void);
+    void pop(void);
+    void push(Type);
     ~Queue();
 };
+
+#include "queue.cpp"
 
 #endif

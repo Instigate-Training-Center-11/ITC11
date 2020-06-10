@@ -1,29 +1,38 @@
+#ifndef _IOSTREAM_
+#define _IOSTREAM_
+
 #include "queue.hpp"
+#include "list.hpp"
 
 int main() {
 
-    List list;
-    //for (int i = 0; i < 10; ++i) {
-    //    list.pushBack(i);
-    //}
-    Queue q;
-    //q.pushBackQ(5);
-    //q.printQ();
-    //object->pushBack(5);
+    List<int> list;
+    Queue<int> obj(4);
+    for (int i = 0; i < 10; ++i){
+        list.insertAtIndex(i,i);
+    }
+
+    //std::cout << object.Size() << std::endl;
     /* index,value */
-    //list[5];
-    //list.pushBack(5);
+        list[8000];
+        //std::cerr << "An array exception occurred (" << exception.getError() << ")\n";
     //list.printList();
-    //list.printList();
-    //list.pushFront(12);
-    //list.popFront();
+    list.removeAtIndex(0);
+    list.printList();
     //list.clear();
+    //obj.push(8);
+    //obj.show();
+    //obj.size();
+    //obj.pop();
+    //obj.show();
+    //list.printList();
     //list.insertAtIndex(0,1000);
     //list.setAtIndex(5,20);
     //list.removeAtIndex(8);
-    //list.printList();
-    //list.printList();
     //list.getSize();
     //list[5];
+
     return 0;
 }
+
+#endif

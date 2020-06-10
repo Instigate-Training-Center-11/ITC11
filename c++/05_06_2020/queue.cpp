@@ -1,23 +1,35 @@
 #include "queue.hpp"
 #include <iostream>
 
-
-void Queue::printQ(void) {
-    printList();
+template <typename Type>
+Queue<Type>::Queue() {
 }
 
-void Queue::clearQ(void) {
-    clear();
+template <typename Type>
+Queue<Type>::Queue(int value):List<Type>(value){
 }
 
-void Queue::pushBackQ(int value) {
-    pushBack(value);
+template <typename Type>
+void Queue<Type>::size(void) {
+    this->getSize();
 }
 
-void Queue::popFrontQ(void) {
-    popFront();
+
+template <typename Type>
+void Queue<Type>::pop(void) {
+    this->removeAtIndex(0);
 }
 
-Queue::~Queue() {
-    clear();
+template <typename Type>
+void Queue<Type>::push(Type value) {
+    this->insertAtIndex(this->getSize(),value);
+}
+
+template <typename Type>
+void Queue<Type>::show(void) {
+    this->printList();
+}
+
+template <typename Type>
+Queue<Type>::~Queue() {
 }
