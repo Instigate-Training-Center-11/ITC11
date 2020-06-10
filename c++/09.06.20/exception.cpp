@@ -23,7 +23,6 @@ int main() {
     std::cout << "Div = " << div(num1, num2) << std::endl;
     for (int i = 0; i < 3; i++) {
         int e = arr[i];
-        int ex = arr[14];
         try {
             if (e < 0) {
                 throw e;
@@ -31,8 +30,11 @@ int main() {
         } catch (int e) {
             std::cout << "Wrong element: " << e << std::endl;
         }
-        throw ex;
+    }
+    try {
+        int *array = new int[100000000000000];
+    } catch (std::exception& a) {
+        std::cout << "Standart exception" << std::endl;
     }
     return 0;
 }
-
