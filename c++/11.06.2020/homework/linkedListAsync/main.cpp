@@ -1,7 +1,5 @@
 #include <iostream>
-
 #include "list.hpp"
-#include "node.hpp"
 
 /* Functions prototypes */
 int getInteger(std::string key, int number = 0);
