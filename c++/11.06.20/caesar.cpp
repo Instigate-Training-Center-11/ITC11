@@ -40,9 +40,7 @@ int main(int argc, char* argv[]) {
     } else {
         std::cout << "After Decrypting!" << std::endl;
         encrypt(str, shift);
-    } else {
-        std::cout << "After Decrypting!" << std::endl;
-        decrypt(str,shift);}
+    }
 
     return 0;
 }
