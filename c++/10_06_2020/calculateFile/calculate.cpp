@@ -4,7 +4,7 @@
 
 
 bool files(std::ifstream& file1, std::ifstream& file2, std::ifstream& file3);
-void arithmetic (std::ifstream& file1, std::ifstream& file2, std::ifstream& file3, std::ofstream& output);
+void arithmetic(std::ifstream& file1, std::ifstream& file2, std::ifstream& file3, std::ofstream& output);
 
 int main () {
 
@@ -43,7 +43,6 @@ bool files(std::ifstream& file1, std::ifstream& file2, std::ifstream& file3) {
 }
 
 void arithmetic (std::ifstream& file1, std::ifstream& file2, std::ifstream& file3,std::ofstream& output) {
-    std::cout << "-----------------------------------\n";
     std::string str1;
     std::string str2;
     std::string str3;
@@ -57,20 +56,20 @@ void arithmetic (std::ifstream& file1, std::ifstream& file2, std::ifstream& file
         num2 = std::stoi(str2);
         switch (c[0]) {
             case '+':
-                output << str1 << " + " << str2 << " = " << num1 + num2 <<  std::endl;
+                output << str1 << " + " << str2 << " = " << num1 + num2 << std::endl;
                 break;
             case '-':
-                output << str1 << " - " << str2 << " = " << num1 - num2 <<  std::endl;
+                output << str1 << " - " << str2 << " = " << num1 - num2 << std::endl;
                 break;
             case '*':
-                output << str1 << " * " << str2 << " = " << num1 * num2 <<  std::endl;
+                output << str1 << " * " << str2 << " = " << num1 * num2 << std::endl;
                 break;
             case '/':
                 try {
                     if (0 == num2 && num1 != 0) {
                         throw "you cannot divide the number by zero";
                     } else {
-                        output << str1 << " / " << str2 << " = " << num1 / num2 <<  std::endl;
+                        output << str1 << " / " << str2 << " = " << num1 / num2 << std::endl;
                     }
                 } catch (const char* exception) {
                     output << str1 << " / " << str2 << " = " << exception << std::endl;
