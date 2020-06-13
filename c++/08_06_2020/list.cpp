@@ -131,10 +131,10 @@ void List<Type>::insertAtIndex(unsigned int index, Type value) {
 
 template <typename Type>
 Type List<Type>::operator[](unsigned int index) const {
-    try {
-        if (index < 0 || index >= size) {
-        throw customException("Invalid index");
-        }
+    if (index < 0 || index >= size) {
+        std::cout << "Invalid index\n";
+        return 0;
+    }
     if (index > size && index != 0) {
         std::cout << "Index must be smaller or equally size"<< "\n";
         return 0;
@@ -144,10 +144,6 @@ Type List<Type>::operator[](unsigned int index) const {
         temp = temp->next;
     }
     return temp->value;
-    } catch (customException& Err) {
-        std::cerr << "An List exception occurred (" << Err.getError() << " [" << index << "] )\n";
-        std::cerr << "List Size = " << this->getSize() << "\n";
-    }
 }
 
 template <typename Type>
@@ -159,11 +155,11 @@ void List<Type>::printList(void) const {
     int index = 0;
     Node *temp = this->head;
     while (temp->next != nullptr) {
-        std::cout << "List Node[" << index << "] = " << temp->value << "\n";
+        std::cout << "Node[" << index << "] = " << temp->value << "\n";
         temp = temp->next;
         ++index;
     }
-    std::cout << "List Node[" << index << "] = " << temp->value << "\n";
+    std::cout << "Node[" << index << "] = " << temp->value << "\n";
 }
 
 template <typename Type>
