@@ -13,13 +13,9 @@ void Queue<Type>::size(void) {
     this->getSize();
 }
 
-template <typename Type>
-void Queue<Type>::clearQ(void) {
-    this->clear();
-}
-template <typename Type>
-void Queue<Type>::insertAtIndexQ(unsigned int index, int value) {
-    this->insertAtIndex(index,value);
+template<typename T>
+std::ostream& operator<< (std::ostream &out, const Queue<T> &obj) {
+    obj.printList();
 }
 
 template <typename Type>
@@ -39,5 +35,4 @@ void Queue<Type>::show(void) {
 
 template <typename Type>
 Queue<Type>::~Queue() {
-    clearQ();
 }

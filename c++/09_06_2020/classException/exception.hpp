@@ -1,17 +1,18 @@
 #ifndef _EXCEPTION_H_
 #define _EXCEPTION_H_
-#include <iostream>
 #include <string>
 
 
-class customException {
+class customException : public std::exception {
 private:
 	std::string m_error;
 public:
 	customException(std::string error):m_error(error){
 	}
-	const char* getError() {
-        return m_error.c_str();
+	virtual const char * what () const throw () {
+        m_error.c_str();
+		return m_error.c_str();
     }
 };
+
 #endif

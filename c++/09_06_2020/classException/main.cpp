@@ -5,33 +5,39 @@
 #include "list.hpp"
 
 int main() {
-
-    List<int> list;
-    Queue<int> obj(4);
-    for (int i = 0; i < 10; ++i){
-        list.insertAtIndex(i,i);
+    int countQ = -10;
+    int countL = -10;
+    try {
+        if (countQ < 0) {
+            throw customException("Error negative number");
+        }
+        if (countL < 0) {
+            throw customException("Error negative number");
+        }
+        List<int> list;
+        Queue<int> obj(-20);
+        for (int i = 0; i < 10; ++i){
+            list.insertAtIndex(i,i);
+            obj.insertAtIndexQ(i,i);
+        }
+        //list[50];
+        //list.printList();
+        //list.removeAtIndex(-2);
+        //list.printList();
+        //list.clear();
+        //obj.push(20);
+        //obj.show();
+        //obj.size();
+        //obj.pop();
+        //obj.clearQ();
+        //list.insertAtIndex(-10,1000);
+        //list.setAtIndex(-22,20);
+        //list.removeAtIndex(8);
+        //list.getSize();
+        //list[5];
+    } catch (customException& Err){
+        std::cout << Err.what () << std::endl;
     }
-
-    //std::cout << object.Size() << std::endl;
-    /* index,value */
-        list[8000];
-        //std::cerr << "An array exception occurred (" << exception.getError() << ")\n";
-    //list.printList();
-    list.removeAtIndex(0);
-    list.printList();
-    //list.clear();
-    //obj.push(8);
-    //obj.show();
-    //obj.size();
-    //obj.pop();
-    //obj.show();
-    //list.printList();
-    //list.insertAtIndex(0,1000);
-    //list.setAtIndex(5,20);
-    //list.removeAtIndex(8);
-    //list.getSize();
-    //list[5];
-
     return 0;
 }
 

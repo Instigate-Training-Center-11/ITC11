@@ -14,80 +14,82 @@ unsigned int List<Type>::getSize(void) const {
 
 template <typename Type>
 List<Type>::List(int countElements) {
-    if (0 == countElements) {
-        this->head = nullptr;
+    try {
+        if (countElements < 0) {
+            throw customException("Error negative number");
+        }
+        if (0 == countElements) {
+            this->head = nullptr;
+            this->size = 0;
+        }
         this->size = 0;
-    }
-    this->size = 0;
-    if (1 == countElements) {
-        insertAtIndex(this->size, 0);
-    }
-    while (countElements != 0) {
-        insertAtIndex(0, 0);
-        --countElements;
+        if (1 == countElements) {
+            insertAtIndex(this->size, 0);
+        }
+        while (countElements != 0) {
+            insertAtIndex(0, 0);
+            --countElements;
+        }
+    } catch (customException& Err){
+        std::cout << Err.what () << std::endl;
     }
 }
 
 template <typename Type>
 void List<Type>::setAtIndex(unsigned int index, Type value) {
-    if (0 == index &&  0 == this->size) {
-        std::cout << " Type the list is empty \n";
-        return;
+    try {
+        if (0 == this->size) {
+            throw customException("The list is empty");
+        } if (index < 0 || index >= this->size) {
+            throw customException("Invalid index");
+        } if (0 == index && this->size != 0) {
+            this->head->value = value;
+            return;
+        }
+        Node *temp = this->head;
+        for (int i = 0; i < index; ++i) {
+            temp = temp->next;
+        }
+        temp->value = value;
+    } catch (customException& Err) {
+        std::cout << Err.what () << std::endl;
     }
-    if (0 == index && this->size != 0) {
-        this->head->value = value;
-        return;
-    }
-    if (index < 0) {
-        std::cout << "Negative index "<< "\n";
-        return;
-    }
-    else if (index >= size && size != 0) {
-        std::cout << "Index must be smaller size"<< "\n";
-        return;
-    }
-    Node *temp = this->head;
-    for (int i = 0; i < index; ++i) {
-        temp = temp->next;
-    }
-    temp->value = value;
+
 }
 
 template <typename Type>
 void List<Type>::removeAtIndex(unsigned index) {
-    if (index < 0) {
-        return;
-    }
-    else if (index >= size && size != 0) {
-        std::cout << "Index must be smaller or equally  size"<< "\n";
-        return;
-    }
-    else if (0 == this->size) {
-        std::cout << "Type the list is empty"<< "\n";
-        return;
-    }
-    Node *temp = this->head;
-    if (1 == size) {
-        delete temp;
-        this->head = nullptr;
-    }
-    else if (2 == size && 1 == index) {
-        temp = temp->next;
-        delete temp;
-    }
-    else if (0 == index && this->size > 1) {
-        this->head = this->head->next;
-        delete temp;
-        --this->size;
-    }
-    else {
-        for (int i = 1; i < index; ++i) {
-            temp = temp->next;
+    try {
+        if (0 == this->size) {
+            throw customException("The list is empty");
+        } else if (index < 0 || index >= this->size) {
+            throw customException("Invalid index");
         }
-        Node *tmp = temp->next;
-        temp->next = tmp->next;
-        delete tmp;
-        tmp = nullptr;
+        Node *temp = this->head;
+        if (1 == size) {
+            delete temp;
+            this->head = nullptr;
+        }
+        else if (2 == size && 1 == index) {
+            temp = temp->next;
+            delete temp;
+        }
+        else if (0 == index && this->size > 1) {
+            this->head = this->head->next;
+            delete temp;
+            --this->size;
+        }
+        else {
+            for (int i = 1; i < index; ++i) {
+                temp = temp->next;
+            }
+            Node *tmp = temp->next;
+            temp->next = tmp->next;
+            delete tmp;
+            tmp = nullptr;
+        }
+    } catch (customException& Err) {
+        std::cout << Err.what () << std::endl;
     }
 }
 
@@ -101,69 +103,64 @@ void List<Type>::insertAtIndex(unsigned int index, Type value) {
         ++this->size;
         return;
     }
-    if (index < 0) {
-        std::cout << "Negative index "<< "\n";
-        return;
-    }
-    else if (index > size) {
-        std::cout << "Index must be smaller or equally size"<< "\n";
-        return;
-    }
-    else if (0 == index && 0 == size) {
-        Node *newNode = new Node();
-        newNode->value = value;
-        this->head = newNode;
-        newNode->next = nullptr;
-        ++this->size;
-    }
-    else {
-        Node *temp = this->head;
-        for (int i = 0; i < index - 1; ++i) {
-            temp = temp->next;
+    try {
+        if (index < 0 || index > this->size) {
+            throw customException("Invalid index");
+        } else if (0 == index && 0 == size) {
+            Node *newNode = new Node();
+            newNode->value = value;
+            this->head = newNode;
+            newNode->next = nullptr;
+            ++this->size;
+        } else {
+            Node *temp = this->head;
+            for (int i = 0; i < index - 1; ++i) {
+                temp = temp->next;
+            }
+            Node *newNode = new Node();
+            newNode->next = temp->next;
+            temp->next = newNode;
+            newNode->value = value;
+            ++this->size;
         }
-        Node *newNode = new Node();
-        newNode->next = temp->next;
-        temp->next = newNode;
-        newNode->value = value;
-        ++this->size;
+    } catch (customException& Err) {
+        std::cout << Err.what () << std::endl;
     }
 }
 
 template <typename Type>
 Type List<Type>::operator[](unsigned int index) const {
     try {
-        if (index < 0 || index >= size) {
-        throw customException("Invalid index");
+        if (index < 0 || index >= this->size) {
+            throw customException("Invalid index");
         }
-    if (index > size && index != 0) {
-        std::cout << "Index must be smaller or equally size"<< "\n";
-        return 0;
-    }
-    Node *temp = this->head;
-    for (int i = 0; i < index; ++i) {
-        temp = temp->next;
-    }
-    return temp->value;
+        Node *temp = this->head;
+        for (int i = 0; i < index; ++i) {
+            temp = temp->next;
+        }
+        return temp->value;
     } catch (customException& Err) {
-        std::cerr << "An List exception occurred (" << Err.getError() << " [" << index << "] )\n";
-        std::cerr << "List Size = " << this->getSize() << "\n";
+        std::cout << Err.what () << std::endl;
     }
 }
 
 template <typename Type>
 void List<Type>::printList(void) const {
-    if ( 0 == this->size) {
-        std::cout << " Type the list is empty \n";
-        return;
+    try {
+        if (0 == this->size) {
+            throw customException("The list is empty");
+        }
+        int index = 0;
+        Node *temp = this->head;
+        while (temp->next != nullptr) {
+            std::cout << "Node[" << index << "] = " << temp->value << "\n";
+            temp = temp->next;
+            ++index;
+        }
+        std::cout << "Node[" << index << "] = " << temp->value << "\n";
+    } catch (customException& Err) {
+        std::cout << Err.what () << std::endl;
     }
-    int index = 0;
-    Node *temp = this->head;
-    while (temp->next != nullptr) {
-        std::cout << "List Node[" << index << "] = " << temp->value << "\n";
-        temp = temp->next;
-        ++index;
-    }
-    std::cout << "List Node[" << index << "] = " << temp->value << "\n";
 }
 
 template <typename Type>
