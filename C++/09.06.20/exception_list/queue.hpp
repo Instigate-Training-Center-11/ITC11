@@ -5,7 +5,7 @@
 
 
 template<typename Type>
-class Queue : protected List<Type> {
+class Queue : public List<Type> {
     public:
         Queue();
         Queue(int, Type);

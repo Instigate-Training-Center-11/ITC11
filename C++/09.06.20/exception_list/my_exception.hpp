@@ -17,5 +17,4 @@ class my_exception : protected std::exception {
     }
 };
 
-#include "my_exception.hpp"
 #endif
