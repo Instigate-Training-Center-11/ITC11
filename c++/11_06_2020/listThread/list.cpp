@@ -1,6 +1,7 @@
 #include <iostream>
 #include "list.hpp"
 #include <thread>
+#include <mutex>
 #include <chrono>
 
 template <typename Type>
@@ -14,16 +15,30 @@ unsigned int List<Type>::getSize(void) const {
     return this->size;
 }
 
+std::mutex m;
 template <typename Type>
-void List<Type>::runMultiThread() {
-    std::cout<<"thread 1\n";
-    std::this_thread::sleep_for(std::chrono::milliseconds(500));
-    std::thread insertThread(&List<Type>::insertAtIndex,this, 6, 1000);
-    insertThread.join();
-    std::cout<<"thread 2\n";
-    std::this_thread::sleep_for(std::chrono::milliseconds(1000));
-    std::thread deleteThread(&List<Type>::removeAtIndex, this,8);
-    deleteThread.join();
+void List<Type>::deleteThread(unsigned int index) {
+    m.lock();
+    std::cout <<"thread removeAtIndex\n";
+    std::this_thread::sleep_for(std::chrono::milliseconds(5000));
+    std::thread::id this_id = std::this_thread::get_id();
+    std::cout << "threadId = " << this_id <<"\n";
+    std::thread th(&List<Type>::removeAtIndex, this,index);
+    m.unlock();
+    th.join();
+}
+
+std::mutex t;
+template <typename Type>
+void List<Type>::insertAtIndexThread(unsigned int index, int value) {
+    t.lock();
+    std::cout <<"thread insertAtIndex\n";
+    std::this_thread::sleep_for(std::chrono::milliseconds(5000));
+    std::thread::id this_id = std::this_thread::get_id();
+    std::cout << "threadId = " << this_id <<"\n";
+    std::thread th1(&List<Type>::insertAtIndex,this,index,value);
+    t.unlock();
+    th1.join();
 }
 
 template <typename Type>

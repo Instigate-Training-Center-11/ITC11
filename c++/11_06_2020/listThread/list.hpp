@@ -28,8 +28,8 @@ public:
     /* Set element by index */
     void setAtIndex(unsigned int, Type);
     /* Get element by index */
-    void runMultiThread();
-
+    void deleteThread(unsigned int);
+    void insertAtIndexThread(unsigned int, int);
     Type operator[](unsigned int) const;
     /* Print the whole list */
     void printList(void) const;
