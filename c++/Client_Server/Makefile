@@ -1,7 +1,9 @@
+CXX=g++
+
 all: server client
 
 server:
-	g++ Server.cpp -o server -w
+	$(CXX) Server.cpp -o server -w
 
 client: 
-	g++ Client.cpp -o client -w
+	$(CXX) Client.cpp -o client -w
