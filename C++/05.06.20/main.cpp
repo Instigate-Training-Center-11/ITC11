@@ -9,6 +9,5 @@ int main() {
     que.push_back_queue(777);
     que.pop_front_queue();
     que.print_queue();
-    // que.get_max();
     return 0;
 }

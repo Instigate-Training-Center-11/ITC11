@@ -1,3 +1,5 @@
+#include "node.hpp"
+
 #ifndef LIST_HPP
 #define LIST_HPP
 
