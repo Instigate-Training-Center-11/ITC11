@@ -6,8 +6,8 @@
 
 int main() {
 
-    List<int> list;
-    Queue<int> obj(4);
+    List list;
+    Queue obj(4);
     for (int i = 0; i < 10; ++i){
         list.insertAtIndex(i,i);
     }

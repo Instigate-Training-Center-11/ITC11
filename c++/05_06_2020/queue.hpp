@@ -2,21 +2,16 @@
 #define _QUEUE_H
 
 #include "list.hpp"
-#include "exception.hpp"
 
-template <typename Type>
-
-class Queue : protected List<Type> {
+class Queue : protected List {
 public:
     Queue();
     Queue(int);
     void show(void);
-    void size(void);
+    unsigned int size(void);
     void pop(void);
-    void push(Type);
+    void push(int value);
     ~Queue();
 };
-
-#include "queue.cpp"
 
 #endif

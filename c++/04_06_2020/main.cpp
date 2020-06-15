@@ -16,7 +16,8 @@ int main() {
     //list.insertAtIndex(0,1000);
     //list.setAtIndex(5,20);
     //list.removeAtIndex(8);
-    //list.printList();
+    list.printList();
     //list.getSize();
+
     return 0;
 }

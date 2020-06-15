@@ -1,19 +1,16 @@
 #include <iostream>
 #include "list.hpp"
 
-template <typename Type>
-List<Type>::List(void) {
+List::List(void) {
     this->head = nullptr;
     this->size = 0;
 }
 
-template <typename Type>
-unsigned int List<Type>::getSize(void) const {
+unsigned int List::getSize(void) const {
     return this->size;
 }
 
-template <typename Type>
-List<Type>::List(int countElements) {
+List::List(int countElements) {
     if (0 == countElements) {
         this->head = nullptr;
         this->size = 0;
@@ -28,8 +25,7 @@ List<Type>::List(int countElements) {
     }
 }
 
-template <typename Type>
-void List<Type>::setAtIndex(unsigned int index, Type value) {
+void List::setAtIndex(unsigned int index, int value) {
     if (0 == index &&  0 == this->size) {
         std::cout << " Type the list is empty \n";
         return;
@@ -53,8 +49,7 @@ void List<Type>::setAtIndex(unsigned int index, Type value) {
     temp->value = value;
 }
 
-template <typename Type>
-void List<Type>::removeAtIndex(unsigned index) {
+void List::removeAtIndex(unsigned index) {
     if (index < 0) {
         return;
     }
@@ -91,8 +86,7 @@ void List<Type>::removeAtIndex(unsigned index) {
     }
 }
 
-template <typename Type>
-void List<Type>::insertAtIndex(unsigned int index, Type value) {
+void List::insertAtIndex(unsigned int index, int value) {
     if (0 == index && size != 0) {
         Node *newNode = new Node();
         newNode->next = this->head;
@@ -129,12 +123,11 @@ void List<Type>::insertAtIndex(unsigned int index, Type value) {
     }
 }
 
-template <typename Type>
-Type List<Type>::operator[](unsigned int index) const {
-    try {
-        if (index < 0 || index >= size) {
-        throw customException("Invalid index");
-        }
+int List::operator[](unsigned int index) const {
+    if (index < 0 || index >= size) {
+        std::cout << "Index must be smaller or equally size\n";
+        return 0;
+    }
     if (index > size && index != 0) {
         std::cout << "Index must be smaller or equally size"<< "\n";
         return 0;
@@ -144,14 +137,9 @@ Type List<Type>::operator[](unsigned int index) const {
         temp = temp->next;
     }
     return temp->value;
-    } catch (customException& Err) {
-        std::cerr << "An List exception occurred (" << Err.getError() << " [" << index << "] )\n";
-        std::cerr << "List Size = " << this->getSize() << "\n";
-    }
 }
 
-template <typename Type>
-void List<Type>::printList(void) const {
+void List::printList(void) const {
     if ( 0 == this->size) {
         std::cout << " Type the list is empty \n";
         return;
@@ -166,15 +154,13 @@ void List<Type>::printList(void) const {
     std::cout << "List Node[" << index << "] = " << temp->value << "\n";
 }
 
-template <typename Type>
-void List<Type>::clear(void) {
+void List::clear(void) {
     while (this->size != 0) {
         removeAtIndex(0);
         --this->size;
     }
 }
 
-template <typename Type>
-List<Type>::~List(void) {
+List::~List(void) {
     clear();
 }
