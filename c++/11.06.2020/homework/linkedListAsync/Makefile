@@ -1,22 +1,30 @@
-flags = -std=c++11 -pthread
-compiler=g++
+FLAGS = -std=c++11 -pthread
+COMPILER = g++
+DIR = build
 
-buildg: main.o list.o node.o
-	${compiler} main.o list.o node.o ${flags} -o build
+INCLUDES = -I./list -I./node
+
+LIST=-L/list/
+NODE=-L/node/
+MAIN=-L/main/
+
+build: main.o list.o node.o
+	${COMPILER} ${DIR}/main.o ${DIR}/list.o ${DIR}/node.o ${FLAGS} -o ${DIR}/build
 
 main.o: main.cpp
-	${compiler} main.cpp -c ${flags} 
+	mkdir -p build
+	${COMPILER} ${INCLUDES} main.cpp -c ${FLAGS} -o ${DIR}/main.o
 
-list.o: list.cpp
-	${compiler} list.cpp -c ${flags} 
+list.o: list/list.cpp
+	${COMPILER} -I./node list/list.cpp -c ${FLAGS} -o ${DIR}/list.o
 
-node.o: node.cpp
-	${compiler} node.cpp -c ${flags} 
+node.o: node/node.cpp
+	${COMPILER} ./node/node.cpp -c ${FLAGS} -o ${DIR}/node.o
 
 .PHONY: clean
 clean:
-	rm -f *.o build
+	rm -rf ${DIR}/*.o ${DIR}/build ${DIR}
 
 .PHONY: run
 run:
-	./build
+	./${DIR}/build
