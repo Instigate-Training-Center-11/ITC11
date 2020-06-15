@@ -9,5 +9,10 @@ node.o: node.h node.cpp
 	g++ -c node.cpp -o $@
 main.o: main.cpp
 	g++ -c main.cpp -o $@
+.PHONY: clean
+
+clean:
+	rm *.o
+	rm queue
 
 
