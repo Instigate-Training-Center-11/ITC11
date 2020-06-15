@@ -58,13 +58,17 @@
 │   │       └── node.hpp
 │   ├── 05.06.2020
 │   │   └── queue
-│   │       ├── list.cpp
-│   │       ├── list.hpp
+│   │       ├── list
+│   │       │   ├── list.cpp
+│   │       │   └── list.hpp
 │   │       ├── main.cpp
-│   │       ├── node.cpp
-│   │       ├── node.hpp
-│   │       ├── queue.cpp
-│   │       └── queue.hpp
+│   │       ├── Makefile
+│   │       ├── node
+│   │       │   ├── node.cpp
+│   │       │   └── node.hpp
+│   │       └── queue
+│   │           ├── queue.cpp
+│   │           └── queue.hpp
 │   ├── 08.06.2020
 │   │   └── queueWithTemplates
 │   │       ├── list.cpp
@@ -82,12 +86,10 @@
 │   │   │       ├── list.hpp
 │   │   │       ├── main.cpp
 │   │   │       ├── Makefile
-│   │   │       ├── make.out
 │   │   │       ├── node.cpp
 │   │   │       └── node.hpp
 │   │   └── homework
 │   │       └── queueWithErrorHandling
-│   │           ├── a.out
 │   │           ├── list.cpp
 │   │           ├── list.hpp
 │   │           ├── main.cpp
@@ -114,14 +116,16 @@
 │   │   │   └── thread.cpp
 │   │   └── homework
 │   │       └── linkedListAsync
-│   │           ├── a.out
-│   │           ├── list.cpp
-│   │           ├── list.hpp
+│   │           ├── list
+│   │           │   ├── list.cpp
+│   │           │   └── list.hpp
 │   │           ├── main.cpp
-│   │           ├── node.cpp
-│   │           └── node.hpp
+│   │           ├── Makefile
+│   │           └── node
+│   │               ├── node.cpp
+│   │               └── node.hpp
 │   └── 12.06.2020
 │       └── clientServer
-│           └── clientServer.cpp
+│           ├── clientServer.cpp
+│           └── Makefile
 └── Readme
-

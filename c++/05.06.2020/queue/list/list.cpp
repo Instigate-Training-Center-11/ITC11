@@ -1,6 +1,5 @@
 #include <iostream>
 #include "list.hpp"
-#include <thread>
 
 /* Get length of list */
 int List::getLength() {
@@ -47,13 +46,8 @@ void List::insertLast(int value) {
     }
 }
 
-bool List::asyncInsertElement(int index, int value) {
-    std::thread first(&List::syncInsertElement, this, index, value);
-    first.join();
-}
-
 /* Insert to list new element by index */
-bool List::syncInsertElement(int index, int value) {
+bool List::insertElement(int index, int value) {
     if (index > length) {
         return false;
     }
@@ -78,13 +72,8 @@ bool List::syncInsertElement(int index, int value) {
     return true;
 }
 
-bool List::asyncRemoveElement(int index) {
-    std::thread first(&List::syncRemoveElement, this, index);
-    first.join();
-}
-
 /* Remove element from list by index */
-bool List::syncRemoveElement(int index) {
+bool List::removeElement(int index) {
     if (index > length - 1) {
         return false;
     }
@@ -156,7 +145,7 @@ bool List::isEmpty() {
     return (0 == length) ? true : false;
 }
 
-/* Default onstructor */
+/* Default constructor */
 List::List() {
     length = 0;
 }

@@ -1,5 +1,4 @@
 #include <iostream>
-
 #include "queue.hpp"
 
 /* Functions prototypes */

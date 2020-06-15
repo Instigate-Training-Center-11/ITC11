@@ -4,8 +4,10 @@
 #include "node.hpp"
 
 class List {
-    private:
+    protected:
         int length;
+
+    private:
         Node* head;
         void insertFirst(int);
         void insertLast(int);
@@ -15,10 +17,8 @@ class List {
     public:
         int getLength();
         int getElement(int);
-        bool syncInsertElement(int, int);
-        bool asyncInsertElement(int, int);
-        bool syncRemoveElement(int);
-        bool asyncRemoveElement(int);
+        bool insertElement(int, int);
+        bool removeElement(int);
         bool empty();
         void show();
         bool isEmpty();

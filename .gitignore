@@ -1,4 +1,7 @@
 *.out
 .vscode/*
 *.vscode/settings.json
-*/.vscode/**/*
+*/.vscode/*
+out
+/build
+build
