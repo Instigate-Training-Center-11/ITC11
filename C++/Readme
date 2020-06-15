@@ -1,0 +1,64 @@
+.
+├── 01.06.20
+│   └── task.cpp
+├── 02.06.20
+│   ├── Chars.cpp
+│   ├── Fact.cpp
+│   ├── matrix.cpp
+│   └── Triangle.cpp
+├── 04.06.20
+│   ├── list.cpp
+│   ├── list.hpp
+│   └── main.cpp
+├── 05.06.20
+│   ├── List
+│   ├── list.cpp
+│   ├── list.hpp
+│   ├── main.cpp
+│   ├── makefile
+│   ├── queue.cpp
+│   └── queue.hpp
+├── 08.06.20
+│   ├── list.hpp
+│   ├── list.tpp
+│   ├── main.cpp
+│   ├── queue.hpp
+│   └── queue.tpp
+├── 09.06.20
+│   ├── array_ex.cpp
+│   ├── divide_ex.cpp
+│   ├── exception_list
+│   │   ├── list.hpp
+│   │   ├── list.tpp
+│   │   ├── main.cpp
+│   │   ├── my_exception.hpp
+│   │   ├── queue.hpp
+│   │   └── queue.tpp
+│   └── <<overriding
+│       ├── list.cpp
+│       ├── list.hpp
+│       ├── main.cpp
+│       └── node.hpp
+├── 10.06.20
+│   ├── Reverse
+│   │   ├── file1.txt
+│   │   ├── file2.txt
+│   │   └── reverse.cpp
+│   ├── task1
+│   │   ├── first
+│   │   ├── math_operations.cpp
+│   │   ├── oper
+│   │   ├── result
+│   │   └── second
+│   └── task2
+│       ├── c++.jpg
+│       └── copy.cpp
+├── 11.06.20
+│   ├── caesar.cpp
+│   ├── file1.txt
+│   └── file2.txt
+└── 12.06.20
+    ├── client.cpp
+    └── server.cpp
+
+14 directories, 47 files
