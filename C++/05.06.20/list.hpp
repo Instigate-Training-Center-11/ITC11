@@ -10,17 +10,6 @@ const int ERROR_101 = 101;
 const int ERROR_202 = 202;
 
 class List {
-    class Node {
-        public:
-        Node* next;
-        int value;
-
-        /* Constructor with default arguments for class Node */
-        Node(int value = 0, Node* node = nullptr) : value(value), next(node) {
-
-        }
-    };
-
     int size;
     Node* head;
     Node* tail;
