@@ -1,12 +1,7 @@
 FLAGS = -std=c++11 -pthread
 COMPILER = g++
 DIR = build
-
 INCLUDES = -I./list -I./node
-
-LIST=-L/list/
-NODE=-L/node/
-MAIN=-L/main/
 
 build: main.o list.o node.o
 	${COMPILER} ${DIR}/main.o ${DIR}/list.o ${DIR}/node.o ${FLAGS} -o ${DIR}/build
