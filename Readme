@@ -8,6 +8,13 @@
 # Directory structure
 
 .
+├── assembly
+│   ├── hello
+│   │   ├── helloWorld.asm
+│   │   └── Makefile
+│   ├── infinitLoop.asm
+│   ├── name.asm
+│   └── printLoop.asm
 ├── bash
 │   ├── 18.05
 │   │   ├── delComments.sh
