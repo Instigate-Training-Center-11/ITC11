@@ -63,15 +63,13 @@ public:
 	// reserve() will never decrase the capacity.
 	void reserve(int newmalloc);
 
-	// Changes the Vector's size.
-	// If the newsize is smaller, the last elements will be lost.
-	// Has a default value param for custom values when resizing.
+	
 	void resize(int newsize, T val = T());
 
-	// Returns the size of the Vector (number of elements). 
+	
 	size_t size() const;
 
-	// Returns the maximum number of elements the Vector can hold
+	
 	size_t max_size() const;
 
 	// Reduces capcity to fit the size
