@@ -11,5 +11,8 @@ int main() {
     vec.push_back(6);
     vec.push_back(7);
     vec.print();
+    Vector<int>::Iterator it = vec.begin();
+    std::cout << *it << std::endl;
+    std::cout << *(it + 5);
     return 0;
 }

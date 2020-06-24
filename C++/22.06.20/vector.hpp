@@ -6,13 +6,29 @@ class Vector {
     int size;
     int capacity;
 
-    // public:
-    // class Iterator {
-    //     public:
-    //     T* iter = begin();
+    public:
 
-    // };
-    friend class Iterator;
+    class Iterator {
+    public:
+        T* iter;
+        Iterator(T* iter) : iter(iter) { }
+
+        friend std::ostream& operator<<(std::ostream& out, Vector<T>::Iterator& it) {
+            out << it.iter << std::endl;
+            return out;
+        }
+
+        T& operator*() {
+            return *iter;
+        }
+
+        auto operator+(int value ) {
+            this->iter+=value;
+            return *this;
+
+        }
+    };
+
     Vector() {
         array = new T[0];
         size = 0;
