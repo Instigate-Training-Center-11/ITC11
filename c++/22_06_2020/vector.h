@@ -9,15 +9,20 @@ class MyVector {
     unsigned int size;
     unsigned int reserveSize;
     public:
+    /* default constructor: Constructs an empty container, with no elements. */
     MyVector(void);
     MyVector(unsigned int constructor_size, Type value);
     MyVector(unsigned int vSize);
     ~MyVector(void);
+    void shrinkToFit(void);
+    void reserve (unsigned int res);
+    bool empty(void) const;
     unsigned int sizeCapacity(void)const;
     unsigned int getSize(void) const;
-    void PushBack(Type newelement);
+    void PushBack(const Type& newelement);
+    void popBack(void);
     void print(void) const;
 };
-
+#include "iterator.h"
 #include "vector.cpp"
 #endif
