@@ -8,7 +8,7 @@ MyVector<Type>::MyVector() {
     arr = new Type[0];
     arr = nullptr;
     this->size = 0;
-    this->reserveSize = 0;
+    this->reserveSize = 20;
     std::cout << "default const\n";
 }
 
@@ -24,6 +24,7 @@ MyVector<Type>::MyVector(unsigned int vSize) {
         std::cerr << "Incorrect index!!!" << e.what() << std::endl;
         this->size = 0;
     }
+    this->reserveSize = 0;
 }
 template <typename Type>
 MyVector<Type>::MyVector(unsigned int vSize, Type value) {
@@ -39,7 +40,6 @@ MyVector<Type>::MyVector(unsigned int vSize, Type value) {
     }
 }
 
-
 template <typename Type>
 MyVector<Type>::~MyVector() {
     if (size == 0) {
@@ -49,6 +49,11 @@ MyVector<Type>::~MyVector() {
         delete [] arr;
     }
     arr = nullptr;
+}
+
+template <typename Type>
+Type* MyVector<Type>::operator[] (unsigned int index) {
+    return  &arr[index];
 }
 
 template <typename Type>
@@ -147,6 +152,16 @@ void MyVector<Type>::popBack(void) {
         --this->size;
         ++this->reserveSize;
     }
+}
+
+template <typename Type>
+Type* MyVector<Type>::begin(void) {
+    return arr;
+}
+
+template <typename Type>
+Type* MyVector<Type>::end(void) {
+    return arr + size - 1;
 }
 
 template <typename Type>

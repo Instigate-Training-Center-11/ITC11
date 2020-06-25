@@ -4,12 +4,11 @@
 template <typename Type>
 
 class MyVector {
-
     Type* arr;
     unsigned int size;
     unsigned int reserveSize;
     public:
-    /* default constructor: Constructs an empty container, with no elements. */
+
     MyVector(void);
     MyVector(unsigned int constructor_size, Type value);
     MyVector(unsigned int vSize);
@@ -21,8 +20,12 @@ class MyVector {
     unsigned int getSize(void) const;
     void PushBack(const Type& newelement);
     void popBack(void);
+    void popFront(void);
     void print(void) const;
+    Type* begin(void);
+    Type back(void);
+
 };
-#include "iterator.h"
+
 #include "vector.cpp"
 #endif
