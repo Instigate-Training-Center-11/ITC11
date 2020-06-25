@@ -92,8 +92,8 @@ void Tree<T>::inorderPrint(Node<T> *leaf){
 
 template <typename T>
 void Tree<T>::inorderPrint(){
-        inorderPrint(root);
-        std::cout << "\n";
+    inorderPrint(root);
+    std::cout << "\n";
 }
 
 template <typename T>
@@ -112,6 +112,6 @@ void Tree<T>::levelOrderPrint(Node<T>* leaf) {
 }
 
 /*template <typename T>
-void Tree<T>::display() {
-    
-}*/
+ * void Tree<T>::display() {
+ *     
+ *     }*/
