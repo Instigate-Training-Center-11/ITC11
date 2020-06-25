@@ -13,15 +13,6 @@ class Queue : private List {
         void display();
         /*Destructor*/
         ~Queue();
-    private:
-        struct Node {
-            int value;
-            Node* next;
-            Node(int newValue)
-            {
-                value = newValue;
-                next = NULL;
-            }
-        };
-        Node* m_head;
 };
+
+#endif

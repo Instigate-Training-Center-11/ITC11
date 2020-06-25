@@ -86,6 +86,7 @@ void Tree<T>::inorderPrint(Node<T> *leaf){
     if (NULL != leaf){
         inorderPrint(leaf->left);
         std::cout << leaf->value << " ";
+        inorderPrint(leaf->right);
     }
 }
 
