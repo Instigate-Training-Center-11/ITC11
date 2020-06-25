@@ -17,6 +17,8 @@ class Tree {
         void insert(T value, Node<T> *leaf);
         Node<T> *search(T value, Node<T> *leaf);
         void inorderPrint(Node<T>* leaf);
+        void postorderPrint(Node<T>* leaf);
+        void preorderPrint(Node<T>* leaf);
         void levelOrderPrint(Node<T>* leaf);
     public:
         /*constructor*/
@@ -29,7 +31,11 @@ class Tree {
         void destroyTree();
         /*searc element */
         Node<T> *search(T value);
+        Node<T> *getNodeByValue(Node<T> *root, T value);
+        void removeNodeByPtr(Node *target);
         void inorderPrint();
+        void postorderPrint();
+        void preorderPrint();
         void levelOrderPrint();
 };
 
