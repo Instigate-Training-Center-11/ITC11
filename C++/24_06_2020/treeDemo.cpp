@@ -38,7 +38,7 @@ public:
 };
 
 class TreeDemo{
-	Node *root = NULL;
+	Node *root;
 public:
 	TreeDemo();
 	~TreeDemo();
