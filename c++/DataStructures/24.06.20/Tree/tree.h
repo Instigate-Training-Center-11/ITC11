@@ -31,8 +31,12 @@ class Tree {
         void destroyTree();
         /*searc element */
         Node<T> *search(T value);
-        Node<T> *getNodeByValue(Node<T> *root, T value);
-        void removeNodeByPtr(Node *target);
+        /*get element by value*/
+        Node<T> *getNodeByValue(Node<T> *leaf, T value);
+        /*remove element*/
+        Node<T> *removeNodeByPtr(Node<T> *leaf, T value);
+        /*find min value*/
+        Node<T>* findMinValue(Node<T>*);
         void inorderPrint();
         void postorderPrint();
         void preorderPrint();

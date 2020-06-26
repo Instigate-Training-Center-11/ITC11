@@ -1,4 +1,5 @@
 #include <iostream>
+#include <queue>
 #include "tree.h"
 
 template <typename T>
@@ -67,7 +68,7 @@ Node<T> *Tree<T>::search(T value, Node<T> *leaf) {
             return search(value, leaf->right);
         }
     } else {
-        return 0;
+        return NULL;
     }
 }
 
@@ -82,12 +83,58 @@ void Tree<T>::destroyTree() {
 }
 
 template <typename T>
-void Tree<T>::inorderPrint(Node<T> *leaf){
-    if (NULL != leaf){
-        inorderPrint(leaf->left);
-        std::cout << leaf->value << " ";
-        inorderPrint(leaf->right);
+Node<T> *Tree<T>::getNodeByValue(Node<T> *leaf, T value) {
+    if(leaf == NULL) {
+        return leaf;
+    } else if (value > leaf->value) {
+        return getNodeByValue(leaf->right, value);
+    } else {
+        return getNodeByValue(leaf->left, value);
     }
+}
+
+template <typename T>
+Node<T>* Tree<T>::findMinValue(Node<T>* leaf) {
+    Node<T> *current = leaf;
+    while (current->left != NULL) {
+        current = current->left;
+    }
+    return current;
+}
+
+template <typename T>
+Node<T>* Tree<T>::removeNodeByPtr(Node<T> *leaf, T value) {
+    if (leaf == NULL) {
+        return leaf;
+    } else if (value < leaf->value) {
+        leaf->left = removeNodeByPtr(leaf->left, value);
+    } else if (value > root->value) {
+        leaf->right = removeNodeByPtr(leaf->right, value);
+    } else {
+        /*no child*/
+        if (leaf->left == NULL && leaf->right == NULL) {
+            delete leaf;
+            leaf = NULL;
+            return NULL;
+        } /*one child*/
+        else if (leaf->left == NULL) {
+            Node<T> *tmp = leaf;
+            leaf = leaf->right;
+            delete tmp;
+            return leaf;
+        } else if (leaf->right == NULL) {
+            Node<T> *tmp = leaf;
+            leaf = leaf->left;
+            delete tmp;
+            return leaf;
+        } /*two child*/
+        else {
+            Node<T> *tmp = findMinValue(leaf->right);
+            leaf->value = tmp->value;
+            leaf->right = removeNodeByPtr(leaf->right, tmp->value);
+        }
+    }
+    return leaf;
 }
 
 template <typename T>
@@ -97,13 +144,22 @@ void Tree<T>::inorderPrint(){
 }
 
 template <typename T>
-void Tree<T>::levelOrderPrint() {
-    levelOrderPrint(root);
-    std::cout << "\n";
+void Tree<T>::inorderPrint(Node<T> *leaf){
+    if (NULL != leaf){
+        inorderPrint(leaf->left);
+        std::cout << leaf->value << " ";
+        inorderPrint(leaf->right);
+    }
 }
 
 template <typename T>
-void Tree<T>::levelOrderPrint(Node<T>* leaf) {
+void Tree<T>::preorderPrint(){
+        preorderPrint(root);
+        std::cout << "\n";
+}
+
+template <typename T>
+void Tree<T>::preorderPrint(Node<T>* leaf) {
     if(NULL != leaf){
         std::cout << leaf->value << " ";
         inorderPrint(leaf->left);
@@ -111,7 +167,38 @@ void Tree<T>::levelOrderPrint(Node<T>* leaf) {
     }
 }
 
-/*template <typename T>
- * void Tree<T>::display() {
- *     
- *     }*/
+template <typename T>
+void Tree<T>::postorderPrint(){
+    postorderPrint(root);
+    std::cout << "\n";
+}
+
+template <typename T>
+void Tree<T>::postorderPrint(Node<T>* leaf) {
+    if(NULL != leaf){
+        inorderPrint(leaf->left);
+        inorderPrint(leaf->right);
+        std::cout << leaf->value << " ";
+    }
+}
+
+template <typename T>
+void Tree<T>::levelOrderPrint() {
+    if (root != NULL) {
+        std::queue<Node<T>*> q;
+        q.push(root);
+        while (!q.empty()) {
+            Node<T>* current = q.front();
+            std::cout << current->value << " ";
+            q.pop();
+            if (current->left) {
+                q.push(current->left);
+            }
+
+            if (current->right) {
+                q.push(current->right);
+            }
+        }
+        std::cout << std::endl;
+    }
+}
