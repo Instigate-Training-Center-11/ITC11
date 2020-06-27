@@ -4,40 +4,65 @@
 #include "vector.h"
 
 template <typename Type>
-MyVector<Type>::MyVector() {
-    arr = new Type[0];
-    arr = nullptr;
-    this->size = 0;
-    this->reserveSize = 20;
-    std::cout << "default const\n";
+void MyVector<Type>::resize(unsigned int sizeVector, Type value) {
+    if (sizeVector > reserveSize) {
+        Type* tempArr = new Type[2 * sizeVector];
+        for (unsigned int i = 0; i < 2 * sizeVector; ++i) {
+            if (i < size) {
+                tempArr[i] = arr[i];
+            } else if (i >= size && i < sizeVector) {
+                tempArr[i] = value;
+            } else {
+                tempArr[i] = 0;
+            }
+        }
+        delete [] arr;
+        arr = tempArr;
+        this->size = sizeVector;
+        this->reserveSize = sizeVector;
+        return;
+    }
+
+    if (sizeVector > size) {
+        for (unsigned int i = 0; i < sizeVector; ++i) {
+            PushBack(value);
+        }
+        return;
+    }
+
+    if (sizeVector < size) {
+        Type* tempArr = new Type[sizeVector];
+        for (unsigned int i = 0; i < sizeVector; ++i) {
+            tempArr[i] = arr[i];
+        }
+        delete [] arr;
+        arr = tempArr;
+        this->size = sizeVector;
+        return;
+    }
+
 }
 
 template <typename Type>
-MyVector<Type>::MyVector(unsigned int vSize) {
-    try {
-        this->size = vSize;
-        arr = new Type[vSize];
-	    for(int i = 0; i < vSize; ++i) {
-	    	arr[i] = 0;
-	    }
-    } catch (const std::exception& e) {
-        std::cerr << "Incorrect index!!!" << e.what() << std::endl;
+MyVector<Type>::MyVector(unsigned int elementcount, Type value) {
+    if (elementcount == 0) {
+        arr = new Type[0];
+        arr = nullptr;
         this->size = 0;
-    }
-    this->reserveSize = 0;
-}
-template <typename Type>
-MyVector<Type>::MyVector(unsigned int vSize, Type value) {
-    this->size = vSize;
-    try {
-        arr = new Type[vSize];
-	    for(int i = 0; i < vSize ; ++i) {
+        this->reserveSize = 20;
+    } else {
+        this->size = elementcount;
+        this->reserveSize = 0;
+        arr = new Type[elementcount];
+	    for(int i = 0; i < elementcount ; ++i) {
 	    	arr[i] = value;
 	    }
-    } catch (const std::exception& e) {
-        std::cerr << "Incorrect index!!!" << e.what() << std::endl;
-        this->size = 0;
     }
+}
+
+template <typename Type>
+MyVector<Type>::MyVector(MyVector<Type> &object) {
+    *this = object;
 }
 
 template <typename Type>
@@ -52,9 +77,29 @@ MyVector<Type>::~MyVector() {
 }
 
 template <typename Type>
-Type* MyVector<Type>::operator[] (unsigned int index) {
-    return  &arr[index];
+Type& MyVector<Type>::operator[](unsigned int index) {
+    if (index > size) {
+        std::cout << "ERR Invalid index !!! size = " << size << " arr[size - 1] = ";
+        return arr[size - 1];
+    }
+    return arr[index];
 }
+
+template <typename Type>
+MyVector<Type>& MyVector<Type>::operator=(MyVector<Type>&  object) {
+    this->size = object.getSize();
+    this->reserveSize = object.sizeCapacity();
+    arr = new Type[reserveSize];
+    for (unsigned int i = 0; i < size; ++i) {
+        if (i < size) {
+            arr[i] = object[i];
+        } else {
+            PushBack(0);
+        }
+    }
+    return *this;
+}
+
 
 template <typename Type>
 void MyVector<Type>::shrinkToFit(void) {
@@ -161,7 +206,7 @@ Type* MyVector<Type>::begin(void) {
 
 template <typename Type>
 Type* MyVector<Type>::end(void) {
-    return arr + size - 1;
+    return &arr[size - 1];
 }
 
 template <typename Type>
