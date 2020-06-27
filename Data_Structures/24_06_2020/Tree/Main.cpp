@@ -27,8 +27,8 @@ int main() {
 
     /* Get data by value. */
     std::cout << "The element with value ";
-    std::cout << tree->getElement(60)->data << " is exist." << "\n";
-    std::cout << "Its right child is: " << tree->getElement(60)->right->data << "\n";
+    std::cout << tree->get_element(60)->data << " is exist." << "\n";
+    std::cout << "Its right child is: " << tree->get_element(60)->right->data << "\n";
 
     /* After using delete tree from heap. */
     delete tree;

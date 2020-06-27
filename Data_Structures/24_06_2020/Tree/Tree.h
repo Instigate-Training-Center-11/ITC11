@@ -13,21 +13,24 @@ template <typename T>
 class Tree {
     private:
         Node<T> *root;
-        Node<T> *getElement(Node<T>*, T);
+        Node<T> *get_element(Node<T>*, T);
         Node<T> *remove(Node<T>*, T);
         void insert(Node<T>*, T);
-        void destroyTree(Node<T>*);
+        void destroy(Node<T>*);
         void in_order_print(Node<T>*);
+        void pre_order_print(Node<T>*);
+        void post_order_print(Node<T>*);
         void level_order_print(Node<T>*);
         bool isLeafNode(Node<T>*);
+        Node<T> *min(Node<T>*);
     public:
         Tree();
         ~Tree();
         void insert(T);
-        void destroyTree();
+        void destroy();
         void display();
         Node<T> *remove(T);
-        Node<T> *getElement(T);
+        Node<T> *get_element(T);
 };
 
 #endif

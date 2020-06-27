@@ -11,21 +11,21 @@ Tree<T>::Tree() {
 /* Destructor */
 template <typename T>
 Tree<T>::~Tree() {
-    destroyTree();
+    destroy();
 }
 
 /* Destroy tree (public method). */
 template <typename T>
-void Tree<T>::destroyTree() {
-    destroyTree(root);
+void Tree<T>::destroy() {
+    destroy(root);
 }
 
 /* Destroy tree (private method). */
 template <typename T>
-void Tree<T>::destroyTree(Node<T> *leaf) {
+void Tree<T>::destroy(Node<T> *leaf) {
     if (leaf != nullptr) {
-        destroyTree(leaf->left);
-        destroyTree(leaf->right);
+        destroy(leaf->left);
+        destroy(leaf->right);
     }
     delete leaf;
 }
@@ -71,20 +71,20 @@ void Tree<T>::insert(Node<T> *leaf, T key) {
 
 /* Get tree element by value (public methode). */
 template <typename T>
-Node<T> *Tree<T>::getElement(T key) {
-  return getElement(root, key);
+Node<T> *Tree<T>::get_element(T key) {
+  return get_element(root, key);
 }
 
 /* Get tree element by value (Private methode). */
 template <typename T>
-Node<T> *Tree<T>::getElement(Node<T> *leaf, T key) {
+Node<T> *Tree<T>::get_element(Node<T> *leaf, T key) {
     if (nullptr == leaf) {
         return nullptr;
     } else if (key == leaf->data) {
         return leaf;
     } else if (key < leaf->data) {
-        return getElement(leaf->left, key);
-    } else return getElement(leaf->right, key);
+        return get_element(leaf->left, key);
+    } else return get_element(leaf->right, key);
 }
 
 /* 
@@ -97,6 +97,18 @@ bool Tree<T>::isLeafNode(Node<T> *tree) {
         return true;
     } else {
         return false;
+    }
+}
+
+/* Find max node. */
+template <typename T>
+Node<T>* Tree<T>::min(Node<T> *tree) {
+    if (nullptr == tree) {
+        return tree;
+    } else if (nullptr == tree->left) {
+        return tree;
+    } else {
+        return min(tree->left);
     }
 }
 
@@ -125,13 +137,17 @@ Node<T> *Tree<T>::remove(Node<T> *tree, T key) {
     if (isLeafNode(tree)) {
         delete tree;
         tree = nullptr;
-    } else {
-        temp = tree;
-        if (nullptr == tree->right) {
-            tree = tree->left;
-        } else if (nullptr == tree->left) {
-            tree = tree->right;
-        }
+    } else if (tree->right && tree->left) {
+            Node<T>* temp = min(tree->right);
+            tree->data = temp->data;
+            tree->right = remove(tree->right, tree->data); 
+        } else {
+            temp = tree;
+            if (nullptr == tree->right) {
+                tree = tree->left;
+            } else if (nullptr == tree->left) {
+                tree = tree->right;
+            }
             delete temp;
         }
     }
@@ -149,6 +165,26 @@ void Tree<T>::in_order_print(Node<T> *tree) {
         in_order_print(tree->left);
         std::cout << tree->data << " ";
         in_order_print(tree->right);
+    }
+}
+
+/* Pre_Order traversal. */
+template <typename T>
+void Tree<T>::pre_order_print(Node<T> *tree) {
+    if (nullptr != tree) {
+        std::cout << tree->data << " ";
+        pre_order_print(tree->left);
+        pre_order_print(tree->right);
+    }
+}
+
+/* Post_Order traversal. */
+template <typename T>
+void Tree<T>::post_order_print(Node<T> *tree) {
+    if (nullptr != tree) {
+        post_order_print(tree->left);
+        post_order_print(tree->right);
+        std::cout << tree->data << " ";
     }
 }
 
@@ -184,4 +220,9 @@ void Tree<T>::display() {
     in_order_print(root);
     std::cout << "\nLevel_Order_Print: ";
     level_order_print(root);
+    std::cout << "\nPre_Order_Print: ";
+    pre_order_print(root);
+    std::cout << "\nPost_Order_Print: ";
+    post_order_print(root);
+    std::cout << "\n";
 }
