@@ -3,6 +3,7 @@
 
 typedef MyVector<int>::Iterator Iterator;
 
+//g++ -std==c++14  main.cpp 
 
 int main() {
 

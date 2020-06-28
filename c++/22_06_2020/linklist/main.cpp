@@ -1,7 +1,7 @@
 #include "linkList.h"
 
 typedef DoubleList<int>::Iterator  Iterator;
-//g++ -std=c++14  main.cpp 
+//g++ -std==c++14  main.cpp 
 int main() {
 
     DoubleList<int> list;
