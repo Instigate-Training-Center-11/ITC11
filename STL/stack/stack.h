@@ -9,7 +9,7 @@ class Stack {
         int count;
         Node<T>* last;
     public:
-        Stack(int size = 0, int value = 0);
+        Stack(int size = 0, T value = 0);
         Stack(const Stack<T>&);
         Node<T>* getLast();
         ~Stack();

@@ -1,8 +1,5 @@
 #include <iostream>
 
-#include "stack.h"
-#include "node.h"
-
 #include "stack.cpp"
 #include "node.cpp"
 
@@ -23,13 +20,19 @@ int main() {
         stack->push(value);
     }
 
+    /* initialize stack by copy constructor */
+    Stack<int>* stack2 = stack;
     std::cout << "*** Now length is: " << stack->size() << std::endl;
 
     /* Delete last element */
-    stack->pop();
+    if (stack->size() > 0) {
+        stack->pop();
+    }
     std::cout << "New node removed!" << std::endl;
     std::cout << "*** Now length is: " << stack->size() << std::endl;
-    std::cout << "*** last node is: " << stack->top() << std::endl;
+    if (stack->size() > 0) {
+        std::cout << "*** last node is: " << stack->top() << std::endl;
+    }
 
     /* Is stack clear? */
     std::cout << "*** Check is stack empty? " << std::endl;
@@ -40,7 +43,12 @@ int main() {
     }
 
     /* Delete used memory */
-    delete stack;
+    if (stack->size() > 0) {
+        delete stack;
+    }
+    if (stack->size() > 0) {
+        delete stack2;
+    }
     return 0;
 }
 

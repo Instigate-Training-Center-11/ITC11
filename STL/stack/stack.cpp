@@ -4,7 +4,7 @@
 
 /* Constructor */
 template <typename T>
-Stack<T>::Stack(int count, int value) {
+Stack<T>::Stack(int count, T value) {
     last = NULL;
     if (0 < count) {
         for (int i = 0; i < count; ++i) {
