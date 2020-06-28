@@ -22,15 +22,14 @@ int main() {
 
     /* initialize stack by copy constructor */
     Stack<int>* stack2 = stack;
+    Stack<int>* stack3(stack);
     std::cout << "*** Now length is: " << stack->size() << std::endl;
 
     /* Delete last element */
-    if (stack->size() > 0) {
+    if (!stack->empty()) {
         stack->pop();
-    }
-    std::cout << "New node removed!" << std::endl;
-    std::cout << "*** Now length is: " << stack->size() << std::endl;
-    if (stack->size() > 0) {
+        std::cout << "New node removed!" << std::endl;
+        std::cout << "*** Now length is: " << stack->size() << std::endl;
         std::cout << "*** last node is: " << stack->top() << std::endl;
     }
 
@@ -43,12 +42,10 @@ int main() {
     }
 
     /* Delete used memory */
-    if (stack->size() > 0) {
+    if (!stack->empty()) {
         delete stack;
     }
-    if (stack->size() > 0) {
-        delete stack2;
-    }
+
     return 0;
 }
 

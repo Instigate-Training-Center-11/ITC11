@@ -18,10 +18,20 @@ Stack<T>::Stack(int count, T value) {
 /* Copy constructor */
 template <typename T>
 Stack<T>::Stack(const Stack<T>& cont) {
+    std::cout << "Copy constructor" << std::endl;
     Node<T>* current = cont.getLast();
+    Stack<T> stack;
     count = 0;
     while (current != NULL) {
-        this->push(current.getValue());
+        stack.push(current->getValue());
+        current = current->getNext();
+        ++count;
+    }
+
+    current = stack.getLast();
+    count = 0;
+    while (current != NULL) {
+        this->push(current->getValue());
         current = current->getNext();
         ++count;
     }
