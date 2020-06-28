@@ -10,6 +10,7 @@ class Node
         Node<T> *left;
 
         Node<T>(T);
+        ~Node<T>();
 };
 
 #endif

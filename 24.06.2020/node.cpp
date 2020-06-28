@@ -9,3 +9,10 @@ Node<T>::Node(T value)
     this->right = NULL;
     this->left = NULL;
 }
+
+template <typename T>
+Node<T>::~Node()
+{
+    delete left;
+    delete right;
+}

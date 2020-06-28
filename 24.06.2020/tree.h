@@ -8,6 +8,8 @@ class Tree
     private:
         Node<T> *root;
 
+        ~Tree();
+
         void insert(Node<T>*, T);
         bool removeNodeByPtr(Node<T>*, Node<T>*, T);
         Node<T>* getNodeByValue(T);
