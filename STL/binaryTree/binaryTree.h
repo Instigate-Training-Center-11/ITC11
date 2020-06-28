@@ -16,6 +16,7 @@ class Tree {
         Node<T>* minValueNode(Node<T>*);
         void postOrderPrint(Node<T>*);
         void preOrderPrint(Node<T>*);
+        void printWithStack();
 
         void insert(Node<T>*, int);
         bool isNodeExists(Node<T>*, int);

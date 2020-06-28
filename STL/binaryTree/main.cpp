@@ -17,6 +17,12 @@ int main() {
 
     std::cout << "Print level by level" << std::endl;
     tree->levelOrderPrint();
+    tree->preOrderPrint(root);
+    std::cout << std::endl;
+    tree->postOrderPrint(root);
+    std::cout << std::endl;
+    tree->printWithStack();
+    std::cout << std::endl;
 
     tree->remove(root, 100);
 

@@ -1,5 +1,6 @@
 #include <iostream>
 #include <queue>
+#include <stack>
 
 #include "binaryTree.h"
 
@@ -104,9 +105,9 @@ void Tree<T>::levelOrderPrint() {
 template <typename T>
 void Tree<T>::inOrderPrint(Node<T>* current) {
     if (current) {
+        inOrderPrint(current->left);
         std::cout << current->value << " ";
         inOrderPrint(current->right);
-        inOrderPrint(current->left);
     }
 }
 
@@ -114,9 +115,9 @@ void Tree<T>::inOrderPrint(Node<T>* current) {
 template <typename T>
 void Tree<T>::postOrderPrint(Node<T>* current) {
     if (current) {
+        inOrderPrint(current->left);
         inOrderPrint(current->right);
         std::cout << current->value << " ";
-        inOrderPrint(current->left);
     }
 }
 
@@ -124,9 +125,9 @@ void Tree<T>::postOrderPrint(Node<T>* current) {
 template <typename T>
 void Tree<T>::preOrderPrint(Node<T>* current) {
     if (current) {
-        inOrderPrint(current->right);
-        inOrderPrint(current->left);
         std::cout << current->value << " ";
+        inOrderPrint(current->left);
+        inOrderPrint(current->right);
     }
 }
 
@@ -176,4 +177,24 @@ Node<T>* Tree<T>::remove(Node<T>* node, T value) {
     }
 
     return node;
+}
+
+/* In order print tree with stack */
+template <typename T>
+void Tree<T>::printWithStack() {
+    /* If root is not NULL */
+    std::stack<Node<T>*> stack;
+    Node<T>* node = this->root;
+
+    while (node != NULL || !stack.empty()) {
+        while (node !=  NULL) {
+            stack.push(node);
+            node = node->left;
+        }
+
+        node = stack.top();
+        stack.pop();
+        std::cout << node->value << " ";
+        node = node->right;
+    }
 }
