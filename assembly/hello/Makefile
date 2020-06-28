@@ -1,4 +1,4 @@
-build: hello.o
+build: hello.o helloWorld.asm
 	ld hello.o -o hello
 
 hello.o:
