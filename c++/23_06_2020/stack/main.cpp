@@ -2,6 +2,7 @@
 #include "stack.h"
 #include "list.h"
 
+// Run----> g++ -std==c++14 main.cpp
 int main() {
     //Stack<int, MyVector<int>> stack(5,111);
     Stack<int, List<int>> stack(5,111);
