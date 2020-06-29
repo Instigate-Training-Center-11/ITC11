@@ -16,7 +16,15 @@ int main() {
         vector.pushBack(i * 100);
     }
 
-    for (int i = 0; i < 5; ++i) {
+    Iterator<int>* i = vector.begin();
+    std::cout << *i << std::endl;
+    i = vector.end();
+    std::cout << *i << std::endl;
+
+    int *a = new int(666);
+    Iterator<int> iter(a);
+    vector.pushBack(iter);
+    for (int i = 0; i < 6; ++i) {
         std::cout << "vector element [" << i << "] is " << vector[i] << std::endl;
     }
 
@@ -32,14 +40,13 @@ int main() {
         vector.pushBack(i * 10);
     }
 
-    for (int i = 0; i < 19; ++i) {
-        std::cout << "vector element [" << i << "] is " << vector[i] << std::endl;
-    }
-
     vector.reverse();
     for (int i = 0; i < 19; ++i) {
         std::cout << "vector element: " << vector[i] << std::endl;
     }
 
+    /* Free used memory */
+    delete i;
+    delete a;
     return 0;
 }

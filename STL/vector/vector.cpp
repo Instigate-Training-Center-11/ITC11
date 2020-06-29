@@ -13,6 +13,9 @@ Vector<T>::Vector(int n) {
         length = n;
         cap = 0;
     }
+
+    first = new Iterator<T>(a);
+    last = new Iterator<T>(a);
 }
 
 template <typename T>
@@ -29,6 +32,9 @@ Vector<T>::Vector(Vector& vector) {
     for (int i = 0; i < newSize; ++i) {
         a[i] = vector[i];
     }
+
+    this->first = new Iterator<T>(vector.begin());
+    this->last = new Iterator<T>(vector.end());
 }
 
 template <typename T>
@@ -37,8 +43,53 @@ void Vector<T>::pushBack(const T& value) {
         a = (T*) realloc(a, length * 2 * sizeof(T));
         length *= 2;
         a[cap++] = value;
+        if (cap == 1) {
+            Iterator<T>* temp = new Iterator<T>(a);
+            first = temp;
+            last = temp;
+        } else {
+            Iterator<T>* temp = new Iterator<T>(a + cap - 1);
+            last = temp;
+        }
     } else if (cap < length) {
         a[cap++] = value;
+        if (cap == 1) {
+            Iterator<T>* temp = new Iterator<T>(a);
+            first = temp;
+            last = temp;
+        } else {
+            Iterator<T>* temp = new Iterator<T>(a + cap - 1);
+            last = temp;
+        }
+    }
+}
+
+template <typename T>
+void Vector<T>::pushBack(Iterator<T> iter) {
+    T value = *(iter);
+    std::cout << value << std::endl;
+    if (length == cap) {
+        a = (T*) realloc(a, length * 2 * sizeof(T));
+        length *= 2;
+        a[cap++] = value;
+        if (cap == 1) {
+            Iterator<T>* temp = new Iterator<T>(a);
+            first = temp;
+            last = temp;
+        } else {
+            Iterator<T>* temp = new Iterator<T>(a + cap - 1);
+            last = temp;
+        }
+    } else if (cap < length) {
+        a[cap++] = value;
+        if (cap == 1) {
+            Iterator<T>* temp = new Iterator<T>(a);
+            first = temp;
+            last = temp;
+        } else {
+            Iterator<T>* temp = new Iterator<T>(a + cap - 1);
+            last = temp;
+        }
     }
 }
 
@@ -46,6 +97,8 @@ template <typename T>
 void Vector<T>::popBack() {
     if (cap > 0) {
         a[cap--] = 0;
+        Iterator<T>* temp = new Iterator<T>(a + cap - 1);
+        last = temp;
     }
 }
 
@@ -115,13 +168,11 @@ T Vector<T>::operator[] (int n) {
 }
 
 template <typename T>
-Iterator<T> Vector<T>::begin() {
-    Iterator<T> start(a);
-    return start;
+Iterator<T>* Vector<T>::begin() {
+    return first;
 }
 
 template <typename T>
-Iterator<T> Vector<T>::end() {
-    Iterator<T> start(a + cap - 1);
-    return start;
+Iterator<T>* Vector<T>::end() {
+    return last;
 }

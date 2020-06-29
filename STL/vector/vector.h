@@ -12,6 +12,7 @@ class Vector {
         Vector(Vector&);
 
         void pushBack(const T&);
+        void pushBack(Iterator<T> iter);
         void popBack();
         int size() const;
         int capacity() const;
@@ -22,13 +23,15 @@ class Vector {
         void shrink_to_fit();
         Vector& operator=(const Vector&);
         T operator[](int );
-        Iterator<T> begin();
-        Iterator<T> end();
+        Iterator<T>* begin();
+        Iterator<T>* end();
 
     private:
         int length;
         int cap;
         T* a;
+        Iterator<T>* first;
+        Iterator<T>* last;
 };
 
 #endif

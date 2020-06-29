@@ -29,26 +29,30 @@ Iterator<T>& Iterator<T>::operator-(int count) {
 }
 
 template <typename T>
-Iterator<T>* Iterator<T>::operator++(int) {
-    ++ptr;
-    return this;
+Iterator<T> Iterator<T>::operator++(int) {
+    Iterator<T> temp = *this;
+    ++(*this);
+    return temp;
 }
 
 template <typename T>
-Iterator<T>* Iterator<T>::operator++() {
-    ptr++;
-    return this;
+Iterator<T> Iterator<T>::operator++() {
+    Iterator<T> temp = *this;
+    ++(*this);
+    return temp;
 }
 
 template <typename T>
-Iterator<T>* Iterator<T>::operator--(int) {
-    --ptr;
-    return this;
+Iterator<T> Iterator<T>::operator--(int) {
+    Iterator<T> temp = *this;
+    --(*this);
+    return temp;
 }
 template <typename T>
-Iterator<T>* Iterator<T>::operator--() {
-    ptr--;
-    return this;
+Iterator<T> Iterator<T>::operator--() {
+    Iterator<T> temp = *this;
+    --(*this);
+    return temp;
 }
 
 template <typename T>
