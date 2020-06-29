@@ -1,5 +1,5 @@
 /* Please compile the following code using --std=c++11 flag:
-g++ MergeSort.cpp --std=c++11 */
+g++ TimeComparison.cpp */
 
 #include <iostream>
 #include <chrono>
