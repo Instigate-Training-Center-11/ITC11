@@ -11,10 +11,42 @@
 ├── assembly
 │   ├── hello
 │   │   ├── helloWorld.asm
+│   │   ├── macro.inc
 │   │   └── Makefile
-│   ├── infinitLoop.asm
-│   ├── name.asm
-│   └── printLoop.asm
+│   ├── printDigit
+│   │   ├── macro.inc
+│   │   ├── Makefile
+│   │   └── printNum.asm
+│   ├── printNumber
+│   │   ├── macro.inc
+│   │   ├── Makefile
+│   │   └── test.asm
+│   ├── printString
+│   │   ├── macro.inc
+│   │   ├── Makefile
+│   │   ├── printLoop.asm
+│   │   └── test.asm
+│   ├── some tests
+│   │   ├── atoi.inc
+│   │   ├── file.asm
+│   │   ├── fileModified.asm
+│   │   ├── macro.inc
+│   │   ├── macros.inc
+│   │   ├── Makefile
+│   │   ├── sum.asm
+│   │   └── test.asm
+│   ├── sum
+│   │   ├── macro.inc
+│   │   ├── Makefile
+│   │   ├── sum
+│   │   └── sum.asm
+│   ├── sumFinal
+│   │   ├── macro.inc
+│   │   ├── Makefile
+│   │   └── sum.asm
+│   └── tests
+│       ├── infinitLoop.asm
+│       └── name.asm
 ├── bash
 │   ├── 18.05
 │   │   ├── delComments.sh
@@ -140,13 +172,19 @@
     ├── binaryTree
     │   ├── binaryTree.cpp
     │   ├── binaryTree.h
-    │   ├── binary_tree_homework
     │   ├── main.cpp
     │   ├── Makefile
-    │   ├── new.cpp
     │   ├── node.cpp
-    │   ├── node.h
-    │   └── test.cpp
+    │   └── node.h
+    ├── calculator
+    │   └── main.cpp
+    ├── list
+    │   ├── list.cpp
+    │   ├── list.hpp
+    │   ├── main.cpp
+    │   ├── Makefile
+    │   ├── node.cpp
+    │   └── node.hpp
     ├── stack
     │   ├── main.cpp
     │   ├── Makefile
