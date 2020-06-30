@@ -8,6 +8,18 @@
 # Directory structure
 
 .
+├── algorithms
+│   ├── mergeSort
+│   │   ├── main.cpp
+│   │   ├── Makefile
+│   │   ├── mergeSort.cpp
+│   │   └── mergeSort.h
+│   ├── Readme
+│   └── sortTimes
+│       ├── main.cpp
+│       ├── Makefile
+│       ├── sort.cpp
+│       └── sort.h
 ├── assembly
 │   ├── hello
 │   │   ├── helloWorld.asm
