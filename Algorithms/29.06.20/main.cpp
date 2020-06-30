@@ -9,12 +9,12 @@ int main() {
     random_array(array1, size);
 
     srand(time(0));
-	merge_sort(array1, 0, size - 1);
+    merge_sort(array1, 0, size - 1);
 
-	// print(array1, size);
+    // print(array1, size);
 
-	std::cout << std::endl;
-	std::cout << "Runtime for merge_sort:\t\t" << clock() / 1000.0 << std::endl;
+    std::cout << std::endl;
+    std::cout << "Runtime for merge_sort:\t\t" << clock() / 1000.0 << std::endl;
 
     int array2[size];
 
@@ -25,7 +25,7 @@ int main() {
     // print(array2, size);
 
     std::cout << std::endl;
-	std::cout << "Runtime for selection_sort:\t" << clock() / 1000.0 << std::endl;
+    std::cout << "Runtime for selection_sort:\t" << clock() / 1000.0 << std::endl;
 
-	return 0;
+    return 0;
 }

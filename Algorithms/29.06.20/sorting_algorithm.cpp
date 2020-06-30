@@ -58,20 +58,20 @@ void merge_sort(Type array[], int begin, int end) {
 /* Selection sort */
 template<typename Type>
 void selection_sort(Type array[], int size) {
-    int index_min = 0;
-    int temp = 0;
+	int index_min = 0;
+	int temp = 0;
 
-    for (int i = 0; i < size - 1; ++i) {
-        index_min = i;
-        for (int j = i + 1; j < size; ++j) {
-            if (array[index_min] > array[j]) {
-                index_min = j;
-            }
-        }
-        temp = array[i];
-        array[i] = array[index_min];
-        array[index_min] = temp;
-    }
+	for (int i = 0; i < size - 1; ++i) {
+		index_min = i;
+		for (int j = i + 1; j < size; ++j) {
+			if (array[index_min] > array[j]) {
+				index_min = j;
+			}
+		}
+		temp = array[i];
+		array[i] = array[index_min];
+		array[index_min] = temp;
+	}
 }
 
 template<typename Type>
