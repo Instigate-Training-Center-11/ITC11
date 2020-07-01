@@ -14,7 +14,24 @@
 │   │   ├── Makefile
 │   │   ├── mergeSort.cpp
 │   │   └── mergeSort.h
+│   ├── quickSort
+│   │   ├── a.out
+│   │   ├── main.cpp
+│   │   ├── Makefile
+│   │   ├── sort.cpp
+│   │   └── sort.h
 │   ├── Readme
+│   ├── search
+│   │   ├── func.cpp
+│   │   ├── func.h
+│   │   ├── main.cpp
+│   │   ├── Makefile
+│   │   └── Readme
+│   ├── shellSort
+│   │   ├── main.cpp
+│   │   ├── Makefile
+│   │   ├── sort.cpp
+│   │   └── sort.h
 │   └── sortTimes
 │       ├── main.cpp
 │       ├── Makefile

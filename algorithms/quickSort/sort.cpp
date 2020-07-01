@@ -61,7 +61,7 @@ int* quickSort(int* a, int left, int right) {
         --j;
     }
 
-    /* If current element in left great then or equal to current in right side*/
+    /* If current element in left great then or equal to current in right side */
     if (a[i] >= a[j]) {
         swap(a[i++], a[j--]);
     }
