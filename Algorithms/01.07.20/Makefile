@@ -1,12 +1,25 @@
 CC=g++ #using compiler g++
 CFLAGS=-std=c++11 -o #flag for compile target with c++11 standart
-HEADERS=menu.hpp linear_search.hpp binary_search.hpp jump_search.hpp interpolation_search.hpp exponential_search.hpp ternary_search.hpp
+OFLAGS=-c #flag for create objects
+OBJECTS=main.o menu.o algorithm.o
 PROG=search
 
-${PROG}: ${HEADERS} main.cpp
-	${CC} main.cpp ${CFLAGS} ${PROG}
+${PROG}: ${OBJECTS}
+	${CC} ${OBJECTS} ${CFLAGS} ${PROG}
 
-.PHONY: run
+main.o: algorithm.hpp menu.hpp main.cpp
+	${CC} ${OFLAGS} main.cpp
+
+menu.o: menu.hpp menu.cpp
+	${CC} ${OFLAGS} menu.cpp
+
+algorithm.o: algorithm.hpp algorithm.cpp
+	${CC} ${OFLAGS} algorithm.cpp
+
+.PHONY: run clean
 
 run:
 	./search
+
+clean:
+	\rm -f *.o

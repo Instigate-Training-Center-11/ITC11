@@ -1,4 +1,5 @@
 #include <iostream>
+#include "algorithm.hpp"
 #include "menu.hpp"
 
 int main() {
