@@ -16,5 +16,4 @@ int* inputArray(unsigned int size);
 int algorithm(int* arr, int choice, unsigned int size);
 
 
-#include "algorithm.cpp"
 #endif
