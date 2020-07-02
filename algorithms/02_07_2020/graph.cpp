@@ -19,9 +19,9 @@ class Graph {
 };
 
 void printGraph(Graph const& graph, int size) {
-	for (int i = 0; i < size; i++) {
+	for(int i = 0; i < size; i++) {
 		std::cout << i << " -> ";
-		for (int vertex : graph.allVertex[i]) {
+		for(int vertex : graph.allVertex[i]) {
 			std::cout << vertex << " ";
         }
 
