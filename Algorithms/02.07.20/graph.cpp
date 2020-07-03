@@ -23,7 +23,7 @@ void Graph::add_edge(int src, int dst) {
 void Graph::print_edges(int id) {
     std::cout << my_city[id].second << "---> ";
     for (auto& edges : my_city[id].first) {
-            std::cout << edges << " ";
+        std::cout << edges << " ";
     }
     std::cout << std::endl;
 }
@@ -31,7 +31,7 @@ void Graph::print_edges(int id) {
 void Graph::print_graph() {
     for (int id = 0; id < print_size; ++id) {
         std::cout << "ID: " << id << " ";
-            std::cout << my_city[id].second << std::endl;
+        std::cout << my_city[id].second << std::endl;
     }
     std::cout << std::endl;
 }
