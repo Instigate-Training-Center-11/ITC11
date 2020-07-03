@@ -20,18 +20,18 @@ void Graph::add_edge(int src, int dst) {
     my_city[dst].first.push_back(src);
 }
 
-void Graph::print_edges(int id) {
+void Graph::print_edges(int id) const {
     std::cout << my_city[id].second << "---> ";
     for (auto& edges : my_city[id].first) {
-        std::cout << edges << " ";
+            std::cout << edges << " ";
     }
     std::cout << std::endl;
 }
 
-void Graph::print_graph() {
+void Graph::print_graph() const {
     for (int id = 0; id < print_size; ++id) {
         std::cout << "ID: " << id << " ";
-        std::cout << my_city[id].second << std::endl;
+            std::cout << my_city[id].second << std::endl;
     }
     std::cout << std::endl;
 }

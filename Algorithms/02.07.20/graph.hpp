@@ -13,8 +13,6 @@ private:
     std::pair<std::list<int>, std::string>* my_city;
 
 public:
-    Graph();
-
     Graph(int real_size, int print_size = 0);
 
     ~Graph();
@@ -26,10 +24,10 @@ public:
     void add_edge(int src, int dst);
 
     /* Printing all edges for vertices(id) */
-    void print_edges(int id);
+    void print_edges(int id) const;
 
     /* Printing all vertices */
-    void print_graph();
+    void print_graph() const;
 };
 
 #endif
