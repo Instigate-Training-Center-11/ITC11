@@ -36,7 +36,5 @@ long long int min(long long int num1, long long int num2) {
     if (num1 < num2) {
         return num1;
     }
-    else {
-        return num2;
-    }
+    return num2;
 }
