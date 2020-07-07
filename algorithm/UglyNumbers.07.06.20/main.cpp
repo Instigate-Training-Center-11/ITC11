@@ -4,7 +4,6 @@ int main() {
     int f2 = 1;
     int f3 = 1;
     int f5 = 1;
-    int count = 0;
     int n;
     while (true) {
         std::cout << "search ugly number by position -> ";
@@ -19,7 +18,7 @@ int main() {
         }
     }
 
-    std::cout << "Ugly number -> " << uglyNumberDynamic(n,count) << std::endl;
+    std::cout << "Ugly number -> " << uglyNumberDynamic(n) << std::endl;
 
     return 0;
 }

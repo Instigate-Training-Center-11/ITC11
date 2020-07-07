@@ -1,6 +1,6 @@
 #include "ugly.h"
 
-long long int uglyNumberDynamic(int n, int& count) {
+long long int uglyNumberDynamic(int n) {
 
     int f2 = 1;
     int f3 = 1;
