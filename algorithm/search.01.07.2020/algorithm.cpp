@@ -5,6 +5,9 @@
 
 int ternarySearch(int* arr, int key, int start,int end) {
     std::cout << "\n\t\tCall algorithm ternarySearch\n";
+    if (end - start == 2) {
+        return (arr[0] == key) ? 0 : 1;
+    }
     if (end >= start) {
         int position1 = start + (end-start)/3;
         int position2 = end -  (end-start)/3;
@@ -204,9 +207,19 @@ int* inputArray(unsigned int size) {
     int* tempArray = new int[size];
     int number = 0;
     for (unsigned int i = 0; i < size; ++i) {
-        std::cout << "array[" << i << "] = ";
-        std::cin >> number;
-        tempArray[i] = number;
+        while (true) {
+            std::cout << "array[" << i << "] = ";
+            std::cin >> number;
+            tempArray[i] = number;
+            if (std::cin.fail()) {
+                std::cin.clear();
+                std::cin.ignore(32767, '\n');
+                std::cout << "\nThat input is invalid.  Please try again.!!!!" << std::endl;
+            } else {
+                std::cin.ignore(32767, '\n');
+            break;
+            }
+        }
     }
     return tempArray;
 }

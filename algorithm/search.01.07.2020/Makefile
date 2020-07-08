@@ -14,6 +14,6 @@ algorithm.o: algorithm.h algorithm.cpp
 .PHONY: clean run
 clean:
 	rm -rf *.o
-
+	rm -rf make
 run:
 	./make
