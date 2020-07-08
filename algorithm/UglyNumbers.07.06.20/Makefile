@@ -11,9 +11,9 @@ main.o: main.cpp
 ugly.o:  ugly.cpp
 	$(CC) $(FLAG) -c ugly.cpp
 
-.PHONY: clean run
+.PHONY: clean
 clean:
 	rm -rf *.o
-	rm -rd make
+	rm -rf make
 run:
 	./make

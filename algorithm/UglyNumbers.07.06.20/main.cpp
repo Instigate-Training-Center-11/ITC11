@@ -1,9 +1,7 @@
 #include "ugly.h"
 
 int main() {
-    int f2 = 1;
-    int f3 = 1;
-    int f5 = 1;
+    std::vector<int> data(2,0);
     int n;
     while (true) {
         std::cout << "search ugly number by position -> ";
@@ -18,7 +16,8 @@ int main() {
         }
     }
 
-    std::cout << "Ugly number -> " << uglyNumberDynamic(n) << std::endl;
-
+    std::cout << "Ugly number -> " << uglyNumberDynamic(n,data) << std::endl;
+    std::cout << "\n---------" << data[24] << "\n";
+    data.clear();
     return 0;
 }
