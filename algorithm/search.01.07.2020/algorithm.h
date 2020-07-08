@@ -13,7 +13,7 @@ void shellSort(int* array, unsigned int sizeArr);
 void printArray(int* array,unsigned int size);
 void swap(int& indexNumOne, int& indexNumTwo);
 int* inputArray(unsigned int size);
-int algorithm(int* arr, int choice, unsigned int size);
+void algorithm(int* arr, int choice, unsigned int size);
 
 
 #endif

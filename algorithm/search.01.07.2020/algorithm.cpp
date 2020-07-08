@@ -224,7 +224,7 @@ int* inputArray(unsigned int size) {
     return tempArray;
 }
 
-int algorithm(int* arr, int choice, unsigned int size) {
+void algorithm(int* arr, int choice, unsigned int size) {
     int key = 0;
      while (true) {
         std::cout << "\nEnter the integer number you are looking for -> ";
