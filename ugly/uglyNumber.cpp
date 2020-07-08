@@ -1,58 +1,64 @@
-# include <iostream>
+#include <iostream>
+#include <vector>
+#include <algorithm>
 
-int min(int x, int y, int z) { //find smallest among three numbers
-    if(x < y) {
-        if(x < z) {
-            return x;
-        }
-        else {
-            return z;
-        }
-    } else {
-        if(y < z) {
-            return y;
-        }
-        else {
-            return z;
-        }
-   }
-}
+int getUglyNum(std::vector<int> &vec, int n) {
+    static int i2 = 0;
+    static int i3 = 0;
+    static int i5 = 0;
 
+    int next2mul = vec[i2] * 2;
+    int next3mul = vec[i3] * 3;
+    int next5mul = vec[i5] * 5;
+    int next ;
 
-int getUglyNum(int n) {
-    int uglyNum[n]; // To store ugly numbers
-    int i2 = 0, i3 = 0, i5 = 0;
-    //find next multiple as 1*2, 1*3, 1*5
-    int next2mul = 2;
-    int next3mul = 3;
-    int next5mul = 5;
-    int next = 1; //initially the ugly number is 1
-    uglyNum[0] = 1;
-    for (int i=1; i<n; i++) {
-        next = min(next2mul, next3mul, next5mul); //find next ugly number
-        std::cout << std::endl <<"next: " << next << std::endl;
-        uglyNum[i] = next;
+    for(int i = vec.size(); i < n; ++i) {
+        next = std::min(std::min(next2mul, next3mul), next5mul); //find next ugly number
+        vec.push_back(next);
+
         if (next == next2mul) {
             ++i2; //increase iterator of ugly numbers whose factor is 2
-            next2mul = uglyNum[i2] * 2;
+            next2mul = vec[i2] * 2;
         }
+
         if (next == next3mul) {
             ++i3; //increase iterator of ugly numbers whose factor is 3
-            next3mul = uglyNum[i3] * 3;
+            next3mul = vec[i3] * 3;
         }
+
         if (next == next5mul) {
             ++i5; //increase iterator of ugly numbers whose factor is 5
-            next5mul = uglyNum[i5] * 5;
+            next5mul = vec[i5] * 5;
         }
     }
 
-    return next; //the nth ugly number
+    return vec[n - 1]; //the nth ugly number
 }
-int main() {
-   int n;
 
-   queue();
-//    std::cout << "Enter term: ";
-//    std::cin >> n;
-//    std::cout << n << "th Ugly number is: " << getUglyNum(n)<< std::endl;
+
+void entering(int &size) {
+    std::cout << "Enter number: ";
+    std::cin >> size;
+    while (size < 1) {
+        std::cout << "Enter number greather 0: ";
+        std::cin >> size;
+    }
+}
+
+
+int main() {
+    std::vector<int> vec;
+    vec.push_back(1);
+    int n;
+
+    entering(n);
+    std::cout << getUglyNum(vec, n) << std::endl;
+
+    entering(n);
+    std::cout << getUglyNum(vec, n) << std::endl;
+
+
+    entering(n);
+    std::cout << getUglyNum(vec, n) << std::endl;
+    return 0;
 }
