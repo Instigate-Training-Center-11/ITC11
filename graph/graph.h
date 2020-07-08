@@ -1,6 +1,6 @@
 #ifndef LIST_H
 #define LIST_H
-
+#include <vector>
 struct Edge {
     int first, last, weight, prev;
 };
@@ -8,7 +8,6 @@ struct Edge {
 class Graph {
 private:
     int nodeNumber;	// number of nodes in the graph
-
 public:
     struct Node {
         int val; //prev node
@@ -31,16 +30,17 @@ public:
     //calculate minimum way
     int minWay(int node, int m);
 
+    //calculate minimum way 2tm method
+    int minWay2(int m, int node, std::vector<std::pair<int, int>> &mVec);
+
     //check node == m
     bool check(int &node, int &m);
-    
+
     // Constructor
     Graph(const Edge edges[], const int n, const int m);
 
     // destructor
     ~Graph();
-
-    // int mino(int node, std::vector<int> index, int i);
 };
 
 #endif
