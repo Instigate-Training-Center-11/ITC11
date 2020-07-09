@@ -42,6 +42,11 @@ int* getNumber(int index, int number) {
         }
     }
 
+    for (int i = 0; i < index; ++i) {
+        std::cout << array[i] << " ";
+    }
+    std::cout << std::endl;
+
     return array;
 }
 
@@ -111,6 +116,11 @@ int getUglyNumber(int index) {
             ++i5;
         }
     }
+
+    for (int i = 0; i < index; ++i) {
+        std::cout << array[i] << " ";
+    }
+    std::cout << std::endl;
 
     return array[index - 1];
 }
