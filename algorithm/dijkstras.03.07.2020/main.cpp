@@ -28,7 +28,7 @@ int main(){
     VECTORPAIR phoenix = {{Denver,821}, {LasVegas,297}, {LosAngeles,372}};
     graph.push_back(phoenix);
 
-    DijkstrasShortestPath(Seattle, Phoenix, graph);
+    DijkstrasShortestPath(Denver, Phoenix, graph);
     std::cout <<"\n";
 
     return 0;

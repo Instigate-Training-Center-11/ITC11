@@ -37,26 +37,26 @@ void DijkstrasShortestPath (int cityOne, int cityTwo, VVPAIR& graph) {
         temp = distWAy[temp.second];
     }
 
-    std::cout <<"\n" << pointArray.size();
     for (int i = 0; i < nodeCount; i++) {
+        std::cout << "("<< cityOne;
         switch(i) {
             case 0:
-                std::cout << "Seattle(" << cityOne << ") -> Seattle(" << i << ") : " << dist[i] << " km" <<std:: endl;
+                std::cout << ") -> Seattle(" << i << ") : " << dist[i] << " km" <<std:: endl;
                 break;
             case 1:
-                std::cout << "Seattle(" << cityOne << ") -> SanFrancisco(" << i << ") : " << dist[i] << " km" <<std:: endl;
+                std::cout << ") -> SanFrancisco(" << i << ") : " << dist[i] << " km" <<std:: endl;
                 break;
             case 2:
-                std::cout << "Seattle(" << cityOne << ") -> Denver(" << i << ") : " << dist[i] << " km" <<std:: endl;
+                std::cout << ") -> Denver(" << i << ") : " << dist[i] << " km" <<std:: endl;
                 break;
             case 3:
-                std::cout << "Seattle(" << cityOne << ") -> LasVegas(" << i << ") : " << dist[i] << " km" <<std:: endl;
+                std::cout << ") -> LasVegas(" << i << ") : " << dist[i] << " km" <<std:: endl;
                 break;
             case 4:
-                std::cout << "Seattle(" << cityOne << ") -> LosAngeles(" << i << ") : " << dist[i] << " km" <<std:: endl;
+                std::cout << ") -> LosAngeles(" << i << ") : " << dist[i] << " km" <<std:: endl;
                 break;
             case 5:
-                std::cout << "Seattle(" << cityOne << ") -> Phoenix(" << i << ") : " << dist[i] << " km" <<std:: endl;
+                std::cout << ") -> Phoenix(" << i << ") : " << dist[i] << " km" <<std:: endl;
                 break;
         }
     }
