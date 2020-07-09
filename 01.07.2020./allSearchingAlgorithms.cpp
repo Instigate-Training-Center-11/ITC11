@@ -1,10 +1,9 @@
 #include <iostream>
 #include <cmath>
-using namespace std;
 
 int size = 0;
 
-/* create function for swap elements of array */
+/* creating function for swap elements of array */
 void swap(int &a, int &b)
 {
     int t = a;
@@ -12,19 +11,19 @@ void swap(int &a, int &b)
     b = t;
 }
 
-/* create function for display elements of array */
+/* creating function for display elements of array */
 void display(int arr[], int size)
 {
-    cout << "Displaying elements: " << endl;
+    std::cout << "Displaying elements: " << std::endl;
 
     /* display array elements */
     for (int i = 0; i < size; ++i)
     {
-        cout << "Element " << i + 1 << ": " << arr[i] << endl;
+        std::cout << "Element " << i + 1 << ": " << arr[i] << std::endl;
     }
 }
 
-/* create function for sort elements of array */
+/* creating function for sort elements of array */
 void selectionSort(int arr[], int size)
 {
     int j = 0;
@@ -50,7 +49,7 @@ void selectionSort(int arr[], int size)
     }
 }
 
-/* create linearSearch function to search some number and return the position */
+/* creating linearSearch function to search some number and return the position */
 int linearSearch(int arr[], int size, int num)
 {
     int result = -1;
@@ -64,7 +63,7 @@ int linearSearch(int arr[], int size, int num)
     return result;
 }
 
-/* create jumpSearch function to search some number and return the position */
+/* creating jumpSearch function to search some number and return the position */
 int jumpSearch(int arr[], int length, int num)
 {
     int left = 0;
@@ -88,7 +87,7 @@ int jumpSearch(int arr[], int length, int num)
     }
     return -1;
 }
-/* create binarySearch function to search some number and return the position */
+/* creating binarySearch function to search some number and return the position */
 int binarySearch(int arr[], int left, int right, int num)
 {
     int result = -1;
@@ -113,7 +112,7 @@ int binarySearch(int arr[], int left, int right, int num)
     return result;
 }
 
-/* create exponentialSearch function to search some number and return the position */
+/* creating exponentialSearch function to search some number and return the position */
 int exponentialSearch(int arr[], int left, int right, int num)
 {
     int i = 1;
@@ -131,7 +130,7 @@ int exponentialSearch(int arr[], int left, int right, int num)
     return binarySearch(arr, i / 2, i, num);
 }
 
-/* create interpolationSearch function to search some number and return the position */
+/* creating interpolationSearch function to search some number and return the position */
 int interpolationSearch(int arr[], int left, int right, int num)
 {
     int lowIndex = left;
@@ -161,7 +160,7 @@ int interpolationSearch(int arr[], int left, int right, int num)
     }
     return -1;
 }
-/* create ternarySearch function to search some number and return the position */
+/* creating ternarySearch function to search some number and return the position */
 int ternarySearch(int arr[], int left, int right, int num)
 {
     int interval = (right - left) / 3;
@@ -193,5 +192,45 @@ int ternarySearch(int arr[], int left, int right, int num)
     else
     {
         return -1;
+    }
+}
+
+void inputParameters(int arr[])
+{
+    int index;
+    int value;
+
+    std::cout << "For linearSearch enter 1:" << std::endl;
+    std::cout << "For binarySearch enter 2:" << std::endl;
+    std::cout << "For jumpSearch enter 3:" << std::endl;
+    std::cout << "For interpolationSearch enter 4:" << std::endl;
+    std::cout << "For exponentialSearch enter 5:" << std::endl;
+    std::cout << "For ternarySearch enter 6:" << std::endl;
+    std::cin >> index;
+
+    std::cout << "Enter the value which you want to find in array:" << std::endl;
+    std::cin >> value;
+
+    switch (index)
+    {
+    case 1:
+        std::cout << "Index of the number is: " << linearSearch(arr, size, value);
+        break;
+    case 2:
+        std::cout << "Index of the number is: " << binarySearch(arr, 0, size, value);
+        break;
+    case 3:
+        std::cout << "Index of the number is: " << jumpSearch(arr, size - 1, value);
+        break;
+    case 4:
+        std::cout << "Index of the number is: " << interpolationSearch(arr, 0, size, value);
+        break;
+    case 5:
+        std::cout << "Index of the number is: " << exponentialSearch(arr, 0, size, value);
+    case 6:
+        std::cout << "Index of the number is: " << ternarySearch(arr, 0, size, value);
+        break;
+    default:
+        break;
     }
 }
