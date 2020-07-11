@@ -6,7 +6,7 @@ bool sudoku(int array[9][9]);
 bool find_null_value(const int array[9][9], int& row, int& col);
 
 /* Check for unique value in rows and cols */
-bool present_in_row_col(const int array[9][9], int row,int col, int value);
+bool present_in_row_col(const int array[9][9], int row, int col, int value);
 
 /* Check for unique value 3x3 subarray */
 bool present_in_subarr(const int array[9][9], int row, int col, int value);
@@ -51,7 +51,7 @@ bool sudoku(int array[9][9]) {
         return true;
     }
 
-    for (int value = 1; value <= 9; value++) {
+    for (int value = 1; value <= 9; ++value) {
         if (safe_for_use(array, row, col, value)) {
             array[row][col] = value;
             if (sudoku(array)) {
@@ -68,8 +68,8 @@ bool sudoku(int array[9][9]) {
 
 /* Find empty elements in array */
 bool find_null_value(const int array[9][9], int& row, int& col) {
-    for (row = 0; row < 9; row++) {
-        for (col = 0; col < 9; col++) {
+    for (row = 0; row < 9; ++row) {
+        for (col = 0; col < 9; ++col) {
             if (array[row][col] == 0) {
                 return true;
             }
@@ -81,7 +81,7 @@ bool find_null_value(const int array[9][9], int& row, int& col) {
 
 /* Check for unique value in rows or columns */
 bool present_in_row_col(const int array[9][9], int row, int col, int value) {
-    for (int i = 0; i < 9; i++) {
+    for (int i = 0; i < 9; ++i) {
         if (array[row][i] == value || array[i][col] == value) {
             return true;
         }
@@ -115,18 +115,17 @@ bool safe_for_use(const int array[9][9], int row, int col, int value) {
 void print(const int array[9][9]) {
     for (int i = 0, count = 2; i < 9; ++i) {
         std::cout << "  |";
-        for (int j = 0, x = 2; j < 9; ++j) {
+        for (int j = 0, count = 2; j < 9; ++j) {
             if (array[i][j] == 0) {
-                if (j == x) {
+                if (j == count) {
                     std::cout << "_ |";
-                    x += 3;
+                    count += 3;
                 } else {
                     std::cout << "_ ";
                 }
-
-            } else if (j == x) {
+            } else if (j == count) {
                 std::cout << array[i][j] << " |";
-                x += 3;
+                count += 3;
             } else {
                 std::cout << array[i][j] << " ";
             }
