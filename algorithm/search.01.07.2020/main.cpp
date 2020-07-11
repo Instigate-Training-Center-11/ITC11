@@ -16,7 +16,7 @@ int main() {
             int* arr = inputArray(sizeArray);
             shellSort(arr,sizeArray);
             /* A function takes an argument enum i runs that algorithm */
-            algorithm(arr,TernarySearch,sizeArray);
+            algorithm(arr,JumpSearch,sizeArray);
             printArray(arr,sizeArray);
             delete [] arr;
         }

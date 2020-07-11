@@ -70,7 +70,7 @@ int interpolationSearch (int* arr, int key, unsigned int size) {
         if (arr[mid] < key) {
             low = mid + 1;
         } else if (arr[mid] > key) {
-            low = mid - 1;
+            high = mid - 1;
         } else {
             std:: cout << "\nFound in index -> ";
             return mid;
