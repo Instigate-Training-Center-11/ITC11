@@ -12,6 +12,7 @@ int main() {
 	std::cout << "This is direct matric: " << std::endl;
     coutMatrix(matric, size, size);
     rotate(matric, size);
+    coutMatrix(matric, size, size);
 	return 0;
 }
 
@@ -57,11 +58,14 @@ void coutMatrix(int **matrix, int row, int col) {
 /* This function rotates the matric */
 void rotate(int ** array, int n) {
     std::cout << "This is rotated matric: " << std::endl;
-    for(int j = 0; j < n; j++) {
-        for(int i = n - 1; i >= 0; i--) {
-            std::cout << array[i][j] << " ";
+    int current = 0;
+    for(int i = 0; i < n; ++i) {
+        for(int j = i; j < n - i - 1; ++j) {
+            current = array[i][j];
+            array[i][j] = array[n - j - 1][i];
+            array[n - j - 1][i] = array[n - i - 1][n - j - 1];
+            array[n - i - 1][n - j - 1] = array[j][n - i - 1];
+            array[j][n - i - 1] = current;
         }
-
-        std::cout << std::endl;
     }
 }
