@@ -1,35 +1,66 @@
 #include "binaryTree.h"
 
-//int BinaryTree::getLeftHeight(void) {
-//    return LeftHeight;
-//}
-//
-//int BinaryTree::getRightHeight(void) {
-//    return  RightHeight;
-//}
 
-int getMaxTime(int n) {
-    for (int i = 1; i < n; ++i) {
-
+int BinaryTree::getMaxTime(int n) {
+    if (n > this->getCountNodes()) {
+        return 0;
     }
+    for (int i = 1; i < n; ++i) {
+        this->remove(this->findMax()->value);
+        this->buildTree(this->getRoot());
+    }
+
+    return this->findMax()->value;
+}
+
+void BinaryTree::storeBSTNodes(Node *root, std::vector<Node*> &nodes) {
+    if (root == NULL) {
+        return;
+    }
+
+    storeBSTNodes(root->left, nodes);
+    nodes.push_back(root);
+    storeBSTNodes(root->right, nodes);
+}
+
+Node* BinaryTree::buildTreeUtil(std::vector<Node*> &nodes, int start,int end) {
+    if (start > end) {
+        return NULL;
+    }
+
+    int mid = (start + end) / 2;
+    Node *root = nodes[mid];
+
+    /* Using index in Inorder traversal, construct
+     * left and right subtress */
+    root->left = buildTreeUtil(nodes, start, mid - 1);
+    root->right = buildTreeUtil(nodes, mid + 1, end);
+
+    return root;
+}
+
+void BinaryTree::buildTree(Node *root) {
+    /* Store nodes of given BinaryTree in sorted order */
+    std::vector<Node *> nodes;
+    storeBSTNodes(root, nodes);
+
+    /* Constucts BinaryTree from nodes[] */
+    int n = nodes.size();
+    this->root = buildTreeUtil(nodes, 0, n - 1);
 }
 
 void BinaryTree::insert(Node *root, int value) {
     if (value > root->value) {
         if (!root->right) {
             root->right = new Node(value);
-            if (!root->left) {
-                RightHeight += 1;
-            }
+            ++countNodes;
         } else {
             insert(root->right, value);
         }
     } else {
         if (!root->left) {
+            ++countNodes;
             root->left = new Node(value);
-            if (!root->left) {
-                LeftHeight += 1;
-            }
         } else {
             insert(root->left, value);
         }
@@ -50,8 +81,8 @@ void BinaryTree::print(Node *root) {
         return;
     }
 
+    std::cout << root->value << ' ';
     print(root->left);
-    std::cout << root->value <<' ';
     print(root->right);
 }
 
@@ -88,6 +119,7 @@ bool BinaryTree::remove(Node *parent, Node *current, int value) {
                 parent->left = NULL;
             }
             delete current;
+            --this->countNodes;
             current = NULL;
             return true;
         } else if (!current->left || !current->right) {
@@ -110,6 +142,7 @@ bool BinaryTree::remove(Node *parent, Node *current, int value) {
             current->value = nextLargerNode->value;
             delete nextLargerNode;
             nextLargerNode = NULL;
+            --this->countNodes;
         }
         return true;
     }
@@ -151,6 +184,16 @@ Node* BinaryTree::findNodeWithValue(int value) {
     return current;
 }
 
+BinaryTree::BinaryTree(void) {
+}
+BinaryTree::~BinaryTree(void) {
+    delete root;
+}
+
 Node* BinaryTree::getRoot() {
     return this->root;
+}
+
+int BinaryTree::getCountNodes(void) {
+    return this->countNodes;
 }
