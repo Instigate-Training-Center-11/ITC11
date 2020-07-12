@@ -14,7 +14,7 @@ Graph::~Graph () {
 }
 
 void Graph::AddEdgeWeight (int src, int dst, int weight) {
-    edgeweight.insert(std::pair<PII,int>(std::make_pair(src, dst), weight));
+    edgeweight.emplace(std::make_pair(src,dst),weight);
 }
 
 void Graph::AddEdge (int src, int dst) {
