@@ -17,7 +17,6 @@ long long int uglyNumberDynamic(int n,std::vector<int> &data) {
     int f5 = 1;
 
     data[1] = 1;
-    dataUglyNumbers[1] = 1;
     for (int i = 2; i <= n; ++i) {
         long long int nextUglyNumber2 = dataUglyNumbers[f2] * 2;
         long long int nextUglyNumber3 = dataUglyNumbers[f3] * 3;
