@@ -1,8 +1,16 @@
-template<typename Type>
-void sort(Type array[], int begin, int end) {
+#include <cstdlib>
+#include <iostream>
+
+void swap(int& first, int& second) {
+    int temp = first;
+    first = second;
+    second = temp;
+}
+
+void sort(int array[], int begin, int end) {
     int i = begin;
     int j = end;
-    Type pivot = array[end - 1];
+    int pivot = array[end - 1];
 
     while (i <= j) {
         while (array[i] < pivot) {
@@ -29,22 +37,13 @@ void sort(Type array[], int begin, int end) {
     }
 }
 
-template<typename Type>
-void swap(Type& first, Type& second) {
-    Type temp = first;
-    first = second;
-    second = temp;
-}
-
-template<typename Type>
-void print(Type array[], int size) {
+void print(int array[], int size) {
 	for (int i = 0; i < size; i++) {
         std::cout << array[i] << " ";
     }
 }
 
-template<typename Type>
-void random_array(Type array[], int size) {
+void random_array(int array[], int size) {
 	for (int i = 0; i < size; ++i) {
 		array[i] = rand() % 1000;
 	}

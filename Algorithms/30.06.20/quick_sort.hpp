@@ -1,22 +1,14 @@
 #ifndef _QUICK_SORT_HPP
 #define _QUICK_SORT_HPP
 
-#include <cstdlib>
-
 /* Quick sort */
 
-template<typename Type>
-void sort(Type array[], int begin, int end);
+void sort(int array[], int begin, int end);
 
-template<typename Type>
-void swap(Type& first, Type& second);
+void swap(int& first, int& second);
 
-template<typename Type>
-void print(Type array[], int size);
+void print(int array[], int size);
 
-template<typename Type>
-void random_array(Type array[], int size);
-
-#include "quick_sort.cpp"
+void random_array(int array[], int size);
 
 #endif

@@ -1,11 +1,13 @@
+#include <iostream>
+#include <cstdlib>
+
 /* Merge sort */
-template<typename Type>
-void sort(Type array[], int begin, int end, int mid) {
+void sort(int array[], int begin, int end, int mid) {
 	int i = 0;
 	int j = 0;
 	int count = 0;
 	int size = end - begin + 1;
-	Type buffer[size];
+	int buffer[size];
 	i = begin;
 	count = 0;
 	j = mid + 1;
@@ -39,8 +41,7 @@ void sort(Type array[], int begin, int end, int mid) {
 	}
 }
 
-template<typename Type>
-void merge_sort(Type array[], int begin, int end) {
+void merge_sort(int array[], int begin, int end) {
 	int mid = 0;
 	if(begin >= end) {
 		return;
@@ -56,8 +57,7 @@ void merge_sort(Type array[], int begin, int end) {
 }
 
 /* Selection sort */
-template<typename Type>
-void selection_sort(Type array[], int size) {
+void selection_sort(int array[], int size) {
 	int index_min = 0;
 	int temp = 0;
 
@@ -74,15 +74,13 @@ void selection_sort(Type array[], int size) {
 	}
 }
 
-template<typename Type>
-void print(Type array[], int size) {
+void print(int array[], int size) {
 	for (int i = 0; i < size; i++) {
         std::cout << array[i] << " ";
     }
 }
 
-template<typename Type>
-void random_array(Type array[], int size) {
+void random_array(int array[], int size) {
 	for (int i = 0; i < size; ++i) {
 		array[i] = rand() % 1000;
 	}
