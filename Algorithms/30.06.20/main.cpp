@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cstdlib>
 #include "quick_sort.hpp"
 
 int main() {

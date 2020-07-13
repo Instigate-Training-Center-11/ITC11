@@ -1,5 +1,6 @@
 #include <iostream>
 #include <ctime>
+#include <cstdlib>
 #include "sorting_algorithm.hpp"
 
 int main() {
