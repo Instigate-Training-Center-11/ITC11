@@ -13,5 +13,6 @@ int main() {
     std::cout << "String 2: " << newStr << std::endl;
     std::cout << "Strings Difference: ";
     std::cout << stringDiff(str, newStr) << std::endl;
+
     return 0;
 }

@@ -28,7 +28,7 @@ int main() {
     std::cout << "Min: " << min(firstNum, secondNum) << std::endl;
     std::cout << "Sum: " << sum(firstNum, secondNum) << std::endl;
     std::cout << "Mul: " << mul(firstNum, secondNum) << std::endl;
-    std::cout << "Pow: " << pow(firstNum, secondNum) << std::endl;
+    std::cout << "Pow: " << power(firstNum, secondNum) << std::endl;
     std::cout << "The arithmetic average: " << average(firstNum, secondNum) << std::endl;
     return 0;
 }
