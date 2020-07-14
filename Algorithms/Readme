@@ -1,0 +1,39 @@
+.
+├── 01.07.20
+│   ├── algorithm.cpp
+│   ├── algorithm.hpp
+│   ├── main.cpp
+│   ├── Makefile
+│   ├── menu.cpp
+│   └── menu.hpp
+├── 02.07.20
+│   ├── graph.cpp
+│   ├── graph.hpp
+│   ├── main.cpp
+│   ├── Makefile
+│   └── weighted_graph
+│       ├── graph.cpp
+│       ├── graph.hpp
+│       ├── main.cpp
+│       └── Makefile
+├── 03.07.20
+│   ├── graph.cpp
+│   ├── graph.hpp
+│   ├── main.cpp
+│   └── Makefile
+├── 08.07.20
+│   └── classwork
+│       └── fibonacci.cpp
+├── 29.06.20
+│   ├── main.cpp
+│   ├── Makefile
+│   ├── sorting_algorithm.cpp
+│   └── sorting_algorithm.hpp
+├── 30.06.20
+│   ├── main.cpp
+│   ├── Makefile
+│   ├── quick_sort.cpp
+│   └── quick_sort.hpp
+└── Readme
+
+8 directories, 28 files

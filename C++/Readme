@@ -11,11 +11,11 @@
 │   ├── list.hpp
 │   └── main.cpp
 ├── 05.06.20
-│   ├── List
 │   ├── list.cpp
 │   ├── list.hpp
 │   ├── main.cpp
-│   ├── makefile
+│   ├── Makefile
+│   ├── node.hpp
 │   ├── queue.cpp
 │   └── queue.hpp
 ├── 08.06.20
@@ -38,6 +38,7 @@
 │       ├── list.cpp
 │       ├── list.hpp
 │       ├── main.cpp
+│       ├── Makefile
 │       └── node.hpp
 ├── 10.06.20
 │   ├── Reverse
@@ -57,8 +58,21 @@
 │   ├── caesar.cpp
 │   ├── file1.txt
 │   └── file2.txt
-└── 12.06.20
-    ├── client.cpp
-    └── server.cpp
+├── 12.06.20
+│   ├── client.cpp
+│   ├── Makefile
+│   └── server.cpp
+├── 22.06.20
+│   ├── main.cpp
+│   └── vector.hpp
+├── 23.06.20
+│   ├── main.cpp
+│   ├── Makefile
+│   ├── stack.cpp
+│   └── stack.hpp
+├── 24.06.20
+│   ├── binery_tree.h
+│   └── main.cpp
+└── Readme
 
-14 directories, 47 files
+17 directories, 58 files
