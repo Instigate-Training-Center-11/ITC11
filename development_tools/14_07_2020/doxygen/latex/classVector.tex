@@ -1,0 +1,155 @@
+\hypertarget{classVector}{}\section{Vector$<$ T $>$ Class Template Reference}
+\label{classVector}\index{Vector$<$ T $>$@{Vector$<$ T $>$}}
+
+
+Implimentation vector.  
+
+
+
+
+{\ttfamily \#include $<$vector.\+h$>$}
+
+
+
+Inheritance diagram for Vector$<$ T $>$\+:
+% FIG 0
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classVector_1_1iterator}{iterator}
+\begin{DoxyCompactList}\small\item\em Implimentation iterator of stack. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classVector_a8656ea9785cd568035328afec77a753c}\label{classVector_a8656ea9785cd568035328afec77a753c}} 
+{\bfseries Vector} (int, T)
+\item 
+\mbox{\Hypertarget{classVector_a4edc1cac2c4cd6d3791280edabd89029}\label{classVector_a4edc1cac2c4cd6d3791280edabd89029}} 
+{\bfseries Vector} (const \hyperlink{classVector}{Vector} \&)
+\item 
+\mbox{\Hypertarget{classVector_ad688a8a0dfbd07ea63d838058a436f79}\label{classVector_ad688a8a0dfbd07ea63d838058a436f79}} 
+bool {\bfseries empty} () const
+\item 
+void \hyperlink{classVector_aed29bfc8028b4c6c18ebe89ed3f02119}{push\+\_\+back} (const T \&d)
+\begin{DoxyCompactList}\small\item\em Insert the element in vector from last. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classVector_adcba035109febbe55cba2a25f8483ba6}\label{classVector_adcba035109febbe55cba2a25f8483ba6}} 
+void \hyperlink{classVector_adcba035109febbe55cba2a25f8483ba6}{pop\+\_\+back} ()
+\begin{DoxyCompactList}\small\item\em Remove the element in vector from last. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classVector_a5214a382564aedc712b609416aa3b7b1}\label{classVector_a5214a382564aedc712b609416aa3b7b1}} 
+unsigned int {\bfseries size} () const
+\item 
+\mbox{\Hypertarget{classVector_a84e014345158da7a6b89a4879c8086c4}\label{classVector_a84e014345158da7a6b89a4879c8086c4}} 
+\hyperlink{classVector}{Vector}$<$ T $>$ \& {\bfseries operator=} (const \hyperlink{classVector}{Vector}$<$ T $>$ \&)
+\item 
+\mbox{\Hypertarget{classVector_ad1dc835efbf1859b3bd960c9b4f55ad4}\label{classVector_ad1dc835efbf1859b3bd960c9b4f55ad4}} 
+\hyperlink{classVector_1_1iterator}{iterator} {\bfseries begin} ()
+\item 
+\mbox{\Hypertarget{classVector_ac03563dbb2d417a36096b524a4875674}\label{classVector_ac03563dbb2d417a36096b524a4875674}} 
+\hyperlink{classVector_1_1iterator}{iterator} {\bfseries end} ()
+\item 
+\mbox{\Hypertarget{classVector_a68ecb8dc5e1047cead715396d146ed61}\label{classVector_a68ecb8dc5e1047cead715396d146ed61}} 
+unsigned int {\bfseries capacity} () const
+\item 
+\mbox{\Hypertarget{classVector_a059385ff13f47a93ce37905fd5d53f3a}\label{classVector_a059385ff13f47a93ce37905fd5d53f3a}} 
+void {\bfseries reserve} (int)
+\item 
+\mbox{\Hypertarget{classVector_a268b979b2dee0ae72b32759ab760fe18}\label{classVector_a268b979b2dee0ae72b32759ab760fe18}} 
+void {\bfseries resize} (int, T val=T())
+\item 
+\mbox{\Hypertarget{classVector_ad6454ce193263b8000d4c18cb0c3a0c8}\label{classVector_ad6454ce193263b8000d4c18cb0c3a0c8}} 
+void {\bfseries shrink\+\_\+to\+\_\+fit} ()
+\item 
+\mbox{\Hypertarget{classVector_ada36811f9a98443820d1ebea0e36a429}\label{classVector_ada36811f9a98443820d1ebea0e36a429}} 
+T \& {\bfseries operator\mbox{[}$\,$\mbox{]}} (int i)
+\item 
+\mbox{\Hypertarget{classVector_a8656ea9785cd568035328afec77a753c}\label{classVector_a8656ea9785cd568035328afec77a753c}} 
+{\bfseries Vector} (int, T)
+\item 
+\mbox{\Hypertarget{classVector_a4edc1cac2c4cd6d3791280edabd89029}\label{classVector_a4edc1cac2c4cd6d3791280edabd89029}} 
+{\bfseries Vector} (const \hyperlink{classVector}{Vector} \&)
+\item 
+\mbox{\Hypertarget{classVector_a9c86c24ca13756c7a4f400d26cd88567}\label{classVector_a9c86c24ca13756c7a4f400d26cd88567}} 
+\hyperlink{classVector}{Vector}$<$ T $>$ \& {\bfseries operator=} (const \hyperlink{classVector}{Vector}$<$ T $>$ \&)
+\item 
+\mbox{\Hypertarget{classVector_a466e8c045ea10d62c28b689888e9fe5a}\label{classVector_a466e8c045ea10d62c28b689888e9fe5a}} 
+\hyperlink{classVector_1_1iterator}{iterator} {\bfseries begin} ()
+\item 
+\mbox{\Hypertarget{classVector_ae288fa619188bff101d5300b8aaf9a90}\label{classVector_ae288fa619188bff101d5300b8aaf9a90}} 
+\hyperlink{classVector_1_1iterator}{iterator} {\bfseries end} ()
+\item 
+bool \hyperlink{classVector_ad688a8a0dfbd07ea63d838058a436f79}{empty} () const
+\begin{DoxyCompactList}\small\item\em Checks whether is incomplete or not. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classVector_a68ecb8dc5e1047cead715396d146ed61}\label{classVector_a68ecb8dc5e1047cead715396d146ed61}} 
+unsigned int {\bfseries capacity} () const
+\item 
+\mbox{\Hypertarget{classVector_a059385ff13f47a93ce37905fd5d53f3a}\label{classVector_a059385ff13f47a93ce37905fd5d53f3a}} 
+void {\bfseries reserve} (int)
+\item 
+\mbox{\Hypertarget{classVector_a268b979b2dee0ae72b32759ab760fe18}\label{classVector_a268b979b2dee0ae72b32759ab760fe18}} 
+void {\bfseries resize} (int, T val=T())
+\item 
+\mbox{\Hypertarget{classVector_a5214a382564aedc712b609416aa3b7b1}\label{classVector_a5214a382564aedc712b609416aa3b7b1}} 
+unsigned int {\bfseries size} () const
+\item 
+\mbox{\Hypertarget{classVector_ad6454ce193263b8000d4c18cb0c3a0c8}\label{classVector_ad6454ce193263b8000d4c18cb0c3a0c8}} 
+void {\bfseries shrink\+\_\+to\+\_\+fit} ()
+\item 
+\mbox{\Hypertarget{classVector_aed29bfc8028b4c6c18ebe89ed3f02119}\label{classVector_aed29bfc8028b4c6c18ebe89ed3f02119}} 
+void {\bfseries push\+\_\+back} (const T \&d)
+\item 
+\mbox{\Hypertarget{classVector_adcba035109febbe55cba2a25f8483ba6}\label{classVector_adcba035109febbe55cba2a25f8483ba6}} 
+void {\bfseries pop\+\_\+back} ()
+\item 
+\mbox{\Hypertarget{classVector_a5db0910fc60e17551b75f6b227c49b46}\label{classVector_a5db0910fc60e17551b75f6b227c49b46}} 
+T \& {\bfseries operator\mbox{[}$\,$\mbox{]}} (int i)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class Vector$<$ T $>$}
+
+Implimentation vector. 
+
+\begin{DoxyVersion}{Version}
+1.\+0.\+0 
+\end{DoxyVersion}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classVector_ad688a8a0dfbd07ea63d838058a436f79}\label{classVector_ad688a8a0dfbd07ea63d838058a436f79}} 
+\index{Vector@{Vector}!empty@{empty}}
+\index{empty@{empty}!Vector@{Vector}}
+\subsubsection{\texorpdfstring{empty()}{empty()}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+bool \hyperlink{classVector}{Vector}$<$ T $>$\+::empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Checks whether is incomplete or not. 
+
+\begin{DoxyReturn}{Returns}
+Return boolean value 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classVector_aed29bfc8028b4c6c18ebe89ed3f02119}\label{classVector_aed29bfc8028b4c6c18ebe89ed3f02119}} 
+\index{Vector@{Vector}!push\+\_\+back@{push\+\_\+back}}
+\index{push\+\_\+back@{push\+\_\+back}!Vector@{Vector}}
+\subsubsection{\texorpdfstring{push\+\_\+back()}{push\_back()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \hyperlink{classVector}{Vector}$<$ T $>$\+::push\+\_\+back (\begin{DoxyParamCaption}\item[{const T \&}]{d }\end{DoxyParamCaption})}
+
+
+
+Insert the element in vector from last. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em d} & need get in function \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+stack/vector.\+h\item 
+stack/vector.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,43 @@
+\hypertarget{structNode}{}\section{Node$<$ T $>$ Struct Template Reference}
+\label{structNode}\index{Node$<$ T $>$@{Node$<$ T $>$}}
+
+
+Implimentation \hyperlink{structNode}{Node}.  
+
+
+
+
+{\ttfamily \#include $<$node.\+h$>$}
+
+
+
+Collaboration diagram for Node$<$ T $>$\+:
+% FIG 0
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structNode_ac450c71a8677a38d306361f9ced518d3}\label{structNode_ac450c71a8677a38d306361f9ced518d3}} 
+T {\bfseries data}
+\item 
+\mbox{\Hypertarget{structNode_a6596c7ac17ecafff5522310c0da3a828}\label{structNode_a6596c7ac17ecafff5522310c0da3a828}} 
+\hyperlink{structNode}{Node} $\ast$ {\bfseries left}
+\item 
+\mbox{\Hypertarget{structNode_a4009a1138f2f04372037fbec63406f11}\label{structNode_a4009a1138f2f04372037fbec63406f11}} 
+\hyperlink{structNode}{Node} $\ast$ {\bfseries right}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+struct Node$<$ T $>$}
+
+Implimentation \hyperlink{structNode}{Node}. 
+
+\begin{DoxyVersion}{Version}
+1.\+0.\+0 
+\end{DoxyVersion}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+binary\+\_\+tree/node.\+h\end{DoxyCompactItemize}
