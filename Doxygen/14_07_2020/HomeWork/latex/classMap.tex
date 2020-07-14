@@ -1,0 +1,96 @@
+\hypertarget{classMap}{}\section{Map Class Reference}
+\label{classMap}\index{Map@{Map}}
+
+
+\hyperlink{classMap}{Map} class.  
+
+
+
+
+{\ttfamily \#include $<$Map.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classMap_aa4aa7fe50b6145e358c6f73f1842495a}{insert} (int, int)
+\begin{DoxyCompactList}\small\item\em Add element in the end of \hyperlink{classList}{List}. \end{DoxyCompactList}\item 
+void \hyperlink{classMap_ab03e57ec10f6d7a611ed84ddabb1a828}{erase} (int)
+\begin{DoxyCompactList}\small\item\em Delete element from end of \hyperlink{classList}{List}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classMap}{Map} class. 
+
+\begin{DoxyVersion}{Version}
+1.\+0.\+0 
+\end{DoxyVersion}
+
+
+\subsection{Member Function Documentation}
+\index{Map@{Map}!erase@{erase}}
+\index{erase@{erase}!Map@{Map}}
+\subsubsection[{\texorpdfstring{erase(int)}{erase(int)}}]{\setlength{\rightskip}{0pt plus 5cm}void Map\+::erase (
+\begin{DoxyParamCaption}
+\item[{int}]{value}
+\end{DoxyParamCaption}
+)}\hypertarget{classMap_ab03e57ec10f6d7a611ed84ddabb1a828}{}\label{classMap_ab03e57ec10f6d7a611ed84ddabb1a828}
+
+
+Delete element from end of \hyperlink{classList}{List}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & -\/ Index, which element will be deleted \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value, that will be returned (void) 
+\end{DoxyReturn}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000004}{Todo}]This function have status In Progress 80\% \end{DoxyRefDesc}
+\begin{DoxyWarning}{Warning}
+Dont use this function more, then 2 arguments
+\end{DoxyWarning}
+
+\begin{DoxyCode}
+\textcolor{keywordtype}{void} \hyperlink{classMap_ab03e57ec10f6d7a611ed84ddabb1a828}{Map::erase}(\textcolor{keywordtype}{int} value, \textcolor{keywordtype}{int} index) \{
+    std::cout << \textcolor{stringliteral}{"This function will delete value from given index of map"} << \textcolor{stringliteral}{"\(\backslash\)n"}; 
+\}
+\end{DoxyCode}
+ \index{Map@{Map}!insert@{insert}}
+\index{insert@{insert}!Map@{Map}}
+\subsubsection[{\texorpdfstring{insert(int, int)}{insert(int, int)}}]{\setlength{\rightskip}{0pt plus 5cm}void Map\+::insert (
+\begin{DoxyParamCaption}
+\item[{int}]{value, }
+\item[{int}]{index}
+\end{DoxyParamCaption}
+)}\hypertarget{classMap_aa4aa7fe50b6145e358c6f73f1842495a}{}\label{classMap_aa4aa7fe50b6145e358c6f73f1842495a}
+
+
+Add element in the end of \hyperlink{classList}{List}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value1} & -\/ Value, which will be added in the \hyperlink{classMap}{Map} \\
+\hline
+{\em value2} & -\/ Index, where the element will be added \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value, that will be returned (void) 
+\end{DoxyReturn}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000003}{Todo}]This function have status In Progress 20\% \end{DoxyRefDesc}
+\begin{DoxyRefDesc}{Deprecated}
+\item[\hyperlink{deprecated__deprecated000002}{Deprecated}]This function already deprecated \end{DoxyRefDesc}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em memory} & error in case of insufficient memory \\
+\hline
+\end{DoxyExceptions}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Map/Map.\+h\item 
+Map/Map.\+cpp\end{DoxyCompactItemize}
