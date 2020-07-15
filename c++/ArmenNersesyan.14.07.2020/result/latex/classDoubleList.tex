@@ -1,0 +1,260 @@
+\hypertarget{classDoubleList}{}\section{Double\+List$<$ Type $>$ Class Template Reference}
+\label{classDoubleList}\index{Double\+List$<$ Type $>$@{Double\+List$<$ Type $>$}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classDoubleList_1_1Iterator}{Iterator}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+auto \hyperlink{classDoubleList_a4c4e2442340bd76f3f73527012cf21dd}{erase} (\hyperlink{classDoubleList_1_1Iterator}{Iterator} position)
+\begin{DoxyCompactList}\small\item\em Removes from the list container either a single element. \end{DoxyCompactList}\item 
+auto \hyperlink{classDoubleList_a4fd49f28ae07fd52f6932f21d8604041}{insert} (\hyperlink{classDoubleList_1_1Iterator}{Iterator} position, const Type \&node\+Value)
+\begin{DoxyCompactList}\small\item\em The container is extended by inserting new elements before the element at the specified position. \end{DoxyCompactList}\item 
+\hyperlink{classDoubleList}{Double\+List}$<$ Type $>$ \& \hyperlink{classDoubleList_afe14167dc2c38016a1a03e5d72597d6a}{operator=} (const \hyperlink{classDoubleList}{Double\+List} \&object)
+\begin{DoxyCompactList}\small\item\em Assigns new contents to the container, replacing its current contents, and modifying its size accordingly. \end{DoxyCompactList}\item 
+void \hyperlink{classDoubleList_a58263ddfc70173f0d5a58c7e4af0e0f1}{remove} (const Type \&node\+Value)
+\begin{DoxyCompactList}\small\item\em Removes from the container all the elements that compare equal to Node\+Value. This calls the destructor of these objects and reduces the container size by the number of elements removed. \end{DoxyCompactList}\item 
+void \hyperlink{classDoubleList_acc64af7f09918c9b93bbb2e0acbe3b99}{push\+Front} (Type Node\+Value)
+\begin{DoxyCompactList}\small\item\em Inserts a new element at the beginning of the list, right before its current first element. The content of Node\+Value is copied (or moved) to the inserted element. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classDoubleList_ac2adea48c1884e2b521dae62708917ea}\label{classDoubleList_ac2adea48c1884e2b521dae62708917ea}} 
+void \hyperlink{classDoubleList_ac2adea48c1884e2b521dae62708917ea}{pop\+Front} (void)
+\begin{DoxyCompactList}\small\item\em Removes the first element in the list container, effectively reducing its size by one. \end{DoxyCompactList}\item 
+bool \hyperlink{classDoubleList_a0ab37dfffb686afb02591b1e390043e5}{empty} (void) const
+\begin{DoxyCompactList}\small\item\em Returns whether the list is empty (i.\+e. whether its size is 0). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classDoubleList_aaa18b7dec106ac0c9bba5cfbc647cf82}\label{classDoubleList_aaa18b7dec106ac0c9bba5cfbc647cf82}} 
+void \hyperlink{classDoubleList_aaa18b7dec106ac0c9bba5cfbc647cf82}{pop\+Back} (void)
+\begin{DoxyCompactList}\small\item\em Removes the last element in the list, effectively reducing the container size by one. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{classDoubleList_a4d41e1e9987abfacc315bbce462618c2}{size} (void) const
+\begin{DoxyCompactList}\small\item\em Returns the number of elements in the list. Member type size\+\_\+type is an unsigned integral type. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classDoubleList_a28c311d57a9a2425a4af2691dc158aac}\label{classDoubleList_a28c311d57a9a2425a4af2691dc158aac}} 
+void \hyperlink{classDoubleList_a28c311d57a9a2425a4af2691dc158aac}{print} (void) const
+\begin{DoxyCompactList}\small\item\em printing the custom list \end{DoxyCompactList}\item 
+void \hyperlink{classDoubleList_ad837f0847d561642747af47645952cfd}{push\+Back} (Type Node\+Value=0)
+\begin{DoxyCompactList}\small\item\em Adds a new element at the end of the list, after its current last element. \end{DoxyCompactList}\item 
+\hyperlink{classDoubleList_a0a5f827968e87609730b0a97dcd08105}{Double\+List} (unsigned int count\+Node=0, Type Node\+Value=0)
+\begin{DoxyCompactList}\small\item\em Constructs a container with n elements. Each element is a copy of Node\+Value. default parameters equal 0. \end{DoxyCompactList}\item 
+\hyperlink{classDoubleList_aba69ed048141748e3269969748b12c0a}{Double\+List} (const \hyperlink{classDoubleList}{Double\+List}$<$ Type $>$ \&object)
+\begin{DoxyCompactList}\small\item\em Constructs a container with a copy of each of the elements in x, in the same order. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classDoubleList_a22b87f4d294b23987e1f19cce85f276e}\label{classDoubleList_a22b87f4d294b23987e1f19cce85f276e}} 
+\hyperlink{classDoubleList_a22b87f4d294b23987e1f19cce85f276e}{$\sim$\+Double\+List} ()
+\begin{DoxyCompactList}\small\item\em Destroys the container object. \end{DoxyCompactList}\item 
+\hyperlink{classDoubleList_1_1Iterator}{Iterator} \hyperlink{classDoubleList_a63f8896f6da1cd0af88e837260d5bbf0}{begin} (void) const
+\begin{DoxyCompactList}\small\item\em iterator to head the current list \end{DoxyCompactList}\item 
+\hyperlink{classDoubleList_1_1Iterator}{Iterator} \hyperlink{classDoubleList_a701f4210e8adb12facfc29308971c9f6}{end} (void) const
+\begin{DoxyCompactList}\small\item\em iterator to tail the current list \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classDoubleList_a0a5f827968e87609730b0a97dcd08105}\label{classDoubleList_a0a5f827968e87609730b0a97dcd08105}} 
+\index{Double\+List@{Double\+List}!Double\+List@{Double\+List}}
+\index{Double\+List@{Double\+List}!Double\+List@{Double\+List}}
+\subsubsection{\texorpdfstring{Double\+List()}{DoubleList()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Type$>$ \\
+\hyperlink{classDoubleList}{Double\+List}$<$ Type $>$\+::\hyperlink{classDoubleList}{Double\+List} (\begin{DoxyParamCaption}\item[{unsigned int}]{count\+Node = {\ttfamily 0},  }\item[{Type}]{Node\+Value = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Constructs a container with n elements. Each element is a copy of Node\+Value. default parameters equal 0. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em unsigned} & int -\/ Node count \\
+\hline
+{\em Type} & -\/ Node value \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classDoubleList_aba69ed048141748e3269969748b12c0a}\label{classDoubleList_aba69ed048141748e3269969748b12c0a}} 
+\index{Double\+List@{Double\+List}!Double\+List@{Double\+List}}
+\index{Double\+List@{Double\+List}!Double\+List@{Double\+List}}
+\subsubsection{\texorpdfstring{Double\+List()}{DoubleList()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Type$>$ \\
+\hyperlink{classDoubleList}{Double\+List}$<$ Type $>$\+::\hyperlink{classDoubleList}{Double\+List} (\begin{DoxyParamCaption}\item[{const \hyperlink{classDoubleList}{Double\+List}$<$ Type $>$ \&}]{object }\end{DoxyParamCaption})}
+
+
+
+Constructs a container with a copy of each of the elements in x, in the same order. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em const} & Double\+List$<$\+Type$>$ \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+Ref \& -\/ object 
+\end{DoxySeeAlso}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classDoubleList_a63f8896f6da1cd0af88e837260d5bbf0}\label{classDoubleList_a63f8896f6da1cd0af88e837260d5bbf0}} 
+\index{Double\+List@{Double\+List}!begin@{begin}}
+\index{begin@{begin}!Double\+List@{Double\+List}}
+\subsubsection{\texorpdfstring{begin()}{begin()}}
+{\footnotesize\ttfamily template$<$typename Type$>$ \\
+\hyperlink{classDoubleList_1_1Iterator}{Iterator} \hyperlink{classDoubleList}{Double\+List}$<$ Type $>$\+::begin (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+iterator to head the current list 
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{classDoubleList_1_1Iterator}{Iterator} -\/ link to the head linked list; 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDoubleList_a0ab37dfffb686afb02591b1e390043e5}\label{classDoubleList_a0ab37dfffb686afb02591b1e390043e5}} 
+\index{Double\+List@{Double\+List}!empty@{empty}}
+\index{empty@{empty}!Double\+List@{Double\+List}}
+\subsubsection{\texorpdfstring{empty()}{empty()}}
+{\footnotesize\ttfamily template$<$typename Type$>$ \\
+bool \hyperlink{classDoubleList}{Double\+List}$<$ Type $>$\+::empty (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns whether the list is empty (i.\+e. whether its size is 0). 
+
+\begin{DoxyReturn}{Returns}
+bool -\/ true or false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDoubleList_a701f4210e8adb12facfc29308971c9f6}\label{classDoubleList_a701f4210e8adb12facfc29308971c9f6}} 
+\index{Double\+List@{Double\+List}!end@{end}}
+\index{end@{end}!Double\+List@{Double\+List}}
+\subsubsection{\texorpdfstring{end()}{end()}}
+{\footnotesize\ttfamily template$<$typename Type$>$ \\
+\hyperlink{classDoubleList_1_1Iterator}{Iterator} \hyperlink{classDoubleList}{Double\+List}$<$ Type $>$\+::end (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+iterator to tail the current list 
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{classDoubleList_1_1Iterator}{Iterator} -\/ link to the tail linked list; 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDoubleList_a4c4e2442340bd76f3f73527012cf21dd}\label{classDoubleList_a4c4e2442340bd76f3f73527012cf21dd}} 
+\index{Double\+List@{Double\+List}!erase@{erase}}
+\index{erase@{erase}!Double\+List@{Double\+List}}
+\subsubsection{\texorpdfstring{erase()}{erase()}}
+{\footnotesize\ttfamily template$<$typename Type$>$ \\
+auto \hyperlink{classDoubleList}{Double\+List}$<$ Type $>$\+::erase (\begin{DoxyParamCaption}\item[{\hyperlink{classDoubleList_1_1Iterator}{Iterator}}]{position }\end{DoxyParamCaption})}
+
+
+
+Removes from the list container either a single element. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{classDoubleList_1_1Iterator}{Iterator}} & -\/ position \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{classDoubleList_1_1Iterator}{Iterator} -\/ position 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDoubleList_a4fd49f28ae07fd52f6932f21d8604041}\label{classDoubleList_a4fd49f28ae07fd52f6932f21d8604041}} 
+\index{Double\+List@{Double\+List}!insert@{insert}}
+\index{insert@{insert}!Double\+List@{Double\+List}}
+\subsubsection{\texorpdfstring{insert()}{insert()}}
+{\footnotesize\ttfamily template$<$typename Type$>$ \\
+auto \hyperlink{classDoubleList}{Double\+List}$<$ Type $>$\+::insert (\begin{DoxyParamCaption}\item[{\hyperlink{classDoubleList_1_1Iterator}{Iterator}}]{position,  }\item[{const Type \&}]{node\+Value }\end{DoxyParamCaption})}
+
+
+
+The container is extended by inserting new elements before the element at the specified position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{classDoubleList_1_1Iterator}{Iterator}} & -\/ position \\
+\hline
+{\em const} & Type\& -\/ node\+Value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{classDoubleList_1_1Iterator}{Iterator} -\/ position 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDoubleList_afe14167dc2c38016a1a03e5d72597d6a}\label{classDoubleList_afe14167dc2c38016a1a03e5d72597d6a}} 
+\index{Double\+List@{Double\+List}!operator=@{operator=}}
+\index{operator=@{operator=}!Double\+List@{Double\+List}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily template$<$typename Type$>$ \\
+\hyperlink{classDoubleList}{Double\+List}$<$Type$>$\& \hyperlink{classDoubleList}{Double\+List}$<$ Type $>$\+::operator= (\begin{DoxyParamCaption}\item[{const \hyperlink{classDoubleList}{Double\+List}$<$ Type $>$ \&}]{object }\end{DoxyParamCaption})}
+
+
+
+Assigns new contents to the container, replacing its current contents, and modifying its size accordingly. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em const} & \hyperlink{classDoubleList}{Double\+List}\& -\/ object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Double\+List$<$\+Type$>$\& -\/ new object 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+Ref \& object 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classDoubleList_ad837f0847d561642747af47645952cfd}\label{classDoubleList_ad837f0847d561642747af47645952cfd}} 
+\index{Double\+List@{Double\+List}!push\+Back@{push\+Back}}
+\index{push\+Back@{push\+Back}!Double\+List@{Double\+List}}
+\subsubsection{\texorpdfstring{push\+Back()}{pushBack()}}
+{\footnotesize\ttfamily template$<$typename Type$>$ \\
+void \hyperlink{classDoubleList}{Double\+List}$<$ Type $>$\+::push\+Back (\begin{DoxyParamCaption}\item[{Type}]{Node\+Value = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Adds a new element at the end of the list, after its current last element. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Type} & -\/ Node\+Value \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classDoubleList_acc64af7f09918c9b93bbb2e0acbe3b99}\label{classDoubleList_acc64af7f09918c9b93bbb2e0acbe3b99}} 
+\index{Double\+List@{Double\+List}!push\+Front@{push\+Front}}
+\index{push\+Front@{push\+Front}!Double\+List@{Double\+List}}
+\subsubsection{\texorpdfstring{push\+Front()}{pushFront()}}
+{\footnotesize\ttfamily template$<$typename Type$>$ \\
+void \hyperlink{classDoubleList}{Double\+List}$<$ Type $>$\+::push\+Front (\begin{DoxyParamCaption}\item[{Type}]{Node\+Value }\end{DoxyParamCaption})}
+
+
+
+Inserts a new element at the beginning of the list, right before its current first element. The content of Node\+Value is copied (or moved) to the inserted element. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Type} & -\/ node\+Value \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classDoubleList_a58263ddfc70173f0d5a58c7e4af0e0f1}\label{classDoubleList_a58263ddfc70173f0d5a58c7e4af0e0f1}} 
+\index{Double\+List@{Double\+List}!remove@{remove}}
+\index{remove@{remove}!Double\+List@{Double\+List}}
+\subsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily template$<$typename Type$>$ \\
+void \hyperlink{classDoubleList}{Double\+List}$<$ Type $>$\+::remove (\begin{DoxyParamCaption}\item[{const Type \&}]{node\+Value }\end{DoxyParamCaption})}
+
+
+
+Removes from the container all the elements that compare equal to Node\+Value. This calls the destructor of these objects and reduces the container size by the number of elements removed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em const} & \hyperlink{classDoubleList}{Double\+List}\& -\/ object \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classDoubleList_a4d41e1e9987abfacc315bbce462618c2}\label{classDoubleList_a4d41e1e9987abfacc315bbce462618c2}} 
+\index{Double\+List@{Double\+List}!size@{size}}
+\index{size@{size}!Double\+List@{Double\+List}}
+\subsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily template$<$typename Type$>$ \\
+unsigned int \hyperlink{classDoubleList}{Double\+List}$<$ Type $>$\+::size (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the number of elements in the list. Member type size\+\_\+type is an unsigned integral type. 
+
+\begin{DoxyReturn}{Returns}
+unsigned int -\/ size current list 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Data\+Structures/linklist/link\+List.\+h\end{DoxyCompactItemize}

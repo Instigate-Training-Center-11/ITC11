@@ -1,0 +1,124 @@
+\hypertarget{classMyVector}{}\section{My\+Vector$<$ Type $>$ Class Template Reference}
+\label{classMyVector}\index{My\+Vector$<$ Type $>$@{My\+Vector$<$ Type $>$}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classMyVector_a3bb5bec961c41c42ba7b961af3743471}\label{classMyVector_a3bb5bec961c41c42ba7b961af3743471}} 
+\hyperlink{classMyVector_a3bb5bec961c41c42ba7b961af3743471}{My\+Vector} (void)
+\begin{DoxyCompactList}\small\item\em empty container constructor (default constructor) Constructs an empty container, with no elements. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classMyVector_a6f41f6e8183a1234adf5c71705fb9a98}\label{classMyVector_a6f41f6e8183a1234adf5c71705fb9a98}} 
+\hyperlink{classMyVector_a6f41f6e8183a1234adf5c71705fb9a98}{My\+Vector} (unsigned int constructor\+Size, Type value)
+\begin{DoxyCompactList}\small\item\em Constructs a container with n elements. Each element is a copy of value. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classMyVector_a90d73cfe8e96e8db68f681ce01a9ff66}\label{classMyVector_a90d73cfe8e96e8db68f681ce01a9ff66}} 
+\hyperlink{classMyVector_a90d73cfe8e96e8db68f681ce01a9ff66}{$\sim$\+My\+Vector} (void)
+\begin{DoxyCompactList}\small\item\em Destroys the container object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classMyVector_abf42d6f142589ab76efd8e8050c2f12c}\label{classMyVector_abf42d6f142589ab76efd8e8050c2f12c}} 
+void \hyperlink{classMyVector_abf42d6f142589ab76efd8e8050c2f12c}{shrink\+To\+Fit} (void)
+\begin{DoxyCompactList}\small\item\em Requests the container to reduce its capacity to fit its size. \end{DoxyCompactList}\item 
+void \hyperlink{classMyVector_a8793cd4a1ec1df2104f20d7b3fda2c7a}{reserve} (unsigned int res)
+\begin{DoxyCompactList}\small\item\em Requests that the vector capacity be at least enough to contain res elements. \end{DoxyCompactList}\item 
+bool \hyperlink{classMyVector_a9a4db5f7572c6dce12279a8ceb2798d5}{empty} (void) const
+\begin{DoxyCompactList}\small\item\em Returns whether the vector is empty (i.\+e. whether its size is 0). \end{DoxyCompactList}\item 
+unsigned int \hyperlink{classMyVector_acf22be00b40145fef2f9dc7a63511995}{size\+Capacity} (void) const
+\begin{DoxyCompactList}\small\item\em Return size of allocated storage capacity. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{classMyVector_aa4f26bb090c1d23861811ea1983927f1}{get\+Size} (void) const
+\begin{DoxyCompactList}\small\item\em Returns the number of elements in the vector. \end{DoxyCompactList}\item 
+void \hyperlink{classMyVector_a9e3b2952308f179196339693d16df039}{Push\+Back} (const Type \&newelement)
+\begin{DoxyCompactList}\small\item\em Adds a new element at the end of the vector, after its current last element. The content of val is copied (or moved) to the new element. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classMyVector_aa666d4e5ec09b7360bd0ce830cd2fdeb}\label{classMyVector_aa666d4e5ec09b7360bd0ce830cd2fdeb}} 
+void \hyperlink{classMyVector_aa666d4e5ec09b7360bd0ce830cd2fdeb}{pop\+Back} (void)
+\begin{DoxyCompactList}\small\item\em Removes the last element in the vector, effectively reducing the container size by one. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classMyVector_a38fd78190795c1d26ce5afee7aabcdaa}\label{classMyVector_a38fd78190795c1d26ce5afee7aabcdaa}} 
+void \hyperlink{classMyVector_a38fd78190795c1d26ce5afee7aabcdaa}{pop\+Front} (void)
+\begin{DoxyCompactList}\small\item\em removes an item from the front, effectively reducing the container size by one. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classMyVector_ad7cc75f5ba4df27bd20a9b6844dcb10e}\label{classMyVector_ad7cc75f5ba4df27bd20a9b6844dcb10e}} 
+void \hyperlink{classMyVector_ad7cc75f5ba4df27bd20a9b6844dcb10e}{print} (void) const
+\begin{DoxyCompactList}\small\item\em Print the current vector. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classMyVector_a0646f68d29b585e684e2a6c539c87854}\label{classMyVector_a0646f68d29b585e684e2a6c539c87854}} 
+Type $\ast$ {\bfseries begin} (void)
+\item 
+\mbox{\Hypertarget{classMyVector_a903e3c1b014989ed316cc5b39f130bdf}\label{classMyVector_a903e3c1b014989ed316cc5b39f130bdf}} 
+Type {\bfseries back} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classMyVector_a9a4db5f7572c6dce12279a8ceb2798d5}\label{classMyVector_a9a4db5f7572c6dce12279a8ceb2798d5}} 
+\index{My\+Vector@{My\+Vector}!empty@{empty}}
+\index{empty@{empty}!My\+Vector@{My\+Vector}}
+\subsubsection{\texorpdfstring{empty()}{empty()}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+bool \hyperlink{classMyVector}{My\+Vector}$<$ Type $>$\+::empty (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns whether the vector is empty (i.\+e. whether its size is 0). 
+
+\begin{DoxyReturn}{Returns}
+bool -\/ true if the container size is 0, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMyVector_aa4f26bb090c1d23861811ea1983927f1}\label{classMyVector_aa4f26bb090c1d23861811ea1983927f1}} 
+\index{My\+Vector@{My\+Vector}!get\+Size@{get\+Size}}
+\index{get\+Size@{get\+Size}!My\+Vector@{My\+Vector}}
+\subsubsection{\texorpdfstring{get\+Size()}{getSize()}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+unsigned int \hyperlink{classMyVector}{My\+Vector}$<$ Type $>$\+::get\+Size (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the number of elements in the vector. 
+
+\begin{DoxyReturn}{Returns}
+unsigned int -\/ size vector 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMyVector_a9e3b2952308f179196339693d16df039}\label{classMyVector_a9e3b2952308f179196339693d16df039}} 
+\index{My\+Vector@{My\+Vector}!Push\+Back@{Push\+Back}}
+\index{Push\+Back@{Push\+Back}!My\+Vector@{My\+Vector}}
+\subsubsection{\texorpdfstring{Push\+Back()}{PushBack()}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+void \hyperlink{classMyVector}{My\+Vector}$<$ Type $>$\+::Push\+Back (\begin{DoxyParamCaption}\item[{const Type \&}]{newelement }\end{DoxyParamCaption})}
+
+
+
+Adds a new element at the end of the vector, after its current last element. The content of val is copied (or moved) to the new element. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em const} & Type\& -\/ value \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classMyVector_a8793cd4a1ec1df2104f20d7b3fda2c7a}\label{classMyVector_a8793cd4a1ec1df2104f20d7b3fda2c7a}} 
+\index{My\+Vector@{My\+Vector}!reserve@{reserve}}
+\index{reserve@{reserve}!My\+Vector@{My\+Vector}}
+\subsubsection{\texorpdfstring{reserve()}{reserve()}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+void \hyperlink{classMyVector}{My\+Vector}$<$ Type $>$\+::reserve (\begin{DoxyParamCaption}\item[{unsigned int}]{res }\end{DoxyParamCaption})}
+
+
+
+Requests that the vector capacity be at least enough to contain res elements. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em unsigned} & int -\/ res \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classMyVector_acf22be00b40145fef2f9dc7a63511995}\label{classMyVector_acf22be00b40145fef2f9dc7a63511995}} 
+\index{My\+Vector@{My\+Vector}!size\+Capacity@{size\+Capacity}}
+\index{size\+Capacity@{size\+Capacity}!My\+Vector@{My\+Vector}}
+\subsubsection{\texorpdfstring{size\+Capacity()}{sizeCapacity()}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+unsigned int \hyperlink{classMyVector}{My\+Vector}$<$ Type $>$\+::size\+Capacity (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const}
+
+
+
+Return size of allocated storage capacity. 
+
+\begin{DoxyReturn}{Returns}
+unsigned int -\/ size Capacity 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Data\+Structures/stack/vector.\+h\end{DoxyCompactItemize}

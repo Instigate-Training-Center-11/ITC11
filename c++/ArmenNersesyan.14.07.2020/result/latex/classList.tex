@@ -1,0 +1,191 @@
+\hypertarget{classList}{}\section{List$<$ Type $>$ Class Template Reference}
+\label{classList}\index{List$<$ Type $>$@{List$<$ Type $>$}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classList_aa54d1f54bc0fbf91f434d55e66dc588b}\label{classList_aa54d1f54bc0fbf91f434d55e66dc588b}} 
+\hyperlink{classList_aa54d1f54bc0fbf91f434d55e66dc588b}{List} (void)
+\begin{DoxyCompactList}\small\item\em default constructor \end{DoxyCompactList}\item 
+\hyperlink{classList_add72f882a3484ed68b14b8c8c797a1f6}{List} (unsigned int count)
+\begin{DoxyCompactList}\small\item\em Parameterized constructor, create a sheet with size = count. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{classList_a261ca8c729d011b0ff08a4da4d5b9d2f}{get\+Size} (void) const
+\begin{DoxyCompactList}\small\item\em Returns the number of elements in the list. Member type size\+\_\+type is an unsigned integral type. \end{DoxyCompactList}\item 
+void \hyperlink{classList_a07496984175b07818abe40573209c7d1}{remove\+At\+Index} (unsigned int)
+\begin{DoxyCompactList}\small\item\em Remove element by index. \end{DoxyCompactList}\item 
+void \hyperlink{classList_afef72ae14d1dc037bfda14ec555f4856}{insert\+At\+Index} (unsigned int, Type)
+\begin{DoxyCompactList}\small\item\em Insert element by index (adding new node) \end{DoxyCompactList}\item 
+void \hyperlink{classList_a8a1748e3792f7c0ee8ff1a89f823b159}{set\+At\+Index} (unsigned int, Type)
+\begin{DoxyCompactList}\small\item\em Set element by index (modifies value node) \end{DoxyCompactList}\item 
+Type \hyperlink{classList_a3898d41810652b70aa2e2089c39bfdde}{operator\mbox{[}$\,$\mbox{]}} (unsigned int) const
+\begin{DoxyCompactList}\small\item\em Get element by index. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classList_a0bb7f24f38d860cc5b7e58961eeca294}\label{classList_a0bb7f24f38d860cc5b7e58961eeca294}} 
+void \hyperlink{classList_a0bb7f24f38d860cc5b7e58961eeca294}{print\+List} (void) const
+\begin{DoxyCompactList}\small\item\em Print the current list. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classList_a2d5977549c7c99d2fe92aece3265f06a}\label{classList_a2d5977549c7c99d2fe92aece3265f06a}} 
+void \hyperlink{classList_a2d5977549c7c99d2fe92aece3265f06a}{clear} (void)
+\begin{DoxyCompactList}\small\item\em Remove all elements from the list. \end{DoxyCompactList}\item 
+Type \hyperlink{classList_ab7b810c9f307470ccf357d0ba328f5b5}{back} (void)
+\item 
+bool \hyperlink{classList_a9326434dfbb5adf23aac5040e9d7a8f7}{empty} (void)
+\begin{DoxyCompactList}\small\item\em Returns whether the list is empty (i.\+e. whether its size is 0). \end{DoxyCompactList}\item 
+void \hyperlink{classList_ad69aa8e4c38ee6a5bf07f8cdd5047bd1}{push\+Back} (Type value)
+\begin{DoxyCompactList}\small\item\em Constructs a container with n elements. Each element is a copy of Node\+Value. default parameters equal 0. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classList_ad580c7d0cc671fcad5eae73932e1dd55}\label{classList_ad580c7d0cc671fcad5eae73932e1dd55}} 
+void \hyperlink{classList_ad580c7d0cc671fcad5eae73932e1dd55}{pop\+Back} ()
+\begin{DoxyCompactList}\small\item\em Removes the last element in the list, effectively reducing the container size by one. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classList_a1d382eeeb6fddaa0de9714051700b305}\label{classList_a1d382eeeb6fddaa0de9714051700b305}} 
+\hyperlink{classList_a1d382eeeb6fddaa0de9714051700b305}{$\sim$\+List} (void)
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classList_add72f882a3484ed68b14b8c8c797a1f6}\label{classList_add72f882a3484ed68b14b8c8c797a1f6}} 
+\index{List@{List}!List@{List}}
+\index{List@{List}!List@{List}}
+\subsubsection{\texorpdfstring{List()}{List()}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+\hyperlink{classList}{List}$<$ Type $>$\+::\hyperlink{classList}{List} (\begin{DoxyParamCaption}\item[{unsigned int}]{count }\end{DoxyParamCaption})}
+
+
+
+Parameterized constructor, create a sheet with size = count. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em unsigned} & int -\/ count \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classList_ab7b810c9f307470ccf357d0ba328f5b5}\label{classList_ab7b810c9f307470ccf357d0ba328f5b5}} 
+\index{List@{List}!back@{back}}
+\index{back@{back}!List@{List}}
+\subsubsection{\texorpdfstring{back()}{back()}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+Type \hyperlink{classList}{List}$<$ Type $>$\+::back (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000001}{Todo}]\end{DoxyRefDesc}
+\mbox{\Hypertarget{classList_a9326434dfbb5adf23aac5040e9d7a8f7}\label{classList_a9326434dfbb5adf23aac5040e9d7a8f7}} 
+\index{List@{List}!empty@{empty}}
+\index{empty@{empty}!List@{List}}
+\subsubsection{\texorpdfstring{empty()}{empty()}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+bool \hyperlink{classList}{List}$<$ Type $>$\+::empty (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Returns whether the list is empty (i.\+e. whether its size is 0). 
+
+\begin{DoxyReturn}{Returns}
+bool -\/ true or false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classList_a261ca8c729d011b0ff08a4da4d5b9d2f}\label{classList_a261ca8c729d011b0ff08a4da4d5b9d2f}} 
+\index{List@{List}!get\+Size@{get\+Size}}
+\index{get\+Size@{get\+Size}!List@{List}}
+\subsubsection{\texorpdfstring{get\+Size()}{getSize()}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+unsigned int \hyperlink{classList}{List}$<$ Type $>$\+::get\+Size (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the number of elements in the list. Member type size\+\_\+type is an unsigned integral type. 
+
+\begin{DoxyReturn}{Returns}
+unsigned int -\/ size current list 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classList_afef72ae14d1dc037bfda14ec555f4856}\label{classList_afef72ae14d1dc037bfda14ec555f4856}} 
+\index{List@{List}!insert\+At\+Index@{insert\+At\+Index}}
+\index{insert\+At\+Index@{insert\+At\+Index}!List@{List}}
+\subsubsection{\texorpdfstring{insert\+At\+Index()}{insertAtIndex()}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+void \hyperlink{classList}{List}$<$ Type $>$\+::insert\+At\+Index (\begin{DoxyParamCaption}\item[{unsigned}]{int,  }\item[{Type}]{ }\end{DoxyParamCaption})}
+
+
+
+Insert element by index (adding new node) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em unsigned} & int -\/ index \\
+\hline
+{\em Type} & int -\/ value \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classList_a3898d41810652b70aa2e2089c39bfdde}\label{classList_a3898d41810652b70aa2e2089c39bfdde}} 
+\index{List@{List}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!List@{List}}
+\subsubsection{\texorpdfstring{operator[]()}{operator[]()}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+Type \hyperlink{classList}{List}$<$ Type $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{unsigned}]{int }\end{DoxyParamCaption}) const}
+
+
+
+Get element by index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em unsigned} & int -\/ index \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Type -\/ value 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classList_ad69aa8e4c38ee6a5bf07f8cdd5047bd1}\label{classList_ad69aa8e4c38ee6a5bf07f8cdd5047bd1}} 
+\index{List@{List}!push\+Back@{push\+Back}}
+\index{push\+Back@{push\+Back}!List@{List}}
+\subsubsection{\texorpdfstring{push\+Back()}{pushBack()}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+void \hyperlink{classList}{List}$<$ Type $>$\+::push\+Back (\begin{DoxyParamCaption}\item[{Type}]{value }\end{DoxyParamCaption})}
+
+
+
+Constructs a container with n elements. Each element is a copy of Node\+Value. default parameters equal 0. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em unsigned} & int -\/ Node count \\
+\hline
+{\em Type} & -\/ Node value \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classList_a07496984175b07818abe40573209c7d1}\label{classList_a07496984175b07818abe40573209c7d1}} 
+\index{List@{List}!remove\+At\+Index@{remove\+At\+Index}}
+\index{remove\+At\+Index@{remove\+At\+Index}!List@{List}}
+\subsubsection{\texorpdfstring{remove\+At\+Index()}{removeAtIndex()}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+void \hyperlink{classList}{List}$<$ Type $>$\+::remove\+At\+Index (\begin{DoxyParamCaption}\item[{unsigned}]{int }\end{DoxyParamCaption})}
+
+
+
+Remove element by index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em unsigned} & int -\/ index \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classList_a8a1748e3792f7c0ee8ff1a89f823b159}\label{classList_a8a1748e3792f7c0ee8ff1a89f823b159}} 
+\index{List@{List}!set\+At\+Index@{set\+At\+Index}}
+\index{set\+At\+Index@{set\+At\+Index}!List@{List}}
+\subsubsection{\texorpdfstring{set\+At\+Index()}{setAtIndex()}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+void \hyperlink{classList}{List}$<$ Type $>$\+::set\+At\+Index (\begin{DoxyParamCaption}\item[{unsigned}]{int,  }\item[{Type}]{ }\end{DoxyParamCaption})}
+
+
+
+Set element by index (modifies value node) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em unsigned} & int -\/ index \\
+\hline
+{\em Type} & int -\/ value \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Data\+Structures/stack/list.\+h\end{DoxyCompactItemize}
