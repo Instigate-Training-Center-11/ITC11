@@ -23,7 +23,7 @@ unsigned int getSize() {
     bool flag = true;
 
     while (flag == true) {
-        while ((number[i] >= '0' && number[i] <= '9' ) || number[i] =='.' && i < number.size()) {
+        while ((number[i] > '0' && number[i] <= '9' ) || number[i] =='.' && i < number.size()) {
             i++;
         }
         if (i == number.size()) {
