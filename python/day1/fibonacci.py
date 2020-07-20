@@ -1,3 +1,4 @@
+# get Fibonacci element by number
 def fibonacci(number):
     if number < 0:
         print("Not valid element index")
@@ -5,14 +6,13 @@ def fibonacci(number):
         return 1
     else:
         return fibonacci(number - 1) + fibonacci(number - 2)
-``
 
-def main():
+# Enter only integer number(not other charecter)
+# Number must be greater then 0
+def getNumber():
     number = 0
-    # Enter only integer number(not other charecter)
-    # Number must be greater then 0
     while number < 1:
-        print('Enter number to get Fibonacci number!')
+        print('Enter number to get Fibonacci number: ', end = "")
         try:
             number = int(input())
         except ValueError:
@@ -23,8 +23,12 @@ def main():
                 print("Number must be great then 0!")
                 number = 0
             else:
-                print("Fibonacci", number, "number is: ", fibonacci(number))
+                return number
 
+# Main function
+def main():
+    number = getNumber()
+    print("Fibonacci", number, "number is:", fibonacci(number))
 
 if __name__ == "__main__":
     main()
