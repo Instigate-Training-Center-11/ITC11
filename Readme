@@ -9,9 +9,35 @@
 
 .
 ├── algorithms
+│   ├── belmanFord
+│   │   ├── graph.cpp
+│   │   ├── graph.h
+│   │   ├── main.cpp
+│   │   └── Makefile
+│   ├── fibonacci
+│   │   ├── fibon.cpp
+│   │   ├── fibon.h
+│   │   ├── main.cpp
+│   │   └── Makefile
 │   ├── graf
 │   │   ├── graph.cpp
 │   │   ├── graph.h
+│   │   ├── graphManeAntonyan.png
+│   │   ├── main.cpp
+│   │   └── Makefile
+│   ├── hamilton
+│   │   ├── graph.cpp
+│   │   ├── graph.h
+│   │   ├── main.cpp
+│   │   └── Makefile
+│   ├── matrices
+│   │   ├── main.cpp
+│   │   ├── Makefile
+│   │   ├── matrix.cpp
+│   │   └── matrix.h
+│   ├── merge
+│   │   ├── func.cpp
+│   │   ├── func.h
 │   │   ├── main.cpp
 │   │   └── Makefile
 │   ├── mergeSort
@@ -19,6 +45,11 @@
 │   │   ├── Makefile
 │   │   ├── mergeSort.cpp
 │   │   └── mergeSort.h
+│   ├── possibleWaysConstructBuildings
+│   │   ├── main.cpp
+│   │   ├── Makefile
+│   │   ├── possibleWays.cpp
+│   │   └── possibleWays.h
 │   ├── quickSort
 │   │   ├── a.out
 │   │   ├── main.cpp
@@ -37,11 +68,26 @@
 │   │   ├── Makefile
 │   │   ├── sort.cpp
 │   │   └── sort.h
-│   └── sortTimes
+│   ├── sortTimes
+│   │   ├── main.cpp
+│   │   ├── Makefile
+│   │   ├── sort.cpp
+│   │   └── sort.h
+│   ├── stringDiff
+│   │   ├── func.cpp
+│   │   ├── func.h
+│   │   ├── main.cpp
+│   │   └── Makefile
+│   ├── uglyNumber
+│   │   ├── func.cpp
+│   │   ├── func.h
+│   │   ├── main.cpp
+│   │   └── Makefile
+│   └── uglyNumberUpdated
+│       ├── func.cpp
+│       ├── func.h
 │       ├── main.cpp
-│       ├── Makefile
-│       ├── sort.cpp
-│       └── sort.h
+│       └── Makefile
 ├── assembly
 │   ├── hello
 │   │   ├── helloWorld.asm
@@ -116,6 +162,7 @@
 │       └── test.sh
 ├── c++
 │   ├── 01.06.2020
+│   │   ├── a.out
 │   │   └── main.cpp
 │   ├── 02.06.2020
 │   │   ├── factorial.cpp
@@ -201,6 +248,115 @@
 │       └── clientServer
 │           ├── clientServer.cpp
 │           └── Makefile
+├── documentation
+│   └── documentation.odt
+├── doxygen
+│   ├── array.cpp
+│   ├── array.h
+│   ├── documentation
+│   │   ├── annotated.html
+│   │   ├── array_8h.html
+│   │   ├── array_8h__incl.map
+│   │   ├── array_8h__incl.md5
+│   │   ├── array_8h__incl.png
+│   │   ├── array_8h_source.html
+│   │   ├── arrowdown.png
+│   │   ├── arrowright.png
+│   │   ├── bc_s.png
+│   │   ├── bdwn.png
+│   │   ├── classArray.html
+│   │   ├── classArray-members.html
+│   │   ├── classes.html
+│   │   ├── classList.html
+│   │   ├── classList-members.html
+│   │   ├── classNode.html
+│   │   ├── classNode-members.html
+│   │   ├── closed.png
+│   │   ├── deprecated.html
+│   │   ├── doc.png
+│   │   ├── doxygen.css
+│   │   ├── doxygen.png
+│   │   ├── dynsections.js
+│   │   ├── files.html
+│   │   ├── folderclosed.png
+│   │   ├── folderopen.png
+│   │   ├── functions_func.html
+│   │   ├── functions.html
+│   │   ├── graph_legend.html
+│   │   ├── graph_legend.md5
+│   │   ├── graph_legend.png
+│   │   ├── index.html
+│   │   ├── jquery.js
+│   │   ├── list_8hpp_source.html
+│   │   ├── nav_f.png
+│   │   ├── nav_g.png
+│   │   ├── nav_h.png
+│   │   ├── node_8hpp_source.html
+│   │   ├── open.png
+│   │   ├── pages.html
+│   │   ├── search
+│   │   │   ├── all_0.html
+│   │   │   ├── all_0.js
+│   │   │   ├── all_1.html
+│   │   │   ├── all_1.js
+│   │   │   ├── all_2.html
+│   │   │   ├── all_2.js
+│   │   │   ├── all_3.html
+│   │   │   ├── all_3.js
+│   │   │   ├── classes_0.html
+│   │   │   ├── classes_0.js
+│   │   │   ├── classes_1.html
+│   │   │   ├── classes_1.js
+│   │   │   ├── close.png
+│   │   │   ├── files_0.html
+│   │   │   ├── files_0.js
+│   │   │   ├── functions_0.html
+│   │   │   ├── functions_0.js
+│   │   │   ├── functions_1.html
+│   │   │   ├── functions_1.js
+│   │   │   ├── mag_sel.png
+│   │   │   ├── nomatches.html
+│   │   │   ├── pages_0.html
+│   │   │   ├── pages_0.js
+│   │   │   ├── pages_1.html
+│   │   │   ├── pages_1.js
+│   │   │   ├── pages_2.html
+│   │   │   ├── pages_2.js
+│   │   │   ├── search.css
+│   │   │   ├── searchdata.js
+│   │   │   ├── search.js
+│   │   │   ├── search_l.png
+│   │   │   ├── search_m.png
+│   │   │   └── search_r.png
+│   │   ├── splitbar.png
+│   │   ├── sync_off.png
+│   │   ├── sync_on.png
+│   │   ├── tab_a.png
+│   │   ├── tab_b.png
+│   │   ├── tab_h.png
+│   │   ├── tabs.css
+│   │   ├── tab_s.png
+│   │   └── todo.html
+│   └── main.cpp
+├── exam
+│   ├── build
+│   │   ├── build
+│   │   ├── func.o
+│   │   └── main.o
+│   ├── func.cpp
+│   ├── func.h
+│   ├── main.cpp
+│   ├── Makefile
+│   └── Readme
+├── python
+│   └── day1
+│       ├── fibonacci.py
+│       ├── getNumber.py
+│       ├── localVar.py
+│       ├── numberRange.py
+│       ├── pascalTriangle.py
+│       ├── perfect.py
+│       └── threeDigitNumber.py
 ├── Readme
 └── STL
     ├── binaryTree

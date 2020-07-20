@@ -13,10 +13,12 @@ def getNumber():
 
 # Main function to check range of number
 def main():
+    print("*** First way ***")
     number = getNumber()
-    condition = number == 1100 or number == 900
-    condition = condition or number == 2100 or number == 1900
+    condition = number <= 1100 and number >= 900
+    condition = condition or (number <= 2100 and number >= 1900)
     print(True if condition else False)
+
 
 if __name__ == "__main__":
     main()
