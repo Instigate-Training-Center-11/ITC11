@@ -1,3 +1,5 @@
+import getNumber
+
 # Print Pascal's triangle pretty
 def pascalTriangle(number):
     for line in range(number):
@@ -18,26 +20,9 @@ def getElement(line, row):
         number = number // (i + 1)
     return number
 
-# Enter only integer number(not other charecter)
-# Number must be greater then 0
-def getNumber():
-    number = 0
-    while number < 1:
-        print('Enter number for Pascal Triangle size: ', end = "")
-        try:
-            number = int(input())
-        except ValueError:
-            print("It is not a number!")
-            number = 0
-        else:
-            if number < 1:
-                print("Number must be great then 0!")
-                number = 0
-            else:
-                return number
-
 def main():
-    number = getNumber()
+    print('Enter number for Pascal Triangle size: ', end = "")
+    number = getNumber.getNumber()
     print("*** Pascal Triangle ***")
     pascalTriangle(number)
 
