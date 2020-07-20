@@ -1,6 +1,6 @@
 def pascal(rows):
     arr = [1]
-    for i in range(rows - 1):
+    for i in range(rows):
         print(arr)
         new_arr = []
         new_arr.append(1)
@@ -10,5 +10,9 @@ def pascal(rows):
         new_arr.append(1)
         arr = new_arr
 
-rows = int(input("Enter the number: "))
-pascal(rows)
+def main():
+    rows = int(input("Enter the number: "))
+    pascal(rows)
+
+if __name__ == '__main__':
+    main()

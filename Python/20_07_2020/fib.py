@@ -1,10 +1,14 @@
-def fib(n): 
-    if n < 0: 
+def fib(num): 
+    if num < 0: 
         print("Must be great or equal to 0") 
-    elif n == 1 or n == 2: 
+    elif num == 1 or num == 2: 
         return 1
     else: 
-        return fib(n - 1) + fib(n - 2) 
+        return fib(num - 1) + fib(num - 2) 
 
-n = input("Enter the number: ") 
-print(fib(int(n)))
+def main():
+    num = input("Enter the number: ") 
+    print(fib(int(num)))
+
+if __name__ == '__main__':
+    main()

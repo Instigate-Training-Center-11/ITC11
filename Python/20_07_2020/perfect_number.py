@@ -4,11 +4,14 @@ def perfect_number(num):
         if num % i == 0:
             sum += i
 
-    print()
     if sum == num:
         print(num, "is Perfect Number")
     else:
         print(num, "is NOT Perfect Number")
 
-n = int(input("Enter the number: "))
-print(perfect_number(n))
+def main():
+    num = int(input("Enter the number: "))
+    perfect_number(num)
+
+if __name__ == '__main__':
+    main()
