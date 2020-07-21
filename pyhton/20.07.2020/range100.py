@@ -10,13 +10,28 @@ def input_number(message):
             break
 
 def compare_numbers(examples_number):
-    result_compare = False
-    equal_number
-    return result_compare
+    """[the function gets integer number and returns true if the received
+        number is between the (900 <= number <= 1100) and (1900 <= number <= 2100)]
+
+    Args:
+        examples_number ([integer]): [number]
+
+    Returns:
+        [bool]: [bool]
+    """
+    indicator = False
+    indicator = 1100 >= examples_number >= 900 or 2100 >= examples_number >= 1900  and True or False
+    return indicator
 
 
 def main():
     examples_number = input_number("Input number ")
-    compare_numbers(examples_number)
+    if compare_numbers(examples_number):
+        print("True")
+    else:
+        print("False")
+
     print(examples_number)
-main()
+
+if __name__ == "__main__":
+    main()

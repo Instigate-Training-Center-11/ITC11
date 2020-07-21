@@ -30,6 +30,9 @@ def main():
     print("count local  variables in function fibonacci = ",fibonacci.__code__.co_nlocals)
     Fib_number = input_number("Input Fibonacci list number ")
     print("Fibonacci number ",Fib_number," = ",fibonacci(Fib_number))
-main()
+
+if __name__ == "__main__":
+    main()
+
 
 

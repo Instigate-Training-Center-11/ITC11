@@ -9,24 +9,27 @@ def input_number(message):
             return user_input
             break
 
+
 def fibonacci(n):
-    fib_first = 0
-    fib_second = 1
-    if n < 0:
+    """[the function gets integer number  and the n-th Fibonacci number is returned]
+
+    Args:
+        n ([integer]): [number]
+
+    Returns:
+        [integer]: [fibonacci number]
+    """
+    if n <= 0:
         print("Incorrect input")
-    elif n == 0:
-        return fib_first
-    elif n == 1:
-        return fib_second
+    elif n == 1 or n == 2:
+        return 1
     else:
-        for i in range(2,n):
-            fib_membr = fib_first + fib_second
-            fib_first = fib_second
-            fib_second = fib_membr
-        return fib_second
+        return fibonacci(n - 1) + fibonacci(n - 2)
 
 def main():
-    Fib_number = input_number("Input Fibonacci list number ")
-    print("Fibonacci number ",Fib_number," = ",fibonacci(Fib_number))
-main()
+    fib_number = input_number("Input Fibonacci list number ")
+    print("Fibonacci number ",fib_number," = ",fibonacci(fib_number))
+
+if __name__ == "__main__":
+    main()
 

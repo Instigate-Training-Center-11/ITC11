@@ -12,7 +12,11 @@ def input_number(message):
             break
 
 def print_Pascal(n):
+    """[the function gets integer number and print pascal triangles (rows == number)]
 
+    Args:
+        n ([integer]): [number]
+    """
     for line in range(1, n + 1):
         current_member = 1
         for i in range(1, line + 1):
@@ -25,4 +29,5 @@ def main():
     n  = input_number("Input lines triangle Pascal ")
     print_Pascal(n)
 
-main()
+if __name__ == "__main__":
+    main()
