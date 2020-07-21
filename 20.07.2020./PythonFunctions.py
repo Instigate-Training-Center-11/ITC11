@@ -1,4 +1,5 @@
 print("=======================Fibonacci numbers=======================")
+
 n = int(input("Enter the positive number or 0 : "))
 
 while n < 0:
@@ -14,6 +15,7 @@ num = fibo(n)
 print(num)
 
 print("=======================Pascal triangle=======================")
+
 n = int(input("Enter the number of rows : "))
 
 def pascalLine(row, col):
@@ -27,8 +29,8 @@ def pascalLine(row, col):
 
 for r in range(1, n + 1):
     for c in range(1, r + 1):
-        print(pascalLine(r, c))
-    print("")
+        print(pascalLine(r, c), end = ' ')
+    print('')
 
 print("=======================Count of local variables=======================")
 
@@ -49,6 +51,7 @@ print ("The count of local variables of printName() is: " + str(n))
 print ("The count of local variables of addition() is: " + str(m))
 
 print("=======================Is in range? =======================")
+
 n = int(input("Enter the number : "))
 
 def isInRange(n):
@@ -57,13 +60,19 @@ def isInRange(n):
 print(isInRange(n))
 
 print("=======================Is perfect number? =======================")
+
 n = int(input("Enter the number : "))
+while n < 0 or n % 2 > 0:
+    n = int(input("Can not be a negative or an odd number : "))
 
 def isPerfect(n):
     total = 0
-    for i in range(1, n):
-        if n % i == 0:
-            total += i
+    for x in range(1, n):
+        if n % x == 0:
+            total += x
     return total == n
 
-print (isPerfect(n))
+if isPerfect(n) == True:
+    print (str(isPerfect(n)) + " : " + str(n) + " is a perfect number.")
+else:
+    print (str(isPerfect(n)) + " : " + str(n) + " is not a perfect number.")
