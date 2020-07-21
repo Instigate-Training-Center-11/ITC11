@@ -1,4 +1,4 @@
-def getNumber():
+def get_number():
     ''' Enter only integer number(not other charecter) '''
     ''' Number must be greater then 0 '''
     number = 0
@@ -19,7 +19,7 @@ def getNumber():
             else:
                 return number
 
-def getMinKey(diction):
+def get_min_key(diction):
     ''' Find minimum index from dictionary '''
     ''' If dictionary is empty, nothing to do '''
     if diction == {}:
@@ -27,10 +27,10 @@ def getMinKey(diction):
 
     ''' Get first element's key from dictionary and infer it minimum key '''
     ''' For getting element by index used dictionary's keys like list '''
-    minKey = list(diction.keys())[0]
+    min_key = list(diction.keys())[0]
 
     ''' Iterate all elements and return minimum key '''
     for key in diction:
-        if key < minKey:
-            minKey = key
-    return minKey
+        if key < min_key:
+            min_key = key
+    return min_key
