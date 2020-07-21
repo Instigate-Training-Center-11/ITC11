@@ -35,6 +35,13 @@
 │   ├── html
 │   │   └── search
 │   └── src
-└── Exam
+├── Exam
+└── Python
+    └── 20.07.20
+        ├── Fibonacci
+        ├── Local_var
+        ├── Optional_tasks
+        ├── Pascal
+        └── Range
 
-37 directories
+44 directories
