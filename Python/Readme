@@ -1,0 +1,18 @@
+.
+├── 20.07.20
+│   ├── Fibonacci
+│   │   ├── fibonacci.py
+│   │   └── main.py
+│   ├── Local_var
+│   │   └── main.py
+│   ├── Optional_tasks
+│   │   ├── devide_in_tree.py
+│   │   └── perfect_number.py
+│   ├── Pascal
+│   │   ├── main.py
+│   │   └── pascal.py
+│   └── Range
+│       └── range.py
+└── Readme
+
+6 directories, 9 files
