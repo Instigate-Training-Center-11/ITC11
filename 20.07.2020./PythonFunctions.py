@@ -29,7 +29,7 @@ def pascalLine(row, col):
 
 for r in range(1, n + 1):
     for c in range(1, r + 1):
-        print(pascalLine(r, c), end = ' ')
+        print(pascalLine(r, c), end=" ")
     print('')
 
 print("=======================Count of local variables=======================")
@@ -37,7 +37,7 @@ print("=======================Count of local variables=======================")
 def printingName():
     firstname = "Vardan"
     lastname = "Babayan"
-    print (firstname + " " + lastname)
+    print(firstname + " " + lastname)
 
 def addition():
     first = 3
@@ -47,8 +47,8 @@ def addition():
 
 n = printingName.__code__.co_nlocals
 m = addition.__code__.co_nlocals
-print ("The count of local variables of printName() is: " + str(n))
-print ("The count of local variables of addition() is: " + str(m))
+print("The count of local variables of printName() is: " + str(n))
+print("The count of local variables of addition() is: " + str(m))
 
 print("=======================Is in range? =======================")
 
@@ -73,6 +73,17 @@ def isPerfect(n):
     return total == n
 
 if isPerfect(n) == True:
-    print (str(isPerfect(n)) + " : " + str(n) + " is a perfect number.")
+    print(str(isPerfect(n)) + " : " + str(n) + " is a perfect number.")
 else:
-    print (str(isPerfect(n)) + " : " + str(n) + " is not a perfect number.")
+    print(str(isPerfect(n)) + " : " + str(n) + " is not a perfect number.")
+
+print("=======================Three-digit number=======================")
+
+n = int(input("Enter the three-digit number for range : "))
+listOfNums = []
+for number in range(100, n):
+    if number % 3 == 0:
+        listOfNums.append(number)
+print(len(listOfNums))
+
+print("=======================End=======================")
