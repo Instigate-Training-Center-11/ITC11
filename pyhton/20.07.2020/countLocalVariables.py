@@ -1,13 +1,13 @@
 def input_number(message):
-  while True:
-    try:
-       user_input = int(input(message))
-    except ValueError:
-       print("Not an integer! Try again.")
-       continue
-    else:
-       return user_input
-       break
+    while True:
+        try:
+            user_input = int(input(message))
+        except ValueError:
+            print("Not an integer! Try again.")
+            continue
+        else:
+            return user_input
+            break
 
 def fibonacci(n):
     fib_first = 0

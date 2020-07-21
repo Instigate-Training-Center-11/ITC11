@@ -22,7 +22,7 @@ def print_Pascal(n):
 
 def main():
 
-    n  = input_number("Input lines trangle Pascal ")
+    n  = input_number("Input lines triangle Pascal ")
     print_Pascal(n)
 
 main()
