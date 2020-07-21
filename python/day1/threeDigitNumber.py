@@ -6,10 +6,7 @@ def isValid(number):
     c = number % 10
     a = number // 100
     b = (number - 100 * a - c) // 10
-    if a != b and a != c and b != c and number % 3 == 0:
-        return True
-    else:
-        return False
+    return a != b and a != c and b != c and number % 3 == 0
 
 def getNumberCount(number):
     count = 0

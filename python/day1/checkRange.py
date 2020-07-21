@@ -11,12 +11,14 @@ def getNumber():
         else:
             return number
 
+def checkRange(number):
+    return number in range(900, 1101) or number in range(1900, 2101)
+
 # Main function to check range of number
 def main():
     number = getNumber()
-    condition = number <= 1100 and number >= 900
-    condition = condition or (number <= 2100 and number >= 1900)
-    print(True if condition else False)
+    array = [False, True]
+    print(array[checkRange(number)])
 
 if __name__ == "__main__":
     main()

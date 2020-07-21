@@ -21,7 +21,7 @@ def getElement(line, row):
     return number
 
 def main():
-    print('Enter number for Pascal Triangle size: ', end = "")
+    print("Enter Pascal's Triangle Line count: ", end = "")
     number = getNumber.getNumber()
     print("*** Pascal Triangle ***")
     pascalTriangle(number)
