@@ -13,7 +13,7 @@ def userInput():
 
 # function to check if inputted number is in the range (return TRUE) or not (return FALSE)
 def checkRange(number):
-    return ((abs(1000 - number) == 100) or (abs(2000 - number) == 100))
+    return ((abs(1000 - number) <= 100) or (abs(2000 - number) <= 100))
 
 def main():
     number = userInput()
