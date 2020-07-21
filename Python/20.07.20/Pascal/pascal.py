@@ -1,11 +1,23 @@
 def pascal_triangle(rows):
+    """ This function call pascal_triangle_rows for printing current row
+
+    Args:
+        rows (integer): Count for all rows
+    """
+
     count = 0;
     while count <= rows:
         pascal_triangle_rows(count, rows)
         count += 1
 
-# Calculate current row values
 def pascal_triangle_rows(row, rows):
+    """ Calculate current row values
+
+    Args:
+        row (integer): Current row
+        rows (integer): All rows
+    """
+
     my_array = []
     for i in range(row + 1):
         my_array.append(0)
@@ -22,17 +34,30 @@ def pascal_triangle_rows(row, rows):
 
     print_array(my_array, rows - row)
 
-# Print array and clear it
 def print_array(my_array, row):
+    """ Print array and clear it
+
+    Args:
+        my_array (list): list for values in row
+        row (integer): Current row
+    """
+
     space = ' '
     print(row * space, end = space)
     for i in my_array:
         print(i, end = space)
+
     my_array.clear()
+
     print()
 
-# Function checking value and return it
 def input_index():
+    """ Function checking validation and return true value
+
+    Returns:
+        (integer): Positive integer for rows
+    """
+
     while True:
         try:
             index = int(input("Insert index: "))
