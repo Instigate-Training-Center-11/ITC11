@@ -19,12 +19,9 @@ def input_value():
 
     while True:
         try:
-            value = int(input("Insert index: "))
-            if value < 0:
-                print("Insert positive integer! Try again ")
-                continue
+            value = int(input("Insert value: "))
         except ValueError:
-            print("Insert positive integer! Try again ")
+            print("Insert integer! Try again ")
             continue
         else:
             return value

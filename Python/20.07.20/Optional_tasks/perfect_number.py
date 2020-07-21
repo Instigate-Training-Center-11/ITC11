@@ -1,3 +1,20 @@
+def input_value():
+    """ Function checking value and return it
+
+    Returns:
+        (integer): Positive integer
+    """
+
+    while True:
+        try:
+            value = int(input("Insert value: "))
+        except ValueError:
+            print("Insert integer! Try again ")
+            continue
+        else:
+            return value
+            break
+
 def perfect_number(value):
     """ Function perfect_number
 
@@ -11,9 +28,6 @@ def perfect_number(value):
         if value % count == 0:
             result += count
         count += 1
-    if result == value:
-        print("True")
-    else:
-        print("False")
+    return (result == value)
 
-perfect_number(int(input("Insert value: ")))
+print(perfect_number(int(input_value())))
