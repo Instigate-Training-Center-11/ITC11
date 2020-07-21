@@ -1,5 +1,3 @@
-print("=======================Fibonacci numbers=======================")
-
 n = int(input("Enter the positive number or 0 : "))
 
 def fibo(n):

@@ -1,5 +1,3 @@
-print("=======================Count of local variables=======================")
-
 def printing_name():
     firstname = "Vardan"
     lastname = "Babayan"

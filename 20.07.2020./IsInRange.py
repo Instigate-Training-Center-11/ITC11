@@ -1,5 +1,3 @@
-print("=======================Is in range? =======================")
-
 n = int(input("Enter the number : "))
 
 def is_in_range(n):

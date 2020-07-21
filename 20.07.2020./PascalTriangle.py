@@ -1,5 +1,3 @@
-print("=======================Pascal triangle=======================")
-
 n = int(input("Enter the number of rows : "))
 
 def pascal_line(row, col):

@@ -1,5 +1,3 @@
-print("=======================Is perfect number? =======================")
-
 n = int(input("Enter the even positive number : "))
 
 def is_perfect(n):
