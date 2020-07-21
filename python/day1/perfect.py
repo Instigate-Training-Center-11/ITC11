@@ -6,10 +6,7 @@ def isPerfect(number):
         if number % i == 0:
             sum += i
 
-    if number == sum:
-        return True
-    else:
-        return False
+    return number == sum
 
 # Check is number is perfect or not
 def main():
