@@ -20,17 +20,13 @@ def compare_numbers(examples_number):
         [bool]: [bool]
     """
     indicator = False
-    indicator = 1100 >= examples_number >= 900 or 2100 >= examples_number >= 1900  and True or False
+    indicator = 1100 >= examples_number >= 900 or 2100 >= examples_number >= 1900
     return indicator
 
 
 def main():
     examples_number = input_number("Input number ")
-    if compare_numbers(examples_number):
-        print("True")
-    else:
-        print("False")
-
+    examples_number = compare_numbers(examples_number)
     print(examples_number)
 
 if __name__ == "__main__":

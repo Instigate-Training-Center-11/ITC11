@@ -25,11 +25,7 @@ def perfect(number):
             sum = sum + i
         i = i - 1
 
-    if sum == number:
-        return True
-    else:
-        return False
-
+    return (sum == number)
 
 def main():
     number = input_number("Input integer number ")
