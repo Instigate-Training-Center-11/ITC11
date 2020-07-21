@@ -1,3 +1,3 @@
-import pascal_func
+import pascal
 
-pascal_func.pascal_triangle(int(input("Insert index: ")))
+pascal.pascal_triangle(pascal.input_index())

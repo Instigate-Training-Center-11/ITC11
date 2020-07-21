@@ -1,3 +1,3 @@
 import fibonacci
 
-print(fibonacci.number_by_index(int(input("Insert index: "))))
+print(fibonacci.number_by_index(fibonacci.input_index()))
