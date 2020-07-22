@@ -1,6 +1,6 @@
-# Enter only integer number(not other charecter)
-# Number must be greater then 0
-def getNumber():
+def get_number():
+    ''' Enter only integer number(not other charecter) '''
+    ''' Number must be greater then 0 '''
     number = 0
     while number < 1:
         try:
@@ -17,9 +17,9 @@ def getNumber():
             else:
                 return number
 
-# Enter only integer number(not other charecter)
-# Number must be in range [100, 999]
-def getThreeDigitNumber():
+def get_three_digit_number():
+    ''' Enter only integer number(not other charecter) '''
+    ''' Number must be in range [100, 999] '''
     number = 0
     while number < 100 or number > 999:
         try:

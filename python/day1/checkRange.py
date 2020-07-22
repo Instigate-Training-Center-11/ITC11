@@ -1,8 +1,7 @@
-# Enter only integer number(not other charecter)
-def getNumber():
+def get_number():
+    ''' Enter only integer number(not other charecter) '''
     number = 0
     while number < 1:
-        print('Enter number: ', end = "")
         try:
             number = int(input())
         except ValueError:
@@ -11,14 +10,18 @@ def getNumber():
         else:
             return number
 
-def checkRange(number):
+def check_range(number):
+    ''' Check is the number in range '''
+    ''' Return values: True or False '''
     return number in range(900, 1101) or number in range(1900, 2101)
 
-# Main function to check range of number
 def main():
-    number = getNumber()
-    array = [False, True]
-    print(array[checkRange(number)])
+    ''' Main function to check range of number '''
+    print("*** Second way ***")
+    ''' Get number '''
+    print('Enter number: ', end = "")
+    number = get_number()
+    print(check_range(number))
 
 if __name__ == "__main__":
     main()

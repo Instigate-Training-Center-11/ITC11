@@ -1,7 +1,7 @@
 import getNumber
 
-# Print Pascal's triangle pretty
 def pascalTriangle(number):
+    ''' Print Pascal's triangle pretty '''
     for line in range(number):
         space = (number - line)
         for i in range(0, space):
@@ -10,8 +10,8 @@ def pascalTriangle(number):
             print(getElement(line, row), "  ", end = "")
         print()
 
-# Get Pascal's triangle element by row and line
 def getElement(line, row):
+    ''' Get Pascal's triangle element by row and line '''
     number = 1
     if (row > line - row):
         row = line - row

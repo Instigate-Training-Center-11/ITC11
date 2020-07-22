@@ -1,5 +1,5 @@
-# get Fibonacci element by number
 def fibonacci(number):
+    ''' Get Fibonacci element by number '''
     if number < 0:
         print("Not valid element index")
     elif number == 1 or number == 2:
@@ -7,9 +7,9 @@ def fibonacci(number):
     else:
         return fibonacci(number - 1) + fibonacci(number - 2)
 
-# Enter only integer number(not other charecter)
-# Number must be greater then 0
-def getNumber():
+def get_number():
+    ''' Enter only integer number(not other charecter) '''
+    ''' Number must be greater then 0    number = 0 '''
     number = 0
     while number < 1:
         print('Enter number to get Fibonacci number: ', end = "")
@@ -25,9 +25,9 @@ def getNumber():
             else:
                 return number
 
-# Main function
 def main():
-    number = getNumber()
+    ''' Main function '''
+    number = get_number()
     print("Fibonacci", number, "number is:", fibonacci(number))
 
 if __name__ == "__main__":

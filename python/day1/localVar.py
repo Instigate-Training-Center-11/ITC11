@@ -1,15 +1,15 @@
-# Function has not local variable
 def foo():
+    ''' Function has not local variable '''
     pass
 
-# Has 3 local variables
 def func():
+    ''' Has 3 local variables '''
     name = "Mane"
-    surname = "Antonyan"
+    surname = "kolibri"
     age = 20
 
-# Run main function to see result
 def main():
+    ''' Run main function to see result '''
     print("Foo function's local variables count is:", foo.__code__.co_nlocals)
     print("Foo function's local variables count is:", func.__code__.co_nlocals)
 

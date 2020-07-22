@@ -1,5 +1,5 @@
-# Enter only integer number(not other charecter)
-def getNumber():
+def get_number():
+    ''' Enter only integer number(not other charecter) '''
     number = 0
     while number < 1:
         print('Enter number: ', end = "")
@@ -11,9 +11,9 @@ def getNumber():
         else:
             return number
 
-# Main function to check range of number
 def main():
-    number = getNumber()
+    ''' Main function to check range of number '''
+    number = get_number()
     condition = number <= 1100 and number >= 900
     condition = condition or (number <= 2100 and number >= 1900)
     print(True if condition else False)

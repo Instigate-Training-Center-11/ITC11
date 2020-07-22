@@ -1,14 +1,15 @@
 import getNumber
 
-# Let the number is valid:
-# if divided into 3 and digits are not repeatable
 def isValid(number):
+    ''' Let the number is valid: '''
+    ''' if divided into 3 and digits are not repeatable '''
     c = number % 10
     a = number // 100
     b = (number - 100 * a - c) // 10
     return a != b and a != c and b != c and number % 3 == 0
 
 def getNumberCount(number):
+    ''' Get count of valid numbers '''
     count = 0
     for i in range(100, number):
         if isValid(i):
