@@ -1,10 +1,13 @@
 import magic_sort
 
-array1 = [['az3', "34", '54'],
-          ['mi2', 'jog', 'mid'],
-          ['x5', '45', '27'],
-          ['a1', 'alps', 'cow'],
-          ['a1', 'alps', 'blow']]
+array1 = [['aaa1', "zah", 'bdd'],
+          ['a1', 'zah', 'add'],
+          ['z9', 'z', 'bdd'],
+          ['xh1', 'abc', 'bdd'],
+          ['xh1', 'abc', 'bdd'],
+          ['r1', 'aa', 'bb'],
+          ['a0', '00', '77'],
+          ['ww1', '08', '00']]
 
 array2 = [['k1', '54', '78'],
           ['k2', 'kaa', 'bdd'],
