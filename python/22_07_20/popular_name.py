@@ -52,4 +52,6 @@ def main():
         number = len(tmp)
     for i in range(0,number):
         print(tmp[i])
-main()
+
+if __name__ == "__main__":
+    main()
