@@ -2,7 +2,12 @@ def sortFirstInteger(a, b):
     aa = str(a)
     bb = str(b)
     if len(a) > len(b):
-        return True
+        return 1
+    elif len(a) < len(b):
+        return -1
+    else:
+        return 0
+
     aaa = 0
     bbb = 0
     for i in range(0, len(a)):
@@ -11,7 +16,11 @@ def sortFirstInteger(a, b):
         if b[i].isdigit():
             bbb += int(b[i])
     if aaa > bbb:
-        return True
+        return 1
+    elif aaa < bbb:
+        return -1
+    else:
+        return 0
 
     aaaa = ""
     bbbb = ""
@@ -20,13 +29,20 @@ def sortFirstInteger(a, b):
             aaaa += a[i]
         if not b[i].isdigit():
             bbbb += b[i]
-    return aaaa > bbbb
+    if aaaa > bbbb:
+        return 1
+    if aaaa < bbbb:
+        return 1
+    else:
+        return 0
 
 def sortFirstString(a, b):
     aa = str(a)
     bb = str(b)
     if len(a) > len(b):
-        return True
+        return 1
+    if len(a) < len(b):
+        return -1
 
     aaaa = ""
     bbbb = ""
@@ -35,7 +51,12 @@ def sortFirstString(a, b):
             aaaa += a[i]
         if not b[i].isdigit():
             bbbb += b[i]
-    return aaaa > bbbb
+    if aaaa > bbbb:
+        return 1
+    elif aaaa < bbbb:
+        return -1
+    else:
+        return 0
 
     aaa = 0
     bbb = 0
@@ -45,7 +66,12 @@ def sortFirstString(a, b):
         if b[i].isdigit():
             bbb += int(b[i])
     if aaa > bbb:
-        return True
+        return 1
+    elif aaa < bbb:
+        return -1
+    else:
+        return 0
+
 
 
 def sortt(st):
@@ -67,20 +93,36 @@ def sortt(st):
         for j in range(0, len(string)):
             aa = string[i].split(" ")
             bb = string[j].split(" ")
-            if not sortFirstString(aa[0], bb[0]):
+            if sortFirstString(aa[0], bb[0]) == -1:
                 temp = string[j]
                 string[j] = string[i]
                 string[i] = temp
+            elif sortFirstInteger(aa[0], bb[0]) == 0:
+                for m in range(1, len(string)):
+                    if len(aa[m]) > len(bb[m]):
+                        temp = string[j]
+                        string[j] = string[i]
+                        string[i] = temp
+                    elif aa[m] > bb[m]:
+                        temp = string[j]
+                        string[j] = string[i]
+                        string[i] = temp
 
 
     for i in range(0, len(integer)):
-        for j in range(0, len(integer)):
+        for j in range(1, len(integer)):
             aa = integer[i].split(" ")
             bb = integer[j].split(" ")
-            if not sortFirstInteger(aa[0], bb[0]):
+            if sortFirstInteger(aa[0], bb[0]) == -1:
                 temp = integer[j]
                 integer[j] = integer[i]
                 integer[i] = temp
+            elif sortFirstInteger(aa[0], bb[0]) == 0:
+                for n in range(1, len(integer)):
+                    if aa[n] > bb[n]:
+                        temp = integer[j]
+                        integer[j] = integer[i]
+                        integer[i] = temp
 
     for i in string:
         print(i)
@@ -90,4 +132,4 @@ def sortt(st):
 
 
 
-sortt("c3 22 33 44\na4 22 33 44\na3 sf5 dds 547\nb2 4l 13 99")
+sortt("c3 233 33 44\nc3 22 33 44\na4 22 33 44\na3 sf5 dds 547\nb2 4l 13 99\nb2 4l 13 999")
