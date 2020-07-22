@@ -17,6 +17,7 @@ def get_line_count():
 
     return n
 
+
 def input_lines(n, strings):
     print("Enter text")
     for i in range(0, n):
@@ -38,7 +39,13 @@ def add_popular_word(strings, my_dict):
                     cur = cur[0:(len(cur) - 1)]
                 """chack word find in dictionary and worf finding count incement"""
                 if(cur.upper() in my_dict):
-                    my_dict[cur.upper()] = my_dict[cur.upper()] + 1
+                    tmp = cur[0] + cur[1:].lower()
+                    indexes = [k for k, x in enumerate(i) if x == cur or x == cur.upper() or x ==  tmp or x == i[j]]
+                    if(indexes[0] != j):
+                        continue
+                    else:
+                        my_dict[cur.upper()] = my_dict[cur.upper()] + 1
+                    
                 #"""when word not found in dictionary """ 
                 #"""check word nots start in line then add in dictionary"""
                 else:
@@ -46,14 +53,17 @@ def add_popular_word(strings, my_dict):
                         tmp = i[j - 1]
                         if(tmp[-1] != '.'):
                             tmp = i[j]
-                            if(tmp[-1] == '.'):
+                            if(tmp[-1] == '.' or tmp[-1] == ','):
                                 """remove last . simbols than add in dictionary"""
                                 tmp = tmp[0:(len(tmp) - 1)]
                                 my_dict[tmp.upper()] = 1
+                                
                             else:
                                 my_dict[i[j].upper()] = 1
 
+
 def popular_word(my_dict):
+    print("\nThe Popular words is: \n")
     if(len(my_dict) < 3):
         for i in my_dict:
             print(i, ":", my_dict[i])
@@ -61,7 +71,6 @@ def popular_word(my_dict):
         my_dict = sorted(my_dict.items(), key=lambda x: x[1], reverse=True)
         for i in range(0, 3):
             print(my_dict[i][0], ":", my_dict[i][1])
-
 
 
 def main():
