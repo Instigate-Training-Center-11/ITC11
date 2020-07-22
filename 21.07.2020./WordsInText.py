@@ -11,13 +11,13 @@ for word in text.split(" "):
             count_of_words[word] = 1
         else:
             ''' Incrementing count, if the word already exsist in count_of_words '''
-            count_of_words[word] += 1
-            
-    ''' Sorting the dictionary by the values, reversed, taking all items, if items are less then n'''
+            count_of_words[word] += 1           
+    
 if len(count_of_words) < n:
-    for i, word in enumerate(sorted(count_of_words, key=count_of_words.get, reverse=True)):
-        print("%s: %s - %s" % (i+1, word, count_of_words[word]))
+    ''' Sorting the dictionary by the values, reversed, taking all items, if items are less then n'''
+    for i, word in enumerate(sorted(count_of_words, key=count_of_words.get, reverse=True)):       
+        print(str(i+1) + ". " +  word + " - " + str(count_of_words[word]))
 else:
     ''' Sorting the dictionary by the values, reversed, taking the n top items,'''
     for i, word in enumerate(sorted(count_of_words, key=count_of_words.get, reverse=True)[:n]):
-        print("%s: %s - %s" % (i+1, word, count_of_words[word]))
+        print(str(i+1) + ". " +  word + " - " + str(count_of_words[word]))
