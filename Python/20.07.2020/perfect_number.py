@@ -11,7 +11,7 @@ def user_input():
             index = 0
         else:
             if index < 1:
-                print("\nTry again... Enter a positive number!!!")
+                print("\nTry again... Enter a number greater 0 !!!")
                 index = 0
             else:
                 return index
