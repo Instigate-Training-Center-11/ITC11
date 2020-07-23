@@ -30,7 +30,7 @@ def perfect_number(number):
             sum += i
     return (sum == number)
 
-""" send used a message if inputted number is a perfect number or not """
+""" send user a message if inputted number is a perfect number or not """
 def print_output(num, func):
     if (func == True):
         print("==>  '", num, "' is a perfect number!!!")
