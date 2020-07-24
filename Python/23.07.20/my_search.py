@@ -2,9 +2,9 @@ import os
 import re
 import argparse
 
-def print_red(text): print("\033[91m {}\033[00m" .format(text), end = '')
-def print_green(text): print("\033[92m {}\033[00m" .format(text))
-def print_blue(text): print("\033[34m {}\033[00m" .format(text))
+def print_red(text): print("\033[91m{}\033[00m".format(text), end = "")
+def print_green(text): print("\033[92m{}\033[00m".format(text), end = "")
+def print_blue(text): print("\033[34m{}\033[00m".format(text), end = "")
 
 def print_result(my_data, result):
     for dirs_or_files in my_data:
@@ -64,16 +64,22 @@ len_files = len(result_files)
 if len_files == 0 and len_dirs == 0:
     print_red("No such file or directory\n")
 else:
-    print_blue(str(len_dirs) + " directories")
-    print_green(str(len_files) + " files\n")
+    print_blue(str(len_dirs) + " directories, ")
+    print_green(str(len_files) + " files\n\n")
 
 for i in result_dirs:
     if color:
-        print_blue(i)
+        x = i.find(key, len(my_path), len(i))
+        print_blue(i[0:x])
+        print_red(i[x:x + len(key)])
+        print_blue(i[len(key) + x:len(i)] + '\n')
     else:
         print(i)
 for i in result_files:
     if color:
-        print_green(i)
+        x = i.find(key, len(my_path), len(i))
+        print_green(i[0:x])
+        print_red(i[x:x + len(key)])
+        print_green(i[len(key) + x:len(i)] + '\n')
     else:
         print(i)
