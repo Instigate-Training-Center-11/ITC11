@@ -7,18 +7,21 @@ def print_result(my_data):
         if key in dirs_or_files:
             if '^' or '?' in include_regex:
                 include_file = re.search(include_regex + '$', dirs_or_files)
-                exclude_file = re.search(exclude_regex + '$', dirs_or_files)
             else:
                 include_file = re.search('\w' + include_regex + '$', dirs_or_files)
+            if '^' or '?' in exclude_regex:
+                exclude_file = re.search(exclude_regex + '$', dirs_or_files)
+            else:
                 exclude_file = re.search('\w' + exclude_regex + '$', dirs_or_files)
             if include_regex == '' and exclude_regex == '':
                 print(os.path.join(root, dirs_or_files))
-            if include_regex == '' and exclude_regex != '':
-                if exclude_file:
-                    continue
-                print(os.path.join(root, dirs_or_files))
-            if include_file:
-                print(os.path.join(root, dirs_or_files))
+            else:
+                if include_regex == '' and exclude_regex != '':
+                    if exclude_file:
+                        continue
+                    print(os.path.join(root, dirs_or_files))
+                elif include_file:
+                    print(os.path.join(root, dirs_or_files))
 
 parser = argparse.ArgumentParser(description = 'A tutorial of My Find 1.0')
 parser.add_argument("--search", required = True, help = "Key for searching")
