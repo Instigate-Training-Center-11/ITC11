@@ -62,18 +62,18 @@ len_dirs = len(result_dirs)
 len_files = len(result_files)
 
 if len_files == 0 and len_dirs == 0:
-    print_red("No such file or directory")
+    print_red("No such file or directory\n")
 else:
     print_blue(str(len_dirs) + " directories")
     print_green(str(len_files) + " files\n")
 
-    for i in result_dirs:
-        if color:
-            print_blue(i)
-        else:
-            print(i)
-    for i in result_files:
-        if color:
-            print_green(i)
-        else:
-            print(i)
+for i in result_dirs:
+    if color:
+        print_blue(i)
+    else:
+        print(i)
+for i in result_files:
+    if color:
+        print_green(i)
+    else:
+        print(i)
