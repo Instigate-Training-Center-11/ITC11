@@ -5,8 +5,11 @@ import argparse
 def print_result(my_data):
     for dirs_or_files in my_data:
         if key in dirs_or_files:
-            include_file = re.search('\w' + include_regex, dirs_or_files)
-            exclude_file = re.search('\w' + exclude_regex, dirs_or_files)
+            if '^' in include_regex:
+                include_file = re.search(include_regex + '$', dirs_or_files)
+            else:
+                include_file = re.search('\w' + include_regex + '$', dirs_or_files)
+            exclude_file = re.search('\w' + exclude_regex + '$', dirs_or_files)
             if include_regex == '' and exclude_regex == '':
                 print(os.path.join(root, dirs_or_files))
             if include_regex == '' and exclude_regex != '':
