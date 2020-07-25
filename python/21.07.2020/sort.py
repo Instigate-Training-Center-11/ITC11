@@ -19,7 +19,6 @@ def display_list(array):
 
 def swap_lines(array, first, second):
     """[swapped two line]
-
     Args:
         array ([class list]): [list]
         first ([str]): [str_one]
@@ -31,7 +30,6 @@ def swap_lines(array, first, second):
 
 def sort_by_key(array, first, second):
     """[sorted list by key]
-
     Args:
         array ([class list]): [list]
         first ([type]): [str_one]
@@ -46,7 +44,6 @@ def sort_by_key(array, first, second):
 
 def sort_by_value(array, first, second):
     """[sorted list by value]
-
     Args:
         array ([class list]): [list]
         first ([str]): [str_one]
@@ -59,7 +56,6 @@ def sort_by_value(array, first, second):
 
 def sort_by_length(array, first, second):
     """[sorted list by length of key]
-
     Args:
         array ([class list]): [list]
         first ([str]): [str_one]
@@ -72,7 +68,6 @@ def sort_by_length(array, first, second):
 
 def general_sort(array):
     """[sorted list]
-
     Args:
         array ([class list]): [list]
     """
