@@ -1,5 +1,8 @@
 """print Pascal triangle"""
-num = int(input("Enter the number: "))
+num = int(input("Enter the number of rows: "))
+if num <= 0:
+    print("Wrong number! Enter the positive number!")
+    num = int(input("Enter the number of rows: "))
 arr = []
 for i in range(num):
     arr.append([])
