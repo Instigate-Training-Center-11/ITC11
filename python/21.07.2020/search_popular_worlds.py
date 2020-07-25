@@ -10,21 +10,25 @@ def input_number(message):
             break
 
 def search_by_key(data, count):
+    first_word = ''
     text = replace_by_symbol(data)
     line_data = set()
     list_data = {}
 
     for i in text.split('.',1000):
-        change_in_upper(i,line_data)
+        first_word = change_in_upper(i,line_data)
+        print("first_world  ",first_word)
         for world in line_data:
             if world in list_data:
                 list_data[world] += 1
             else:
                 list_data.update(dict({world : 1}))
+        if first_word in list_data and  not line_data:
+            list_data[first_word] += 1
         line_data.clear()
 
     list_data = sorted(list_data.items(), key=lambda x: x[1], reverse=True)
-
+    print("\n\t\tpopuliars worlds",end="\n\n")
     if count > len(list_data):
         for i in range(0,len(list_data)):
             print(list_data[i][0], " = ",list_data[i][1])
@@ -33,12 +37,19 @@ def search_by_key(data, count):
             print(list_data[i][0], " = ",list_data[i][1])
 
 def change_in_upper(line,line_data):
+    i = 0
+    first_word = ''
     list_world = (split_by_space(line))
     for world in list_world:
         if world != '':
             if world.isalpha() and world.istitle() or world.isupper():
+                if i == 0:
+                    print("==========",world)
+                    i += 1
+                    continue
                 line_data.add(world.upper())
-
+        i += 1
+    return first_word
 
 def replace_by_symbol(text):
     try:
