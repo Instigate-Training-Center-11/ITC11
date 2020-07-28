@@ -1,0 +1,25 @@
+DROP DATABASE IF EXISTS  Online_Market;
+
+CREATE DATABASE Online_Market;
+
+USE Online_Market;
+
+CREATE TABLE IF NOT EXISTS Costumers(id INT AUTO_INCREMENT PRIMARY KEY NOT NULL, name VARCHAR(35) NOT NULL, city VARCHAR(35) NOT NULL, street VARCHAR(50) NOT NULL, phone VARCHAR(35) NOT NULL);
+
+CREATE TABLE IF NOT EXISTS Supplierts(id INT AUTO_INCREMENT PRIMARY KEY NOT NULL, name VARCHAR(35) NOT NULL, city VARCHAR(35) NOT NULL, street VARCHAR(50) NOT NULL, phone VARCHAR(35) NOT NULL);
+
+CREATE TABLE IF NOT EXISTS Products(id INT AUTO_INCREMENT PRIMARY KEY NOT NULL, name VARCHAR(35) NOT NULL, pricePurchase INT NOT NULL, priceSale INT NOT NULL, stock INT NOT NULL, suppliert_id INT NOT NULL, FOREIGN KEY (suppliert_id) REFERENCES  Supplierts(id));
+
+CREATE TABLE IF NOT EXISTS OrderLines(id INT AUTO_INCREMENT PRIMARY KEY NOT NULL, product_id INT NOT NULL, productQuantity INT NOT NULL, totalSale INT NOT NULL, productDelivered BOOLEAN NOT NULL, productDeliveredDate DATE NOT NULL, productDeliveredTime DATETIME NOT NULL,  FOREIGN KEY (product_id) REFERENCES  Products(id));
+
+CREATE TABLE IF NOT EXISTS Orders(id INT AUTO_INCREMENT PRIMARY KEY NOT NULL, costumer_id INT NOT NULL, orderPlacedDate DATE NOT NULL, orderPlacedTime DATETIME NOT NULL, orderCompleted BOOLEAN NOT NULL, orderCompletedDate DATE NOT NULL, orderComplitedTime DATETIME NOT NULL, orderLines_id INT NOT NULL, FOREIGN KEY (costumer_id) REFERENCES  Costumers(id), FOREIGN KEY (orderLines_id) REFERENCES  OrderLiness(id));
+
+===========================================================================================================================
+
+1)SELECT Products.name FROM Products  INNER JOIN OrderLines ON Products.id = OrderLines.product_id INNER JOIN Orders ON Orders.orderLines_id = OrderLines.id INNEr JOIn Costumers ON Costumers.id = Orders.costumer_id;
+2)SELECT Orders.id,  OrderLines.productDeliveredTime from OrderLines INNER JOIN Orders ON Orders.orderLines_id = OrderLines.id;
+3)SELECT COUNT(orderCompleted) FROM Orders WHERE orderCompleted = False;
+4)SELECT SUM(totalSale) FROM OrderLines WHERE id  = 1;
+5)SELECT Supplierts.name , Supplierts.city, Supplierts.street, Supplierts.phone, Products.name FROM Supplierts INNER JOIN Products ON Products.suppliert_id = Supplierts.id;
+6)SELECT Products.name, SUM(stock) FROM Products GROUP BY name;
+7)SELECT name,  priceSale - pricePurchase AS 'mark-up' FROM Products;
