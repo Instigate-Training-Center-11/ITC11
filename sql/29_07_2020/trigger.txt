@@ -1,0 +1,7 @@
+To create a trigger that, before deleting data, will delete data from second tables that were associated with row first of the table.
+
+CREATE TRIGGER del BEFORE  DELETE ON subject
+	FOR EACH ROW
+		DELETE FROM student
+		WHERE student.subject_id = old.sub_id;
+
