@@ -1,0 +1,6 @@
+CREATE TRIGGER log_table1_delete before DELETE on table1 
+FOR EACH ROW 
+BEGIN DELETE FROM table2     
+WHERE table2.[table2_id] = old.[table1_id]; 
+END;
+
