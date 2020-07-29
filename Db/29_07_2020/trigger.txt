@@ -1,0 +1,3 @@
+To use cascade deletion from given tables, you need to use this command:
+
+CREATE TRIGGER del_trigger BEFORE DELETE ON citizen FOR EACH ROW DELETE FROM people WHERE people.c_id = old.city_id;
