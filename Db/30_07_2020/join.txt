@@ -1,0 +1,12 @@
+delimiter **
+
+create procedure pr(a int, b int)
+    begin
+	select * from Customers inner join Orders using(Customer_Id)
+	inner join OrderLines using(Order_Id)
+	inner join Products using(Product_Id) where Customer_Id = a and Product_Id = b;
+    end**
+
+delimiter ;
+
+call pr(4, 5);

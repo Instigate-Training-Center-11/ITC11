@@ -1,0 +1,10 @@
+delimiter **
+
+create trigger trig after update on OrderLines for each row
+    begin
+	if new.bool = 1 then
+	update Orders set Orders.date = NOW() where Orders.Order_Id = new.Order_Id;
+    end if;
+end **
+
+delimiter ;
