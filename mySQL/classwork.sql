@@ -1,7 +1,7 @@
 --- Query for join with procedure ---
-
 delimiter //
-CREATE PROCEDURE myProc(one integer, two integer)
+
+CREATE PROCEDURE myProc(one in integer, two in integer)
 BEGIN
 SELECT * FROM customers INNER JOIN orders using(customerID)
 INNER JOIN orderLines using(orderID)
