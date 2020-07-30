@@ -1,0 +1,17 @@
+#################################################################
+SELECT products.* FROM products inner join OrderLiness as or_l
+on or_l.product_id = products.id
+inner join orders as ord
+on ord.id = or_l.order_id
+where ord.user_id = 1
+group by products.id
+#################################################################
+SELECT count(id) as count FROM orders where status = "new"
+#################################################################
+SELECT sum(quantity*price),orders.id FROM orders
+inner join OrderLiness as o
+on o.order_id = orders.id
+inner join products as p
+on p.id = o.product_id
+group by orders.id
+#################################################################

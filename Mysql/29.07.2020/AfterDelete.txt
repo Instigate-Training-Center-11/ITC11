@@ -1,0 +1,2 @@
+1)Before Delete-> Delete from customers where customer_id='2';
+2)After Delete-> Delete from sales where customer_id='2';
