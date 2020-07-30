@@ -1,2 +1,5 @@
 1)Before Delete-> Delete from customers where customer_id='2';
 2)After Delete-> Delete from sales where customer_id='2';
+3)After Insert-> Insert into customers (customer_id, customer_name, level )values('10','Artur Abraham','shef');
+4)Before Insert-> Insert into  sales(sales_id, customer_id, sales_amount) values('1','1','25');
+5)Before Insert-> Insert into  sales(sales_id, customer_id, sales_amount) values('1','1','250000000');

@@ -63,7 +63,7 @@ CREATE TABLE `customer_status` (
 
 LOCK TABLES `customer_status` WRITE;
 /*!40000 ALTER TABLE `customer_status` DISABLE KEYS */;
-INSERT INTO `customer_status` VALUES (1,'director'),(2,'Trainer');
+INSERT INTO `customer_status` VALUES (1,'director'),(2,'Trainer'),(4,'ACCOUNT OPENED SUCCESSFULLY');
 /*!40000 ALTER TABLE `customer_status` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -88,9 +88,28 @@ CREATE TABLE `customers` (
 
 LOCK TABLES `customers` WRITE;
 /*!40000 ALTER TABLE `customers` DISABLE KEYS */;
-INSERT INTO `customers` VALUES (1,'Mike Tyson','beginner'),(2,'Roy Jones','junior'),(3,'Muhamed Ali','senior');
+INSERT INTO `customers` VALUES (1,'Mike Tyson','beginner'),(2,'Roy Jones','junior'),(3,'Muhamed Ali','senior'),(4,'DAVID DOE','Shef');
 /*!40000 ALTER TABLE `customers` ENABLE KEYS */;
 UNLOCK TABLES;
+/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
+/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
+/*!50003 SET @saved_col_connection = @@collation_connection */ ;
+/*!50003 SET character_set_client  = utf8 */ ;
+/*!50003 SET character_set_results = utf8 */ ;
+/*!50003 SET collation_connection  = utf8_general_ci */ ;
+/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
+/*!50003 SET sql_mode              = 'ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION' */ ;
+DELIMITER ;;
+/*!50003 CREATE*/ /*!50017 DEFINER=`root`@`localhost`*/ /*!50003 TRIGGER customer_status_records
+AFTER INSERT
+ON customers
+FOR EACH ROW
+Insert into customer_status(customer_id, status_notes) VALUES(NEW.customer_id, 'ACCOUNT OPENED SUCCESSFULLY') */;;
+DELIMITER ;
+/*!50003 SET sql_mode              = @saved_sql_mode */ ;
+/*!50003 SET character_set_client  = @saved_cs_client */ ;
+/*!50003 SET character_set_results = @saved_cs_results */ ;
+/*!50003 SET collation_connection  = @saved_col_connection */ ;
 /*!50003 SET @saved_cs_client      = @@character_set_client */ ;
 /*!50003 SET @saved_cs_results     = @@character_set_results */ ;
 /*!50003 SET @saved_col_connection = @@collation_connection */ ;
@@ -135,9 +154,31 @@ CREATE TABLE `sales` (
 
 LOCK TABLES `sales` WRITE;
 /*!40000 ALTER TABLE `sales` DISABLE KEYS */;
-INSERT INTO `sales` VALUES (1,3,152.35),(2,1,364.35),(3,2,364.35);
+INSERT INTO `sales` VALUES (1,3,152.35),(2,1,364.35),(3,2,364.35),(4,5,820);
 /*!40000 ALTER TABLE `sales` ENABLE KEYS */;
 UNLOCK TABLES;
+/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
+/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
+/*!50003 SET @saved_col_connection = @@collation_connection */ ;
+/*!50003 SET character_set_client  = utf8 */ ;
+/*!50003 SET character_set_results = utf8 */ ;
+/*!50003 SET collation_connection  = utf8_general_ci */ ;
+/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
+/*!50003 SET sql_mode              = 'ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION' */ ;
+DELIMITER ;;
+/*!50003 CREATE*/ /*!50017 DEFINER=`root`@`localhost`*/ /*!50003 TRIGGER validate_sales_amount
+BEFORE INSERT
+ON sales
+FOR EACH ROW
+IF NEW.sales_amount>10000 THEN
+SIGNAL SQLSTATE '45000'
+SET MESSAGE_TEXT = 'Sale has exceeded the allowed amount of 10000.';
+END IF */;;
+DELIMITER ;
+/*!50003 SET sql_mode              = @saved_sql_mode */ ;
+/*!50003 SET character_set_client  = @saved_cs_client */ ;
+/*!50003 SET character_set_results = @saved_cs_results */ ;
+/*!50003 SET collation_connection  = @saved_col_connection */ ;
 /*!50003 SET @saved_cs_client      = @@character_set_client */ ;
 /*!50003 SET @saved_cs_results     = @@character_set_results */ ;
 /*!50003 SET @saved_col_connection = @@collation_connection */ ;
@@ -167,4 +208,4 @@ DELIMITER ;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-07-31  0:28:00
+-- Dump completed on 2020-07-31  1:50:57
