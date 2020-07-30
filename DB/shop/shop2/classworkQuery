@@ -1,0 +1,16 @@
+#input values customer_id, product_id 
+#output - table , vory parunakuma e customer, order product data 
+
+
+delimiter //
+create procedure XXX (Cid int, Pid int)
+begin
+    SELECT  Customer.name, Product.name, Product.marke_up, Orders.orderDate, Orders.countOfProducts, Orders.isOrdered from Product
+        inner join Order_Product on Product.id = Order_Product.ProductId
+            inner join Orders on Order_Product.OrderId = Orders.id
+                inner join OrdersList on Order_Product.id = OrdersList.Order_ProductId
+                    inner join Customer on OrdersList.CustomerId = Customer.id where Customer.id = Cid and Product.id = Pid;
+end //
+delimiter ;
+
+call XXX(1, 2);

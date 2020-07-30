@@ -1,0 +1,48 @@
+insert into Product (name, marke_up) VALUES ('Apple', 'app_mark');
+insert into Product (name, marke_up) VALUES ('Cucumber', 'cuc_mark');
+insert into Customer (name) VALUES ('Simon');
+insert into Customer (name) VALUES ('Petros');
+insert into Supplier (name) VALUES ('App_Sup');
+update shop.Supplier SET name = 'Supplier' WHERE id = 1;
+insert into Orders (countOfProducts, orderDate, isOrdered) VALUES (5, '2000-01-01', false);
+insert into Orders (countOfProducts, orderDate, isOrdered) VALUES (3, '2000-02-02', false);
+insert into Order_Product (OrderId, ProductId) VALUES (1, 1);
+insert into Order_Product (OrderId, ProductId) VALUES (2, 2);
+insert into Supplier_Product (Supplier_Id, Product_Id) VALUES (1, 1);
+insert into Supplier_Product (Supplier_Id, Product_Id) VALUES (1, 2);
+insert into OrdersList (CustomerId, Order_ProductId) VALUES (1, 1);
+insert into OrdersList (CustomerId, Order_ProductId) VALUES (1, 2);
+
+1. Հաճախորդի պատվիրած ապրանքների ցուցակը
+SELECT  Customer.name, Product.name from Product
+    inner join Order_Product on Product.id = Order_Product.ProductId
+        inner join Orders on Order_Product.OrderId = Orders.id
+            inner join OrdersList on Order_Product.id = OrdersList.Order_ProductId
+                inner join Customer on OrdersList.CustomerId = Customer.id and Customer.name = 'Simon';
+
+2. Որ ամսաթվին / ժամն է ուղարկվել հատուկ Պատվերը ուղարկելու ամսաթիվը  / ժամ
+SELECT  Customer.name, Orders.orderDate from Product
+    inner join Order_Product on Product.id = Order_Product.ProductId
+        inner join Orders on Order_Product.OrderId = Orders.id
+            inner join OrdersList on Order_Product.id = OrdersList.Order_ProductId
+                inner join Customer on OrdersList.CustomerId = Customer.id and Orders.isOrdered = TRUE;
+
+
+3. Քանի՞ բաց պատվեր ունենք համակարգում որոնք դեռևս չեն հասել հաճախորդին
+SELECT  Customer.name, Orders.orderDate from Product
+    inner join Order_Product on Product.id = Order_Product.ProductId
+        inner join Orders on Order_Product.OrderId = Orders.id
+            inner join OrdersList on Order_Product.id = OrdersList.Order_ProductId
+                inner join Customer on OrdersList.CustomerId = Customer.id and Orders.isOrdered = FALSE;
+
+4. Քանի՞ ապրանք կա պահեստում:
+SELECT name, count from Product where Product.count > 0;
+
+5. Ո՞ր մատակարարն է ապահովում տրված ապրանքը:
+
+SELECT Supplier.name, Product.name from Supplier
+    inner join Supplier_Product on Supplier.id = Supplier_Product.Supplier_Id
+        inner join Product on Supplier_Product.Product_Id = Product.id and Product.name = 'apple';
+
+
+
