@@ -1,7 +1,10 @@
+drop procedure myProc;
 --- Query for join with procedure ---
+--- Delete procedure if exists yet ---
+drop procedure myProc;
 delimiter //
 
-CREATE PROCEDURE myProc(one in integer, two in integer)
+CREATE PROCEDURE myProc(in one integer, in two integer)
 BEGIN
 SELECT * FROM customers INNER JOIN orders using(customerID)
 INNER JOIN orderLines using(orderID)
@@ -12,14 +15,16 @@ delimiter ;
 call myProc(1, 2);
 
 
---- Trigger to update date when updating isDev column ---
+--- Trigger to update delivery time when updating isDev column ---
+--- Delete trigger if exists yet ---
+drop trigger myTrigger;
 delimiter //
 
 CREATE TRIGGER myTrigger AFTER UPDATE ON orderLines
 FOR EACH ROW
 BEGIN
 IF new.isDev = 1 THEN
-update orders set orders.time = NOW() where orders.orderID = new.orderID;
+update orders set orders.delTime = NOW() where orders.orderID = new.orderID;
 END IF;
 END //
 

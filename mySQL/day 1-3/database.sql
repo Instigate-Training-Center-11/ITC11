@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 5.7.30, for Linux (x86_64)
+-- MySQL dump 10.13  Distrib 5.7.31, for Linux (x86_64)
 --
 -- Host: localhost    Database: test
 -- ------------------------------------------------------
--- Server version	5.7.30-0ubuntu0.16.04.1
+-- Server version	5.7.31-0ubuntu0.16.04.1
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -33,6 +33,8 @@ DROP TABLE IF EXISTS `customers`;
 CREATE TABLE `customers` (
   `customerID` int(11) NOT NULL AUTO_INCREMENT,
   `name` char(20) DEFAULT NULL,
+  `surname` varchar(20) DEFAULT NULL,
+  `town` varchar(20) DEFAULT NULL,
   PRIMARY KEY (`customerID`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -43,7 +45,7 @@ CREATE TABLE `customers` (
 
 LOCK TABLES `customers` WRITE;
 /*!40000 ALTER TABLE `customers` DISABLE KEYS */;
-INSERT INTO `customers` VALUES (1,'Jack'),(2,'Nano'),(3,'Pitter'),(4,'Polo');
+INSERT INTO `customers` VALUES (1,'Jack','Styles','London'),(2,'Nano','Sprouse','Yerevan'),(3,'Pitter','Parker','Canada'),(4,'Polo','Dylan','Barcelona');
 /*!40000 ALTER TABLE `customers` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -58,6 +60,7 @@ CREATE TABLE `orderLines` (
   `orderID` int(11) NOT NULL,
   `productID` int(11) NOT NULL,
   `count` int(11) DEFAULT NULL,
+  `isDev` tinyint(1) DEFAULT '0',
   KEY `productID` (`productID`),
   KEY `orderID` (`orderID`),
   CONSTRAINT `orderLines_ibfk_1` FOREIGN KEY (`productID`) REFERENCES `products` (`productID`),
@@ -71,9 +74,30 @@ CREATE TABLE `orderLines` (
 
 LOCK TABLES `orderLines` WRITE;
 /*!40000 ALTER TABLE `orderLines` DISABLE KEYS */;
-INSERT INTO `orderLines` VALUES (1,1,10),(1,2,20),(2,2,20),(2,2,66);
+INSERT INTO `orderLines` VALUES (1,1,10,1),(1,2,20,1),(2,2,20,0),(2,2,66,0);
 /*!40000 ALTER TABLE `orderLines` ENABLE KEYS */;
 UNLOCK TABLES;
+/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
+/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
+/*!50003 SET @saved_col_connection = @@collation_connection */ ;
+/*!50003 SET character_set_client  = utf8 */ ;
+/*!50003 SET character_set_results = utf8 */ ;
+/*!50003 SET collation_connection  = utf8_general_ci */ ;
+/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
+/*!50003 SET sql_mode              = 'ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION' */ ;
+DELIMITER ;;
+/*!50003 CREATE*/ /*!50017 DEFINER=`root`@`localhost`*/ /*!50003 TRIGGER myTrigger AFTER UPDATE ON orderLines
+FOR EACH ROW
+BEGIN
+IF new.isDev = 1 THEN
+update orders set orders.delTime = NOW() where orders.orderID = new.orderID;
+END IF;
+END */;;
+DELIMITER ;
+/*!50003 SET sql_mode              = @saved_sql_mode */ ;
+/*!50003 SET character_set_client  = @saved_cs_client */ ;
+/*!50003 SET character_set_results = @saved_cs_results */ ;
+/*!50003 SET collation_connection  = @saved_col_connection */ ;
 
 --
 -- Table structure for table `orders`
@@ -86,11 +110,9 @@ CREATE TABLE `orders` (
   `orderID` int(11) NOT NULL AUTO_INCREMENT,
   `time` datetime DEFAULT NULL,
   `customerID` int(11) NOT NULL,
-  `supplierID` int(11) NOT NULL,
+  `delTime` date DEFAULT NULL,
   PRIMARY KEY (`orderID`),
-  KEY `supplierID` (`supplierID`),
   KEY `customerID` (`customerID`),
-  CONSTRAINT `orders_ibfk_1` FOREIGN KEY (`supplierID`) REFERENCES `suppliers` (`supplierID`),
   CONSTRAINT `orders_ibfk_2` FOREIGN KEY (`customerID`) REFERENCES `customers` (`customerID`)
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -101,7 +123,7 @@ CREATE TABLE `orders` (
 
 LOCK TABLES `orders` WRITE;
 /*!40000 ALTER TABLE `orders` DISABLE KEYS */;
-INSERT INTO `orders` VALUES (1,'2020-07-28 00:00:00',1,1),(2,'2020-07-28 00:00:00',2,1),(3,'2020-07-28 00:00:00',1,2),(4,'2020-07-28 00:00:00',1,1),(6,'2020-07-28 00:00:00',1,3);
+INSERT INTO `orders` VALUES (1,'2020-07-31 01:34:17',1,'2020-07-31'),(2,'2020-07-28 00:00:00',2,NULL),(3,'2020-07-28 00:00:00',1,NULL),(4,'2020-07-28 00:00:00',2,NULL),(6,'2020-07-28 00:00:00',3,NULL);
 /*!40000 ALTER TABLE `orders` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -117,7 +139,10 @@ CREATE TABLE `products` (
   `price` int(11) DEFAULT NULL,
   `count` int(11) DEFAULT NULL,
   `name` char(20) NOT NULL,
-  PRIMARY KEY (`productID`)
+  `supplierID` int(11) NOT NULL DEFAULT '1',
+  PRIMARY KEY (`productID`),
+  KEY `supplierID` (`supplierID`),
+  CONSTRAINT `products_ibfk_1` FOREIGN KEY (`supplierID`) REFERENCES `suppliers` (`supplierID`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -127,7 +152,7 @@ CREATE TABLE `products` (
 
 LOCK TABLES `products` WRITE;
 /*!40000 ALTER TABLE `products` DISABLE KEYS */;
-INSERT INTO `products` VALUES (1,50,100,'Egg'),(2,150,40,'bread'),(3,210,50,'snikers');
+INSERT INTO `products` VALUES (1,50,100,'Egg',1),(2,150,40,'bread',1),(3,210,50,'snikers',1);
 /*!40000 ALTER TABLE `products` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -141,6 +166,8 @@ DROP TABLE IF EXISTS `suppliers`;
 CREATE TABLE `suppliers` (
   `supplierID` int(11) NOT NULL AUTO_INCREMENT,
   `name` char(20) DEFAULT NULL,
+  `surname` varchar(20) DEFAULT NULL,
+  `town` varchar(20) DEFAULT NULL,
   PRIMARY KEY (`supplierID`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -151,7 +178,7 @@ CREATE TABLE `suppliers` (
 
 LOCK TABLES `suppliers` WRITE;
 /*!40000 ALTER TABLE `suppliers` DISABLE KEYS */;
-INSERT INTO `suppliers` VALUES (1,'Mane'),(2,'Mary'),(3,'Dave'),(4,'Enzo');
+INSERT INTO `suppliers` VALUES (1,'Mane','Antonova','Kirovakan'),(2,'Mary','Antonova','Kirovakan'),(3,'Dave','Morgan','Britian'),(4,'Enzo','Sent John','Mistic false');
 /*!40000 ALTER TABLE `suppliers` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -164,4 +191,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-07-28 12:54:25
+-- Dump completed on 2020-07-31  2:20:18
