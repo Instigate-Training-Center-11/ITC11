@@ -10,382 +10,85 @@
 .
 ├── algorithms
 │   ├── belmanFord
-│   │   ├── graph.cpp
-│   │   ├── graph.h
-│   │   ├── main.cpp
-│   │   └── Makefile
 │   ├── fibonacci
-│   │   ├── fibon.cpp
-│   │   ├── fibon.h
-│   │   ├── main.cpp
-│   │   └── Makefile
 │   ├── graf
-│   │   ├── graph.cpp
-│   │   ├── graph.h
-│   │   ├── graphManeAntonyan.png
-│   │   ├── main.cpp
-│   │   └── Makefile
 │   ├── hamilton
-│   │   ├── graph.cpp
-│   │   ├── graph.h
-│   │   ├── main.cpp
-│   │   └── Makefile
 │   ├── matrices
-│   │   ├── main.cpp
-│   │   ├── Makefile
-│   │   ├── matrix.cpp
-│   │   └── matrix.h
 │   ├── merge
-│   │   ├── func.cpp
-│   │   ├── func.h
-│   │   ├── main.cpp
-│   │   └── Makefile
 │   ├── mergeSort
-│   │   ├── main.cpp
-│   │   ├── Makefile
-│   │   ├── mergeSort.cpp
-│   │   └── mergeSort.h
 │   ├── possibleWaysConstructBuildings
-│   │   ├── main.cpp
-│   │   ├── Makefile
-│   │   ├── possibleWays.cpp
-│   │   └── possibleWays.h
 │   ├── quickSort
-│   │   ├── a.out
-│   │   ├── main.cpp
-│   │   ├── Makefile
-│   │   ├── sort.cpp
-│   │   └── sort.h
 │   ├── Readme
 │   ├── search
-│   │   ├── func.cpp
-│   │   ├── func.h
-│   │   ├── main.cpp
-│   │   ├── Makefile
-│   │   └── Readme
 │   ├── shellSort
-│   │   ├── main.cpp
-│   │   ├── Makefile
-│   │   ├── sort.cpp
-│   │   └── sort.h
 │   ├── sortTimes
-│   │   ├── main.cpp
-│   │   ├── Makefile
-│   │   ├── sort.cpp
-│   │   └── sort.h
 │   ├── stringDiff
-│   │   ├── func.cpp
-│   │   ├── func.h
-│   │   ├── main.cpp
-│   │   └── Makefile
 │   ├── uglyNumber
-│   │   ├── func.cpp
-│   │   ├── func.h
-│   │   ├── main.cpp
-│   │   └── Makefile
 │   └── uglyNumberUpdated
-│       ├── func.cpp
-│       ├── func.h
-│       ├── main.cpp
-│       └── Makefile
 ├── assembly
 │   ├── hello
-│   │   ├── helloWorld.asm
-│   │   ├── macro.inc
-│   │   └── Makefile
 │   ├── printDigit
-│   │   ├── macro.inc
-│   │   ├── Makefile
-│   │   └── printNum.asm
 │   ├── printNumber
-│   │   ├── macro.inc
-│   │   ├── Makefile
-│   │   └── test.asm
 │   ├── printString
-│   │   ├── macro.inc
-│   │   ├── Makefile
-│   │   ├── printLoop.asm
-│   │   └── test.asm
 │   ├── some tests
-│   │   ├── atoi.inc
-│   │   ├── file.asm
-│   │   ├── fileModified.asm
-│   │   ├── macro.inc
-│   │   ├── macros.inc
-│   │   ├── Makefile
-│   │   ├── sum.asm
-│   │   └── test.asm
 │   ├── sum
-│   │   ├── macro.inc
-│   │   ├── Makefile
-│   │   ├── sum
-│   │   └── sum.asm
 │   ├── sumFinal
-│   │   ├── macro.inc
-│   │   ├── Makefile
-│   │   └── sum.asm
 │   └── tests
-│       ├── infinitLoop.asm
-│       └── name.asm
 ├── bash
 │   ├── 18.05
-│   │   ├── delComments.sh
-│   │   ├── group.sh
-│   │   ├── swap.sh
-│   │   ├── task3.sh
-│   │   └── test2.sh
 │   ├── 19.05
-│   │   ├── sort.sh
-│   │   └── task2.sh
 │   ├── 20.05
-│   │   ├── animation.sh
-│   │   ├── file.sh
-│   │   ├── proc.sh
-│   │   ├── task3.sh
-│   │   ├── task4.sh
-│   │   └── task5.sh
 │   ├── 21.05
 │   │   ├── classwork
-│   │   │   ├── cron.sh
-│   │   │   ├── env.sh
-│   │   │   ├── kill.sh
-│   │   │   ├── setNumber.sh
-│   │   │   └── var.sh
 │   │   └── homework
-│   │       ├── task2.sh
-│   │       ├── task3.sh
-│   │       └── task4.sh
 │   └── examples
-│       ├── array.sh
-│       ├── if_else.sh
-│       ├── test2.sh
-│       └── test.sh
 ├── c++
 │   ├── 01.06.2020
-│   │   ├── a.out
-│   │   └── main.cpp
 │   ├── 02.06.2020
-│   │   ├── factorial.cpp
-│   │   ├── matrix.cpp
-│   │   ├── reverse.cpp
-│   │   └── triangle.cpp
 │   ├── 04.06.2020
 │   │   └── linkedList
-│   │       ├── list.cpp
-│   │       ├── list.hpp
-│   │       ├── main.cpp
-│   │       ├── node.cpp
-│   │       └── node.hpp
 │   ├── 05.06.2020
 │   │   └── queue
-│   │       ├── list
-│   │       │   ├── list.cpp
-│   │       │   └── list.hpp
-│   │       ├── main.cpp
-│   │       ├── Makefile
-│   │       ├── node
-│   │       │   ├── node.cpp
-│   │       │   └── node.hpp
-│   │       └── queue
-│   │           ├── queue.cpp
-│   │           └── queue.hpp
 │   ├── 08.06.2020
 │   │   └── queueWithTemplates
-│   │       ├── list.cpp
-│   │       ├── list.hpp
-│   │       ├── main.cpp
-│   │       ├── node.cpp
-│   │       ├── node.hpp
-│   │       ├── queue.cpp
-│   │       └── queue.hpp
 │   ├── 09.06.2020
 │   │   ├── classwork
-│   │   │   ├── exaptionHandle.cpp
-│   │   │   └── linkedListOperator
-│   │   │       ├── list.cpp
-│   │   │       ├── list.hpp
-│   │   │       ├── main.cpp
-│   │   │       ├── Makefile
-│   │   │       ├── node.cpp
-│   │   │       └── node.hpp
 │   │   └── homework
 │   │       └── queueWithErrorHandling
-│   │           ├── list.cpp
-│   │           ├── list.hpp
-│   │           ├── main.cpp
-│   │           ├── Makefile
-│   │           ├── myException.cpp
-│   │           ├── myException.hpp
-│   │           ├── node.cpp
-│   │           ├── node.hpp
-│   │           ├── queue.cpp
-│   │           └── queue.hpp
 │   ├── 10.06.2020
 │   │   ├── image
-│   │   │   ├── main.cpp
-│   │   │   └── nkar.jpg
 │   │   ├── operator
-│   │   │   └── main.cpp
 │   │   └── reverseFile
-│   │       └── fileReverse.cpp
 │   ├── 11.06.2020
 │   │   ├── classwork
-│   │   │   ├── cezarAlgorithmCircle.cpp
-│   │   │   ├── cezarAlgorithmCircleOptimize.cpp
-│   │   │   ├── cezarAlgorothm.cpp
-│   │   │   └── thread.cpp
 │   │   └── homework
 │   │       └── linkedListAsync
-│   │           ├── list
-│   │           │   ├── list.cpp
-│   │           │   └── list.hpp
-│   │           ├── main.cpp
-│   │           ├── Makefile
-│   │           └── node
-│   │               ├── node.cpp
-│   │               └── node.hpp
 │   └── 12.06.2020
 │       └── clientServer
-│           ├── clientServer.cpp
-│           └── Makefile
 ├── documentation
 │   └── documentation.odt
 ├── doxygen
 │   ├── array.cpp
 │   ├── array.h
 │   ├── documentation
-│   │   ├── annotated.html
-│   │   ├── array_8h.html
-│   │   ├── array_8h__incl.map
-│   │   ├── array_8h__incl.md5
-│   │   ├── array_8h__incl.png
-│   │   ├── array_8h_source.html
-│   │   ├── arrowdown.png
-│   │   ├── arrowright.png
-│   │   ├── bc_s.png
-│   │   ├── bdwn.png
-│   │   ├── classArray.html
-│   │   ├── classArray-members.html
-│   │   ├── classes.html
-│   │   ├── classList.html
-│   │   ├── classList-members.html
-│   │   ├── classNode.html
-│   │   ├── classNode-members.html
-│   │   ├── closed.png
-│   │   ├── deprecated.html
-│   │   ├── doc.png
-│   │   ├── doxygen.css
-│   │   ├── doxygen.png
-│   │   ├── dynsections.js
-│   │   ├── files.html
-│   │   ├── folderclosed.png
-│   │   ├── folderopen.png
-│   │   ├── functions_func.html
-│   │   ├── functions.html
-│   │   ├── graph_legend.html
-│   │   ├── graph_legend.md5
-│   │   ├── graph_legend.png
-│   │   ├── index.html
-│   │   ├── jquery.js
-│   │   ├── list_8hpp_source.html
-│   │   ├── nav_f.png
-│   │   ├── nav_g.png
-│   │   ├── nav_h.png
-│   │   ├── node_8hpp_source.html
-│   │   ├── open.png
-│   │   ├── pages.html
-│   │   ├── search
-│   │   │   ├── all_0.html
-│   │   │   ├── all_0.js
-│   │   │   ├── all_1.html
-│   │   │   ├── all_1.js
-│   │   │   ├── all_2.html
-│   │   │   ├── all_2.js
-│   │   │   ├── all_3.html
-│   │   │   ├── all_3.js
-│   │   │   ├── classes_0.html
-│   │   │   ├── classes_0.js
-│   │   │   ├── classes_1.html
-│   │   │   ├── classes_1.js
-│   │   │   ├── close.png
-│   │   │   ├── files_0.html
-│   │   │   ├── files_0.js
-│   │   │   ├── functions_0.html
-│   │   │   ├── functions_0.js
-│   │   │   ├── functions_1.html
-│   │   │   ├── functions_1.js
-│   │   │   ├── mag_sel.png
-│   │   │   ├── nomatches.html
-│   │   │   ├── pages_0.html
-│   │   │   ├── pages_0.js
-│   │   │   ├── pages_1.html
-│   │   │   ├── pages_1.js
-│   │   │   ├── pages_2.html
-│   │   │   ├── pages_2.js
-│   │   │   ├── search.css
-│   │   │   ├── searchdata.js
-│   │   │   ├── search.js
-│   │   │   ├── search_l.png
-│   │   │   ├── search_m.png
-│   │   │   └── search_r.png
-│   │   ├── splitbar.png
-│   │   ├── sync_off.png
-│   │   ├── sync_on.png
-│   │   ├── tab_a.png
-│   │   ├── tab_b.png
-│   │   ├── tab_h.png
-│   │   ├── tabs.css
-│   │   ├── tab_s.png
-│   │   └── todo.html
 │   └── main.cpp
 ├── exam
 │   ├── build
-│   │   ├── build
-│   │   ├── func.o
-│   │   └── main.o
-│   ├── func.cpp
-│   ├── func.h
-│   ├── main.cpp
-│   ├── Makefile
 │   └── Readme
+├── mySQL
+│   ├── database.sql
+│   ├── deleteConnection.sql
+│   ├── queries.sql
+│   └── sum.sql
 ├── python
-│   └── day1
-│       ├── fibonacci.py
-│       ├── getNumber.py
-│       ├── localVar.py
-│       ├── numberRange.py
-│       ├── pascalTriangle.py
-│       ├── perfect.py
-│       └── threeDigitNumber.py
+│   ├── day1
+│   ├── day2-3
+│   ├── day4
+│   └── day5
 ├── Readme
 └── STL
     ├── binaryTree
-    │   ├── binaryTree.cpp
-    │   ├── binaryTree.h
-    │   ├── main.cpp
-    │   ├── Makefile
-    │   ├── node.cpp
-    │   └── node.h
     ├── calculator
-    │   └── main.cpp
     ├── list
-    │   ├── list.cpp
-    │   ├── list.hpp
-    │   ├── main.cpp
-    │   ├── Makefile
-    │   ├── node.cpp
-    │   └── node.hpp
     ├── stack
-    │   ├── main.cpp
-    │   ├── Makefile
-    │   ├── node.cpp
-    │   ├── node.h
-    │   ├── stack.cpp
-    │   └── stack.h
     └── vector
-        ├── iterator.cpp
-        ├── iterator.h
-        ├── main.cpp
-        ├── Makefile
-        ├── vector.cpp
-        └── vector.h
