@@ -1,0 +1,8 @@
+CREATE TRIGGER trigUpdate
+    BEFORE UPDATE ON Orders
+    for each row
+        set NEW.isOrdered = TRUE, NEW.orderDate = current_date;
+
+drop trigger trigUpdate;
+
+update Orders set countOfProducts=77 where id = 2;
