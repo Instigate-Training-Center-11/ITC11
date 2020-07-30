@@ -29,7 +29,7 @@ CREATE TABLE `customers` (
   `customer_city` varchar(30) NOT NULL,
   `customer_phone` varchar(15) NOT NULL,
   PRIMARY KEY (`customer_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -38,7 +38,7 @@ CREATE TABLE `customers` (
 
 LOCK TABLES `customers` WRITE;
 /*!40000 ALTER TABLE `customers` DISABLE KEYS */;
-INSERT INTO `customers` VALUES (1,'Tom','Skagen','Stavanger','0123654');
+INSERT INTO `customers` VALUES (1,'Tom','Skagen','Stavanger','0123654'),(2,'Bob','Vilson','Moskow','6547893'),(3,'Ani','Lorak','Sevan','547896'),(4,'Vardan','Andreev','Gugarq','852963');
 /*!40000 ALTER TABLE `customers` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -59,7 +59,7 @@ CREATE TABLE `order_lines` (
   KEY `product_id` (`product_id`),
   CONSTRAINT `order_lines_ibfk_1` FOREIGN KEY (`ord_ID`) REFERENCES `orders` (`ord_ID`),
   CONSTRAINT `order_lines_ibfk_2` FOREIGN KEY (`product_id`) REFERENCES `products` (`product_ID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -68,6 +68,7 @@ CREATE TABLE `order_lines` (
 
 LOCK TABLES `order_lines` WRITE;
 /*!40000 ALTER TABLE `order_lines` DISABLE KEYS */;
+INSERT INTO `order_lines` VALUES (1,1,50,5820.0000,'1000-01-01 00:00:00'),(2,2,20,5820.0000,'1010-02-08 00:00:00'),(3,3,11,6200.0000,'1200-02-01 00:00:00');
 /*!40000 ALTER TABLE `order_lines` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -86,7 +87,7 @@ CREATE TABLE `orders` (
   PRIMARY KEY (`ord_ID`),
   KEY `customer_id` (`customer_id`),
   CONSTRAINT `orders_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customers` (`customer_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -95,6 +96,7 @@ CREATE TABLE `orders` (
 
 LOCK TABLES `orders` WRITE;
 /*!40000 ALTER TABLE `orders` DISABLE KEYS */;
+INSERT INTO `orders` VALUES (1,1,10,1),(2,NULL,5,2),(3,NULL,8,1),(4,NULL,8,1),(5,1,8,1),(6,NULL,11,0),(7,NULL,12,0);
 /*!40000 ALTER TABLE `orders` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -114,7 +116,7 @@ CREATE TABLE `products` (
   PRIMARY KEY (`product_ID`),
   KEY `supplier_id` (`supplier_id`),
   CONSTRAINT `products_ibfk_1` FOREIGN KEY (`supplier_id`) REFERENCES `suppliers` (`supplier_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -123,6 +125,7 @@ CREATE TABLE `products` (
 
 LOCK TABLES `products` WRITE;
 /*!40000 ALTER TABLE `products` DISABLE KEYS */;
+INSERT INTO `products` VALUES (1,NULL,'dress',23.60000,'China'),(2,NULL,'skirt',16.50000,'China'),(3,NULL,'hat',16.55000,'Germany'),(4,NULL,'jeans',30.80000,'Germany');
 /*!40000 ALTER TABLE `products` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -162,4 +165,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-07-29  2:34:52
+-- Dump completed on 2020-07-30 20:51:18
