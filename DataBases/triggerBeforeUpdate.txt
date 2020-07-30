@@ -1,0 +1,20 @@
+SELECT * FROM OrderLines;
+
+DELIMITER //
+
+CREATE TRIGGER triggerBeforeUpdate
+BEFORE UPDATE
+ON OrderLines
+FOR EACH ROW
+BEGIN
+IF OLD.productDelivired = 0 THEN
+SET new.productDelivired = 1;
+END IF;
+END//
+
+DELIMITER ;
+
+UPDATE OrderLines
+SET product_id = 2 WHERE id = 3;
+
+SELECT * FROM OrderLines;
