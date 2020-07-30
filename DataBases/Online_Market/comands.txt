@@ -17,9 +17,9 @@ CREATE TABLE IF NOT EXISTS Orders(id INT AUTO_INCREMENT PRIMARY KEY NOT NULL, co
 ===========================================================================================================================
 
 1)SELECT Products.name FROM Products  INNER JOIN OrderLines ON Products.id = OrderLines.product_id INNER JOIN Orders ON Orders.orderLines_id = OrderLines.id INNEr JOIn Costumers ON Costumers.id = Orders.costumer_id;
-2)SELECT Orders.id,  OrderLines.productDeliveredTime from OrderLines INNER JOIN Orders ON Orders.orderLines_id = OrderLines.id;
+2)SELECT orderPlacedTime from Orders WHERE id = 6;
 3)SELECT COUNT(orderCompleted) FROM Orders WHERE orderCompleted = False;
-4)SELECT COUNT(*) FROM Products WHERE stock > 0;
+4)SELECT COUNT(*) FROM Products WHERE stock > 0; OR SELECT COUNT(*) FROM Products;
 5)SELECT Supplierts.name , Supplierts.city, Supplierts.street, Supplierts.phone, Products.name FROM Supplierts INNER JOIN Products ON Products.suppliert_id = Supplierts.id;
 6)SELECT SUM(OrderLines.productQuantity * Products.priceSale) FROM OrderLines INNER JOIN Orders ON Orders.id = OrderLines.order_id INNER JOIN Costumers ON Costumers.id = Orders.costumer_id INNER JOIN Products ON Products.id = OrderLines.product_id where OrderLines.order_id = 1;
 7)SELECT name,  priceSale - pricePurchase AS 'mark-up' FROM Products;
