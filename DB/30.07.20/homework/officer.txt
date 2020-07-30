@@ -1,0 +1,14 @@
+1.select project.name, employee.name
+    from project
+        inner join employee_project on project.id = employee_project.projectId
+            inner join employee on employee_project.employeeId = employee.id
+                where project.name = 'pr1;
+
+
+2.select project.name, employee.name from project
+    inner join employee_project on project.id = employee_project.projectId
+        inner join employee on employee_project.employeeId = employee.id
+            where employee_project.endDate IS NULL and startDate is not null ;
+
+
+3.select SUM(endDate - startDate) from employee_project where projectId = 2;
