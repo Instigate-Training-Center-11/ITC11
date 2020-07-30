@@ -1,0 +1,10 @@
+delimiter //
+create procedure p (aa int, bb int)
+	begine
+		select * from customers inner join orders using(customers_id)
+		inner join orderLines using(order_id)
+		inner join product using(product_id) where customer_id = aa and product_id = bb;
+	END//
+delimiter ;
+
+call p(1, 2);

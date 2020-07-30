@@ -1,0 +1,11 @@
+delimiter //
+
+create trigger t after update on order_list
+for each row
+	begin
+	if nlist.bool = 1 then
+		update orders set orders.time = NOW() where orders.order_id = nlist.order_id;
+	END IF;
+	END //
+
+delimiter ;
