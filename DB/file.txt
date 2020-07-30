@@ -1,0 +1,4 @@
+1.select orderNo, orderDate, orderTime from orders;
+2.select productName, quantity from product;
+3.select suppliers.contactName, suppliers.phoneNo, product.productName from suppliers inner join product ON product.supplierId = suppliers.supplierId;
+4.select sum(totalPrice) from orderlines where orderlinesId = 2;

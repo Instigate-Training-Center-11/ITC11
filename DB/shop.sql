@@ -32,7 +32,7 @@ CREATE TABLE `customer` (
   `postCode` varchar(15) NOT NULL,
   `phoneNo` varchar(15) NOT NULL,
   PRIMARY KEY (`customerId`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -41,33 +41,34 @@ CREATE TABLE `customer` (
 
 LOCK TABLES `customer` WRITE;
 /*!40000 ALTER TABLE `customer` DISABLE KEYS */;
-INSERT INTO `customer` VALUES (1,'Karen','Gevorgyan','Armenia','Vanadzor','Garegin Njhdeh 5','2001','094256541'),(2,'Gayane','Gevorgyan','Armenia','Erevan','TigranMec 15','0022','077652395'),(3,'David','Karapetyan','Armenia','Erevan','TigranMec 15','0022','098652395');
+INSERT INTO `customer` VALUES (1,'Alfreds','Futterkiste','Germany','Berlin','Obere Str. 57','12209','5464564556'),(2,'Ana','Kiste','Mexico','Mexico','Avda. de la Constitución 2222','05021','6464564556'),(3,'Emelia','Moreno','Mexico','Mexico','Mataderos 2312','05023','897876354635'),(4,'Thomas','Hardy','UK','London','120 Hanover Sq.','18023','12236354635'),(5,'Karen','Gevorgyan','Armenia','Vanadzor','Garegin Njhdeh 5','2001','094256541'),(6,'Gayane','Gevorgyan','Armenia','Erevan','Tigran Mec 15','0022','077652395');
 /*!40000 ALTER TABLE `customer` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
--- Table structure for table `orderLines`
+-- Table structure for table `orderlines`
 --
 
-DROP TABLE IF EXISTS `orderLines`;
+DROP TABLE IF EXISTS `orderlines`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `orderLines` (
-  `customerId` int(10) DEFAULT NULL,
-  `orderId` int(10) DEFAULT NULL,
-  `productID` int(10) DEFAULT NULL,
-  `productTotal` int(10) NOT NULL,
-  `totalPrice` decimal(10,5) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+CREATE TABLE `orderlines` (
+  `orderlinesId` int(11) NOT NULL AUTO_INCREMENT,
+  `productID` int(11) DEFAULT NULL,
+  `customerId` int(11) DEFAULT NULL,
+  `totalPrice` decimal(10,5) NOT NULL,
+  PRIMARY KEY (`orderlinesId`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `orderLines`
+-- Dumping data for table `orderlines`
 --
 
-LOCK TABLES `orderLines` WRITE;
-/*!40000 ALTER TABLE `orderLines` DISABLE KEYS */;
-/*!40000 ALTER TABLE `orderLines` ENABLE KEYS */;
+LOCK TABLES `orderlines` WRITE;
+/*!40000 ALTER TABLE `orderlines` DISABLE KEYS */;
+INSERT INTO `orderlines` VALUES (1,1,4,52000.00000),(2,3,6,9000.00000),(3,2,5,52000.00000);
+/*!40000 ALTER TABLE `orderlines` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -85,7 +86,7 @@ CREATE TABLE `orders` (
   `productID` int(11) DEFAULT NULL,
   `customerId` int(11) DEFAULT NULL,
   PRIMARY KEY (`orderId`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -94,35 +95,36 @@ CREATE TABLE `orders` (
 
 LOCK TABLES `orders` WRITE;
 /*!40000 ALTER TABLE `orders` DISABLE KEYS */;
+INSERT INTO `orders` VALUES (1,'2020-03-10',5,'21:25:36',2,3),(2,'2020-05-18',3,'12:25:16',1,6),(3,'2020-08-11',2,'16:30:16',6,6),(4,'2020-08-30',1,'16:30:16',4,5),(5,'2020-12-30',6,'22:35:16',5,1),(6,'2020-12-15',6,'08:35:46',5,4);
 /*!40000 ALTER TABLE `orders` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
--- Table structure for table `products`
+-- Table structure for table `product`
 --
 
-DROP TABLE IF EXISTS `products`;
+DROP TABLE IF EXISTS `product`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `products` (
-  `productID` int(10) unsigned NOT NULL AUTO_INCREMENT,
+CREATE TABLE `product` (
+  `productID` int(11) NOT NULL AUTO_INCREMENT,
   `productCode` char(3) NOT NULL DEFAULT '',
   `productName` varchar(30) NOT NULL DEFAULT '',
-  `quantity` int(10) unsigned NOT NULL DEFAULT '0',
-  `unitPrice` decimal(7,2) NOT NULL DEFAULT '99999.99',
-  `stock` smallint(6) NOT NULL,
+  `quantity` int(11) NOT NULL DEFAULT '0',
+  `price` decimal(7,2) NOT NULL,
+  `supplierId` int(11) NOT NULL,
   PRIMARY KEY (`productID`)
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `products`
+-- Dumping data for table `product`
 --
 
-LOCK TABLES `products` WRITE;
-/*!40000 ALTER TABLE `products` DISABLE KEYS */;
-INSERT INTO `products` VALUES (1,'pen','red pen',100,5.25,2),(2,'pen','blue pen',50,10.25,4),(3,'pen','black pen',150,10.87,5),(4,'pec','black pencil',150,10.87,5),(5,'pec','2H pencil',150,10.87,5),(6,'pec','2B pencil',15,20.87,6);
-/*!40000 ALTER TABLE `products` ENABLE KEYS */;
+LOCK TABLES `product` WRITE;
+/*!40000 ALTER TABLE `product` DISABLE KEYS */;
+INSERT INTO `product` VALUES (1,'fur','chair',70,7000.00,3),(2,'fur','bed',20,17000.00,3),(3,'fur','sofa',8,25000.00,2),(4,'car','BMW',8,65000.00,1),(5,'car','Mersedes',18,45000.00,2),(6,'car','Toyota',5,52000.00,2);
+/*!40000 ALTER TABLE `product` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -134,15 +136,10 @@ DROP TABLE IF EXISTS `suppliers`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `suppliers` (
   `supplierId` int(11) NOT NULL AUTO_INCREMENT,
-  `companyName` varchar(50) NOT NULL,
   `contactName` varchar(50) NOT NULL,
-  `supplierCountry` varchar(50) NOT NULL,
-  `supplierCity` varchar(50) NOT NULL,
-  `supplierAddress` varchar(50) NOT NULL,
-  `postCode` varchar(15) NOT NULL,
   `phoneNo` varchar(15) NOT NULL,
   PRIMARY KEY (`supplierId`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -151,7 +148,7 @@ CREATE TABLE `suppliers` (
 
 LOCK TABLES `suppliers` WRITE;
 /*!40000 ALTER TABLE `suppliers` DISABLE KEYS */;
-INSERT INTO `suppliers` VALUES (1,'Ding Lao Shi','Shie','China','Shenyan','Mec 15','1022','092811652395'),(2,'Dolphin','Joe','Germany','Berlin','Mayci 15','1122','0928524564395');
+INSERT INTO `suppliers` VALUES (1,'Garik Gevorgyan','041652395'),(2,'Karl Gevhia','045645695'),(3,'Dima Petrov','07945645695');
 /*!40000 ALTER TABLE `suppliers` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -164,4 +161,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-07-30  0:11:30
+-- Dump completed on 2020-07-30 22:57:23
