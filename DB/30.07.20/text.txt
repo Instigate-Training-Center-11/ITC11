@@ -1,0 +1,2 @@
+ CREATE TRIGGER deleteConnections BEFORE DELETE ON customer FOR EACH ROW DELETE FROM orders where orders.customerId = OLD.customerId;
+
