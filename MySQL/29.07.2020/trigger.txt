@@ -1,0 +1,2 @@
+
+create trigger for_delete before delete on table1 for each row delete from table2 where table2.id_1 = old.id_1;
