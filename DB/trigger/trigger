@@ -1,0 +1,2 @@
+create trigger trig before delete on some1 for each row delete from some2 where some2.some1Id = old.id;
+
