@@ -1,0 +1,2 @@
+select imploe.name,project.name from imploe left join project on   project.id=imploe.pro_id;
+select name,status from project where status='worked';
