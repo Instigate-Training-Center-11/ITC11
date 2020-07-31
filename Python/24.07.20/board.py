@@ -1,7 +1,4 @@
-import os
-
 class Board:
-    __simvol = ' '
     __black = "   "
     __white = "\033[30m\033[47m   \033[0m"
     board = [[__white, __black, __white, __black, __white, __black, __white, __black],
@@ -26,7 +23,6 @@ def check(board, x, y):
         return board[x][y][1]
 
 def print_board(board):
-    os.system('cls' if os.name == 'nt' else 'clear')
     print("   A  B  C  D  E  F  G  H")
 
     print(" +------------------------+")

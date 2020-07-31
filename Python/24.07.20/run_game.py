@@ -1,6 +1,7 @@
 import figure
 import board
 import string
+import os
 
 def check_move(current_white_figure,current_black_figure, new_x, new_y, cordinate_x, cordinate_y, count):
     for i in range(0, count):
@@ -13,11 +14,21 @@ def check_move(current_white_figure,current_black_figure, new_x, new_y, cordinat
                     current_black_figure[i].set_x_y(new_x, new_y)
                     board.move(new_board.board, black_x, black_y, ' ')
                     board.move(new_board.board, new_x, new_y, current_black_figure[i].get_simvol())
+                    print("Nice move for:", end = " ")
+                    print(current_black_figure[i].get_simvol())
+                else:
+                    print("No such move for:", end = " ")
+                    print(current_black_figure[i].get_simvol())
         elif white_x == cordinate_x and white_y == cordinate_y:
                 if current_white_figure[i].safe_move(new_x, new_y):
                     current_white_figure[i].set_x_y(new_x, new_y)
                     board.move(new_board.board, white_x, white_y, ' ')
                     board.move(new_board.board, new_x, new_y, current_white_figure[i].get_simvol())
+                    print("Nice move for:", end = " ")
+                    print(current_white_figure[i].get_simvol())
+                else:
+                    print("No such move for:", end = " ")
+                    print(current_white_figure[i].get_simvol())
 
 new_board = board.Board()
 
@@ -68,7 +79,8 @@ white_queen.append(figure.Queen(7, 3, "♔"))
 board.move(new_board.board, 7, 3, "♔")
 
 is_exit = False
-
+os.system('cls' if os.name == 'nt' else 'clear')
+print("Good luck!!!")
 while is_exit == False:
     board.print_board(new_board.board)
     print("Please insert some figure cordinates.(Example: A and 2)")
@@ -78,7 +90,7 @@ while is_exit == False:
     new_x = int(input("New second cordinate: ")) - 1
 
     simvol = board.check(new_board.board, cordinate_x, cordinate_y)
-
+    os.system('cls' if os.name == 'nt' else 'clear')
     if simvol == '.':
         print("Empty")
     else:
@@ -94,5 +106,3 @@ while is_exit == False:
             check_move(black_king, white_king, new_x, new_y, cordinate_x, cordinate_y, 1)
         elif simvol == '♚' or simvol == '♔':
             check_move(black_queen, white_queen, new_x, new_y, cordinate_x, cordinate_y, 1)
-
-    ##TO_DO
