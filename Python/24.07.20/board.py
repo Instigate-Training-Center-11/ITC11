@@ -32,7 +32,7 @@ def check(board, x, y):
         return board[x][y][1]
 
 def print_board(board):
-    #os.system('cls' if os.name == 'nt' else 'clear')
+    os.system('cls' if os.name == 'nt' else 'clear')
     print("   A  B  C  D  E  F  G  H")
 
     print(" +------------------------+")
