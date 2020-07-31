@@ -1,5 +1,7 @@
+DROP PROCEDURE IF EXISTS myProcedure;
+
 DELIMITER //
-CREATE PROCEDURE myProcedure(IN costumerID INT, IN productID INT, OUT result INT)
+CREATE PROCEDURE myProcedure(IN costumerID INT, IN productID INT)
 BEGIN
 SELECT c.name as Cpstumer_name,
 s.name AS Supplier_name,
@@ -20,4 +22,4 @@ END//
 
 DELIMITER ;
 
-CALL myProcedure(1, 1, @result);
+CALL myProcedure(3, 2);
