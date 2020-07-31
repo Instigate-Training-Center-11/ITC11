@@ -1,5 +1,6 @@
 import figure
 import board
+import string
 
 new_board = board.Board()
 
@@ -37,12 +38,20 @@ for i in range(2, 8, 3):
 
 black_king = figure.Figure(0, 3, "♛")
 board.move(new_board.board, 0, 3, "♛")
-white_king = figure.Figure(7, 3, "♕")
-board.move(new_board.board, 7, 3, "♕")
+white_king = figure.Figure(7, 4, "♕")
+board.move(new_board.board, 7, 4, "♕")
 
 black_queen = figure.Figure(0, 4, "♚")
 board.move(new_board.board, 0, 4, "♚")
-white_queen = figure.Figure(7, 4, "♔")
-board.move(new_board.board, 7, 4, "♔")
+white_queen = figure.Figure(7, 3, "♔")
+board.move(new_board.board, 7, 3, "♔")
 
-board.print_board(new_board.board)
+is_exit = False
+
+while is_exit == False:
+    board.print_board(new_board.board)
+    cordinate_x = 1 - int(input("First cordinate: "))
+    cordinate_y = ord(input("Second cordinate: ")) - 65
+
+    ##TO_DO
+
