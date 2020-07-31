@@ -14,16 +14,10 @@ class Board:
              [__black, __white, __black, __white, __black, __white, __black, __white]]
 
 def move(board, x, y, simvol1):
-    if len(board[x][y]) > 3 and board[x][y][11] == '.':
+    if len(board[x][y]) > 3:
         board[x][y] = board[x][y][:11] + simvol1 + board[x][y][11 + 1:]
     else:
         board[x][y] = board[x][y][:1] + simvol1 + board[x][y][1 + 1:]
-
-def remove(board, x, y):
-    if len(board[x][y]) > 3:
-        board[x][y] = board[x][y][:11] + '.' + board[x][y][11 + 1:]
-    else:
-        board[x][y] = board[x][y][:1] + '.' + board[x][y][1 + 1:]
 
 def check(board, x, y):
     if len(board[x][y]) > 3:
@@ -32,7 +26,7 @@ def check(board, x, y):
         return board[x][y][1]
 
 def print_board(board):
-    os.system('cls' if os.name == 'nt' else 'clear')
+    #os.system('cls' if os.name == 'nt' else 'clear')
     print("   A  B  C  D  E  F  G  H")
 
     print(" +------------------------+")

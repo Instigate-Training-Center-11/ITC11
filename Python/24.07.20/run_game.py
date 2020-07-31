@@ -61,14 +61,21 @@ while is_exit == False:
     if simvol == '.':
         print("Empty")
     else:
-        if simvol == '♟':
+        if simvol == '♟' or simvol == '♙':
             for i in range(0, 8):
-                current_x = black_pown[i].get_x()
-                current_y = black_pown[i].get_y()
-                if current_x == cordinate_x and current_y == cordinate_y:
-                    black_pown[i].set_x_y(current_x, current_y)
-                    board.remove(new_board.board, current_x, current_y)
-                    board.move(new_board.board, new_x, new_y, "♟")
+                black_x = black_pown[i].get_x()
+                black_y = black_pown[i].get_y()
+                white_x = white_pown[i].get_x()
+                white_y = white_pown[i].get_y()
+                if black_x == cordinate_x and black_y == cordinate_y:
+                    black_pown[i].set_x_y(new_x, new_y)
+                    board.move(new_board.board, black_x, black_y, '.')
+                    board.move(new_board.board, new_x, new_y, black_pown[i].get_simvol())
+                elif white_x == cordinate_x and white_y == cordinate_y:
+                    white_pown[i].set_x_y(new_x, new_y)
+                    board.move(new_board.board, white_x, white_y, '.')
+                    board.move(new_board.board, new_x, new_y, white_pown[i].get_simvol())
+
 
     ##TO_DO
 
