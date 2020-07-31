@@ -50,8 +50,25 @@ is_exit = False
 
 while is_exit == False:
     board.print_board(new_board.board)
-    cordinate_x = 1 - int(input("First cordinate: "))
-    cordinate_y = ord(input("Second cordinate: ")) - 65
+    print("Please insert some figure cordinates.(Example: A and 2)")
+    cordinate_y = ord(input("First cordinate: ")) - 65
+    cordinate_x = int(input("Second cordinate: ")) - 1
+    new_y = ord(input("New first cordinate: ")) - 65
+    new_x = int(input("New second cordinate: ")) - 1
+
+    simvol = board.check(new_board.board, cordinate_x, cordinate_y)
+
+    if simvol == '.':
+        print("Empty")
+    else:
+        if simvol == '♟':
+            for i in range(0, 8):
+                current_x = black_pown[i].get_x()
+                current_y = black_pown[i].get_y()
+                if current_x == cordinate_x and current_y == cordinate_y:
+                    black_pown[i].set_x_y(current_x, current_y)
+                    board.remove(new_board.board, current_x, current_y)
+                    board.move(new_board.board, new_x, new_y, "♟")
 
     ##TO_DO
 
