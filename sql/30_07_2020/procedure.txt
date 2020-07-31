@@ -1,9 +1,9 @@
 delimiter //
 create procedure p (aa int, bb int)
-	begine
+	begin
 		select * from customers inner join orders using(customers_id)
-		inner join orderLines using(order_id)
-		inner join product using(product_id) where customer_id = aa and product_id = bb;
+		inner join order_list using(order_id)
+		inner join product using(product_id) where customers_id = aa and product_id = bb;
 	END//
 delimiter ;
 
