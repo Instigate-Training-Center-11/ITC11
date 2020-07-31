@@ -1,9 +1,9 @@
 import os
 
 class Board:
-    __simvol = "."
-    __black = " " + __simvol + " "
-    __white = "\033[30m\033[47m " + __simvol + " \033[0m"
+    __simvol = ' '
+    __black = "   "
+    __white = "\033[30m\033[47m   \033[0m"
     board = [[__white, __black, __white, __black, __white, __black, __white, __black],
              [__black, __white, __black, __white, __black, __white, __black, __white],
              [__white, __black, __white, __black, __white, __black, __white, __black],
