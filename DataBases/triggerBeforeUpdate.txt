@@ -9,6 +9,7 @@ FOR EACH ROW
 BEGIN
 IF OLD.productDelivired = 0 THEN
 SET new.productDelivired = 1;
+SET new.productDeliviredTime = NOW();
 END IF;
 END//
 
