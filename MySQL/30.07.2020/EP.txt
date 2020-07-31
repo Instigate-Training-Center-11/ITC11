@@ -1,0 +1,6 @@
+1. -->  select Title, empName, empSurname from Projects inner join `Employee-Projects` on Projects.pID = `Employee-Projects`.pID inner join Employees on `Employee-Projects`.empID = Employees.empID where Projects.Title = 'T1';
+
+ 
+2. -->  select sum(WorkTime) from `Employee-Projects` where pID = 1;
+
+3. -->  select sum(isActive) from Projects where isActive = 1;
