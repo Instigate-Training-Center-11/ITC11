@@ -1,3 +1,5 @@
+DROP TRIGGER IF EXISTS triggerBeforeUpdate;
+
 SELECT * FROM OrderLines;
 
 DELIMITER //
@@ -8,14 +10,14 @@ ON OrderLines
 FOR EACH ROW
 BEGIN
 IF OLD.productDelivired = 0 THEN
-SET new.productDelivired = 1;
-SET new.productDeliviredTime = NOW();
+SET NEW.productDelivired = 1;
+SET NEW.productDeliviredTime = NOW();
 END IF;
 END//
 
 DELIMITER ;
 
 UPDATE OrderLines
-SET product_id = 2 WHERE id = 3;
+SET product_id = 2 WHERE id = 6;
 
 SELECT * FROM OrderLines;
