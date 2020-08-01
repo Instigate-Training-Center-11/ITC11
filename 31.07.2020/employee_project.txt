@@ -1,0 +1,2 @@
+SELECT name from employees INNER JOIN projects on employees.
+-> ProjectID = projects.ProjectID;
