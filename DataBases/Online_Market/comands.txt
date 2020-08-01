@@ -34,10 +34,11 @@ FROM Supplierts
 INNER JOIN Products ON Products.suppliert_id = Supplierts.id 
 WHERE Supplierts.id = 1;
 
-6)SELECT SUM(OrderLines.productQuantity * Products.priceSale) AS Total_Price FROM OrderLines 
+6)SELECT SUM(OrderLines.productQuantity * Products.priceSale) AS Total_Price 
+FROM OrderLines 
 INNER JOIN Orders ON Orders.id = OrderLines.order_id 
 INNER JOIN Costumers ON Costumers.id = Orders.costumer_id 
 INNER JOIN Products ON Products.id = OrderLines.product_id 
-WHERE OrderLines.order_id = 1;
+WHERE OrderLines.order_id = 5;
 
 7)SELECT name,  priceSale - pricePurchase AS 'mark-up' FROM Products;
