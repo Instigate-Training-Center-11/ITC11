@@ -1,0 +1,7 @@
+DELIMITER //
+
+CREATE PROCEDURE proc1(in arg1 integer, in arg2 integer) BEGIN SELECT * FROM customers INNER JOIN orders using(c_id) INNER JOIN orderLines using(o_id) INNER JOIN products using(p_id) WHERE c_id = arg1 and p_id = arg2; END//
+
+DELIMITER ;
+
+call proc1(1, 1);
