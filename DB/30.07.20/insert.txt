@@ -1,0 +1,6 @@
+/*for insert*/
+delimiter **
+create trigger totalcount  after insert on customer for each row begin if @count = 3 then set @count = 0; set @total = @total + new.customerId; else set @count = @count + 1; end if; end**
+
+delimiter ;
+
