@@ -1,19 +1,225 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>HTML Tags</title>
-		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-	</head>
-    <body style="margin: 0; padding: 0;">
-        <!--This is a comment. Comments are not displayed in the browser-->
-		<div class="">
-            <p style="font-size: 32px;text-align: center;color:red; font-weight: 900; background-color: aqua;">Html tags</p>
-            <div style="font-size: 32px;text-align: center; font-weight: 900;">
-                <p>H1 - H6 Tags</p>
-            </div>
-            <div style="background-color: cadetblue;">
-                <ol>
+    <head>
+        <title>HTML TAGS</title>
+        <meta charset="UTF-8">
+        <base href="" target="_blank">
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            .list-style {
+                list-style: none;
+            }
+
+            .navbar {
+                background-color: #ebebeb;
+            }
+
+            .flex {
+                display: flex;
+            }
+
+            .ml-50 {
+                margin-left: 50px;
+            }
+
+            .p-25 {
+                padding: 25px;
+            }
+
+            .mt-25 {
+                margin-top: 25px;
+            }
+        </style>
+        <script>
+            function showContent() {
+                var temp = document.getElementsByTagName("template")[0];
+                var clon = temp.content.cloneNode(true);
+                document.body.appendChild(clon);
+            }
+        </script>
+        <noscript>Your browser does not support JavaScript!</noscript>
+    </head>
+
+    <body>
+        <header>
+            <nav class="navbar p-25">
+                <ul class="list-style flex ">
                     <li>
+                        <a href="#">
+                            <p>
+                                <strong>About</strong>
+                            </p>
+                        </a>
+                    </li>
+                    <li class="ml-50">
+                        <a href="#">
+                            <p>
+                                <strong> Contact</strong>
+                            </p>
+                        </a>
+                    </li>
+                    <li class="ml-50">
+                        <a href="#">
+                            <p>
+                                <strong>Menu</strong>
+                            </p>
+                        </a>
+                    </li>
+                    <li class="ml-50">
+                        <a href="#login">
+                            <p>
+                                <strong>Log In</strong>
+                            </p>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <section>
+            <form action="submission.html" method="GET" id="login">
+                <fieldset>
+                    <legend>LOG IN:</legend>
+                    <label for="username">Username:</label>
+                    <br>
+                    <input id="username" name="username" type="text" required minlength="3" maxlength="15">
+                    <br>
+                    <label for="pw">Password:</label>
+                    <br>
+                    <!--Add the pattern attribute to the input below-->
+                    <input id="pw" name="pw" type="password" required minlength="8" maxlength="15">
+                    <br>
+                    <input type="submit" value="Submit">
+                </fieldset>
+            </form>
+        </section>
+        <section>
+            <form action="submission.html" method="POST">
+                <h1>Create a burger!</h1>
+                <section class="mt-25">
+                    <label for="patty">What type of protein would you like?</label>
+                    <input type="text" name="patty" id="patty">
+                </section>
+                <hr>
+
+                <section class="mt-25">
+                    <label for="amount">How many patties would you like?</label>
+                    <input type="number" name="amount" id="amount">
+                </section>
+                <hr>
+
+                <section class="mt-25">
+                    <label for="doneness">How do you want your patty cooked</label>
+                    <br>
+                    <span>Rare</span>
+                    <input type="range" name="doneness" id="doneness" value="3" min="1" max="5">
+                    <span>Well-Done</span>
+                </section>
+                <hr>
+
+                <section class="mt-25">
+                    <span>What toppings would you like?</span>
+                    <br>
+                    <input type="checkbox" name="topping" id="lettuce" value="lettuce">
+                    <label for="lettuce">Lettuce</label>
+                    <input type="checkbox" name="topping" id="tomato" value="tomato">
+                    <label for="tomato">Tomato</label>
+                    <input type="checkbox" name="topping" id="onion" value="onion">
+                    <label for="onion">Onion</label>
+                </section>
+                <hr>
+
+                <section class="mt-25">
+                    <span>Would you like to add cheese?</span>
+                    <br>
+                    <input type="radio" name="cheese" id="yes" value="yes">
+                    <label for="yes">Yes</label>
+                    <input type="radio" name="cheese" id="no" value="yes">
+                    <label for="no">No</label>
+                </section>
+                <hr>
+
+                <section class="mt-25">
+                    <label for="bun">What type of bun would you like?</label>
+                    <select name="bun" id="bun">
+                        <option value="sesame">Sesame</option>
+                        <option value="potatoe">Potato</option>
+                        <option value="pretzel">Pretzel</option>
+                    </select>
+                </section>
+                <hr>
+
+                <section class="mt-25">
+                    <label for="sauce">What type of sauce would you like?</label>
+                    <input list="sauces" id="sauce" name="sauce">
+                    <datalist id="sauces">
+                        <option value="ketchup"></option>
+                        <option value="mayo"></option>
+                        <option value="mustard"></option>
+                    </datalist>
+                </section>
+                <hr>
+                <section class="mt-25">
+                    <label for="extra">Anything else you want to add?</label>
+                    <br>
+                    <textarea id="extra" name="extra" rows="3" cols="40"></textarea>
+                </section>
+                <hr>
+
+                <optgroup label="German Cars">
+                    <option value="mercedes">Mercedes</option>
+                    <option value="audi">Audi</option>
+                </optgroup>
+                <hr>
+
+                <form oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+                    <input type="range" id="a" value="50">
+                    +<input type="number" id="b" value="25">
+                    =<output name="x" for="a b"></output>
+                </form>
+
+                <input list="browsers" name="browser" id="browser">
+                <datalist id="browsers">
+                    <option value="Edge">
+                    <option value="Firefox">
+                    <option value="Chrome">
+                    <option value="Opera">
+                    <option value="Safari">
+                </datalist>
+
+                <hr>
+
+                <section class="mt-25">
+                    <input type="submit" value="Submit">
+                </section>
+            </form>
+        </section>
+        <main>
+            <h2>Using Canvas</h2>
+
+            <canvas id="myCanvas">Your browser does not support the canvas tag.</canvas>
+            <script>
+                var c = document.getElementById("myCanvas");
+                var ctx = c.getContext("2d");
+                ctx.fillStyle = "#48a868";
+                ctx.fillRect(0, 0, 800, 100);
+            </script>
+
+            <label for="file">Downloading progress:</label>
+            <meter value="0" max="100" low="10" high="60">Низкая</meter>
+            <meter value="30" max="100" low="10" high="60">Нормальная</meter>
+            <meter value="80" max="100" low="10" high="60">Горячая</meter>
+            <meter value="100" max="100">Кипяток</meter>
+            <progress id="file" value="32" max="100"> 32% </progress>
+            <div style="background-color: cadetblue;">
+                <div style="font-size: 32px;text-align: center; font-weight: 900;">
+                    <p>H1 - H6 Tags</p>
+                </div>
+                <ol>
+                    <li class="mt-25">
                         <h1>I am
                             <span style="color: red;"> <abbr title="H1 tag">H1</abbr> </span> tag. My
                             <span style="color: red;">font size is:</span> 32 px. My default stylesheet is:
@@ -21,7 +227,7 @@
                             <span style="color: red;">font-weight:</span> bolder
                         </h1>
                     </li>
-                    <li>
+                    <li class="mt-25">
                         <h2>I am
                             <span style="color: red;"> H2 </span> tag. My
                             <span style="color: red;">font size is:</span> 24 px. My default stylesheet is:
@@ -29,7 +235,7 @@
                             <span style="color: red;">font-weight:</span> bolder
                         </h2>
                     </li>
-                    <li>
+                    <li class="mt-25">
                         <h3>I am
                             <span style="color: red;"> H3 </span> tag. My
                             <span style="color: red;">font size is:</span> 18.72 px. My default stylesheet is:
@@ -37,7 +243,7 @@
                             <span style="color: red;">font-weight:</span> bolder
                         </h3>
                     </li>
-                    <li>
+                    <li class="mt-25">
                         <h4>I am
                             <span style="color: red;"> H4 </span> tag. My
                             <span style="color: red;">font size is:</span> 16 px. My default stylesheet is:
@@ -45,7 +251,7 @@
                             <span style="color: red;">font-weight:</span> bolder
                         </h4>
                     </li>
-                    <li>
+                    <li class="mt-25">
                         <h5>I am
                             <span style="color: red;"> H5 </span> tag. My
                             <span style="color: red;">font size is:</span> 13.28 px. My default stylesheet is:
@@ -53,7 +259,7 @@
                             <span style="color: red;">font-weight:</span> bolder
                         </h5>
                     </li>
-                    <li>
+                    <li class="mt-25">
                         <h6>I am
                             <span style="color: red;"> H4 </span> tag. My
                             <span style="color: red;">font size is:</span> 10.72 px. My default stylesheet is:
@@ -63,80 +269,198 @@
                     </li>
                 </ol>
             </div>
-            <div class="HR">
-                <p style="font-size: 32px; text-align: center; ">Html hr tag</p>
-                <ul>
-                    <li>
-                        <hr style="border-top: 1px solid blue;">
-                    </li>
-                    <li>
-                        <hr style="border-top: 1px dashed blue;">
-                    </li>
-                    <li>
-                        <hr style="border-top: 1px dotted blue;">
-                    </li>
-                    <li>
-                        <hr style="border: 2px solid blue">
-                    </li>
-                </ul>
-            </div>
-            <div>
-                <p style="font-size: 32px; color: chartreuse; font-weight: 900; text-align: center;">Formatting tags</p>
+        </main>
 
-                <p> My address using  <mark>Address</mark> tag</p>
-                <address>
-                    Vanadzor<br>
-                    Armenia
-                </address>
-                <p>
-                    <b>Bold text using
-                        <mark>b tag,</mark> i don't like it, i like
-                        <mark>font-weight in css </mark>
-                    </b>
-                </p>
+        <div class="mt-25">
+            <h1>About Me</h1>
 
-                <bdi>إيان</bdi>:
-                <blockquote cite="http://www.worldwildlife.org/who/index.html">
-                    designed to highlight long quotations within a document.
-                    Text marked with this tag is traditionally displayed as an aligned
-                    box with left and right padding (approximately 40 pixels each) and padding at the top and bottom.
-                </blockquote>
-                <bdo dir="rtl">This tag do reverse the text</bdo><br>
-                <cite>Browsers usually set the text inside the container to
-                    <mark>cite</mark> I usually use
-                    <mark>font-style: italic</mark> in css
-                </cite><br>
-                <code>Browsers usually render the contents of the
-                    <mark>code</mark> container as reduced-size monospaced text
-                </code>
-                <p>The most important encyclopedia in the world is
-                    <del>Encyclopedia Britannica</del>
-                    <ins>Wikipedia</ins>
-                </p><br>
-                <i>Sets the font to italic. It is permissible to use this tag in conjunction with other tags that define the style of the text.</i><br>
-                <p>The  tag is used to indicate text that is typed on the
-                    <kbd>keyboard or for the name of keys. Browsers usually mark the text in the
+            <p>
+                I am <em>Armine Gevorgyan.</em> I am <ins>26</ins> years old.
+            </p>
+            <p> My address using <mark>Address</mark> tag</p>
 
-                    </kbd> container with a mono spaced font
-                </p>
-                <p>
-                    The tag is intended to emphasize <em>  text. Browsers render such text in italics.
-                </p>
-
-                <p>
-                    Used to display a value in a certain known range. Used primarily to display numerical values such as search results, fluid volume, pressure, etc.
-                </p>
-                <meter value="0" max="100" low="10" high="60">Низкая</meter>
-                <meter value="30" max="100" low="10" high="60">Нормальная</meter>
-                <meter value="80" max="100" low="10" high="60">Горячая</meter>
-                <meter value="100" max="100">Кипяток</meter>
-                <p>
-                    The element defines a block of preformatted text.
-                    <pre>  Such text is usually displayed in a monospaced font and with all spaces between words. By default, any number of consecutive spaces in the code is shown as one on the web page. The
-                        tag allows you to bypass this feature and display the text as required by the developer.
-                    </pre>
-                </p>
-            </div>
+            <address>
+                I was Born in Vanadzor
+            </address>
         </div>
-	</body>
+
+        <div class="mt-25">
+            <cite>Browsers usually set the text inside the container to
+                <mark>cite</mark> I usually use
+                <mark>font-style: italic</mark> in css
+            </cite><br>
+            <code>Browsers usually render the contents of the
+                <mark>code</mark> container as reduced-size monospaced text
+            </code>
+        </div>
+
+        <div class="mt-25">
+            <h3>ITALIC TEXT VARIANTS</h3>
+            <ol>
+                <li>
+                    <mark>using i tag </mark>
+                    <p><i>Lorem ipsum</i> is the most popular filler text in history.</p>
+                </li>
+                <li>
+                    <mark>using em tag </mark>
+                    <data value="21053"><br><em>Second</em> Variants</data>
+                </li>
+                <li>
+                    <mark>using dfn tag</mark>
+                    <p>
+                        <dfn title="HyperText Markup Language">HTML</dfn> is the standard markup language for creating web
+                        pages.
+                    </p>
+                </li>
+                <li>
+                    <mark>using var tag</mark>
+                    <p>The area of a triangle is: 1/2 x <var>b</var> x <var>h</var>, where <var>b</var> is the base, and
+                        <var>h</var> is the vertical height.</p>
+                </li>
+            </ol>
+        </div>
+
+        <div class="mt-25">
+            <p>The tag is used to indicate text that is typed on the
+                <kbd>keyboard or for the name of keys. Browsers usually mark the text in the
+
+                </kbd> container with a mono spaced font
+            </p>
+            <blockquote cite="http://www.worldwildlife.org/who/index.html">
+                designed to highlight long quotations within a document.
+                Text marked with this tag is traditionally displayed as an aligned
+                box with left and right padding (approximately 40 pixels each) and padding at the top and bottom.
+            </blockquote>
+            <strong><bdo dir="rtl">This tag do reverse the text</bdo><br></strong>
+
+            <p>The most important encyclopedia in the world is
+                <del>Encyclopedia Britannica</del>
+                <ins>Wikipedia</ins>
+                <s>Only 50 tickets left!</s>
+                This text contains <sub>subscript</sub> text.
+                This text contains <sup>superscript</sup> text.
+                This is some <u>mispeled</u> text.
+            </p><br>
+
+            <p>
+                The
+                <wbr> (Word Break Opportunity) tag specifies where in a text it would be ok to add a line-break.
+                        Tip: When a word is too long, the browser might break it at the wrong place. You can use the
+                <wbr> element to add word break opportunities.
+            </p>
+
+            <p><dfn title="HyperText Markup Language">HTML</dfn> is the standard markup language for creating web pages.</p>
+
+            <h2>Pre tag</h2>
+            <pre>
+                Lorem ipsum, dolor sit <small>This is some smaller text.</small> amet consectetur adipisicing elit.
+                                    Consequatur necessitatibus expedita dolorum rem atque fugiat
+                    fuga neque fugit, non eos amet delectus sapiente eveniet aliquid,
+                            illum vitae laboriosam repellendus rerum?
+            </pre>
+            <p>WWF's goal is to:
+                <q>Build a future where people live in harmony with nature.</q>
+                We hope they succeed.
+                <ruby>
+                    漢 <rt>
+                    <rp>(</rp>ㄏㄢˋ<rp>)</rp>
+                    </rt>
+                </ruby>
+            </p>
+            <p>
+                <strong>
+                    Open from <time>02:30</time> to <time>16:00</time> every weekday.
+                </strong>
+            </p>
+
+            <p>
+                <strong>
+                    I have a date on <time datetime="1994-04-27 22:00">My birt day</time>.
+                </strong>
+            </p>
+            <dialog open>This is an open dialog window</dialog>
+            <details>
+                <summary>Epcot Center</summary>
+                <p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international
+                    pavilions, award-winning fireworks and seasonal special events.</p>
+            </details>
+            <dl>
+                <dt>Coffee</dt>
+                <dd>Black hot drink</dd>
+                <dt>Milk</dt>
+                <dd>White cold drink</dd>
+            </dl>
+
+            <dl>
+                <dt>Coffee</dt>
+                <dd>Black hot drink</dd>
+                <dt>Milk</dt>
+                <dd>White cold drink</dd>
+            </dl>
+
+            <dl>
+                <dt>Coffee</dt>
+                <dd>Black hot drink</dd>
+                <dt>Milk</dt>
+                <dd>White cold drink</dd>
+            </dl>
+        </div>
+
+        <div class="mt-25">
+            <article>
+                <h2>Facts About Dogs</h2>
+                <p>
+                    Dogs have a sense of time. It's been proven that they know the difference between a hour and five. If
+                    conditioned to, they can predict future events, such as regular walk times.
+                </p>
+                <article>
+                    <figure>
+                        <img src="https://content.codecademy.com/courses/SemanticHTML/dogimage.jpeg" />
+                        <figcaption>A cute dog.</figcaption>
+                    </figure>
+
+                    <picture>
+                        <source media="(min-width:650px)"
+                            srcset="https://thumbs-prod.si-cdn.com/ej9KRK9frB5AXD6W9LXKFnuRc-0=/fit-in/1600x0/https://public-media.si-cdn.com/filer/ad/7b/ad7b3860-ad5f-43dc-800e-af57830cd1d3/labrador.jpg">
+                        <source media="(min-width:465px)"
+                            srcset="https://thumbs-prod.si-cdn.com/ej9KRK9frB5AXD6W9LXKFnuRc-0=/fit-in/1600x0/https://public-media.si-cdn.com/filer/ad/7b/ad7b3860-ad5f-43dc-800e-af57830cd1d3/labrador.jpg">
+                        <img src="https://thumbs-prod.si-cdn.com/ej9KRK9frB5AXD6W9LXKFnuRc-0=/fit-in/1600x0/https://public-media.si-cdn.com/filer/ad/7b/ad7b3860-ad5f-43dc-800e-af57830cd1d3/labrador.jpg"
+                            alt="Flowers" style="width:98%;">
+                    </picture>
+
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSpg2whs_hG7nQK0WzVkfoW-S0odw31TAnVZg&usqp=CAU"
+                        alt="dog" width="200" height="179">
+
+                    <map name="workmap">
+                        <area shape="rect" coords="34,44,270,350" alt="Computer" href="computer.htm">
+                        <area shape="rect" coords="290,172,333,250" alt="Phone" href="phone.htm">
+                        <area shape="circle" coords="337,300,44" alt="Cup of coffee" href="coffee.htm">
+                    </map>
+                    <audio controls>
+                        <source src="https://content.codecademy.com/courses/SemanticHTML/dogBarking.mp3" type="audio/mp3">
+                    </audio>
+                    <object data="https://content.codecademy.com/courses/SemanticHTML/dogBarking.mp3">
+                        <param name="autoplay" value="true">
+                    </object>
+                    <video src="https://content.codecademy.com/courses/SemanticHTML/dog-video.mp4" controls>
+                        <track src="fgsubtitles_en.vtt" kind="subtitles" srclang="en" label="English">
+                        <track src="fgsubtitles_no.vtt" kind="subtitles" srclang="no" label="Norwegian">
+                    </video>
+
+
+                    <h2>IFRAME</h2>
+                    <iframe id="ytplayer" type="text/html" width="640" height="360"
+                        src="http://www.youtube.com/embed/M7lc1UVf-VE?autoplay=1&origin=http://example.com" frameborder="0">
+                    </iframe>
+                    <template>
+                        <embed src="https://content.codecademy.com/courses/SemanticHTML/dog-on-beach.gif" />
+                    </template>
+                    <button onclick="showContent()">Show hidden content</button>
+                    <img src="./img.png" alt="Codecademy">
+                </article>
+            </div>
+        <footer>
+            <p>Contact me at +1 234 567 8910 </p>
+        </footer>
+    </body>
 </html>
