@@ -1,0 +1,59 @@
+<!-- HTML file for table with merged rows and/or columns -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Table</title>
+        <link rel="icon" type="image/png" href="https://cdn4.iconfinder.com/data/icons/flat-pro-database-set-3/32/tables-512.png">
+        <meta charset="UTF-8">
+        <meta name="description" content="Table with merge rows or columns">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="refresh" content="60">
+        <style>
+            table {
+                border: 1px solid black;
+                border-collapse: collapse;
+                text-align: center;
+            }
+            td {
+                border: 1px solid black;
+                width: 100px;
+                height: 100px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <table>
+            <tr>
+                <td rowspan="3">1x1<br/>+<br/>2x1<br/>+<br/>3x1</td>
+                <td>1x2</td>
+                <td colspan="2">1x3 + 1x4</td>
+            </tr>
+            <tr>
+                <td>2x2</td>
+                <td>2x2</td>
+                <td>2x3</td>
+            </tr>
+            <tr>
+                <td>3x2</td>
+                <td rowspan="4">3x3<br/>+<br/>4x3<br/>+<br/>5x3<br/>+<br/>6x3</td>
+                <td>3x4</td>
+            </tr>
+            <tr>
+                <td>4x1</td>
+                <td>4x2</td>
+                <td>4x4</td>
+            </tr>
+            <tr>
+                <td>5x1</td>
+                <td>5x2</td>
+                <td>5x4</td>
+            </tr>
+            <tr>
+                <td>6x1</td>
+                <td>6x2</td>
+                <td>6x4</td>
+            </tr>
+        </table>
+    </body>
+</html>
