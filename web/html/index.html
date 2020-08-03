@@ -12,7 +12,7 @@
         <!-- Meta viewport is for each device to work in the appropriate way -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- whit this tag we put icon for title -->
-        <link rel="shortcut icon" type="image/x-icon" href="./icon/business_globe_globesearchworld_negocio_2355.ico ">
+        <link rel="shortcut icon" type="image/x-icon" href="./resource/icon.ico ">
         <!-- Title of page -->
         <title>Title my document</title>
     </head>
@@ -35,13 +35,21 @@
         </address> 
 
         <article>
+            <header>
+                <h2>My header</h2>
+            </header>
             <h3>Title</h3>
             <p>Some text</p>
         </article>
 
+        <aside>
+            <h4>MY reclam</h4>
+            <p>Picture or/and some text</p>
+        </aside>
+
          <audio controls>
-            <source src="dog.ogg" type="audio/ogg">
-            <source src="dog.mp3" type="audio/mpeg">
+            <source src="" type="audio/ogg">
+            <source src="" type="audio/mpeg">
         </audio> 
 
         <b>
@@ -52,6 +60,12 @@
             <p>Some text in italic</p>
         </i>
 
+        <dfn>
+            <p>Some text in dfn</p>
+        </dfn>
+        
+        <p>Some text in <em>italic by em</em></p>
+        <dialog open>Open dialog</dialog>
         <div> 
             <h1>Big text 1</h1>
             <h2>Big text 2</h2>
@@ -65,6 +79,7 @@
             <li>English</li>
             <li>Russon</li>
             <li>French</li>
+            <li>Iran  <bdi>إي   ان</bdi></li>
         </ul>  
 
         <ol>
@@ -73,7 +88,13 @@
             <li>Germany</li>
         </ol>
 
-        <table>
+        <table border="1">
+            <caption>My table</caption>
+            <colgroup>
+                <!-- painted columns -->
+                <col span="1" style="background-color:green">
+                <col style="background-color:pink">
+              </colgroup>
             <tr>
                 <th>Day</th>
                 <th>Summa</th>
@@ -90,19 +111,77 @@
             </tr> 
         </table> 
 
-        <br/> 
-        <img src="https://posta-magazine.ru/wp-content/uploads/2020/03/main_ny-out-of-dogs-to-adopt_posta-magazine.jpg" alt="Dog" width="600" height="500"> 
+        <br>
+
+        <dl>
+            <dt>Coffee</dt>
+            <dd>Black hot drink</dd>
+            <dt>Milk</dt>
+            <dd>White cold drink</dd>
+        </dl>
+
+        <br>
+
+        <figure>
+            <img src="https://posta-magazine.ru/wp-content/uploads/2020/03/main_ny-out-of-dogs-to-adopt_posta-magazine.jpg" alt="Dog" width="300" height="200"> 
+            <figcaption>this is my dog</figcaption>
+        </figure>
+
+        <embed type="image/jpg" src="https://posta-magazine.ru/wp-content/uploads/2020/03/main_ny-out-of-dogs-to-adopt_posta-magazine.jpg" alt="Dog" width="300" height="200">
+
+        <br>
+        <img src="./resource/test1.png" alt="homework" width="300" height="200"> 
+        <img src="./resource/test2.png" alt="homework" width="300" height="200"> 
         <hr>
         <br/>
 
         <form action="" method="get">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name"><br><br>
-            <label for="urname">Surname:</label>
-            <input type="text" id="surname" name="surname"><br><br>
-            <input type="submit" value="Press here">
+            <fieldset>
+                <legend>My form</legend>
+                <label for="name">Name:</label>
+                <input list="text" id="name" name="name"><br><br>
+                <datalist id="text">
+                    <option value="Poxos">
+                    <option value="Petros">
+                    <option value="Markos">
+                    <option value="Martiros">
+                    <option value="Lyudovikos">
+                </datalist>
+                <label for="urname">Surname:</label>
+                <input type="text" id="surname" name="surname"><br><br>
+                <input type="submit" value="Press here">
+                <button type="button">Press here </button> 
+            </fieldset>    
         </form> 
 
+        <hr>
+        <br>
+        <label for="value">Choose the value:</label>
+        <select id="value" required multiple>
+            <optgroup label="1 group">
+                <option value="value 1">Value 1</option>
+                <option value="value 2">Value 2</option>
+            </optgroup>
+
+            <optgroup label="2 group">
+                <option value="value 3">Value 3</option>
+                <option value="value 4">Value 4</option>
+            </optgroup>
+
+            <optgroup label="3 group">
+                <option value="value 5">Value 5</option>
+                <option value="value 6">Value 6</option>
+            </optgroup>
+        </select>
+
+        <picture>
+            <source media="(min-width:900px)" srcset="https://lh3.googleusercontent.com/YGJ77qN9KiwctZgfqV8Bf3hNo0rZvcFaPKDTkvtS6kVbtwyCS80Pm6dpXzJCCLZE1Q">
+            <source media="(min-width:600px)" srcset="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/andromeda-galaxy-royalty-free-image-1585682435.jpg">
+            <img width="300px" height="200px"
+                src="https://lh3.googleusercontent.com/YGJ77qN9KiwctZgfqV8Bf3hNo0rZvcFaPKDTkvtS6kVbtwyCS80Pm6dpXzJCCLZE1Q" 
+                alt="Space">
+        </picture>
+        
         <hr>
         <br/>
         
@@ -111,5 +190,44 @@
             <a href="https://twitter.com">TWITTER</a> |
             <a href="https://www.instagram.com">INSTAGRAM</a> |
         </nav> 
+
+        <br>
+        <div>
+            <p>
+                <del>London</del><ins>Yerevan</ins> is a famous and historic city. It is the capital of
+                England in the United Kingdom. The city is quite popular 
+                for international tourism because London is home to one of 
+                the oldest-standing monarchies in the western hemisphere. 
+                Rita and Joanne recently traveled to London. They were very 
+                excited for their trip because this was their first journey 
+                overseas from the <abbr title="United States">US</abbr>.
+            </p>
+        </div>
+
+        <a href="maps/10258/vanadzor/?ll=44.485274%2C40.811425&z=7">Base tag (YANDEX MAP)</a>
+        
+        <p>London is a famous and historic city.</p>
+        <p><bdo dir="rtl">England in the United Kingdom.</bdo></p>
+
+        <details>
+            <summary>My detalist</summary>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Quaerat, consectetur fugiat et tempore dolores modi quisquam 
+                animi quia blanditiis aliquid praesentium qui voluptates aut 
+                rem in dicta! Ea, voluptatem ipsa!
+            </p>
+        </details>
+
+        <div>
+            <p><b>Other page</b></p>
+            <iframe src="https://www.youtube.com"></iframe> 
+        </div>
+
+        <p>Press on <kbd>Enter</kbd></p>
+
+        <footer>
+            <p>My footer</p>
+        </footer>
     </body>
 </html>
