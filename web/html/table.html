@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <title>HTML Tags</title>
+        <style>
+            .content {
+                padding-top: 200px;
+                text-align: center;
+            }
+
+            .table {
+                width: 350px;
+                border-collapse: collapse;
+                border: 1px solid;
+                margin: 0 auto;
+            }
+
+            .td {
+                width: 100px;
+                height: 80px;
+                border: 1px solid;
+                background-color:mediumseagreen;
+                font-weight: 900;
+            }
+
+            .td-span{
+                background-color:limegreen;
+                font-weight: 900;
+            }  
+        </style>
+	</head>
+    <body>
+        <div class="content">
+            <h1>Table</h1>
+            <table class="table">
+                <tbody>
+                    <tr>
+                        <td rowspan="3"class="th td-span"></td>
+                        <td class="td"></td>
+                        <td colspan="2" class="th td-span"></td>
+                    </tr>
+                    <tr>
+                        <td class="td"></td>
+                        <td class="td"></td>
+                        <td class="td"></td>
+                    </tr>
+                    <tr>
+                        <td class="td"></td>
+                        <td rowspan="5" class="th td-span"></td>
+                        <td class="td"></td>
+                    </tr>
+                    <tr>
+                        <td class="td"></td>
+                        <td class="td"></td>
+                        <td class="td"></td>
+                    </tr>
+                    <tr>
+                        <td class="td"></td>
+                        <td class="td"></td>
+                        <td class="td"></td>
+                    </tr>
+                    <tr>
+                        <td class="td"></td>
+                        <td class="td"></td>
+                        <td class="td"></td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>
