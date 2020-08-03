@@ -14,23 +14,25 @@
     <link rel="canonical" href="http://example.com/">
     <!-- Refresh page. The content attribute specifies the time delay in seconds -->
     <meta http-equiv="refresh" content="20">
-
     <title>Document</title>
 </head>
 <body>
     <header>
-        <h1>Defines a Header for a document or section</h1>  
+        <h1>Defines a Header for a document or section</h1>
     </header>
+    
     <div>
         <h3>The 'h1' to 'h6' tags are used to define HTML headings.</h3>
         <p>The 'p' tag defines a paragraph.</p>
     </div>
     <hr>
+
     <nav>
         <a href="">Home Page</a> |
         <a href="">Page 1</a> |
         <a href="">Page 2</a> |
     </nav>
+
     <div>
         <p>The 'ul' tag defines an unordered (bulleted) list.</p>
         <p>The 'li' tag defines a list item.</p>
@@ -40,6 +42,7 @@
             <li>List 3</li>
         </ul>
     </div>
+
     <div>
         <p>In 'ol' the list items will usually be displayed with numbers or letters.</p>
         <ol>
@@ -48,6 +51,7 @@
             <li>List 3</li>
         </ol>
     </div>
+
     <div>
         <dl>
             <dt>Row 1</dt>
@@ -57,54 +61,164 @@
         </dl>
     </div>
     <hr>
+
+    <details>
+        <summary>Show more...</summary>
+        <p>You can hide or show this text for more details.</p>
+    </details>
+    <!-- Main must be only one -->
+    <main>
+        The content inside the <b>'main'</b> tag should be unique for the document.
+        There must not be more than one 'main' element in a document.
+    </main>
+    <hr>
+
+    <!-- Article -->
+    <article>
+        <h2>Article 1</h2>
+        <p>Content for article</p>
+    </article>
+    <hr>
+    
     <div>
         <address>
-            The <b>'address'</b> tag defines the contact information for the author/owner of a document or an article.
+            The <b>'address'</b> tag defines the <kbd>contact</kbd> 
+            <q>information</q> for the <mark>author/owner</mark> of a document or an article.
         </address>
         <bdo dir="rtl">right to left.</bdo>
-        <code>The 'code' tag is used to define a piece of computer code.</code>
-        <p><i>Defines a part of text in an alternate voice or mood</i></p>
-        <p>Defines a text that has been inserted<del> into a </del> <ins>document</ins></p>
-        <p><small>Defines smaller text</small></p>
-        <p><samp>Defines sample output <br>from a computer program</samp></p>
+
+        <p>
+            <code>The 'code' tag is used to define <i>a piece</i> of computer code.</code>
+        </p>
+        <p>
+            <i>Defines a <em>part of</em> text in an alternate voice or mood</i>
+        </p>
+        <p>
+            Defines a text that has been inserted<del> into a </del><ins>document</ins>
+        </p>
+        <p>
+            <small>Defines <dfn>smaller</dfn> text</small>
+        </p>
+        <p>
+            <samp>Defines sample output <br>from a computer program</samp>
+        </p>
         <strong>Defines important text</strong>
-        <p>Defines <sub>subscripted </sub> text</p>
-        <p>Defines <sup>superscripted</sup> text</p>
+        <p>
+            Defines <sub>subscripted </sub> text
+        </p>
+        <p>
+            Defines <sup>superscripted</sup> text
+        </p>
+        <p>
+            <abbr title="Russian Federation">RD</abbr>
+        </p>
+
+        <!-- Represents the progress of a task -->
+        <label for="per">Download...</label>
+        <progress id="per" value="17" max="100"> 17% </progress>
+
+        <!-- Measure data within a given range -->
+        <label for="per2">Download...</label>
+        <meter id="per2" value="80" min="0" max="100">2 out of 10</meter><br>
+
+        <!-- Tag ruby -->
+        <pre>The 'ruby' tag specifies a ruby annotation. 
+            <s>Ruby is not useful</s>
+            <ruby>X<rt> _ </rt></ruby>
+        </pre>
+
+        <samp>Computer program output</samp>
+        <!-- Template tag -->
+        <template>The template tag hold some content that will be hidden when the page loads</template>
+        
+        <p>
+            The variable: <var>A</var> = <u>12</u>
+        </p>
+        <p>
+            When the word is very long, <wbr>break the word</wbr> in right place
+        </p>
     </div>
     <hr>
-    <div>
+    
+    <section>
+        <p>Click the star or moon</p>
         <img 
             src="https://image.shutterstock.com/image-photo/armenia-vanadzor-full-moon-night-260nw-1278545083.jpg" 
-            alt="Girl in a jacket" width="200" height="150"
+            alt="image" width="200" height="150" usemap="#map"
         >
-        <p><cite>The 'cite' tag defines the title of a creative work</cite></p>
-    </div>
+        <map name="map">
+            <area shape="rect" coords="90,20,120,90" alt="Html result" 
+                href="./resources/result.jpg">
+        </map>
+
+        <img src="./resources/result.jpg" alt="result" width="200" height="150">
+        <p>
+            <cite>The 'cite' tag defines the title of a creative work</cite>
+        </p>
+
+        <figure>
+            <img src="./resources/result.jpg" alt="res" width="200" height="150">
+            <figcaption>The Html result</figcaption>
+        </figure>
+    </section>
     <hr>
-    <div>
-        <form action="">
+
+    <!-- Form -->
+    <form action="" method="">
+        <fieldset>
+            <legend>Form:</legend>
             <label for="">Name</label>
             <input type="text" id="name" name="name" placeholder="Nmae"><br><br>
             <label for="">Surname</label>
             <input type="text" id="surname" name="surname" placeholder="Surname"><br><br>
             <button>Submit</button>
-        </form>
-    </div>
+        </fieldset>
+    </form>
     <hr>
-    <table>
-        <tr>
-            <th>Name</th>
-            <th>Surname</th>
-        </tr>
-        <tr>
-            <td>John</td>
-            <td>Smith</td>
-        </tr>
-        <tr>
-            <td>Johnson</td>
-            <td>Williams</td>
-        </tr>
+
+    <!-- Select->option -->
+    <label for="rows">Choose the row:</label>
+    <select id="rows" required multiple>
+        <optgroup label="First group">
+            <option value="Row 1">Row 1</option>
+            <option value="Row 2">Row 2</option>
+        </optgroup>
+        <optgroup label="Second group">
+            <option value="Row 3">Row 1</option>
+            <option value="Row 4">Row 2</option>
+        </optgroup>
+    </select>
+    <hr>
+
+    <!-- Table -->
+    <table border=1>
+        <caption>Names and surnames</caption>
+        <colgroup>
+            <col style="background-color:green">
+            <col span="2" style="background-color:grey">
+        </colgroup>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Surname</th>
+                <th>Address</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>John</td>
+                <td>Smith</td>
+                <td>xxx</td>
+            </tr>
+            <tr>
+                <td>Johnson</td>
+                <td>Williams</td>
+                <td>yyy</td>
+            </tr>
+        </tbody>
     </table>
     <hr>
+
     <div>
         <label for="">Textarea: </label>
         <textarea name="text" rows="5" cols="10">
@@ -112,8 +226,52 @@
         </textarea>
     </div>
     <hr>
+
+    <!-- Datalist -->
+    <label for="inp">Choose value for input:</label>
+    <input list="inputs" id="inp">
+    <datalist id="inputs">
+        <option value="Value 1">
+        <option value="Value 2">
+        <option value="Value 3">
+    </datalist>
+    <input type="submit">
+    <hr>
+
+    <!-- Picture -->
+    <picture>
+        <source media="(min-width:800px)" srcset="https://media-cdn.tripadvisor.com/media/photo-p/07/ab/fa/6b/saint-hovhannes-church.jpg">
+        <source media="(min-width:400px)" srcset="https://ichef.bbci.co.uk/news/1024/cpsprodpb/C386/production/_105745005_gettyimages-684415304.jpg">
+        <img width="200px" height="150px"
+            src="https://media-cdn.tripadvisor.com/media/photo-p/07/ab/fa/6b/saint-hovhannes-church.jpg" 
+            alt="Churches">
+    </picture>
+
+    <!-- Audio -->
+    <p>Click the button to play sound</p>
+    <audio controls>
+        <source src="" type="audio/ogg">
+    </audio>
+    <hr>
+    
+    <!-- Video -->
+    <p>Click the button to play video</p>
+    <video width="200" height="200" controls>
+        <source src="" type="video/mp4">
+    </video>
+    <hr>
+
+    <!-- Embed -->
+    <p>
+        The <i>'embed'</i> tag defines a container for an external resource, such as
+        a web page, a picture, a media player, or a plug-in application.
+    </p>
+    <embed type="image/jpg" src="./resources/result.jpg"  width="200" height="100">
+    <hr>
+
+    <!-- Footer -->
     <footer>
-        <p>Defines a footer for a document or section</p>
+        <pre>Defines a footer for a document or section</pre>
     </footer>
 </body>
 </html>
