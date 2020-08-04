@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Test</title>
+        <link rel="icon" type="image/jpg" href="https://icon-library.com/images/tags-icon/tags-icon-7.jpg">
+        <meta charset="UTF-8">
+        <meta name="description" content="|= vs ^=">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="refresh" content="60">
+        <style>
+            /* Represents an element with the attribute, */
+            /*  which value either being exactly "val" or beginning with "val" immediately followed by "-" */
+            div[attribute |= 'value'] {
+                color: white;
+            }
+
+            /* Represents an element with the attribute which value begins with the prefix "val". */
+            div[attribute ^= 'value'] {
+                background-color: cornflowerblue;
+            }
+        </style>
+
+    <head>
+    <body>
+        <div attribute='value'>Test1</div>
+        <div attribute='value-new'>Test2</div>
+        <div attribute='valuenew'>Test3</div>
+        <div attribute='val'>Test3</div>
+        <div attribute='newvalue'>Test3</div>
+        <div attribute='value '>Test3</div>
+    </body>
+<html>
