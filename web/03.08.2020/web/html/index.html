@@ -1,0 +1,199 @@
+<!-- simple web page -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Physics</title>
+        <base href="https://" target="_blank">
+        <link rel="icon" type="image/png" href="https://cdn4.iconfinder.com/data/icons/physics-yellow/60/045_-_Electric_Bulb-512.png">
+        <meta charset="UTF-8">
+        <meta name="description" content="Physics tutorial for beginners">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="refresh" content="30">
+
+        <style>
+            table, th, td {
+                border: 1px solid white;
+                text-align: center;
+            }
+        </style>
+        <style>
+            aside {
+                padding-left: 15px;
+                margin-left: 15px;
+                float: right;
+                font-style: italic;
+                background-color: cadetblue;
+            }
+        </style>
+
+        <style>
+            blockquote { 
+                display: block;
+                margin-top: 1em;
+                margin-bottom: 1em;
+                margin-left: 40px;
+                margin-right: 40px;
+                background-color: cadetblue;
+            }
+            </style>
+    </head>
+
+    <body>
+        <font size="+50" style="color: cadetblue"><b>PHYSICS TUTORIAL</b></font>
+        <!-- <audio controls>
+            <source src="welcome.ogg" type="audio/ogg">
+            <source src="welcome.mp3" type="audio/mpeg">
+        </audio> -->
+        <div style="background-color: lightcyan;">
+
+        <aside>
+            <form action="file:///home/ani/Desktop/web/html/index.html">
+                <fieldset>
+                    <label for="Question">Who you are?</label>
+                    <select id="Question">
+                      <option value="student">Student</option>
+                      <option value="Teacher">Teacher</option>
+                      <option value="lecturer">Lecturer</option>
+                      <option value="headmaster">Headmaster</option>
+                    </select>
+
+                    <br>
+
+                    <legend>Sign in?:</legend>
+                    
+                    <label for="fname">First name:</label>
+                    <input type="text" id="fname" name="fname"><br><br>
+                    <label for="lname">Last name:</label>
+                    <input type="text" id="lname" name="lname"><br><br>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email"><br><br>
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password"><br><br>
+                    <input type="submit" value="Submit">
+                </fieldset>
+              </form>
+
+              <table>
+                <caption><br><br><br><b>Phiysics constants</b></caption>
+                <tr>
+                    <th style="background-color:#dce3e4">Constant name</th>
+                    <th style="background-color:#dce3e4">Value</th>
+                    <th style="background-color:#dce3e4">Unit</th>
+                </tr>
+                <tbody>
+                    <tr>
+                        <td>
+                            <abbr title="The Planck constant, or Planck's constant, is the quantum of electromagnetic action that relates a photon's energy to its frequency. The Planck constant multiplied by a photon's frequency is equal to a photon's energy. The Planck constant is a fundamental physical constant denoted as , and of fundamental importance in quantum mechanics. In metrology it is used to define the kilogram in SI units.">Planck constant</abbr>
+                        </td>
+                        <td>6.6 &#183 10<sup>-34</sup></td>
+                        <td>J &#183 s</td>
+                    </tr>
+                    <tr>
+                    <td>
+                        <abbr title="The gravitational constant, denoted by the letter G, is an empirical physical constant involved in the calculation of gravitational effects in Sir Isaac Newton's law of universal gravitation and in Albert Einstein's general theory of relativity.">Newtonian constant of gravitation</abbr>
+                        </td>
+                    <td>6.67 &#183 10<sup>-11</sup></td>
+                    <td>m<sup>3</sup> &#183 kg<sup>−1</sup> &#183 s<sup>−2</sup></td>
+                    <tr>
+                        <td><abr title="The elementary charge, usually denoted by e or sometimes qe, is the electric charge carried by a single proton or, equivalently, the magnitude of the negative electric charge carried by a single electron, which has charge −1 e. This elementary charge is a fundamental physical constant. To avoid confusion over its sign, e is sometimes called the elementary positive charge.">Elementary charge</abr></td>
+                        <td>1.6 &#183 10<sup>-19</sup></td>
+                        <td>C</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <img id="myImage" onclick="changeImage()" src="bulb.gif" width="80" height="160" > <p><small>Click the light bulb to turn on/off the light.</small></p>
+
+            <script>
+            function changeImage() {
+                var image = document.getElementById('myImage');
+                if (image.src.match("bulbon")) {
+                    image.src = "bulb.gif";
+                } else {
+                    image.src = "bulbON.gif";
+                }
+            }
+            </script>    
+        </aside>
+          
+        <blockquote cite="file:///home/ani/Desktop/web/html/index.html">
+            <pre>                                                                                 "Only two things are infinite, the universe and 
+                                                                                     human stupidity, and I'm not sure about the Universe."
+                                                                                                                            <u>Albert Einstein</u></pre>
+        </blockquote>
+        <article>
+            <h2><ul><li>Newton's Laws</li></ul></h2>
+            <p>Newton's three laws of motion are explained and their application to the analysis of the motion of objects in one dimension is discussed.</p>
+        </article>
+        <figure>
+            <img src="https://www.akg-images.co.uk/Docs/AKG/Media/TR3_WATERMARKED/a/a/2/d/AKG333767.jpg" alt="Newton" style="width:300px">
+            <figcaption>Fig.1 - Isaak Newton under the apple tree.</figcaption>
+        </figure>
+            
+        <article>
+            <h2><ul><li>Work, Energy, and Power</li></ul></h2>
+            <p>Concepts of work, kinetic energy and potential energy are discussed; these concepts are combined with the work-energy theorem to provide a</p>
+            <p>convenient means of analyzing an object or system of objects moving between an initial and final state.</p>
+
+            <video controls>
+                <source src="video.mp4" type="video/mp4">
+            </video> 
+        </article>
+            
+        <article>
+            <h2><ul><li>Thermal Physics</li></ul></h2>
+            <p>The distinction between heat and temperature is thoroughly explained. Methods of heat transfer are explained. The mathematics associated with</p>
+            <p>temperature changes and phase changes is discussed; its application to the science of calorimetry is presented.</p>
+            
+            <img src="https://www.examfear.com/u-img/00/00/32/00003235.jpg">
+
+        </article> 
+
+        <article>
+            <h2><ul><li>Electric Circuits</li></ul></h2>
+            <p>The flow of charge through electric circuits is discussed in detail. The variables which cause and hinder the rate of charge flow are explained and the</p>
+            <p>mathematical application of electrical principles to series, parallel and combination circuits is presented.</p>
+            <picture>
+                <source media="(min-width:650px)" srcset="circuit.png">
+                <source media="(min-width:465px)" srcset="circuit.png">
+                <img src="circuit.png" alt="Flowers" style="width:auto;">
+            </picture>
+        </article> 
+
+        <article>
+            <h2><ul><li>Sound Waves and Music</li></ul></h2>
+            <p>The nature of sound as a longitudinal, mechanical pressure wave is explained and the properties of sound are discussed. Wave principles of</p>
+            <p>resonance and standing waves are applied in an effort to analyze the physics of musical instruments.</p>
+        </article>
+
+        <article>
+            <h2><ul><li>Light Waves and Color</li></ul></h2>
+            <p>The behavior of light waves is introduced and discussed; polarization, color, diffraction and interference are introduced as supporting evidence of</p>
+            <p>the wave nature of light. Color perception is discussed in detail.</p>
+
+        </article>
+        <button onclick="showContent()">Show Table</button>
+
+        <template>
+            <h2>Electramagnetic Wave Table</h2>
+            <img src="spectrum.jpg">
+        </template>
+        <script>
+        function showContent() {
+            var temp = document.getElementsByTagName("template")[0];
+            var clon = temp.content.cloneNode(true);
+            document.body.appendChild(clon);
+        }
+        </script>
+
+        <br><br>
+        <details>
+            <summary>Additional information</summary>
+            <address>
+                Page was written by <a href="https://www.linkedin.com/in/ani-shakhkyan-66ba82177/">Ani Shakhkyan</a>.<br>
+                eMail: anishakhkyan95@gmail.com <br>
+                Vanadzor, RA
+            </address> 
+        </details>
+    </body>
+</html> 
