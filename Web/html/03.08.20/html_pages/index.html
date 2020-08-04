@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tags in HTML</title>
+        <link rel="shortcut icon" href="../favicon-dark.ico" type="image/x-icon">
+        <meta charset="UTF-8">
+        <meta name="description" content="Tags HTML">
+        <meta name="keywords" content="HTML, Tags">
+        <meta name="author" content="Artashes Sargsyan">
+        <meta name="viewport" content="width=device-width, internal-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <header>
+            <div>
+                <h1>Six HTML headings:</h1>
+                <h1>This is h1</h1>
+                <h2>This is h2</h2>
+                <h3>This is h3</h3>
+                <h4>This is h4</h4>
+                <h5>This is h5</h5>
+                <h6>This is h6</h6>
+            </div>
+        <nav>
+            <div>
+                <a href="#formatting">Formatting tags</a> ||
+                <a href="#forms">Forms and Input</a> ||
+                <a href="#media">Media</a> ||
+                <a href="#foot">Go to end</a>
+            </div>
+        </nav>
+        </header>
+        <section id="formatting">
+            <div>
+                 <table border="1">
+                    <tr>
+                        <th>Tag</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>b</td>
+                        <td>Defines bold text</td>
+                    </tr>
+                    <tr>
+                        <td>em</td>
+                        <td>Defines emphasized text </td>
+                    </tr>
+                    <tr>
+                        <td>small</td>
+                        <td>Defines smaller text</td>
+                    </tr>
+                    <tr>
+                        <td>strong</td>
+                        <td>Defines important text</td>
+                    </tr>
+                    <tr>
+                        <td>sub</td>
+                        <td>Defines subscripted text</td>
+                    </tr>
+                </table>
+            </div>
+            <div>
+                <h2>Formatting tags:</h2>
+                <p><abbr title="Information Technology">IT</abbr> is the use of computers to store, retrieve, transmit, and manipulate data or information.</p>
+                <p><b>Lorem ipsum dolor sit amet, consectetur adipiscing elit</b>.</p>
+                <p><em>Lorem ipsum dolor sit amet, consectetur adipiscing elit</em></p>
+                <p><i>Lorem ipsum dolor sit amet, <time>23:00</time> to <time>00:00</time> consectetur adipiscing elit</i></p>
+                <p><small>Lorem ipsum dolor sit amet, consectetur adipiscing elit</small></p>
+                <p><ins>Lorem ipsum dolor sit amet, consectetur adipiscing elit</ins></p>
+                <p><sub>Lorem ipsum </sub>dolor sit amet, <sup>consectetur adipiscing elit</sup></p>
+                <p><bdo dir="rtl">is the use of computers to store, retrieve, transmit, and manipulate data<del>manipulate data</del> or information.</bdo></p>
+                <p>Press <kbd>Alt</kbd> + <kbd>F4</kbd> to see a magic</p>
+                <p><dfn>LOREM</dfn> ipsum dolor sit amet, consectetur adipiscing elit</p>
+                <p><samp>Lorem ipsum dolor sit amet, consectetur adipiscing elit</samp></p>
+                <dl>
+                    <dt>Lorem</dt>
+                    <dd>ipsum dolor sit amet, consectetur adipiscing elit</dd>
+                    <dt>Lorem</dt>
+                    <dd>ipsum dolor sit amet, consectetur adipiscing elit</dd>
+                </dl>
+            </div>
+        </section>
+        <section id="forms">
+                <div>
+                    <h2>Forms and Input:</h2>
+                    <form action="" method="">
+                        <fieldset>
+                        <legend>Form</legend>
+                            <label for="login">Login:</label>
+                            <input type="" id="" name=""><br><br>
+                            <label for="passwd">Pass:</label>
+                            <input type="text" id="" name=""><br><br>
+                            <label for="page">Downloading page:</label>
+                            <meter id="page" value="0.9">99%</meter><br>
+                            <input type="date" id="birthday" name="birthday"><br><br>
+                            <input list="users" name="browser" id="browser">
+                            <datalist id="users">
+                                <option value="admin">
+                                <option value="user">
+                                <option value="guests">
+                            </datalist>
+                            <input type="submit" value="Sign in">
+                            <button type="button" onclick="">My button!</button>
+                        </fieldset>
+                    </form>
+                </div>
+                <div>
+                    <label for="example">Textarea:</label>
+                    </br>
+                    <textarea id="example" name="example" rows="5" cols="150">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                    </textarea>
+                </div>
+        </section>
+        <section id="table">
+            <div>
+                <h2>Table:</h2>
+                <table>
+                    <tr>
+                        <th>Name</th>
+                        <th>Surname</th>
+                        <th>Age</th>
+                    </tr>
+                    <tr>
+                        <td>Artashes</td>
+                        <td>Sargsyan</td>
+                        <td>27</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+        <section id="media">
+            <h2>Media:</h2>
+            <div>
+                <h3>Iframe example</h3>
+                <iframe width="730" height="380" src="https://www.youtube.com/embed/pQN-pnXPaVg?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                </iframe>
+            </div>
+            <div>
+                <h3>Video example</h3>
+                <video widht="730" height="380" src=https://content.codecademy.com/courses/SemanticHTML/dog-video.mp4 controls></video>
+            </div>
+            <figure>
+                <h3>Image example</h3>
+                <img src="https://content.codecademy.com/courses/SemanticHTML/dogimage.jpeg"/>
+                <figcaption>A dog.</figcaption>
+            </figure>
+            <audio controls>
+                <source src="https://content.codecademy.com/courses/SemanticHTML/dogBarking.mp3" type="audio/mp3">
+            </audio>
+        </section>
+        <footer>
+            <a name="foot"></a>
+            <p>Author: Artashes Sargsyan</p>
+            <p><a href="https://www.facebook.com/artashes.sargsyan.7">My Facebook page</a></p>
+        </footer>
+    </body>
+</html>
