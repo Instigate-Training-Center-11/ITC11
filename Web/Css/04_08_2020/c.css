@@ -1,0 +1,89 @@
+div[id^='d']   {
+    width: 500px;
+    height: 170px;
+    background-color: #b9bbbe;
+    border: 3px solid black;
+    border-radius: 50%;
+    align-content: center;
+    align-items: center;
+    position: relative;
+    animation: mymove 3s infinite;
+    animation-iteration-count: 27;
+    animation-duration: revert;
+    animation-direction: alternate;
+}
+
+q:lang(en) {
+    quotes: "\201C" "\201D"; /* for english language */
+}
+
+div {
+    width: 100px;
+    height: 50px;
+    background: red;
+    color: white;
+    font-weight: bold;
+    transition: width 2s;
+    transition-timing-function: linear;
+
+}
+
+div:hover{
+    width: 1300px;
+}
+
+p {
+    border: 5px solid black;
+    background-image: url("https://theimageconference.org/wp-content/uploads/2020/04/vancouver_image_conference_3-scaled.jpg");
+}
+
+@keyframes mymove {
+    from {left: 5px;}
+    to {left: 265px;}
+}
+
+@keyframes mymove1 {
+    from {top: 0px;}
+    to {top: 180px;}
+}
+
+body {
+    background-image: url("https://theimageconference.org/wp-content/uploads/2020/04/vancouver_image_conference_3-scaled.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+body>p {
+    width: 100px;
+    height: 100px;
+    background-color: #b9bbbe;
+    border: 5px solid wheat;
+    position: relative;
+    animation: mymove1 3s;
+    animation-iteration-count: 27;
+    animation-direction: alternate;
+}
+
+body>video {
+    border-left: 5px dotted green;
+    border-top: 5px dotted red;
+    border-right: 5px dotted green;
+    position: relative;
+    left: 900px;
+    transform: rotate(20deg);
+}
+
+.dot {
+    border: 1px solid beige;
+    height: 50px;
+    width: 50px;
+    background-image: url("https://theimageconference.org/wp-content/uploads/2020/04/vancouver_image_conference_3-scaled.jpg");
+    border-radius: 50%;
+    position: relative;
+    animation: mymove 3s infinite;
+    animation-iteration-count: 27;
+    animation-duration: revert;
+    animation-direction: alternate;
+    resize: both;
+    overflow: auto;
+    width: 700px;
+}
