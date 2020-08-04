@@ -1,0 +1,109 @@
+<!-- HTML file for table with marged rows and/or columns -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Table</title>
+        <link rel="icon" type="image/jpg" href="https://icon-library.com/images/tags-icon/tags-icon-7.jpg">
+        <meta charset="UTF-8">
+        <meta name="description" content="Table with marge rows or columns">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="refresh" content="60">
+        <style>
+            div {
+            width: 100px;
+            height: 100px;
+            background: cadetblue;
+            position: relative;
+            animation: mymove 5s infinite;
+            animation-delay: 2s;
+            animation-direction:alternate-reverse;
+            }
+            @keyframes mymove {
+                from {left: 0px;}
+                to {left: 100%;}
+            }
+
+            table {
+                border-color: black;
+                border-style: double;
+                border-collapse: collapse;
+                text-align: center;
+            }
+            td {
+                border: 1px solid black;
+                background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcROivxCf-7zVu5Bf0ocRQjRmWUE6cJciCU3sg&usqp=CAU");
+                width: 100px;
+                height: 100px;
+            }
+            th {
+                border: 1px solid black;
+                background-color: darkgoldenrod;
+                width: 100px;
+                height: 100px;
+            }
+            #borderimg1 { 
+                border: 10px solid transparent;
+                padding: 10px;
+                border-image: url("https://image.shutterstock.com/image-vector/red-border-frame-deco-plaque-260nw-361977956.jpg") 30 round;
+            }
+
+            #borderimg2 { 
+                border-style: dotted;
+            }
+
+            /* body  {
+                background-image: url("https://i.stack.imgur.com/jGlzr.png");
+                /* background-color: #cccccc; */
+            } */
+
+        </style>
+    </head>
+    <body>
+        <div></div>
+        <table>
+            <tr>
+                <th>h1</th>
+                <th>h2</th>
+                <th>h3</th>
+                <th>h4</th>
+            </tr>
+
+            <tr>
+                <td rowspan="3">1x1<br/>+<br/>2x1<br/>+<br/>3x1</td>
+                <td>1x2</td>
+                <td colspan="2">1x3 + 1x4</td>
+            </tr>
+            <tr>
+                <td>2x2</td>
+                <td>2x2</td>
+                <td>2x3</td>
+            </tr>
+            <tr>
+                <td>3x2</td>
+                <td rowspan="4">3x3<br/>+<br/>4x3<br/>+<br/>5x3<br/>+<br/>6x3</td>
+                <td>3x4</td>
+            </tr>
+            <tr>
+                <td>4x1</td>
+                <td>4x2</td>
+                <td>4x4</td>
+            </tr>
+            <tr>
+                <td>5x1</td>
+                <td>5x2</td>
+                <td>5x4</td>
+            </tr>
+            <tr>
+                <td>6x1</td>
+                <td>6x2</td>
+                <td>6x4</td>
+            </tr>
+        </table>
+
+        <dev>
+            <p id="borderimg1">Content 1</p>
+            <p id="borderimg2">Content 2</p>
+
+        </dev>
+    </body>
+</html>
