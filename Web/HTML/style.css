@@ -1,0 +1,98 @@
+.myDiv {
+    width: auto;
+    height: auto;
+    border: 5px outset rgb(194, 229, 227);  
+    background-color: rgb(231, 188, 233);
+    text-align: center;
+    align-content: center;
+    flex: 1;
+}
+
+@media only screen and (max-width: 800px) {
+    .myDiv {
+      background-color: rgb(26, 29, 31);
+    }
+  }
+
+.nav_bar{    
+    display: inline-block;    
+}
+
+p.ex2 {
+    font-size: 20px;
+}
+
+body {
+    background-color: lightblue;
+    color: darkblue;
+    text-align: center;
+    font-family: verdana;
+}
+
+div p {
+    margin: 35px;
+}
+
+
+mark {
+    background-color: rgb(187, 184, 184);
+    color: black;
+}
+
+iframe {
+    align-self: center;
+}
+
+#anim {
+    width: 100px;
+    height: 100px;    
+    background: rgb(0, 247, 255);
+    position: absolute;
+    animation: mymove 5s infinite;    
+  }
+
+  #animTwo {
+    width: 100px;
+    height: 100px;   
+    background: rgb(160, 228, 164);
+    position: absolute;
+    animation: moveTwo 5s infinite;    
+  }
+
+  @keyframes mymove {
+    from {left: 0px;}
+    to {left: 600px;}    
+  }
+
+  @keyframes moveTwo {
+    from {right: 0px;}
+    to {right: 600px;}    
+  }
+
+  .big {
+    width: auto;
+    height: 100px;
+    position: relative;
+    border-bottom: 4px dotted blue;
+  }
+
+  .choose{
+    width: auto;
+    height: 100px;
+    position: relative;
+    border: 2px solid red;
+  padding: 10px;
+  border-bottom-left-radius: 50px 20px;
+  }
+
+  #table2 {
+    border-collapse: separate;
+    border-spacing: 15px 50px;
+    align-self: center;        
+    border-color: rgb(243, 255, 80);   
+    border-radius: 50px 20px;
+  }
+
+  img {
+    filter: grayscale(100%);
+  }
