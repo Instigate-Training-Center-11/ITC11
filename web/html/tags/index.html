@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>hayfilm</title>
+        <title>hayfilm </title>
         <meta charset="UTF-8">
         <link rel="shortcut icon" href="./icon.jpg" type="image/x-icon">
         <link rel="stylesheet" href="mystyle.css">
@@ -9,7 +9,25 @@
         <meta name="author" content="Armen Nersesyan">
         <meta http-equiv="refresh" content="5000">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <base  target="_blank">
 
+        <!-- CMO twitter -->
+        <meta name="twitter:card" content="Free Web movie site">
+        <meta name="twitter:site" content="@nytimes">
+        <meta name="twitter:creator" content="@my_account">
+        <meta name="twitter:title" content="Free Web movie site">
+        <meta name="twitter:description" content="films">
+        <meta name="twitter:image" content="./hayfilm.jpg">
+
+        <!-- CMO other sotial services -->
+        <meta property="og:title" content="Free Web movie site" />
+        <meta property="og:url" content="https://hayfilm" />
+        <meta property="og:image" content="./hayfilm.jpg" />
+        <meta property="og:image:width" content="500" />
+        <meta property="og:image:height" content="250" />
+        <meta property="og:type" content="article" />
+        <meta property="og:description" content="The best films" />
+        <meta property="og:locale" content="am_AM" />
     </head>
 
     <body>
@@ -18,31 +36,240 @@
               color: blue;
             }
         </style>
-        <!-- this is a website for watching movies -->
+        <!-- HTML headr tag -->
         <header>
-            <h1><a href=#index.html>Հայֆիլմ</a></h1>
+            <h1><a target="blank" href=index.html>Հայֆիլմ</a>
+                <a target="blank" href="#mer-masin">Mer masin</a>
+            </h1>
         </header>
+
+        <h1>The video element</h1>
+
+        <!-- HTML <a> Tag -->
         <h3>Հայ անվանի դերասաններ</h3>
+
         <ul>
-          <li>Մհեր Մկրտչյան</li>
-          <li>Սոս Սարգսյան</li>
-          <li>Խորեն Աբրահամյանի</li>
-          <li><a href="#ԲաբկենՆերսիսյան">Բաբկեն Ներսիսյան</a></li>
+
+            <li>
+                <a href="#mher-mkrtchyan"> Մհեր Մկրտչյան </a>
+            </li>
+
+            <li>
+                <a href="#sos-sargsyan">Սոս Սարգսյան</a>
+            </li>
+
+            <li>
+                <a href="#babken-nersisyan">Բաբկեն Ներսիսյան</a>
+            </li>
+
         </ul>
-        <a href="#About the site">About the site:</a>
+
+        <!--HTML <bdo> Tag-->
+        <h1>HTML <bdo> Tag</h1>
+        <p>dram</p>
+        <p><bdo dir="rtl">dram</bdo></p>
+
+        <h1>The cite element</h1>
+
+        <img src="./hayfilm.jpg" width="220" height="277" alt="The Scream">
+        <p><cite>Amo Beknazaryan </cite> “Armenfilm” film studio named after Amo Beknazaryan is an Armenian film studio of feature films in Yerevan.</p>
+
+        <h1>The code element</h1>
+
+        <p>The HTML <code>button</code> tag defines a clickable button.</p>
+
+        <!--HTML <bdi> Tag-->
+        <h2>The bdi element</h2>
+        <ul>
+            <li>User <bdi>Armen</bdi>: 60 points</li>
+            <li>User <bdi>Vartan</bdi>: 80 points</li>
+            <li>User <bdi>إيان</bdi>: 90 points</li>
+        </ul>
+
+        <h1>The details element</h1>
+
+        <details>
+        <summary>mercedes benz</summary>
+        <p>Mercedes-Benz (German: [mɛɐ̯ˈtseːdəsˌbɛnts, -dɛs-])[6][7] is both a German automotive marque and, from late 2019 onwards, a subsidiary (Mercedes-Benz AG) of Daimler AG.[1] Mercedes-Benz is known for producing luxury vehicles and commercial vehicles.[note 2] The headquarters is in Stuttgart, Baden-Württemberg. The name first appeared in 1926 under Daimler-Benz. In 2018, Mercedes-Benz was the largest seller of premium vehicles in the world, having sold 2.31 million passenger cars.[8]</p>
+        </details>
+
+        <p><b>Note:</b> The details element is not supported in Edge (prior version 79).</p>
+
+        <h1>The dfn element</h1>
+        <p><dfn>HTML</dfn> HTML</p>
+
+        <h1>The button Element</h1>
+
+        <button type="button" onclick="alert('I am a button')">Click Me!</button>
+
+        <!-- HTML <article> Tag -->
+        <h1>Կենսագրական</h1>
+
+        <article>
+          <h2>Մհեր Մկրտչյան</h2>
+          <p> Մհեր Մկրտչյանը ծնվել է Գյումրիում 1930 թվականին։ Հայրը ծագումով մշեցի էր, իսկ մայրը՝ վանեցի։
+              Գյումրիում սովորել է նկարչական ու երաժշտական դպրոցներում, միաժամանակ հաճախել<br> է թատերական ինքնագործ խմբակ։
+              1945-1946 թվականներին սովորել է Մռավյանի անվան թատրոնին կից ստուդիայում, ավարտելուց հետո, 1947 թվականին ընդգրկվել է նույն թատրոնի հիմնական խմբի մեջ։
+              Այս թատրոնում Մհերը խաղացել է տասնյակից ավելի մեծ ու փոքր դերեր՝ ցուցաբերելով իր տարիքի համար անսովոր վարպետություն։</p>
+        </article>
+
+        <article>
+          <h2>Սոս Սարգսյան</h2>
+          <p> Ծնվել է 1929 թվականի հոկտեմբերի 24-ին Ստեփանավան քաղաքում։ Բեմական առաջին քայլերը կատարել է Ստեփանավանի պետական թատրոնում:
+              1948 թվականին տեղափոխվել է Երևան և աշխատել Երևանի պատանի հանդիսատեսի թատրոնում՝ որպես դերասան։ 1954 թվականին ավարտել է Երևանի գեղարվեստաթատերական ինստիտուտի դերասանական ֆակուլտետը։
+              1954-1991 թվականներին եղել է Երևանի Գաբրիել Սունդուկյանի անվան ակադեմիական թատրոնի դերասան։ 1991 թվականին հիմնադրել է Համազգային թատրոնը։ 1991 թվականին նա թեկնածու է եղել նորանկախ 
+              Հայաստանի Հանրապետութեան նախագահութեան համար, Հայ Յեղափոխական Դաշնակցութեան կուսակցութեան՝ թեկնածուն։ </p>
+        </article>
+
+        <article>
+          <h2>Բաբկեն Ներսիսյան</h2>
+          <p>Բաբկեն Ներսիսյանի ծնողները՝ Պողոսը և Եղիսաբեթը, եղել են մշեցիներ, հետագայում հաստատվել են Թբիլիսիում, որտեղ էլ 1917 թվականին ծնվել է Բաբկենը[2]։ 17 տարեկանում ընդունվում է Թիֆլիսի Պատանի հանդիսատեսի թատրոն։
+            Հետագայում Վարդան Աճեմյանը նրան հրավիրում է Հայաստան։ 1955 թվականին Թիֆլիսի Հայ դրամայից նա տեղափոխվում է Գ. Սունդուկյանի անվան թատրոն։
+            1957 թվականից նկարահանվել է կինոյում[3]։ Եղել է Հայկական ԽՍՀ կինեմատոգրաֆիստների միության անդամ[4]։
+            Բաբկեն Ներսիսյանի որդին՝ Տիգրան Ներսիսյանը, նույնպես դերասան է։.</p>
+        </article>
+
         <p>This is normal text - <b>and this is bold text</b>.</p>
-        <address>
-            <a href="mailto:armennersesyan95@gmail.com">Send email</a>
-        </address>
+
+
+        <p>My family and I visited The Epcot center this summer. The weather was nice, and Epcot was amazing! I had a great summer together with my family!</p>
+
+        <!-- HTML <aside> Tag -->
+        <aside>
+            <h4>Epcot Center</h4>
+            <p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>
+        </aside>
+
+        <h3>Audio</h3>
+        <audio controls>
+            <source src="https://content.codecademy.com/courses/SemanticHTML/dogBarking.mp3"  type="audio/mp3">
+        </audio>
+
+        <h1>The dl, dd, and dt elements</h1>
+
+        <p>These three elements are used to create a description list:</p>
+        <dl>
+          <dt>Task 1:"create server"</dt>
+          <dd>In progress</dd>
+          <dt>Task 2:"create index.html"</dt>
+          <dd>Done</dd>
+        </dl>
+
+        <h1>The del element</h1>
+
+        <p>2 + 2 = <del>25</del> <ins>4</ins>!</p>
+
+        <h2>HTML datalist Tag</h2>
+        <label for="browser">Choose your browser from the list:</label>
+        <input list="browsers" name="browser" id="browser">
+
+        <datalist id="browsers">
+            <option value="Edge">
+            <option value="Firefox">
+            <option value="Chrome">
+            <option value="Opera">
+            <option value="Safari">
+        </datalist>
+
+        <p translate="yes">Don't translate this!</p>
+        <p>This can be translated to any language.</p>
+        <!-- HTML <div> Tag -->
+        <!-- HTML <h1> Tag -->
+        <!-- HTML <img> Tag -->
+        <!-- HTML <iframe> Tag -->
         <div id="media">
-          <h2>Media</h2>
-            <div id="ԲաբկենՆերսիսյան">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQqN3uGWZ7AEnCi48ao3szrD_-dUowNbs_pug&usqp=CAU" alt="Բաբկեն Ներսիսյան" />
-                <video src="" width="320" height="240" controls>
-                    Video not supported
-                </video>
+            <div id="babken-nersisyan">
+                <h1> Բաբկեն Ներսիսյան </h1>
+                <a target="blank" href="https://ru.wikipedia.org/wiki/%D0%9D%D0%B5%D1%80%D1%81%D0%B5%D1%81%D1%8F%D0%BD,_%D0%91%D0%B0%D0%B1%D0%BA%D0%B5%D0%BD_%D0%9F%D0%BE%D0%B3%D0%BE%D1%81%D0%BE%D0%B2%D0%B8%D1%87">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQqN3uGWZ7AEnCi48ao3szrD_-dUowNbs_pug&usqp=CAU" alt="Babken Nersisyan" />
+                </a>
+                <iframe
+                    width="460"
+                    height="262"
+                    src="https://www.youtube.com/embed/tmoxvEPGnYU"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
             </div>
+
+            <div id="mher-mkrtchyan">
+                <h1>  Մհեր Մկրտչյան </h1>
+                <a  target="blank"
+                    href="https://ru.wikipedia.org/wiki/%D0%9C%D0%BA%D1%80%D1%82%D1%87%D1%8F%D0%BD,_%D0%A4%D1%80%D1%83%D0%BD%D0%B7%D0%B8%D0%BA_%D0%9C%D1%83%D1%88%D0%B5%D0%B3%D0%BE%D0%B2%D0%B8%D1%87">
+                    <img src="https://www.awtv.ru/tvimg/frunzik-mkrtchyan-tragediya-smeshnogo-cheloveka_big.jpg"alt="Mher Mkrtchyan" />
+                </a>
+                <iframe
+                    width="460"
+                    height="275"
+                    src="https://www.youtube.com/embed/WIBMqlaLrZs"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+
+            <div id="sos-sargsyan">
+                <h1> Սոս Սարգսյան </h1>
+                <a  target="blank"
+                    href="https://ru.wikipedia.org/wiki/%D0%A1%D0%B0%D1%80%D0%BA%D0%B8%D1%81%D1%8F%D0%BD,_%D0%A1%D0%BE%D1%81_%D0%90%D1%80%D1%82%D0%B0%D1%88%D0%B5%D1%81%D0%BE%D0%B2%D0%B8%D1%87">
+                    <img src="https://st.kp.yandex.net/images/kadr/sm_2041751.jpg"alt="Սոս Սարգսյան" />
+                </a>
+                <iframe
+                    width="390"
+                    height="225"
+                    src="https://www.youtube.com/embed/1PwYm3HKrcw"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+
         </div>
+
+
+        <div id="mer-masin">
+            <h3>Մեր մասին</h3>
+            <!-- HTML <address> Tag -->
+            <address>
+                <p>Առաջարկների համար կարող եք գրել
+                    <a href="mailto:armennersesyan95@gmail.com">Send email</a>
+                </p>
+            </address>
+            <!-- HTML <abbr> Tag -->
+            <h4>The abbr element</h4>
+            <p>The <abbr title="Հայկական ֆիլմերի դիտման կայք">WHO</abbr> web site founded in 2020..</p>
+
+            <footer>
+                <a name="foot"></a>
+                <p>Author: Armen Nersesyan</p>
+                <p><a target="blank" href="https://www.facebook.com/armen.nersisyan.5074">My Facebook page</a></p>
+            </footer>
+        </divid></div>
+
     </body>
 
+
+
 </html>
+
+
+<!--
+    head
+    title
+    meta
+    body
+    form
+    input
+    textarea
+    div
+    a
+    button
+    iframe
+    h1 - h6
+    span
+    p
+    img
+    br
+
+-->
