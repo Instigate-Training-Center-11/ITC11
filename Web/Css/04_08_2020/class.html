@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div, h2 {
+            width: 200px;
+            height: 200px;
+            background-color: chartreuse;
+            border: 5px solid black;
+            align-content: center;
+            align-items: center;
+            position: relative;
+            animation: mymove 3s infinite;
+            animation-iteration-count: 27;
+            animation-duration: revert;
+            animation-direction: alternate;
+        }
+
+        @keyframes mymove {
+            from {left: 0px;}
+            to {left: 700px;}
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h2>|</h2>
+        <h2>|</h2>
+    </div>
+</body>
+</html>
