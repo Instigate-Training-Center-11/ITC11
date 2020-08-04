@@ -1,0 +1,38 @@
+div.exampleOne {
+  width: 300px;
+  height: 600px;
+  border: 1px solid blue;
+}
+
+div.backgroundRED{
+    width: 50%;
+    height: 50%;
+    background-color: brown;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+div.backgroundBlue{
+    width: 50%;
+    height: 300px;
+    background-color: blue;
+}
+
+div.exampleTwo {
+    width: 400px;
+    height: 200px;
+    background-color: olivedrab;
+    all: initial;
+}
+
+
+div.mymove {
+    width: 100px;
+    height: 100px;
+    background: red;
+    position: relative;
+    animation: mymove 5s infinite;
+    from {left: 0px;}
+    to {left: 200px;}
+}
