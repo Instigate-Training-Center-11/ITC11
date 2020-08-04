@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            a:link {
+                color: red;
+            }
+            a:visited {
+                color: green;
+            }
+            a:hover {
+                color: hotpink;
+            }
+            a:active {
+                color: blue;
+            }
+            p::after { 
+                content: " hello tux";
+            }
+            p::before { 
+                content: "hello ";
+            }
+            p::first-letter {
+                font-size: 300%;
+                color: #8A2BE2;
+            }
+            p::first-line {
+                font-size: 600%;
+            }
+            ::selection {
+                color: red;
+                background: yellow;
+            }
+            input:checked {
+                height: 50px;
+                width: 50px;
+            }
+            input[type=text]:enabled {
+                background: #ffff00;
+            }
+
+            input[type=text]:disabled {
+                background: #dddddd;
+            }
+            span:empty {
+                width: 100px;
+                height: 50px;
+                background: red;
+            }
+            span:first-child {
+                background-color: yellow;
+            }
+            span:first-of-type {
+                color: red;
+            }
+            input:focus {
+                color: red;
+            }
+            input:in-range {
+                border: 10px solid rgb(19, 19, 18);
+            }
+            input:invalid {
+                color: rgb(12, 182, 63);
+            }
+            :not(p) {
+                color: #ff0000;
+            }
+        </style>
+    </head>
+    <body>
+        <p>
+            <b>
+                <a href="https://www.w3schools.com/css/css_pseudo_classes.asp">link</a>
+            </b>
+        </p>
+        <input type="checkbox">
+        <input type="text" disabled="disabled">
+        <input type="text" >
+        <br>
+        <span></span>
+        <br>
+        <div>
+            <span>hello</span>
+        </div>
+        <div>This is some text in a div element.</div>
+        </body>
+</html>
