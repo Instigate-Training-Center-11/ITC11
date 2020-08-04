@@ -1,0 +1,71 @@
+.example:hover {
+    color: #00ff15;
+}
+
+header:hover {
+    background-color: rgb(132, 132, 199);
+  }
+
+a:link {
+    color: red;
+  }  
+  
+  a:visited {
+    color: green;
+  }
+    
+  a:hover {
+    color: hotpink;
+  }
+    
+  a:active {
+    color: blue;
+  }
+
+  span {
+    display: none;
+    background-color: rgb(219, 49, 27);
+    padding: 15px;
+  }
+
+   body:hover span {
+    display: block;
+    background: image("https://i2.wp.com/tech-story.net/wp-content/uploads/10x-featured-social-media-image-size.png?resize=678%2C381");
+  }
+
+  pre::first-line {
+    color: #0044ff;
+    font-variant: small-caps;
+    font-size: medium;
+  }
+
+  pre::first-letter {
+    color: #ff0000;
+    font-size: xx-large;
+  }
+
+  h2::before {
+    content: url("favicon.ico");
+  }
+
+  h2::after {
+    content: url("favicon.ico");
+  }
+
+  :root:hover {
+    background: grey;
+  }
+
+  :target {
+    border: 2px solid #ce7d7d;
+    background-color: #e5eecc;
+  }
+
+  input:optional {
+    background-color: rgb(60, 255, 0);    
+  }
+  
+  input:focus {
+    background-color: yellow;
+  }
+

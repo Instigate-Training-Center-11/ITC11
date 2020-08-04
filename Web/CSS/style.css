@@ -1,0 +1,232 @@
+html{
+  scroll-behavior: smooth;
+}
+.myDiv {
+    width: auto;
+    height: auto;
+    border: 5px outset rgb(194, 229, 227); 
+    border-top: 5px groove rgb(122, 152, 233); 
+    border-top-width: thick;
+    border-top-width:10px;
+    background-color: rgb(189, 227, 241);
+    background-repeat: no-repeat;
+    background-size: auto;
+    text-align: center;
+    align-content: center;
+    flex: 1;
+    margin-top: 50px;
+}
+
+@media only screen and (max-width: 800px) {
+    .myDiv {
+      background-color: rgb(26, 29, 31);
+    }
+  }
+
+.nav_bar{        
+    cursor:grab;    
+    display: inline;    
+}
+
+.nav_bar:hover {
+  background: #786b59; 
+  color: #ffe; 
+}
+
+p.ex2 {
+    font-size: 20px;
+}
+
+summary {
+  text-shadow: 4px 5px rgb(241, 243, 243);  
+}
+
+body {
+  background-image: url("https://i.stack.imgur.com/GWVfL.jpg");
+    background-color: lightblue;
+    color: darkblue;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+div p {
+    margin: 35px;
+}
+
+mark {
+    background-color: rgb(187, 184, 184);
+    color: black;
+}
+
+iframe {
+    align-self: center;
+}
+
+#anim {
+    width: 100px;
+    height: 100px;    
+    background: rgb(0, 247, 255);
+    position: absolute;
+    animation: mymove 5s infinite;    
+  }
+
+  #animTwo {
+    width: 100px;
+    height: 100px;   
+    background: rgb(160, 228, 164);
+    position: absolute;
+    animation: moveTwo 5s infinite;    
+  }
+
+  @keyframes mymove {
+    from {left: 0px;}
+    to {left: 600px;}    
+  }
+
+  @keyframes moveTwo {
+    from {right: 0px;}
+    to {right: 600px;}    
+  }
+
+  .big {
+    width: auto;
+    height: 100px;
+    position: relative;
+    border-bottom: 4px dotted blue;
+  }
+
+  .choose{
+    width: auto;
+    height: 100px;
+    position: relative;
+    border: 2px solid red;
+  padding: 10px;
+  border-bottom-left-radius: 50px 20px;
+  }
+
+  .table2 {    
+    border: solid black;
+    caption-side: top;    
+    display: inline;
+    border-collapse: separate;
+    border-spacing: 5px 5px;    
+    border-color: rgb(223, 230, 132);   
+    border-radius: 50px 20px;
+    empty-cells: show;
+  }
+
+  img {
+    width: 300px;
+    height: 200px;
+    filter: grayscale(10%);
+    filter: opacity(30%);
+  }
+
+  img:hover {
+    box-shadow: inset 0 0 0 23px #1ac460;
+    border-radius: 70%;
+    -webkit-transform: rotateZ(20deg);
+  -ms-transform: rotateZ(20deg);
+  transform: rotateZ(20deg);
+  }
+
+  .circle {
+    width: 50px;
+    height: 50px;
+    background: red;
+    position: relative;
+    animation: myfirst 3s 2;
+    animation-direction: alternate;
+    border-radius: 50px;
+  }
+
+  @keyframes myfirst {
+    0%   {background: red; left: 0px; top: 0px;}
+    25%  {background: yellow; left: 150px; top: 0px;}
+    50%  {background: blue; left: 150px; top: 150px;}
+    75%  {background: green; left: 0px; top: 150px;}
+    100% {background: red; left: 0px; top: 0px;}    
+  }
+
+  input {
+         border: 4px insert rgb(29, 3, 29);
+      }
+
+      cite {
+        border: 5px solid rgb(224, 237, 238);
+        padding:  0em 1em;
+        border-radius: 16px;
+        font-size: 24px;
+        line-height: 2;
+        cursor:not-allowed;;        
+      }
+
+button {  
+    border: 1px solid;
+    padding: 5px;
+    box-shadow: 20px 20px 50px 15px rgb(202, 231, 238);
+    cursor:grab;
+}
+
+#colomText {
+  column-count: 3;
+  column-gap: 40px;
+  column-rule: 4px double #fa72fa;
+  column-rule-width: 4px;
+  column-width: 100px;
+}
+
+a{  
+  cursor: grab;
+}
+
+body {  
+  counter-reset: an-counter;
+  justify-content: center;
+}
+h6::before {  
+  counter-increment: an-counter;
+  content: "Number " counter(an-counter)": " ;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-gap: 10px;
+  background-color: #2196F3;
+  padding: 10px;
+}
+
+.grid-container > div {
+  background-color: lightblue;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 20px;
+}
+/* something is wrong in this pice */
+#divSmoll.toscroll{  
+    background-color: lightblue;
+    text-decoration-line: underline;
+    width: 110px;
+    height: 110px;
+    overflow: scroll;  
+}
+
+input:focus {
+  background-color: rgb(0, 89, 255);
+}
+
+a:link {
+  color: red;
+}  
+
+a:visited {
+  color: green;
+}
+  
+a:hover {
+  color: hotpink;
+}
+  
+a:active {
+  color: blue;
+}
