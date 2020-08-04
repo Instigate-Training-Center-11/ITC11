@@ -2,10 +2,12 @@
 div.parent_1 {
     width: 220px;
     height: 300px;
-    border: 1px solid black;
+    border: 5px solid black;
     display: flex;
     flex-wrap: wrap;
     align-content: center;
+    border-style: solid;
+    border-bottom-color: red;
 }
 
 div.parent_2 {
@@ -14,6 +16,7 @@ div.parent_2 {
     border: 1px solid black;
     display: flex;
     align-items: center;
+    box-shadow: 15px 20px #888888;
 }
 
 div.parent_3 {
@@ -58,18 +61,15 @@ div.animation_right {
 div.animation_left{
     position: relative;
     animation: move_left 5s infinite;
-    animation-delay: 2s;
     animation-direction: alternate;
 }
 
 @keyframes move_right {
-    from {left: 0px;}
+    from {left: 0px; background-color: blue;}
     to {left: 500px;}
 }
 
 @keyframes move_left {
-    0% {left: 0px; top: 0px;}
-    50% {left: 500px; top: 0px;}
-    75% {right: 500px; top: 0px;}
-    100% {right: 0px; top: 0px;}
+    from {left: 500px; background-color: blue;}
+    to {left: 0px;}
 }

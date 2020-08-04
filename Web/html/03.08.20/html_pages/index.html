@@ -2,6 +2,7 @@
 <html>
     <head>
         <title>Tags in HTML</title>
+        <base href="" target="_blank">
         <link rel="shortcut icon" href="../favicon-dark.ico" type="image/x-icon">
         <meta charset="UTF-8">
         <meta name="description" content="Tags HTML">
@@ -60,10 +61,14 @@
             </div>
             <div>
                 <h2>Formatting tags:</h2>
-                <p><abbr title="Information Technology">IT</abbr> is the use of computers to store, retrieve, transmit, and manipulate data or information.</p>
-                <p><b>Lorem ipsum dolor sit amet, consectetur adipiscing elit</b>.</p>
-                <p><em>Lorem ipsum dolor sit amet, consectetur adipiscing elit</em></p>
-                <p><i>Lorem ipsum dolor sit amet, <time>23:00</time> to <time>00:00</time> consectetur adipiscing elit</i></p>
+                <article>
+                    <p><abbr title="Information Technology">IT</abbr> is the use of computers to store, retrieve, transmit, and manipulate data or information.</p>
+                    <p><b>Lorem ipsum dolor sit amet, consectetur adipiscing elit</b>.</p>
+                </article>
+                <aside>
+                    <p><em>Lorem ipsum dolor sit amet, consectetur adipiscing elit</em></p>
+                    <p><i>Lorem ipsum dolor sit amet, <time>23:00</time> to <time>00:00</time> consectetur adipiscing elit</i></p>
+                </aside>
                 <p><small>Lorem ipsum dolor sit amet, consectetur adipiscing elit</small></p>
                 <p><ins>Lorem ipsum dolor sit amet, consectetur adipiscing elit</ins></p>
                 <p><sub>Lorem ipsum </sub>dolor sit amet, <sup>consectetur adipiscing elit</sup></p>
@@ -141,8 +146,11 @@
             </div>
             <figure>
                 <h3>Image example</h3>
-                <img src="https://content.codecademy.com/courses/SemanticHTML/dogimage.jpeg"/>
+                <img src="https://content.codecademy.com/courses/SemanticHTML/dogimage.jpeg" alt="Workplace" usemap="#workmap"/>
                 <figcaption>A dog.</figcaption>
+                <map name="workmap">
+                    <area shape="rect" coords="34,44,270,350" alt="dog" href="#formatting">
+                </map>
             </figure>
             <audio controls>
                 <source src="https://content.codecademy.com/courses/SemanticHTML/dogBarking.mp3" type="audio/mp3">
@@ -151,7 +159,9 @@
         <footer>
             <a name="foot"></a>
             <p>Author: Artashes Sargsyan</p>
-            <p><a href="https://www.facebook.com/artashes.sargsyan.7">My Facebook page</a></p>
+            <address>
+                <p><a href="https://www.facebook.com/artashes.sargsyan.7">My Facebook page</a></p>
+            </address>
         </footer>
     </body>
 </html>
