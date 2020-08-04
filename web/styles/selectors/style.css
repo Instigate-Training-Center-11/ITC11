@@ -1,0 +1,111 @@
+* {
+    box-sizing: border-box;
+}
+
+/* class_name */
+.class_name {
+    width: 400px;
+    background-color: burlywood;
+    text-align: center;
+    margin: auto;
+}
+
+/* class.class */
+.class1.class2 {
+    color: green;
+    background-color:yellow;
+    width: 50px;
+}
+
+/* element */
+li {
+    font-size: 24px;
+}
+
+/* element.class */
+p.class3 {
+    width: 150px;
+    height: 150px;
+    background-image: url(
+        "https://www.fotor.com/loopBannerImg/indexBannerImg/banner-01.jpg"
+    );
+}
+
+/* element,element */
+ul, li {
+    font-style: italic;
+}
+
+/* #id */
+#name {
+    color: hotpink;
+}
+
+/* element element */
+ul li {
+    text-decoration: underline;
+}
+
+/* element > element */
+div > p {
+    border: 5px double indigo;
+}
+
+/* element + element */
+div + p {
+    width: 100px;
+    outline: 3px solid blue;
+}
+
+/* element ~ element */
+b ~ h5 {
+    border: 5px dotted blue;
+    box-shadow: 7px 13px;
+    width: 200px;
+    height: 60px;
+    text-align: center;
+}
+
+/* attribute */
+img[src] {
+    width: 150px;
+    height: 100px;
+}
+
+/* attribute == value */
+img[alt="image"] {
+    border: 5px solid firebrick;
+}
+
+/* attribute ~= value */
+[attr~="first"] {
+    color: red;
+}
+
+/* attribute |= value */
+[size|="max"] {
+    background-color: salmon;
+    background-origin: 5px, 10px;
+    border: 3px solid purple;
+    width: 200px;
+}
+
+/* attribute ^= value */
+[col^="test"] {
+    text-decoration: underline;
+    color: red;
+    font-size: 20px;
+}
+
+/* attribute $= value */
+[col$="first"] {
+    outline: 5px solid black; 
+    width: 200px;   
+}
+
+/* attribute *= value */
+[row*="test"] {
+    background-color: blue;
+    color: cornsilk;
+    width: 200px;   
+}
