@@ -1,3 +1,7 @@
+*{
+    box-sizing: border-box;
+}
+
 .class1 {
     width: 700px;
     height: 60px;
@@ -33,7 +37,7 @@ h2 {
     background-size: 300px 100px;
 }
 
-ul {
+.class_ul1 {
     border-top-left-radius: 50px 20px;
     border: 2px solid red;
     border-right-style: dotted;
@@ -84,6 +88,174 @@ li {
     padding-right: 50px;
 }
 
-*{
+.border { 
+    border: 10px solid transparent;
+    padding: 25px;
+    border-image-source: url(border.png);
+    border-image-repeat: round;  
+    border-image-slice: 30;
+    border-image-width: 30px;    
+}
+
+.border_left {
+    border-left: 50px solid red;
+}
+
+.border_left1 {
+    border-left-color: blue;
+    border-left-width: 50px;
+    border-left-style: inset;
+}
+
+.border_right {
+    border-right: 350px solid red;
+}
+
+.border_right1 {
+    border-right-color: blue;
+    border-right-width:350px;
+    border-right-style: solid;
+}
+
+.table_border {
+    border-collapse:separate;
+    border-width: 10px;
+    border-spacing: 10px;
+    border-style: double;
+    border-top: 20px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-top-color: blueviolet;
+    border-top-width: 100px; 
+    bottom: 75px;
+}
+
+.box {
     box-sizing: border-box;
+    width: 300px;
+    height: 150px;
+    padding: 30px;  
+    border: 10px solid darkturquoise;
+}
+  
+.mymove1 {
+    width: 100px;
+    height: 100px;
+    background:green;
+    position: relative;
+    animation: mymove 5s;
+    animation-iteration-count:1000;
+}
+  
+@keyframes mymove {
+    from {top: 0px;}
+    to {top: 200px;}
+}
+
+caption {
+    caption-side: bottom;
+}
+
+.input1 {
+    caret-color: red;
+    border-width: 5px;
+}
+  
+.input2 {
+    caret-color: darkblue;
+    border-width: 5px;
+}   
+
+.my_image {
+    position: absolute;
+    clip: rect(0px,60px,200px,0px);
+}
+
+.circle_image {
+    clip-path: circle(50%);
+}
+
+.my_color {
+    color: red;
+}
+
+.class_ul2 {
+    list-style: square inside url("https://icon-icons.com/icons2/2454/PNG/32/alien_icon_148951.png");
+    list-style-position: inside;
+}
+
+.responsive {
+    background-color: pink;
+    color: black;
+}
+
+@media screen and (min-width: 900px) {
+    .media {
+        background-color: grey;
+        color: brown;
+    }
+}
+@media screen and (max-width: 500px) {
+    .media {
+        background-color: black;
+        color:yellow;
+    }
+}
+
+.size {
+    width: 300px;
+    height: 150px;
+}
+
+.my_grid {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: 150px 120px;
+    grid-gap: 25px;
+    background-color:burlywood;
+    padding: 10px;
+}
+
+.my_grid > p {
+    background-color: gray;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 20px;
+}
+
+.my_line {
+    display: flex;
+    width: 300px;
+    height: 200px;
+    margin-left: 75px;
+    border: 1px solid red;
+    outline-style: double;
+    outline-width: 7px;
+    outline-offset: 12px;
+    outline-color: green;
+}
+.my_line div {
+    width: 100px;
+    height: 100px;
+}
+
+div.color1 {
+    order: 3;
+    overflow-x: hidden;
+}
+
+.color1 {
+    background-color:blue;
+}
+
+.color2 {
+    background-color:green;
+}
+
+.color3 {
+    background-color: yellow;
+}
+
+.color4 {
+    background-color: blueviolet;
 }
