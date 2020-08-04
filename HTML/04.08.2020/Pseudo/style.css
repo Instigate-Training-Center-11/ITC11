@@ -1,0 +1,238 @@
+.ps_elements p::first-letter {
+    color: rgb(81, 255, 0);
+}
+
+.ps_elements ul::first-letter {
+    color: rgb(4, 0, 255);
+}
+
+.ps_elements p::first-line {
+    color: red;
+}
+
+.ps_elements ul::first-line {
+    color: orange;
+}
+
+.before-after p::before {
+    content: "Before ... ";
+}
+
+.ps_elements p::after {
+    content: " ... After";
+}
+
+.ps_classes a:visited {
+    color: green;
+}
+
+.ps_classes a {
+    color: orange;
+}
+
+.ps_classes a:visited {
+    color: blue;
+}
+
+.ps_classes a:hover {
+    color: yellow;
+}
+
+.ps_classes a:focus {
+    color: red;
+}
+
+.ps_classes a:active {
+    color: teal;
+}
+
+.ps_classes li:first-child {
+    color: orange;
+}
+
+.ps_classes ul :first-of-type {
+    color: orange;
+}
+
+.ps_classes li:last-child {
+    color: lightseagreen;
+}
+
+.last-of-type ul :last-of-type {
+    color: crimson;
+}
+
+.first-item li:not(.first-item) {
+    color: rgb(0, 255, 0);
+}
+
+.first-item li:not(.first-item):not(:last-of-type) {
+    background: yellow;
+    color: black;
+}
+
+.nt-child ol :nth-child(2) {
+    color: rgb(195, 14, 171);
+}
+
+.nt-child ol :nth-child(3n) {
+    color: rgb(44, 214, 38);
+}
+
+.nt-child ol :nth-child(even) {
+    color: rgb(0, 68, 255);
+}
+
+.nt-child ol :nth-child(2n+8) {
+    color: rgb(207, 28, 22);
+}
+
+.nt-child2 ol :nth-last-child(2) {
+    color: rgb(50, 126, 88);
+}
+
+.nt-child2 ol :nth-last-child(2n) {
+    color: orange;
+}
+
+.nt-child2 ol :nth-last-child(even) {
+    color: rgb(8, 26, 126);
+}
+
+.nt-child2 ol :nth-last-child(even) {
+    color: rgb(204, 11, 188);
+}
+
+.ps_classes p:nth-of-type(2) {
+    color: rgb(255, 0, 98);
+}
+
+.ps_classes p:nth-last-of-type(2) {
+    color: rgb(38, 255, 0);
+}
+
+.only-child ul :only-child {
+    color: rgb(0, 195, 255);
+}
+
+.only-of-type li:only-of-type {
+    color: rgb(255, 72, 0);
+}
+
+.target p:target {
+    background-color: rgb(119, 103, 14) !important;
+}
+
+p:target::before {
+    font: 70% sans-serif;
+    content: "►";
+    color: rgb(4, 71, 4);
+    margin-right: .25em;
+}
+
+p:target i {
+    color: rgb(0, 47, 255);
+}
+
+input:checked {
+    margin-left: 25px;
+    border: 1px solid rgb(255, 0, 76);
+}
+
+input:default {
+    box-shadow: 0 0 1px 1px red;
+}
+
+:disabled {
+    opacity: .9;
+}
+
+.empty div {
+    background: orange;
+    height: 30px;
+    width: 200px;
+}
+
+.empty div:empty {
+    background: yellow;
+}
+
+:enabled {
+    opacity: 1;
+    border: 1px solid green;
+}
+
+input[type=number]:in-range {
+    border: 5px solid green;
+}
+
+input[type=number] {
+    border: 5px solid orange;
+}
+
+input[type=number]:out-of-range {
+    border: 1px solid rgb(0, 26, 255);
+}
+
+:indeterminate+label {
+    background: rgb(216, 25, 41);
+    font-weight: 900;
+}
+
+input[type=email]:valid {
+    border: 1px solid green;
+}
+
+:optional {
+    color: gray;
+}
+
+input:read-only {
+    color: gray;
+}
+
+:read-write:focus {
+    padding: 5px;
+    border: 1px dotted black;
+}
+
+:required {
+    color: black;
+    font-weight: bold;
+}
+
+article :-moz-dir(rtl) {
+    color: orange;
+}
+
+article :dir(rtl) {
+    color: orange;
+}
+
+article :-moz-dir(ltr) {
+    color: blue;
+}
+
+article :dir(ltr) {
+    color: blue;
+}
+
+:lang(en) q {
+    quotes: '“' '”';
+}
+
+:lang(fr) q {
+    quotes: '«' '»';
+}
+
+:lang(de) q {
+    quotes: '»' '«';
+}
+
+:root {
+    background: rgb(219, 213, 202);
+}
+
+h1:fullscreen {
+    background: rgb(133, 14, 77);
+}
