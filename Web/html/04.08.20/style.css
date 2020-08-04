@@ -1,0 +1,75 @@
+
+div.parent_1 {
+    width: 220px;
+    height: 300px;
+    border: 1px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+div.parent_2 {
+    width: 220px;
+    height: 300px;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+}
+
+div.parent_3 {
+    width: 220px;
+    height: 300px;
+    border: 1px solid black;
+    display: flex;
+    align-items: flex-start;
+}
+
+div.child_1 {
+    width: 110px;
+    height: 110px;
+}
+
+div.child_2 {
+    flex: 1;
+}
+
+div.center {
+    align-self: center;
+}
+
+div.red {
+    background-color:red;
+}
+
+div.blue {
+    background-color:blue;
+}
+
+div.green {
+    background-color:green;
+}
+
+div.animation_right {
+    position: relative;
+    animation: move_right 5s infinite;
+    animation-delay: 2s;
+}
+
+div.animation_left{
+    position: relative;
+    animation: move_left 5s infinite;
+    animation-delay: 2s;
+    animation-direction: alternate;
+}
+
+@keyframes move_right {
+    from {left: 0px;}
+    to {left: 500px;}
+}
+
+@keyframes move_left {
+    0% {left: 0px; top: 0px;}
+    50% {left: 500px; top: 0px;}
+    75% {right: 500px; top: 0px;}
+    100% {right: 0px; top: 0px;}
+}
