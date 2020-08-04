@@ -1,0 +1,344 @@
+* {
+    box-sizing: border-box;
+}
+
+/* background */
+.class1 {
+    width: 100px;
+    height: 100px;
+    border: 10px solid green;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    background-color: yellow;
+    background-image: url("https://cdn3-www.dogtime.com/assets/uploads/2017/08/chupacabra-dog-2.jpg");
+    background-blend-mode: lighten;
+    border-image: url("https://cdn3-www.dogtime.com/assets/uploads/2017/08/chupacabra-dog-2.jpg") 5 stretch;
+}
+
+.class2 {
+    width: 300px;
+    height: 100px;
+    background-image: url("https://cdn3-www.dogtime.com/assets/uploads/2017/08/chupacabra-dog-2.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    border: 10px dotted black;
+    background-clip: padding-box;
+    background-position: center;
+    direction: rtl;
+}
+
+.class3 {
+    border: 5px solid black;
+    padding: 30px;
+    background: url("https://cdn3-www.dogtime.com/assets/uploads/2017/08/chupacabra-dog-2.jpg");
+    background-repeat: no-repeat;
+    background-size: 300px 100px;
+}
+
+/* Borders */
+.class4 {
+    width: 200px;
+    height: 200px;
+    border-top-style: dotted;
+    border-right-style: double;
+    border-bottom-style: dashed;
+    border-left-style: solid;
+    border-color: red;
+    border-width: 5px;
+    border-radius: 25px;
+    box-shadow: 5px 10px gray;
+    overflow: hidden;
+    text-overflow: ellipsis; /* word... */
+    text-shadow: 3px 2px blueviolet;
+    text-transform: capitalize;
+    word-spacing: 20px;
+}
+
+/* Table */
+.tbl {
+    caption-side: bottom;
+    empty-cells: hide;
+    font-variant-caps: petite-caps;
+}
+
+/* create red cursor */
+div input {
+    caret-color: red;
+}
+
+/* image */
+div img {
+    position: absolute;
+    clip-path: circle(50%);
+    filter: blur(5px);
+}
+
+.inp {
+    padding-left: 50px;
+    padding-right: 200px;
+    padding-top: 30px;
+    padding-bottom: 50px;
+}
+
+/* create columns for text */
+.class5 {
+    column-count: 4;
+    column-width: 100px;
+    column-fill: auto;
+    column-gap: 100px;
+    column-rule-style: double;
+    column-rule-color: red;
+    column-rule-width: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    letter-spacing: 2px;
+    line-height: 1.6;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+h3 {
+    column-span: all;
+}
+
+/* create counter */
+body {
+    counter-reset: my-sec-counter;
+}
+
+h5::before {
+    counter-increment: my-sec-counter;
+    content: "PART__ " counter(my-sec-counter) ". ";
+}
+
+/* flex */
+.class6 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-variant: small-caps;
+}
+
+.class6 div {
+    width: 150px;
+    height: 100px;
+    color: hotpink;
+    background-color: indianred;
+}
+
+.class7 {
+    width: 400px;
+    height: 150px;
+    border: 5px solid gray;
+    display: flex;
+    flex-direction: row-reverse;
+    margin-bottom: 30px;
+}
+  
+.class7 div, .class8 div {
+    width: 50px;
+    height: 50px;
+}
+
+.class8 {
+    width: 400px;
+    height: 150px;
+    border: 5px double black;
+    display: flex;
+    flex-flow: row-reverse wrap;
+    margin-bottom: 30px;
+}
+
+/* Flex--justify-content */
+.class9 {
+    width: 300px;
+    height: 100px;
+    border: 3px dotted gray;
+    display: flex;
+    justify-content: center;
+}
+
+.class9 div {
+    width: 80px;
+    height: 50px;
+}
+
+/* Create font */
+@font-face {
+    font-family: myFont;
+    src: url(sansation_light.woff);
+}
+
+.text1 {
+    float: right;
+    font-size: 40px;
+    font-stretch: expanded;
+    font-family: Arial, sans-serif;
+    font-style: oblique;
+}
+
+.text2 {
+    float: left;
+    font-family: myFont;
+    font-style: italic;
+    background: blue;
+    opacity: 0.8;
+}
+
+/* Grid */
+.container {
+    display: grid;
+    grid: 100px / auto auto auto;
+    grid-gap: 25px;
+    grid-column-gap: 50px;
+    background-color:blue;
+    padding: 20px;
+}
+
+.container > div, .container-second > div {
+    background-color: olivedrab;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 20px;
+}
+
+.i1 {
+    grid-column: 1 / span 2;
+}
+
+.i2 {
+    grid-column-end: span 2;
+}
+
+.i4 {
+    grid-column-start: 3;
+}
+
+/* Grid 2 */
+.container-second {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: 50px 100px;
+    grid-gap: 20px;
+    background-color: plum;
+    padding: 5px;
+}
+
+.ii1 {
+    grid-row: 1 / span 3;
+}
+
+.ii2 {
+    grid-row-start: 4;
+}
+
+/* Long ward */
+.cont {
+    width: 100px;
+    border: 2px solid gray;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.txt {
+    hyphens: manual;
+}
+
+/* ul */
+ul {
+    list-style: square inside url(
+        "https://icon-icons.com/icons2/2451/PNG/32/apple_fruit_food_icon_148896.png"
+    );
+    list-style-position: inside;
+}
+
+.ul-li {
+    list-style-type: lower-alpha;
+}
+
+/* css @media */
+.media {
+    background-color: blue;
+    color: black;
+    width: 200px;
+    height: 50px;
+}
+
+@media screen and (min-width: 1100px) {
+    .media {
+        background-color: red;
+        color: black;
+        width: 200px;
+        height: 50px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .media {
+        background-color: orange;
+        color: white;
+        width: 200px;
+        height: 50px;
+    }
+}
+
+/* Order */
+.class10 {
+    width: 200px;
+    height: 150px;
+    border: 1px solid black;
+    display: flex;
+    outline-width: 10px;
+    outline-color: green;
+    outline-style: dotted;
+    outline-offset: 8px;
+    margin-left: 20px;
+}
+
+.class10 div {
+    width: 100px;
+    height: 100px;
+}
+
+div.blue {
+    order: 3;
+    /* overflow-x: auto;
+    overflow-y: hidden; */
+    overflow-x: hidden;
+}
+
+div.red {
+    order: 2;
+    text-decoration: underline overline;
+    text-decoration-color: wheat;
+    text-decoration-style: solid;
+}
+
+div.orange {
+    text-indent: 35px;
+}
+
+/* Transform */
+.transform {
+    margin-top: 70px;
+    margin-bottom: 70px;
+    width: 120px;
+    height: 50px;
+    background-color:palevioletred;
+    transform: rotate(25deg);
+    transform-origin: 20% 40%;
+}
+
+/* Transition */
+.transition {
+    width: 50px;
+    height: 50px;
+    background: purple;
+    transition-property: width;
+    transition-duration: 2s;
+}
+
+.transition:hover {
+    width: 500px;
+}
