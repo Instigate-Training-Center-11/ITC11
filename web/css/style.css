@@ -1,0 +1,89 @@
+.class1 {
+    width: 700px;
+    height: 60px;
+    border: 1px solid red;
+    display:flex;
+    flex-wrap: wrap;
+    align-content: center;
+    animation-duration: 1s;
+    animation-name: myAnim;
+}
+
+.class2 {
+    width: 700px;
+    height: 100px;
+    background :coral;
+    background-image: url("https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.archdaily.com%2F922278%2F23-places-in-paris-every-architect-must-visit&psig=AOvVaw1BydNBL4uulYTj_FqY9RS4&ust=1596619895769000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCJjgkOGegesCFQAAAAAdAAAAABAD");
+    background-repeat: space;
+    background-attachment: fixed;
+    align-items: center;
+    align-self:center;
+    border: aqua;
+    background-size: auto;
+}
+
+h2 {
+    border-bottom: 5px solid red;
+}
+
+.class3 {
+    border: 2px solid black;
+    padding: 25px;
+    background-repeat: no-repeat;
+    background-size: 300px 100px;
+}
+
+ul {
+    border-top-left-radius: 50px 20px;
+    border: 2px solid red;
+    border-right-style: dotted;
+    border-left-width: thin;
+}
+
+li {
+    width: 70px;
+    bottom: 10px;
+    width: 50%;
+    border: 3px solid #8AC007;
+}
+
+.class4 {
+    width: 400px;
+    height: 300px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    border: 10px dotted black;
+    background-clip: padding-box;
+    background-position: center;
+}
+
+.class5 {
+    width: 150px;
+    height: 150px;
+    border-top-style: dotted;
+    border-right-style: double;
+    border-bottom-style: dashed;
+    border-left-style: solid;
+    border-color: greenyellow;
+    border-width: 5px;
+    border-radius: 25px;
+}
+
+.merge {
+    margin-top: 50px;
+    margin-left: 150px;
+    margin-bottom: 50px;
+    margin-right: 100px;
+}
+
+.padding {
+
+    padding-top: 25px;
+    padding-left: 50px;
+    padding-bottom: 25px;
+    padding-right: 50px;
+}
+
+*{
+    box-sizing: border-box;
+}
