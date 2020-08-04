@@ -1,17 +1,115 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-    <title>SEO_META</title>
+<head prefix="my_namespace: https://example.com/ns#">
+    <title>SEO_MEDIA</title>
     <meta charset="UTF-8">
     <meta name="description" content="Free Web tutorials">
-    <meta name="keywords" content="HTML,CSS,XML,JavaScript">
-    <meta name="author" content="John Doe">
+    <meta name="keywords" content="HTML, CSS, XML, JavaScript, SEO, MEDIA,">
+    <meta name="author" content="Armine Gevorgyan">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <base href="./" target="_blank">
+    <link rel="icon" type="image/png" href="https://cdn0.iconfinder.com/data/icons/forgen-seo-1/64/search-256.png">
+
 </head>
 
 <body>
+
+    <!-- the length of title need be less to 60-70 characters  -->
+    <!-- title need be unique -->
+    <!--Avoiding Stop Words in Your Title Tags A stop word can be any of the following: => A And But So On Or The Was With -->
+    <meta property="og:title" content="SEO_MEDIA" />
+
+    <!-- Use the canonical URL. It helps consolidate all connected data, such as likes, across all the duplicate URLs posted. -->
+    <meta property="og:url" content="https://ahrefs.com/blog/open-graph-meta-tags/" />
+
+    <!-- if the page (object) you are sharing is part of a larger network -->
+    <meta property="og:site_name" content="SEO_MEDIA" />
+
+    <!-- Best practices
+        1)Use article for articles and website for the rest of your pages.
+        2)Describe object types further where appropriate (optional). -->
+    <meta property="og:type" content="video.movie" />
+    <meta property="og:type" content="my_namespace:my_type" />
+    <meta property=”og:type” content=”website” />
+    <meta property=”og:type” content="article" />
+    <meta property=”og:type” content="blog" />
+    <meta property=”og:type” content="book" />
+    <meta property=”og:type” content="game" />
+    <meta property=”og:type” content="movie" />
+
+    <!-- Best practices
+        1)Complement the title to make the snippet as appealing and click-worthy as possible.
+        2)Copy your meta description here if it makes sense.
+        3)Keep it short and sweet. Facebook recommends 2–4 sentences, but that often truncates. -->
+    <meta property="og:description"
+        content="Sean Connery found fame and fortune as the suave, sophisticated British agent, James Bond." />
+
+    <!-- Best practices
+        1)Use custom images for “shareable” pages (e.g., homepage, articles, etc.)
+        2)Use your logo or any other branded image for the rest of your pages.
+        3)Use images with a 1.91:1 ratio and minimum recommended dimensions of 1200x630 for optimal clarity across all devices. -->
+    <meta property="og:image"
+        content="https://images.unsplash.com/photo-1494548162494-384bba4ab999?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80">
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <meta property="og:audio" content="https://example.com/bond/theme.mp3" />
+
+    <meta property="og:video" content="http://www.youtube.com/v/GFLGRidF04?version=3&autohide=1">
+    <meta property="og:type" content="video.other"/>
+    <meta property="og:video:type" content="application/x-shockwave-flash">
+    <meta property="og:video:duration" content="240">
+    <meta property="og:video:width" content="398">
+    <meta property="og:video:height" content="264">
+    <meta property="og:site_name" content="YouTube">
+    <meta property="ya:ovs:allow_embed" content="true"/>
+
+    <!-- Use only for content not written in American English (en_US).
+        Facebook assumes content without this tag is written in this language. -->
+    <meta property="og:locale" content="en_GB" />
+    <meta property="og:locale:alternate" content="fr_FR" />
+    <meta property="og:locale:alternate" content="es_ES" />
+
+
+    <!-- TWITTER -->
+    <meta name="twitter:card" content="player" />
+    <meta name="twitter:site" content="@flickr" />
+
+    <!-- A concise title for the related content. Platform specific behaviors:
+        1) iOS, Android: Truncated to two lines in timeline and expanded Tweet
+        2) Web: Truncated to one line in timeline and expanded Tweet -->
+    <meta name="twitter:title" content="Small Armenian Developing States Photo Submission" />
+
+    <!-- A description that concisely summarizes the content as appropriate for presentation within a Tweet.
+        You should not re-use the title as the description or use this field to describe the general services provided by the website.
+        Platform specific behaviors:
+        1) iOS, Android: Not displayed
+        2)Web: Truncated to three lines in timeline and expanded Tweet -->
+    <meta name="twitter:description" content="View the album on Flickr." />
+
+    <!-- A URL to a unique image representing the content of the page.
+        You should not use a generic image such as your website logo, author photo, or other image that spans multiple pages.
+        Images for this Card support an aspect ratio of 1:1 with minimum dimensions of 144x144 or maximum of 4096x4096 pixels.
+        Images must be less than 5MB in size.
+        The image will be cropped to a square on all platforms. JPG, PNG, WEBP and GIF formats are supported.
+        Only the first frame of an animated GIF will be used. SVG is not supported. -->
+    <meta name="twitter:image" content="https://farm6.staticflickr.com/5510/14338202952_93595258ff_z.jpg" />
+
+    <!-- A text description of the image conveying the essential
+        nature of an image to users who are visually impaired. Maximum 420 characters. -->
+    <meta name="twitter:image:alt" content="Some Image" />
+
+    <!-- URL in a browser on iPhone. In the image to the right, note that the video has NOT yet begun play,
+        fits the full screen, and the secure browser lock (top left) is still intact.
+        As noted previously, an active mixed content warning will not be approved. -->
+    <meta name="player" content="https://example.com/bond/trailer.swf" />
+    <meta name="twitter:player:height" content="720" />
+    <meta name="twitter:player:width" content="720" />
+    <meta name="twitter:player:stream" content="https://wakey.io/public/vid/26.mp4" />
+    <meta name="twitter:player:stream:content_type" content="video/mp4" />
+
+
     <div>
         <h2>Most Important HTML
             Tags You Need to Know for SEO</h2>
@@ -26,50 +124,61 @@
             <li>
                 <h3>Heading tags(h1-h5) </h3>
                 <p>
-                    Header tags are often used to break up the content to make it easier to read. In reality, about 55% of visitors will only spend 15 seconds at most skimming your content.
+                    Header tags are often used to break up the content to make it easier to read. In reality, about 55%
+                    of visitors will only spend 15 seconds at most skimming your content.
                 </p>
             </li>
             <li>
                 <h3>Add Alt Tags in Images</h3>
                 <p>
-                    An important part of engaging the audience is using images. In fact, you can get about 94% more views if you use graphics in your articles.
+                    An important part of engaging the audience is using images. In fact, you can get about 94% more
+                    views if you use graphics in your articles.
                 </p>
             </li>
             <li>
                 <h3>Fine-Tune Meta Description Tags</h3>
                 <p>
-                    Another vital HTML tag for SEO is the meta description. Like titles, this information shows in search results of Google. Take a look under the link for any search. The snippet of text under the title is usually pulled from the description tag.
+                    Another vital HTML tag for SEO is the meta description. Like titles, this information shows in
+                    search results of Google. Take a look under the link for any search. The snippet of text under the
+                    title is usually pulled from the description tag.
                 </p>
             </li>
             <li>
                 <h3>Add Open Graph Tags</h3>
                 <p>
-                    Open graph tags help in boosting search and display abilities for social media. For instance, Facebook will use open graph to display information if your content is shared.
+                    Open graph tags help in boosting search and display abilities for social media. For instance,
+                    Facebook will use open graph to display information if your content is shared.
                 </p>
             </li>
             <li>
                 <h3>Building Links</h3>
-                <p>Getting high-quality backlinks is only part of SEO. You also need to focus on internal links as well as connecting to external sites.</p>
+                <p>Getting high-quality backlinks is only part of SEO. You also need to focus on internal links as well
+                    as connecting to external sites.</p>
             </li>
             <li>
                 <h3>Twitter Card Tags</h3>
                 <p>
-                    Open graph isn’t the only way to customize data for social media. Twitter has its own platform called “Cards.” Twitter Cards work similar to OG with the exception that these are specifically for Twitter.
+                    Open graph isn’t the only way to customize data for social media. Twitter has its own platform
+                    called “Cards.” Twitter Cards work similar to OG with the exception that these are specifically for
+                    Twitter.
                 </p>
             </li>
             <li>
                 <h3>The Robots Tag</h3>
-                <p>The robots tag is a useful element if you want to prevent certain articles from being indexed. These can stop crawlers from sites like Google from accessing the content.</p>
+                <p>The robots tag is a useful element if you want to prevent certain articles from being indexed. These
+                    can stop crawlers from sites like Google from accessing the content.</p>
             </li>
             <li>
                 <h3>Use Canonical Tags when Appropriate</h3>
                 <p>
-                    When you create a website, it may be accessible in a variety of ways. For instance, all of these can link to the same site:
+                    When you create a website, it may be accessible in a variety of ways. For instance, all of these can
+                    link to the same site:
                 </p>
             </li>
             <li>
                 <h3>Responsive Site Meta Tags</h3>
-                <p>About 48% of people will use a mobile search to find information about a product or business. This means you need to focus attention on responsive and mobile designs.</p>
+                <p>About 48% of people will use a mobile search to find information about a product or business. This
+                    means you need to focus attention on responsive and mobile designs.</p>
             </li>
         </ul>
 
