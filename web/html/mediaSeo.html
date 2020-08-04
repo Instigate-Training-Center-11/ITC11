@@ -18,11 +18,41 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="author" content="Mane Kolibri">
         <meta charset="UTF8">
+
         <!--
             In this instance, Google will not index the content
             not follow any of the links
         -->
-        <meta name="robots" content="noindex, nofollow">
+        <meta name="robots" content="noindex">
+
+        <!-- for facebook media optimization -->
+        <meta name="og:title" property="og:title" content="my Title">
+        <!-- The URL of object that will be used as its unique ID -->
+        <meta property="og:url" content="https://www.example.com/objects/id666066"/>
+        <!-- URL to an video file -->
+        <meta property="og:video" content="https://example.com/bond/trailer.swf" />
+        <!-- URL to an image file -->
+        <meta property="og:image" content="https://www.example.com/images/myImage"/>
+        <!-- URL to an audio file -->
+        <meta property="og:audio" content="https://example.com/audios/myAudio.mp3"/>
+        <!-- A few sentences - description of object -->
+        <meta property="og:description" content="Seo and media optimization"/>
+        <!-- Words that can be added in title wen client searching -->
+        <meta property="og:determiner" content="the" />
+        <!--
+            Object is part of a larger web site,
+            the name which should be displayed for the overall site
+        -->
+        <meta property="og:site_name" content="SEO" />
+
+        <!--
+            Twitter media optimization
+            Twitter can use OG data in the event it cannot find specific information
+        -->
+        <meta name="twitter:card" content="my Card">
+        <meta name="twitter:title" content="My Title">
+        <meta name="twitter:description" content="Seo and media optimization">
+        <meta name="twitter:image" content="https://www.example.com/images/myImage">
     </head>
     <body>
         <!-- While H2-H6 tags are considered not as important as H1 tag -->
@@ -41,13 +71,6 @@
         -->
         <a href="https://horses.example.com/Palomino" rel="nofollow">Some link</a>
 
-        <!-- for facebook media optimization -->
-        <meta name="og:title" property="og:title" content="my Title">
-        <!--
-            Twitter media optimization
-            Twitter can use OG data in the event it cannot find specific information
-        -->
-        <meta name="twitter:card" content="summary">
         <!--
             These essentially tell sites like Google
             what domains are the most important to me
