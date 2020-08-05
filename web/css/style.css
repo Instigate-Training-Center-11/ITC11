@@ -1,0 +1,119 @@
+body{
+    margin: 0px;
+    padding: 0px;
+}
+
+
+.context {
+    position: absolute;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: linear-gradient(90deg,black 0%,blue 30%, aqua 100%);
+}
+h1{
+    font-family: poppins;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+    color: #fff;
+    font-size: 50px;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+
+
+.box div{
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background-color: transparent;
+    border: 8px solid lime;
+    border-radius: 50px 20px;
+}
+
+.box div:nth-child(1){
+    top: 12%;
+    left: 42%;
+    box-shadow: 5px 10px purple;
+    animation: animate 10s linear infinite;
+}
+
+
+.box div:nth-child(2){
+    top: 70%;
+    left: 50%;
+    box-shadow: 5px 10px red;
+    animation: animate 7s linear infinite;
+}
+
+.box div:nth-child(3){
+    top: 17%;
+    left: 6%;
+    box-shadow: 5px 10px palegreen;
+    animation: animate 9s linear infinite;
+}
+
+.box div:nth-child(4){
+    top: 20%;
+    left: 60%;
+    box-shadow: 5px 10px white;
+    animation: animate 10s linear infinite;
+}
+
+.box div:nth-child(5){
+    top: 67%;
+    left: 10%;
+    box-shadow: 5px 10px brown;
+    animation: animate 6s linear infinite;
+}
+
+.box div:nth-child(6){
+    top: 80%;
+    left: 70%;
+    box-shadow: 5px 10px blueviolet;
+    animation: animate 12s linear infinite;
+}
+
+.box div:nth-child(7){
+    top: 60% ;
+    left: 80%;
+    box-shadow: 5px 10px red;
+    animation: animate 15s linear infinite;
+}
+
+.box div:nth-child(8){
+    top: 32%;
+    left: 25%;
+    box-shadow: 5px 10px gold;
+    animation: animate 16s linear infinite;
+}
+
+.box div:nth-child(9){
+    top: 90%;
+    left: 25%;
+    box-shadow: 5px 10px green;
+    animation: animate 9s linear infinite;
+}
+
+.box div:nth-child(10){
+    top: 20%;
+    left: 80%;
+    box-shadow: 5px 10px red;
+    animation: animate 5s linear infinite;
+}
+@keyframes animate{
+    0%{
+        transform: scale(0) translateY(0) rotate(0);
+        opacity: 1;
+    }
+    100%{
+        transform: scale(2) translateY(-50px) rotate(720deg);
+        opacity: 0;
+    }
+}
