@@ -1,12 +1,12 @@
-.example:hover {
+  .example:hover {
     color: #00ff15;
-}
+  }
 
-header:hover {
+  header:hover {
     background-color: rgb(132, 132, 199);
   }
 
-a:link {
+  a:link {
     color: red;
   }  
   

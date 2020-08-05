@@ -1,98 +1,77 @@
 <!DOCTYPE html>
-
 <html>
-
-<head>
-    <title> First html page </title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <meta charset="UTF-8">
-    <meta name="desciption" content="Using html tags">
-    <meta name="keywords" content="HTML">
-    <meta name="viewport" content="width = device-width, initial-scale = 1.0">
-    <base href="https://github.com/" target="_blank">
-
-</head>
-
-<body>
-
-    <nav class="nav_bar">
-        <a href="/about/">ABOUT AS</a> |
-        <a href="/pictures/">PICTURES</a> |
-        <a href="/articles/">ARTICLES</a> |
-        <a href="/frineds/">FRINEDS</a>
-    </nav>
-
-    <div class="myDiv">
-
-        <p> <cite> HTML PAGE </cite></p>
-
-        <button type="button" onclick="alert('Hello from web page')">Some alert!</button> <br>
-        <hr>
-        <details>
-            <summary>What is this page for?</summary>
-            <p>This page is for learning <dfn>CSS.</dfn></p>
-        </details>
-        <hr>
-
-        <div class="big">
-            <div id="anim">
-                <a href="google.com"> HTML </a>
+    <head>
+        <title> First html page </title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <meta charset="UTF-8">
+        <meta name="desciption" content="Using html tags">
+        <meta name="keywords" content="HTML">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <base href="https://github.com/" target="_blank">
+    </head>
+    <body>
+        <nav class="nav_bar">
+            <a href="/about/">ABOUT AS</a> |
+            <a href="/pictures/">PICTURES</a> |
+            <a href="/articles/">ARTICLES</a> |
+            <a href="/frineds/">FRINEDS</a>
+        </nav>
+        <div class="myDiv">
+            <p> <cite> HTML PAGE </cite></p>
+            <button type="button" onclick="alert('Hello from web page')">Some alert!</button> <br>
+            <hr>
+            <details>
+                <summary>What is this page for?</summary>
+                <p>This page is for learning <dfn>CSS.</dfn></p>
+            </details>
+            <hr>
+            <div class="big">
+                <div id="anim">
+                    <a href="google.com"> HTML </a>
+                </div>
+                <div id="animTwo">
+                    <a href="google.com"> CSS </a>
+                </div>
             </div>
-
-            <div id="animTwo">
-                <a href="google.com"> CSS </a>
-            </div>
-
-        </div>
-        <br>
-        <br>
-
-        <img src = "https://cdn1.iconfinder.com/data/icons/seo-web-service/503/35-html-512.png" alt = "Picture html">
-
-        <form class="choose" action="Some action">
-            <label for="cars">Choose a version:</label> <br>
-            <select name="html" id="html">
-                <option value="1">Version 1</option>
-                <option value="2">Version 2</option>
-                <option value="3">Version 3</option>
-                <option value="4">Version 4</option>
-            </select>
             <br>
             <br>
-            <input type="submit" value="Submit">
-        </form>
-
-        <div class="circle"> </div>
-
-        </main>
-
-
-        <form action="/action_page.php">
-            <fieldset>
-                <legend>This is a legend:</legend>
-                <label for="form_name">First name:</label>
-                <input type="text" id="form_name" name="form_name"><br><br>
-                <label for="label_name">Last name:</label>
-                <input type="text" id="label_name" name="label_name"><br><br>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email"><br><br>
-                <label for="birthday">Birthday:</label>
-                <input type="date" id="birthday" name="birthday"><br><br>
-                <input type="submit" value="Register">
-            </fieldset>
-
-            <div class="grid-container">
-                <div class="item1">1</div>
-                <div class="item2">2</div>
-                <div class="item3">3</div>  
-                <div class="item4">4</div>
-                <div class="item5">5</div>
-                <div class="item6">6</div>
-              </div>
-              
-
-            <p id="colomText">Though in general hydro-testing will be undertaken during the
+            <img src="https://cdn1.iconfinder.com/data/icons/seo-web-service/503/35-html-512.png" alt="Picture html">
+            <form class="choose" action="Some action">
+                <label for="cars">Choose a version:</label> <br>
+                <select name="html" id="html">
+                    <option value="1">Version 1</option>
+                    <option value="2">Version 2</option>
+                    <option value="3">Version 3</option>
+                    <option value="4">Version 4</option>
+                </select>
+                <br>
+                <br>
+                <input type="submit" value="Submit">
+            </form>
+            <div class="circle"> </div>
+            </main>
+            <form action="/action_page.php">
+                <fieldset>                    <legend>This is a legend:</legend>
+                    <label for="form_name">First name:</label>
+                    <input type="text" id="form_name" name="form_name"><br><br>
+                    <label for="label_name">Last name:</label>
+                    <input type="text" id="label_name" name="label_name"><br><br>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email"><br><br>
+                    <label for="birthday">Birthday:</label>
+                    <input type="date" id="birthday" name="birthday"><br><br>
+                    <input type="submit" value="Register">
+                </fieldset>
+                <div class="grid-container">
+                    <div class="item1">1</div>
+                    <div class="item2">2</div>
+                    <div class="item3">3</div>  
+                    <div class="item4">4</div>
+                    <div class="item5">5</div>
+                    <div class="item6">6</div>
+                </div>
+                <p id="colomText">Though in general hydro-testing will be undertaken during the
                 summer months, there may be a need to do some hydro-testing
                 during the winter months for the short pipe sections that will
                 be installed at the winter river crossing sites.
@@ -101,57 +80,46 @@
                 during the winter months for the short pipe sections that will
                 be installed at the winter river crossing sites.
                 during the winter months for the short pipe sections that will</p>
-
-            <table class="table2">
-                <tr>
-                    <th>Firstname</th>
-                    <th>Lastname</th>
-                </tr>
-                <tr>
-                    <td>Peter</td>
-                    <td>Griffin</td>
-                </tr>
-                <tr>
-                    <td>Lois</td>
-                    <td>Griffin</td>
-                </tr>
-            </table>
-
-            <hr>
-
-            <h6>HTML Tutorial</h6>
-            <h6>CSS Tutorial</h6>
-            <h6>JavaScript Tutorial</h6>
-            <h6>Bootstrap Tutorial</h6>
-            <h6>SQL Tutorial</h6>
-            <h6>PHP Tutorial</h6>
-
-        </form>
-
-        <div id = "divSmoll">
-        <p class = "toscroll">
-        When you set the position relative to an element, without adding 
-        any other positioning attributes (top, bottom, right, left) nothing
-         will happen. When you add an additional position, such as left:
-         20px the element will move 20px to the right from its normal position.
-         Here, you can see that this element is relative to itself. 
-        </p>
-    </div>
-
-         <hr>        
-
-        <footer>
-            <address>
-                <a href="https://translate.google.am/?hl=en&tab=rT"> Author of page </a> . <br>
-                USA <br>
-                <q>New_York</q>
-            </address>
-        </footer>
-        <label for="disk_c">Disk usage C:</label>
-
-    </div>
-
-</body>
-
-
+                <table class="table2">
+                    <tr>
+                        <th>Firstname</th>
+                        <th>Lastname</th>
+                    </tr>
+                    <tr>
+                        <td>Peter</td>
+                        <td>Griffin</td>
+                    </tr>
+                    <tr>
+                        <td>Lois</td>
+                        <td>Griffin</td>
+                    </tr>
+                </table>
+                <hr>
+                <h6>HTML Tutorial</h6>
+                <h6>CSS Tutorial</h6>
+                <h6>JavaScript Tutorial</h6>
+                <h6>Bootstrap Tutorial</h6>
+                <h6>SQL Tutorial</h6>
+                <h6>PHP Tutorial</h6>
+            </form>
+            <div id="divSmoll">
+                <p class="toscroll">
+                    When you set the position relative to an element, without adding 
+                    any other positioning attributes (top, bottom, right, left) nothing
+                    will happen. When you add an additional position, such as left:
+                    20px the element will move 20px to the right from its normal position.
+                    Here, you can see that this element is relative to itself. 
+                </p>
+            </div>
+            <hr>        
+            <footer>
+                <address>
+                    <a href="https://translate.google.am/?hl=en&tab=rT"> Author of page </a> . <br>
+                    USA <br>
+                    <q>New_York</q>
+                </address>
+            </footer>
+            <label for="disk_c">Disk usage C:</label>
+        </div>
+    </body>
 </html>
