@@ -11,7 +11,6 @@ div.exampleOne {
 }
 
 
-
 div.backgroundRED{
     width: 50%;
     height: 50%;
@@ -63,11 +62,87 @@ div.backgroundBlue{
     background-color: blue;
 }
 
+p::first-line {
+    background-color: red;
+}
+
+
+p:empty {
+    width: 100px;
+    height: 20px;
+    background: #ff0000;
+}
+
+p::first-letter {
+    font-size: 150%;
+    color: brown;
+}
+
+input[type=text]:enabled {
+    background: skyblue;
+}
+
+input[type=text]:disabled {
+    background: skyblue;
+}
+
+input:checked {
+    height: 50px;
+    width: 50px;
+}
+
+
+a:active {
+    background-color: blue;
+}
+
+div[class$="example"] {
+    background: #ffff00;
+}
+
+p::before {
+    content: "CSS ::before Selector Hello!";
+}
+
+p::after {
+    content: " Goodby";
+}
+
+div[class^="use"] {
+    background: #e1d5e7;
+    color: black;
+}
+
+[lang|=en] {
+    background: yellow;
+}
+
+div > p {
+    background-color: yellow;
+}
+
+p ~ ul {
+    background: green;
+}
+
 div.exampleTwo {
     width: 400px;
     height: 200px;
     background-color: olivedrab;
     all: initial;
+}
+
+* {
+    background-color:gray;
+}
+
+h2, a {
+    background-color: darkgrey;
+}
+
+div + p {
+    margin-top: 100px;
+    background-color:blue;
 }
 
 a{
@@ -79,6 +154,7 @@ div {
     color: saddlebrown;
     font-size:100%;
 }
+
 
 #a-two {
     color: crimson;
