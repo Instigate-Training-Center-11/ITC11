@@ -1,0 +1,1094 @@
+@import "navigation.css";
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.grid {
+    display: grid;
+    grid: "header header header" "nav article ads" "footer footer footer" / 20% 1fr 15%;
+    grid-gap: 10px;
+}
+
+.direction .kerning {
+    font-kerning: normal;
+}
+
+.flex-grow.box {
+    padding: 10px;
+    flex-grow: 2;
+}
+
+#grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1px;
+}
+
+pre {
+    tab-size: 16;
+}
+
+div.ul {
+    color: #8AC007;
+}
+
+.caption td,
+.caption th {
+    border: 2px solid rgb(255, 30, 0);
+    padding: 5px;
+    empty-cells: hide;
+}
+
+div h5 {
+    color: blue;
+}
+
+#grid>div {
+    background-color: limegreen;
+    color: white;
+    font-size: 4vw;
+    padding: 10px;
+}
+
+div+p {
+    background-color: yellow;
+}
+
+p~ul {
+    background: #ff0000;
+}
+
+div[target] {
+    width: 40%;
+    padding: 30px;
+    background: gold;
+    overflow: auto;
+    resize: both;
+}
+
+div[target=_blank] {
+    width: 40%;
+    padding: 30px;
+    background: gold;
+    overflow: auto;
+    resize: both;
+}
+
+[title~=flower] {
+    border: 5px solid yellow;
+}
+
+[lang|=en] {
+    background: rgb(14, 136, 136);
+}
+
+div[class^="multicol"] {
+    background: #ffff00;
+}
+
+div[class$="multicol1"] {
+    color: #ff0000;
+}
+
+div[class*="ol"] {
+    font-size: 18px;
+}
+
+div.rotate {
+    width: 50px;
+    height: 30px;
+    padding: 20px;
+    text-align: center;
+    background: rgb(30, 121, 133);
+    animation: rotate 4s linear 5s infinite normal none;
+    backface-visibility: hidden;
+    visibility: visible;
+    white-space: nowrap;
+    word-break: break-all;
+    word-spacing: 30px;
+    word-wrap: break-word;
+    writing-mode: horizontal-tb;
+}
+
+#grid>div:first-child {
+    grid-area: 2 / 2 / 4 / 4;
+    background: orangered;
+}
+
+#grid1 {
+    display: grid;
+    grid-template-rows: 20vh 20vh;
+    grid-template-columns: 25vw;
+    grid-auto-columns: 5vw;
+    grid-auto-flow: column;
+    grid-gap: 5px;
+    grid-template-columns: auto auto auto;
+}
+
+#grid1>div {
+    background-color: tomato;
+    color: white;
+    font-size: 2vw;
+    padding: 10px;
+}
+
+#grid2 {
+    display: grid;
+    grid-template-rows: 10vh 10vh;
+    grid-auto-flow: column;
+    grid-gap: 5px;
+}
+
+#grid2>div {
+    background-color: tomato;
+    color: white;
+    font-size: 2vw;
+    padding: 10px;
+}
+
+#grid3 {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: 20vh;
+    grid-auto-rows: 5vh;
+    grid-gap: 10px;
+}
+
+#grid3>div {
+    background-color: tomato;
+    color: white;
+    font-size: 2vw;
+    padding: 10px;
+}
+
+#grid4 {
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr 0.5fr;
+    grid-gap: 1px;
+}
+
+#grid4>div {
+    background-color: orangered;
+    color: white;
+    font-size: 4vw;
+    padding: 10px;
+}
+
+#grid5 {
+    display: grid;
+    grid: auto auto auto / auto auto auto;
+    grid-column-gap: 20px;
+}
+
+#grid5>div {
+    background-color: slateblue;
+    color: white;
+    font-size: 4vw;
+    padding: 10px;
+}
+
+#grid6 {
+    display: grid;
+    grid-template-rows: 0.5fr 0.5fr 0.5fr;
+    grid-auto-flow: column;
+    grid-gap: 10px;
+}
+
+#grid6>div {
+    background-color: orangered;
+    color: white;
+    font-size: 2vw;
+    padding: 10px;
+}
+
+#grid6>div:first-child {
+    grid-column-start: 2;
+    background: limegreen;
+}
+
+#grid7 {
+    display: grid;
+    grid-template-columns: 0.3fr 0.3fr 0.3fr;
+    grid-gap: 1px;
+}
+
+#grid7>div {
+    background-color: limegreen;
+    color: white;
+    font-size: 4vw;
+    padding: 10px;
+}
+
+#grid7>div:nth-child(6) {
+    grid-column: 1 / 3;
+    background: orangered;
+}
+
+#grid8 {
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr 0.5fr;
+    grid-gap: 1px;
+}
+
+#grid8>div {
+    background-color: orangered;
+    color: white;
+    font-size: 2vw;
+    padding: 10px;
+}
+
+#grid8>div:first-child {
+    grid-row-end: 3;
+    background: limegreen;
+}
+
+#grid9 {
+    display: grid;
+    grid: auto auto auto / auto auto auto;
+    grid-row-gap: 10px;
+}
+
+#grid9>div {
+    background-color: rgb(205, 90, 205);
+    color: white;
+    font-size: 2vw;
+    padding: 10px;
+}
+
+#grid10 {
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr 0.5fr;
+    grid-gap: 1px;
+}
+
+#grid10>div {
+    background-color: orangered;
+    color: white;
+    font-size: 2vw;
+    padding: 10px;
+}
+
+#grid10>div:first-child {
+    grid-row-start: 3;
+    background: limegreen;
+}
+
+#grid>div:nth-child(5) {
+    grid-column-end: 4;
+    background: rgb(50, 148, 205);
+}
+
+#grid11 {
+    display: grid;
+    grid-template: 5vh 1fr 5vh / 3vw 1fr 12vw;
+    grid-gap: 10px;
+    height: 5vh;
+    max-height: 6vh;
+}
+
+#grid11>div {
+    background-color: hotpink;
+    color: white;
+    font-size: 2vw;
+    padding: 10px;
+}
+
+.grid-template {
+    display: grid;
+    grid-template-areas: "header header header" "nav article ads" "nav footer footer";
+    grid-template-rows: 80px 1fr 70px;
+    grid-template-columns: 50vw 1fr 10vw;
+    grid-gap: 10px;
+    height: 6vh;
+    margin: 0;
+}
+
+.grid-template header,
+.grid-template footer,
+.grid-template article,
+.grid-template nav,
+.grid-template div {
+    padding: 20px;
+    background: gold;
+}
+
+.grid-template #pageHeader {
+    grid-area: header;
+}
+
+.grid-template #pageFooter {
+    grid-area: footer;
+}
+
+.grid-template #mainArticle {
+    grid-area: article;
+}
+
+.grid-template#mainNav {
+    grid-area: nav;
+}
+
+.grid-template #siteAds {
+    grid-area: ads;
+}
+
+.mt-25 {
+    margin-top: 25px;
+}
+
+.parent_div {
+    width: 50px;
+    max-width: 60px;
+    min-width: 45px;
+    height: 300px;
+    min-width: 250px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-self: start;
+    justify-content: start;
+    padding: 2px 0 3px;
+}
+
+.parent_div div {
+    width: 50px;
+    height: 50px;
+    margin: 2px 0 3px 0;
+    padding: 5px 10px;
+}
+
+.myBlueDiv {
+    align-self: center;
+    margin: 1px 2px;
+    background: red;
+    position: relative;
+    padding: 5px 0 2px 0;
+    animation: mymove 10s infinite;
+}
+
+.align_items {
+    width: 220px;
+    height: 100px;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    margin-left: 1px;
+    margin-right: 1px;
+}
+
+.align_items div {
+    padding: 2px;
+    flex: 1;
+    height: 50px;
+}
+
+.div1 {
+    background-color: red;
+}
+
+.div2 {
+    background-color: blue;
+}
+
+.div3 {
+    background-color: orange;
+}
+
+.align-self {
+    width: 220px;
+    height: 100px;
+    border: 1px solid black;
+    display: flex;
+    align-items: flex-start;
+}
+
+.align-self div {
+    flex: 1;
+}
+
+@keyframes mymove {
+    from {
+        top: 0px;
+    }
+    to {
+        top: 100px;
+    }
+}
+
+div.bounce {
+    width: 100px;
+    padding: 20px;
+    background: gold;
+    position: relative;
+    animation: bounce 1s ease-in 2s 6 alternate none;
+}
+
+@keyframes bounce {
+    from {
+        top: 0px;
+        left: 0px;
+    }
+    to {
+        top: 150px;
+        left: 150px;
+    }
+}
+
+p::first-letter {
+    color: rgb(81, 255, 0);
+}
+
+ul::first-letter {
+    color: rgb(4, 0, 255);
+}
+
+p::first-line {
+    color: red;
+}
+
+ul::first-line {
+    color: orange;
+}
+
+.before-afther p::before {
+    content: "Before ... ";
+}
+
+p::after {
+    content: " ... After";
+    letter-spacing: 3px;
+    line-height: 1.6;
+    font: italic normal 300 1.8em/1.5em Helvetica, sans-serif;
+}
+
+.all {
+    background: gold;
+    color: green;
+    font-family: serif;
+    font-size: 2em;
+    empty-cells: hide;
+}
+
+@font-face {
+    font-family: myFirstFont;
+    src: url(sansation_light.woff);
+}
+
+.all p {
+    background: yellowgreen;
+    font: italic normal 300 1.8em/1.5em Helvetica, sans-serif;
+    hanging-punctuation: first;
+}
+
+.all div {
+    color: white;
+    font-family: sans-serif;
+    font-size: .7em;
+    font-style: italic;
+    padding: 5px;
+    border: 1px solid black;
+    empty-cells: hide;
+}
+
+.c2 {
+    all: inherit;
+}
+
+.c3 {
+    all: unset;
+}
+
+.c4 {
+    all: initial;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(360deg);
+    }
+}
+
+.boo {
+    background: rgb(10, 88, 114) url("./images/img_tree-removebg-preview.png") no-repeat fixed center;
+    mix-blend-mode: darken;
+    height: 230px;
+    width: 200px;
+    background-clip: padding-box;
+    background-origin: content-box;
+    background-size: 200px 200px;
+    border: double;
+}
+
+.borders {
+    width: 250px;
+    height: 250px;
+    border-bottom: 4px dotted blue;
+    border-bottom-color: coral;
+    border-bottom-left-radius: 25px;
+    border-bottom-left-radius: 50px 20px;
+    border-bottom-right-radius: 75px;
+    border-bottom-style: dotted;
+    border-bottom-width: thin;
+    border-collapse: separate;
+    border-image-source: url(border.png);
+    border-image-outset: 10px;
+    border-image-width: 50px;
+    border-left: 15px solid red;
+    border-right: 14px dotted blue;
+    border-top: 5px solid green;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 25px;
+}
+
+table {
+    border-collapse: collapse;
+    table-layout: auto;
+}
+
+table,
+td,
+th {
+    border: 1px solid black;
+    border-color: coral;
+    border-image: url(./images/img_tree-removebg-preview.png) 30 round;
+    border-image-width: 50px;
+    empty-cells: hide;
+    padding-left: 1px;
+    padding-right: 1px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+
+.relative {
+    position: relative;
+    height: 200px;
+    border: 4px solid red;
+}
+
+.relative div {
+    position: absolute;
+    width: 50%;
+    bottom: 10px;
+    border: 3px solid #8AC007;
+    height: 100px;
+    z-index: 10;
+}
+
+.multicol-3 {
+    width: 350px;
+    padding: 5px;
+    border: 1px solid black;
+    margin: 30px;
+    font: 12px sans-serif;
+    vertical-align: text-top;
+    -webkit-columns: 70px 3;
+    /* Safari and Chrome */
+    -moz-columns: 70px 3;
+    /* Firefox */
+    columns: 70px 3;
+    /* CSS3 */
+}
+
+.inner-box {
+    border: 3px solid limegreen;
+    padding: 10px;
+    -webkit-box-decoration-break: clone;
+    /* Safari and Chrome */
+    box-decoration-break: clone;
+    /* CSS */
+}
+
+.drop-shadow {
+    box-shadow: 7px 7px 20px 0px rgba(0, 0, 0, 0.3), 40px 40px 10px -40px rgba(0, 0, 0, 0.8) inset;
+    width: 200px;
+    padding: 30px;
+    border: 1px solid limegreen;
+    margin: 30px;
+}
+
+.content-box {
+    box-sizing: content-box;
+}
+
+.border-box {
+    box-sizing: border-box;
+}
+
+.content-box,
+.border-box {
+    background: rgb(39, 168, 22);
+    width: 150px;
+    height: 150px;
+    padding: 10px;
+    border: 10px solid rgb(77, 3, 70);
+    margin: 10px;
+    float: left;
+}
+
+.multicol {
+    background-color: beige;
+    padding: 10px;
+    column-count: 3;
+    column-fill: auto;
+    column-rule-color: red;
+    column-rule: 2px solid olivedrab;
+    column-rule-style: dotted;
+    column-rule-width: 10px;
+}
+
+.multicol hr {
+    break-after: column;
+}
+
+.multicol h3 {
+    break-before: column;
+}
+
+.multicol1 {
+    background-color: lightyellow;
+    padding: 10px;
+    column-count: 3;
+    column-rule: 2px dotted coral;
+}
+
+.multicol1 ul {
+    break-inside: avoid;
+    list-style: none;
+}
+
+.caption table {
+    border: 3px solid rgb(117, 79, 7);
+    border-collapse: collapse;
+    width: 100%;
+    empty-cells: hide;
+}
+
+.caption caption {
+    caption-side: bottom;
+}
+
+.caption input {
+    caret-color: orange;
+    color: white;
+    background: black;
+    font-size: 32px;
+    padding: 1vw;
+}
+
+.right,
+.left,
+.clear {
+    background: rgb(21, 127, 168);
+    color: white;
+    width: 100px;
+    padding: 10px;
+    margin: 5px;
+}
+
+.right {
+    float: right;
+}
+
+.left {
+    float: left;
+}
+
+.clear {
+    clear: both;
+    background: rgb(77, 3, 70);
+}
+
+.clip {
+    background: url("./images/img_tree-removebg-preview.png");
+    border: 2px solid black;
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    top: inherit;
+    left: 0px;
+    clip-path: circle(50%);
+}
+
+.newspaper h2 {
+    column-span: all;
+}
+
+.newspaper {
+    column-count: 3;
+    column-width: 100px;
+}
+
+.counter-increment {
+    line-height: 0.8em;
+    counter-reset: chapter;
+    cursor: move;
+    background: gold;
+    padding: 20px;
+    font-size: 3vh;
+}
+
+.counter-increment h1 {
+    font-size: 18px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.counter-increment h1:before {
+    content: "Chapter " counter(chapter) ": ";
+    counter-increment: chapter;
+}
+
+.direction>p {
+    direction: rtl;
+}
+
+.filter img {
+    filter: grayscale(100%);
+}
+
+.outer-container {
+    font: 16px sans-serif;
+    background: gold;
+    color: white;
+    height: 200px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: row-reverse;
+    text-align: center;
+    text-align-last: right;
+    text-decoration: overline;
+    text-decoration: underline;
+    text-decoration-color: red;
+    text-decoration-style: solid;
+    text-decoration-line: overline;
+    text-indent: 50px;
+    text-justify: inter-word;
+    text-overflow: ellipsis;
+    text-shadow: 2px 2px #ff0000;
+    unicode-bidi: bidi-override;
+}
+
+.box {
+    padding: 10px;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 700px;
+}
+
+.smaller {
+    background: yellowgreen;
+    flex-shrink: 5;
+}
+
+.flex-flow {
+    height: 200px;
+    font: 100 24px/100px sans-serif;
+    text-align: center;
+    color: white;
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.flex-flow div {
+    height: 50%;
+    width: 50%;
+}
+
+.red {
+    background: orangered;
+}
+
+.green {
+    background: yellowgreen;
+}
+
+.blue {
+    background: steelblue;
+}
+
+.flex-grow {
+    font: 16px sans-serif;
+    background: gold;
+    color: white;
+    height: 200px;
+    border: 1px solid black;
+    display: flex;
+}
+
+.flex-grow .larger {
+    background: yellowgreen;
+    flex-grow: 10;
+}
+
+.direction div {
+    font-family: Lato;
+    font-weight: 900;
+    font-size: 8vw;
+}
+
+.direction .no-kerning {
+    font-kerning: none;
+}
+
+.direction .kerning {
+    font-kerning: normal;
+}
+
+.adjust div.a {
+    font-family: verdana;
+}
+
+.adjust div.b {
+    font-family: 'times new roman';
+}
+
+.adjust #div1,
+.adjust #div2 {
+    font-size-adjust: 0.58;
+}
+
+.condensed {
+    font-stretch: condensed;
+}
+
+@font-face {
+    font-family: "Roboto";
+    font-stretch: condensed;
+    font-weight: 400;
+    src: url(/samples/fonts/roboto-condensed.woff2) format("woff2");
+}
+
+.font-stretch {
+    font-family: Roboto, serif;
+    font-size: 1vw;
+    background: beige;
+}
+
+.font-stretch p {
+    color: darkorange;
+    font-size: 1.1em;
+    padding: 20px;
+    border-style: double;
+}
+
+.font-stretch .sc {
+    font-variant: small-caps;
+}
+
+time {
+    font-variant-caps: all-small-caps;
+}
+
+.grid header,
+footer,
+.grid article,
+.grid nav,
+.grid div {
+    padding: 20px;
+    background: gold;
+}
+
+#pageHeader {
+    grid-area: header;
+}
+
+#pageFooter {
+    grid-area: footer;
+}
+
+#mainArticle {
+    grid-area: article;
+}
+
+#mainNav {
+    grid-area: nav;
+}
+
+#siteAds {
+    grid-area: ads;
+}
+
+dd {
+    width: 55px;
+    border: 1px solid black;
+}
+
+dd.none {
+    -webkit-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+}
+
+dd.manual {
+    -webkit-hyphens: manual;
+    -ms-hyphens: manual;
+    hyphens: manual;
+}
+
+dd.auto {
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+}
+
+.isolate {
+    font-family: sans-serif;
+    background-image: url('./images/img_tree-removebg-preview.png');
+    width: 200px;
+    height: 200px;
+    /* background-size: cover; */
+}
+
+.isolate h1 {
+    width: 200px;
+    padding: 10px;
+    float: left;
+    background-color: orange;
+    color: white;
+    mix-blend-mode: overlay;
+}
+
+.isolate .isolated {
+    isolation: isolate;
+}
+
+.list-style ul {
+    list-style-image: url("./images/rsz_download.jpg");
+    list-style-position: inside;
+    list-style-type: square;
+}
+
+@media only screen and (max-width: 768px) {
+    body {
+        background-color: rgb(8, 105, 138);
+    }
+    h1 {
+        page-break-before: always;
+    }
+    pre,
+    blockquote {
+        page-break-inside: avoid;
+    }
+}
+
+img.a {
+    width: 200px;
+    height: 400px;
+    object-fit: cover;
+    object-position: 55px 10%;
+}
+
+.outer-container {
+    height: 70px;
+    font: 100 24px/50px sans-serif;
+    text-align: center;
+    color: white;
+    display: flex;
+}
+
+.outer-container div {
+    width: 10%;
+    flex: 1 1 auto;
+}
+
+.red {
+    background: orangered;
+    order: 2;
+}
+
+.green {
+    background: yellowgreen;
+    order: 2;
+}
+
+.blue {
+    background: steelblue;
+    order: 1;
+}
+
+#outline {
+    font-size: 1vw;
+    padding: 1vw;
+    margin: 1vw;
+    outline: 20px solid orange;
+    border: 50px solid green;
+    outline-width: 2vw;
+    outline-style: dotted;
+    outline-offset: 50px;
+    outline-color: orange;
+}
+
+.clipped {
+    width: 150px;
+    height: 110px;
+    padding: 20px;
+    background-color: gold;
+    border: 5px solid orange;
+    overflow: scroll;
+    overflow-wrap: break-word;
+    overflow-x: scroll;
+    overflow-y: scroll;
+}
+
+footer {
+    page-break-after: always;
+}
+
+div.container {
+    padding: 20px;
+    perspective: 100px;
+}
+
+div.rotate {
+    width: 100px;
+    padding: 30px;
+    text-align: center;
+    background: gold;
+    transform: rotateX(15deg);
+    pointer-events: none;
+    transform-origin: 20% 40%;
+    transform-style: preserve-3d;
+    perspective-origin: 25% 75%;
+}
+
+p:lang(en) q {
+    quotes: "\201c" "\201d" "\2018" "\2019";
+}
+
+p:lang(fr) q {
+    quotes: "\00AB\00A0" "\00A0\00BB";
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.transition {
+    background-color: yellowgreen;
+    color: olivedrab;
+    width: 40%;
+    height: 20px;
+    padding: 10px;
+    font-size: 1em;
+    font-family: sans-serif;
+    transition: width 0.5s cubic-bezier(0.25, 0.1, 0.25, 1.4) 0s, height 0.5s cubic-bezier(0.25, 0.1, 0.25, 1.4) 0s, font-size 0.5s cubic-bezier(0.25, 0.1, 0.25, 1.4) 0s;
+}
+
+.transition:hover {
+    width: 70%;
+    height: 150px;
+    font-size: 2em;
+    font-weight: bold;
+    background-color: beige;
+    transition-duration: 0.3s;
+    transition-delay: 0s;
+    transition-property: width, height, font-size, font-weight, background-color;
+    transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1.4);
+}
