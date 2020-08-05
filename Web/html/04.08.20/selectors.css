@@ -81,6 +81,22 @@ a:hover {
     background-color: green;
 }
 
+p::first-letter {
+    font-size: 150%;
+}
+
+p:first-child {
+    background-color: lightyellow;
+}
+
+p:lang(am) {
+    background: lightblue;
+}
+
+p:nth-last-of-type(2) {
+    background: greenyellow;
+}
+
 input:checked {
     height: 20px;
     width: 20px;
@@ -96,22 +112,6 @@ input[type=radio]:disabled {
 
 input:valid {
     background-color: lightgreen;
-}
-
-p::first-letter {
-    font-size: 150%;
-}
-
-p:first-child {
-    background-color: lightyellow;
-}
-
-p:lang(am) {
-    background: lightblue;
-}
-
-p:nth-last-of-type(2) {
-    background: greenyellow;
 }
 
 input:-moz-read-write { /* For Firefox */
