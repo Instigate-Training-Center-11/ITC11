@@ -1,4 +1,11 @@
 
+body {
+    background: white url("code.jpg") no-repeat fixed center;
+    padding: 10px;
+    background-clip: content-box;
+    background-origin: content-box;
+}
+
 div.parent_1 {
     width: 220px;
     height: 300px;
@@ -73,3 +80,12 @@ div.animation_left{
     from {left: 500px; background-color: blue;}
     to {left: 0px;}
 }
+
+#hidden {
+    height: 100px;
+    width: 100px;
+    border: 1px solid black;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+}
+
