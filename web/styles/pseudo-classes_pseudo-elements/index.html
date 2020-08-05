@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./style.css">
+        <title>Document</title>
+    </head>
+    <!-- :root -->
+    <body>
+        <!-- :active, :hover -->
+        <a href="https://www.w3schools.com/tags/tag_a.asp">Active Link</a>
+        <a href="#">Unvisited link</a>
+
+        <!-- ::after -->
+        <p><em>::after--- EM element __First</em></p>
+        <p><em>::after--- EM element __Second</em></p>
+
+        <!-- :checked, :default -->
+        <input type="checkbox" value="Checkbox" checked><br>
+        <input type="radio" value="Radiobutton"><hr>
+
+        <!-- :enable, :disable, :focus, :in-range, :out-of-range, ::placeholder -->
+        <form action="#">
+            <input type="text" placeholder="disabled" disabled="disabled">
+            <input type="text" placeholder="enabled">
+            <input type="text" placeholder="disabled" disabled="disabled">
+            <input type="text" placeholder="enabled">
+            <label for="max-date">:in-range</label>
+            <input type="date" id="max-date" name="max-date" 
+                min="1979-12-31" max="1989-12-31" value="1982-12-31">
+        </form>
+        <br><br>
+
+        <!-- :empty -->
+        <b>Empty 'div' tag</b>
+        <div></div>
+        <hr>
+
+        <!-- First child, last child -->
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>2</li>
+            <li>3</li>
+        </ul>
+
+        <ul>
+            <li>4</li>
+            <li>5</li>
+            <li>5</li>
+            <li>6</li>
+        </ul>
+        <hr>
+
+        <!-- First letter, first-line, :lang(arm) -->
+        <pre lang="arm">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus esse
+            laborum vero vitae minus, dolorum optio, possimus libero dolor consectetur
+            aliquid officia impedit eveniet est odit quia, sequi explicabo qui?
+        </pre>
+        <hr>
+
+        <!-- first-of-type, last-of-type, :nth-child(n), nth-last-child(n) -->
+        <p>
+            <i>italic text 1</i>
+            <i>italic text 2</i>
+            <i>italic text 3</i>
+            <i>italic text 4</i>
+        </p>
+        <hr>
+
+        <!-- :invalid >>> must enter the correct value type ; :valid-->
+        <i></i>
+        <input type="email" value="hi">
+        <hr>
+
+        <!-- :nth-of-type(n), :only-of-type -->
+        <div>
+            <i>Only one 'i' child into 'div'</i>
+            <b>Bold text 1</b>
+            <b>Bold text 2</b>
+            <b>Bold text 3</b>
+            <b>Bold text 4</b>
+            <b>Bold text 5</b>
+        </div>
+        <hr>
+
+        <!-- :only-child -->
+        <div>
+            <span>Only one child</span>
+        </div>
+        <br><br>
+
+        <!-- :optional, :read-only, :read-write, :required -->
+        <p>Select and style only if the 'input' element does not have a "required" attribute:</p>
+        <div>
+            <input type="text" required readonly>
+            <input type="text">
+            <input type="text">
+            <input type="text">
+            <input type="text" required>
+        </div>
+        <hr>
+
+        <!-- : -->
+        <div>
+            <h3>Select some text here!!</h3>
+        </div>
+
+    </body>
+</html>

@@ -1,0 +1,177 @@
+* {
+    box-sizing: border-box;
+}
+
+a:active {
+    font-size: 20px;
+    color: red;
+}
+
+a:hover {
+    font-size: 40px;
+}
+
+a:link {
+    background-color: greenyellow;
+}
+
+a:visited {
+    background-color: gray;
+}
+
+em::after {
+    content: "--End<<<";
+    font-size: large;
+    background-color: darkorchid;
+}
+
+em::before {
+    content: ">>>Start--";
+    font-size: large;
+    background-color: plum;
+}
+
+input:checked {
+    height: 70px;
+    width: 70px;
+    display: block;
+}
+
+input:default {
+    box-shadow: 3px 6px green;
+    cursor: pointer;
+}
+
+input[type=text] {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input:in-range {
+    border: 5px solid yellow;
+}
+
+input:out-of-range {
+    border: 5px solid green;
+}
+
+input::placeholder {
+    font-size: 20px;
+}
+
+input:enabled {
+    background: red;
+    padding: 5px;
+}
+  
+input:disabled {
+    background: blue;
+    padding: 8px;
+}
+
+input[type=text]:focus {
+    border: 5px solid green;
+    outline: 2px double black;
+    outline-offset: 5px;
+}
+
+div:empty {
+    height: 50px;
+    width: 150px;
+    background-color: indianred;
+}
+
+ul li:first-child, ul li:last-child {
+    color: lightcoral;
+    font-size: 22px;
+    background-color: lightslategray;
+    width: 200px;
+}
+
+pre::first-letter {
+    font-size: 40px;
+    color: mediumorchid;
+}
+
+pre::first-line {
+    text-decoration: underline;
+}
+
+p i:first-of-type, p i:last-of-type {
+    background: red;
+    width: 100px;
+}
+
+p i {
+    display: block;
+}
+
+i+input:invalid {
+    border: 10px double black;
+}
+
+i+input:valid {
+    border: 10px double yellowgreen;
+}
+
+pre:lang(arm) { 
+    border: 10px double green;
+}
+
+i:nth-child(3) {
+    background-color: blueviolet;
+    width: 100px;
+}
+
+i:nth-last-child(4) {
+    outline: 5px double blueviolet;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+div b:nth-of-type(3) {
+    border: 3px solid cyan;
+}
+
+div b {
+    display: block;
+    width: 200px;
+}
+
+div i:only-of-type {
+    background: red;
+}
+
+div span:only-child {
+    border: 5px solid palevioletred;
+}
+
+div input:optional {
+    background-color: plum;
+}
+
+div input {
+    display: block;
+}
+
+div input:read-only {
+    border: 5px solid green;
+}
+
+div input:read-write {
+    border: 5px solid purple;
+}
+
+div input:required {
+    outline: 5px solid salmon;
+    outline-offset: 5px;
+}
+
+:root {
+    background-color: seashell;
+}
+
+div h3::selection {
+    color: slateblue;
+    background-color: tomato;
+}
