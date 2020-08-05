@@ -1,0 +1,30 @@
+.class1 {
+    color: black;
+}
+.class1.class2 {
+    color: blanchedalmond;
+}
+* {
+    color: blueviolet;
+}
+div {
+    color: coral;
+}
+div.class1 {
+    color: cyan;
+}
+div,span {
+    color: darkmagenta;
+}
+div span {
+    color: dimgray;
+}
+div > span {
+    color: gold;
+}
+div + span {
+    color: hotpink;
+}
+a[target]{
+    background-color: yellow;
+}
