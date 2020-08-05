@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CSS Selectors</title>
+        <link rel="icon" type="image/jpg" href="https://icon-library.com/images/tags-icon/tags-icon-7.jpg">
+        <meta charset="UTF-8">
+        <meta name="description" content="CSS selectors">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="refresh" content="60">
+        <style>
+            * {
+                color: darkgreen;
+            }
+            .intro {
+                background-color: rgba(13, 109, 101, 0.89);
+            }
+            #ex1 {
+                background-color: lightslategray;
+            }
+            h1 {
+                border-style: dotted;
+            }
+            h2, h3 {
+                border-style: dotted;
+                border-color: darkkhaki;
+            }
+            h4.c1 {
+                background-color: violet;
+            }
+            div h4 {
+                background-color: rgb(146, 136, 136);
+            }
+            div > p {
+                font-style: italic;
+            }
+            h1 + p {
+                background-color: red;
+            }
+            p + ul {
+                background-color: lawngreen;
+            }
+            a[target] {
+                background-color:lightsalmon;
+            }
+            a[target=_blank] {
+                border-style: dotted;
+                border-color: red;
+            }
+            div[attribute |= 'value'] {
+                color: white;
+            }
+            div[attribute ^= 'value'] {
+                background-color: cornflowerblue;
+            }
+            div[class*="int"] {
+                word-spacing: 30px;
+            }
+            h4[class$="1"] {
+                text-decoration-line: underline;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <h1>CSS</h1><br>
+            <h1>SEelectors</h1>
+            <p>Some text</p>
+        </div><hr>
+
+        <div class="intro">
+            <p>An ex-engineer for Google's self-driving car unit has been sentenced to 18 months in prison for trade secret theft shortly before he joined Uber.</p>
+            <p>US District Judge William Alsup in San Francisco said Anthony Levandowski had carried out the "biggest trade secret crime I have ever seen". Levandowski loaded more than 14,000 Google files onto his laptop before leaving the firm in January 2016.</p>
+        </div><hr>
+          
+        <p> He led Uber's robocar project, only to be fired in 2017 over this case.</p>
+        <hr>
+
+        <p class="intro">Levandowski filed for bankruptcy in March this year because he owes $179m (£136m) to Google's parent company, Alphabet, for his actions.</p>
+        <hr>
+
+        <p id="ex1">Text 1</p><hr>
+
+        <div>
+            <h2>Text 2</h2>
+            <h3>Text 3</h3>
+        </div>
+
+        <div>
+            <h4 class="c1">Text 4</h4>
+            <h4 class="c2">Text 5</h4>
+        </div>
+
+        <div>
+            <h4 class="c1">Text 6</h4>    
+        </div>
+
+        <div>
+            <h2>Text 7</h2>
+            <p>Text 8</p>
+        </div>
+          
+        <div><span><p>Text 9</p></span></div>
+
+        <div>
+            <p>Text 10</p>
+            <h5>Text 11</h5>
+        </div>
+        <div>List 1</div>
+        <ul>
+            <li>Line 1</li>
+            <li>Line 2</li>
+            <li>Line 3</li>
+        </ul>
+
+        <p>List 2</p>
+        <ul>
+            <li>Line 1.1</li>
+            <li>Line 2.1</li>
+            <li>Line 3.1</li>
+        </ul>
+
+        <h2>List 3</h2>
+        <ul>
+            <li>Line 1.1</li>
+            <li>Line 2.1</li>
+            <li>Line 3.1</li>
+        </ul>
+        <hr>
+        <div attribute='value'>Test1</div>
+        <div attribute='value-new'>Test2</div>
+        <div attribute='valuenew'>Test3</div>
+        <div attribute='val'>Test3</div>
+        <div attribute='newvalue'>Test3</div>
+        <div attribute='value '>Test3</div>
+    </body>
+</html>
