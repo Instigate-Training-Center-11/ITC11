@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./style.css">
+        <title>Document</title>
+    </head>
+    <body>
+        <header>CSS selectors</header>
+        <!-- Table -->
+        <table border="1" class="size">
+            <tr class="class1 class2">
+                <th>a</th>
+                <th>b</th>
+                <th>c</th>
+            </tr>
+            <tr class="class1">
+                <td class="class2">4</td>
+                <td id="id">5</td>
+                <td>6</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>8</td>
+                <td>9</td>
+            </tr>
+        </table>
+
+        <br><p>London is big city</p>
+        <br><p class="class">London is big city</p>
+        <div>Lorem ipsum dolor, sit amet consectetur</div>
+
+        <ul>
+            <li>100</li>
+            <li>200</li>
+            <li>300</li>
+        </ul>
+
+        <div>
+            <p>Lorem ipsum dolor, sit amet consectetur</p>
+        </div>
+
+        <!-- tag1 > tag2 -->
+        <h2> tag1 > tag2 </h2>
+        <b>text 1</b>
+        <div>
+            <b>text 2</b>
+            <br>
+            <b>text 3</b>
+        </div>
+        <b>text 4</b>
+
+        <!-- tag1 + tag2 -->
+        <h2> tag1 + tag2 </h2>
+        <i></i>
+        <h4>text 1</h4>
+        <h4>text 2</h4>
+
+        <!-- tag1 ~ tag2 -->
+        <h2> tag1 ~ tag2 </h2>
+        <h4>Another text 1</h4>
+        <em></em>
+        <h4>Another text 2</h4>
+        <h4>Another text 3</h4>
+
+        <!-- atribute name -->
+        <h2> tag1[attr_name] </h2>
+        <p name="name">
+            Lorem ipsum dolor, sit amet consectetur
+            Lorem ipsum dolor, sit amet consectetur
+            Lorem ipsum dolor, sit amet consectetur
+        </p>
+
+        <!-- atr_name = atr_value -->
+        <h2>input[attribute_name=value]</h2>
+        <input type="text" placeholder="Enter_value">
+
+        <!-- atr_name ~= atr_value (^,|)-->
+        <h2>
+            tag[attribute_name~=value] AND tag[attribute_name|=value]
+            AND tag[attribute_name^=value]
+        </h2>
+        <h5 elem="max min sum" last="win" path="start">Lorem ipsum dolor,</h5>
+        <h5 elem="width sum" last="week" path="end-start">Lorem ipsum dolor,</h5>
+        <h5 elem="div" last="win-win" path="mid-start">Lorem ipsum dolor,</h5>
+        <h5 elem="sum" last="week-win" path="mid">Lorem ipsum dolor,</h5>
+        <br><br>
+
+        <!-- atr_name $= atr_value (*)-->
+        <h2>tag[attribute_name$=value] AND tag[attribute_name*=value]</h2>
+        <h6 end="end" every="every">Last text</h6>
+        <h6 end="end-text" every="no-every">Last text</h6>
+        <h6 end="start" every="any">Last text</h6>
+        <h6 end="e-end" every="none">Last text</h6>
+    </body>
+</html>

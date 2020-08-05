@@ -1,0 +1,111 @@
+* {
+    box-sizing: border-box;
+}
+
+header {
+    margin: auto;
+    text-align: center;
+    color: brown;
+    font-size: 50px;
+    text-decoration: underline;
+}
+
+.class1.class2 {
+    color: rgb(123, 247, 7);
+}
+
+.class1 .class2 {
+    color: palevioletred;
+}
+
+.class1, .class2 {
+    color: red;
+}
+
+#id {
+    background-color: yellow;
+    
+}
+
+.size {
+    width: 200px;
+    height: 200px;
+}
+
+p {
+    background-color: aqua;
+    border: 1px solid green;
+    margin: 20px;
+    padding: 10px;
+    width: 250px;
+}
+
+p.class {
+    background-color: blue;
+    color:red;
+}
+
+ul, li {
+    border: 10px double brown;
+    width: 100px;
+}
+
+div p {
+    border: 5px solid greenyellow ;
+    width: 120px;
+}
+
+div > b {
+    background-color: darkmagenta;
+    color: wheat;
+    width: 150px;
+}
+
+i + h4 {
+    background-color: rgba(109, 99, 56, 0.678);
+    color: rgb(38, 52, 83);
+    width: 150px;
+}
+
+em ~ h4 {
+    border: 4px solid tomato;
+    box-shadow: 3px, 9px;
+    width: 150px;
+}
+
+p[name] {
+    text-transform: uppercase;
+    background-color: thistle;
+    border: 5px double palevioletred;
+}
+
+input[placeholder=Enter_value] {
+    background-color: greenyellow;
+}
+
+[elem~=sum] {
+    border: 5px solid red;
+    width: 300px;
+}
+
+[last|=win] {
+    background-color: indigo;
+    width: 300px;
+}
+
+[path^=start] {
+    font-size: 40px;
+    width: 300px;
+}
+
+[end$=end] {
+    font-size: 25px;
+    color: brown;
+    font-style: oblique;
+    width: 300px;
+}
+
+[every*=every] {
+    border: 4px solid black;
+    width: 300px;
+}
