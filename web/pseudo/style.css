@@ -1,0 +1,172 @@
+* {
+    box-sizing: border-box;
+}
+
+a:active {
+    background-color: green;
+}
+
+a:hover {
+    border: 1px solid red;
+}
+
+i::after { 
+    content: "--> is italic";
+    color: red;
+}
+
+i::before { 
+    content: "-->This text";
+    color: pink;
+}
+
+input:checked {
+    width: 100px;
+    height: 100px;
+}
+
+input:default {
+    box-shadow: 0 0 2px 3px darkmagenta
+}
+
+input[type=text]:enabled {
+    background: palevioletred;
+}
+  
+input[type=text]:disabled {
+    background: darkgreen;
+}
+
+input:focus {
+    width: 500px;
+    height: 20px;
+}
+
+p:empty {
+    width: 100px;
+    height: 20px;
+    border: 5px dotted red;
+    background: rgb(46, 48, 44);
+}
+
+p:first-child {
+    background-color: turquoise;
+}
+
+p::first-letter {
+    background-color: red;
+}
+
+pre::first-line {
+    background-color: green;
+}
+
+em:first-of-type {
+    width: 100px;
+    height: 20;
+    border: 5px solid red;
+}
+
+div input:in-range {
+    width: 100px;
+    height: 30;
+    border: 1px solid green;
+}
+
+div input:invalid {
+    width: 200px;
+    border: 2px solid darkred;
+}
+
+div input:valid {
+    width: 400px;
+    border: 2px solid green;
+}
+
+b:lang(eng) {
+    color: green;
+}
+
+p:last-child {
+    border: 2px double blue;
+}
+
+h4:last-of-type {
+    width: 100px;
+    height: 30px;
+    border: 3px dashed grey
+}
+
+a:link {
+    box-shadow: 5px 10px yellow;
+    outline: auto;
+}
+
+h4:nth-child(2) {
+    width: 80px;
+    height: 30px;
+    border: 3px double red
+}
+
+h4:nth-last-child(2) {
+    width: 120px;
+    height: 31px;
+    border: 3px solid goldenrod
+}
+
+b:nth-of-type(1) {
+    color: red;
+}
+
+b:nth-last-of-type(2) {
+    color: pink
+}
+
+div b {
+    display: block;
+}
+
+div em:only-child {
+    border: 2px double green;
+    outline: solid;
+}
+
+span span:only-of-type {
+    height: 20px;
+    width: 200px;
+    border: 3px dashed orange;
+    outline: pink;
+}
+
+section input:optional {
+    height: 20px;
+    width: 200px;
+    color:red;
+}
+
+:root {
+    background-color: aquamarine;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+bdo::selection {
+    color: yellow;
+    background: green;
+}
+
+bdo::-moz-selection {
+    color: yellow;
+    background: green;
+}
+
+:target {
+    border: 2px dotted grey;
+    background-color: greenyellow
+}
+
+a:visited {
+    color: red;
+    border: 3px dotted black;
+    text-align: right;
+    outline: double;
+}
