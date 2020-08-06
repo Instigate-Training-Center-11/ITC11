@@ -1,97 +1,438 @@
 <html>
-    <head>
-        <title>test</title>
-        <meta charset="UTF-8">
-        <link rel="shortcut icon" href="./icon.jpg" type="image/x-icon">
-        <link rel="stylesheet" href="mystyle.css">
-        <meta name="description" content="Free Web movie site">
-        <meta name="author" content="Armen Nersesyan">
-        <meta http-equiv="refresh" content="5000">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="./style.css">
-    </head>
 
-    <body>
+<head>
+    <title>test</title>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="./icon.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="mystyle.css">
+    <meta name="description" content="Free Web movie site">
+    <meta name="author" content="Armen Nersesyan">
+    <meta http-equiv="refresh" content="5000">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+</head>
 
-        <img src="./1.jpg" width="100" height="140">
-        <div id="animacia">animation</div>
-        <div id="animation2">rotate</div>
-        <div class="message success" target="_blank">All installed packages</div>
-        <div class="message failed">failed error ab cd ada bdef kh</div>
-        <div class="message warning">warning ab cd ada bdef kh</div>
-        <div class="message">warning</div>
-        <form action="">
-            First name: <input type="text" value="your name"><br>
-            Last name: <input type="text" value="your surname"><br>
-        </form>
+<body>
 
-        my message
-        <h1>The align-content Property</h1>
-        <div class="exampleOne">
+    <div>Hover over me to show the p element
+        <p>I am hidden text</p>
+    </div>
+
+    <p><a class="highlight" href="css_syntax.asp">CSS Syntax</a></p>
+    <p><b><a href="https://www.w3schools.com/cssref/css3_pr_align-content.asp" target="_blank">w3schools.com</a></b></p>
+    <p><b>Note:</b> a:hover MUST come after a:link and a:visited in the CSS definition in order to be effective.</p>
+    <p><b>Note:</b> a:active MUST come after a:hover in the CSS definition in order to be effective.</p>
+
+    <p>pseudo-element is used to add a special style to the first letter of a text.</p>
+    <p>pseudo-element is used to add a special style to the first letter of a text.</p>
+
+    <h1>The transform Property</h1>
+
+    <h2>transform: rotate(20deg):</h2>
+    <div class="a">Transform1</div>
+    <br>
+
+    <h2>transform: skewY(20deg):</h2>
+    <div class="b">Transform2</div>
+    <br>
+
+    <h2>transform: scaleY(1.5):</h2>
+    <div class="c">Transform3</div>
+
+    <h2>perspective: 100px:</h2>
+    <div id="div1">DIV1
+        <div id="div2">DIV2</div>
+    </div>
+
+    <h2>perspective: none:</h2>
+    <div id="div3">DIV3
+        <div id="div4">DIV4</div>
+    </div>
+
+
+    <table class="a">
+        <tr>
+            <th>Company</th>
+            <th>Contact</th>
+            <th>Country</th>
+        </tr>
+        <tr>
+            <td>Alfreds Futterkiste</td>
+            <td>Maria Anders</td>
+            <td>Germany</td>
+        </tr>
+        <tr>
+            <td>Island Trading</td>
+            <td>Helen Bennett</td>
+            <td>UK</td>
+        </tr>
+        <tr>
+            <td>Magazzini Alimentari Riuniti</td>
+            <td>Giovanni Rovelli</td>
+            <td>Italy</td>
+        </tr>
+    </table>
+
+    <h2>table-layout: fixed; width: 180px:</h2>
+    <table class="b">
+        <tr>
+            <th>Company</th>
+            <th>Contact</th>
+            <th>Country</th>
+        </tr>
+        <tr>
+            <td>Alfreds Futterkiste</td>
+            <td>Maria Anders</td>
+            <td>Germany</td>
+        </tr>
+        <tr>
+            <td>Island Trading</td>
+            <td>Helen Bennett</td>
+            <td>UK</td>
+        </tr>
+        <tr>
+            <td>Magazzini Alimentari Riuniti</td>
+            <td>Giovanni Rovelli</td>
+            <td>Italy</td>
+        </tr>
+    </table>
+
+    <h2>table-layout: auto; width: 100%:</h2>
+    <table class="c">
+        <tr>
+            <th>Company</th>
+            <th>Contact</th>
+            <th>Country</th>
+        </tr>
+        <tr>
+            <td>Alfreds Futterkiste</td>
+            <td>Maria Anders</td>
+            <td>Germany</td>
+        </tr>
+        <tr>
+            <td>Island Trading</td>
+            <td>Helen Bennett</td>
+            <td>UK</td>
+        </tr>
+        <tr>
+            <td>Magazzini Alimentari Riuniti</td>
+            <td>Giovanni Rovelli</td>
+            <td>Italy</td>
+        </tr>
+    </table>
+
+    <h2>table-layout: fixed; width: 100%:</h2>
+    <table class="d">
+        <tr>
+            <th>Company</th>
+            <th>Contact</th>
+            <th>Country</th>
+        </tr>
+        <tr>
+            <td>Alfreds Futterkiste</td>
+            <td>Maria Anders</td>
+            <td>Germany</td>
+        </tr>
+        <tr>
+            <td>Island Trading</td>
+            <td>Helen Bennett</td>
+            <td>UK</td>
+        </tr>
+        <tr>
+            <td>Magazzini Alimentari Riuniti</td>
+            <td>Giovanni Rovelli</td>
+            <td>Italy</td>
+        </tr>
+    </table>
+
+    <h2>A Heading with a 5 pixels green dotted outline</h2>
+
+    <div class="a">A div element with a 2 pixels blue dashed outline. Also notice that the outline is outside of any
+        border.</div>
+
+
+    <h2>overflow: auto:</h2>
+    <div class="ex3">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt
+        ut laoreet dolore magna aliquam erat volutpat.</div>
+
+    <div id="main">
+        <p>isolation</p>
+        <p>isolation</p>
+    </div>
+
+    <h1>The order Property</h1>
+
+    <div id="main">
+        <div style="background-color:coral;" id="myRedDIV"></div>
+        <div style="background-color:lightblue;" id="myBlueDIV"></div>
+        <div style="background-color:lightgreen;" id="myGreenDIV"></div>
+        <div style="background-color:pink;" id="myPinkDIV"></div>
+    </div>
+
+    <h1>The left Property</h1>
+
+    <div class="a">This div element has position: relative;
+        <div class="b">This div element has position: absolute and left: auto.</div>
+        <div class="c">This div element has position: absolute and is placed 150 pixels to the right of the LEFT edge of
+            the containing positioned element.</div>
+    </div>
+
+    <div class="grid-container">
+        <div class="item1">1</div>
+        <div class="item2">2</div>
+        <div class="item3">3</div>
+        <div class="item4">4</div>
+        <div class="item5">5</div>
+        <div class="item6">6</div>
+    </div>
+
+    <p class="alias">alias</p>
+    <p class="all-scroll">all-scroll</p>
+    <p class="auto">auto</p>
+    <p class="cell">cell</p>
+    <p class="context-menu">context-menu</p>
+    <p class="col-resize">col-resize</p>
+    <p class="copy">copy</p>
+
+    <h1>The column-gap Property</h1>
+    <p>The column-gap property defines the gap between the columns of the element:</p>
+
+    <div class="newspaper">
+        <h2>Lorem ipsum dolor sit amet, consectetuer adipiscing elit</h2>
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
+        dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper
+        suscipit lobortis nisl ut <p class="ex1"></p> aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor
+        in hendrerit in
+        vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et
+        iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+        Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer
+        possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem.
+        Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius.
+    </div><br>
+    <div id="main">
+        <div style="background-color:coral;">RED</div>
+        <div style="background-color:lightblue;">BLUE</div>
+        <div style="background-color:lightgreen;">Green div with more content.</div>
+    </div>
+
+    <p><b>Note:</b> Internet Explorer 9 and earlier versions do not support the flex property.</p>
+
+    <p><b>Note:</b> Internet Explorer 10 supports an alternative, the -ms-flex property. IE11 and newer versions fully
+        support the flex property (do not need the -ms- prefix).</p>
+
+    <input class="example1" value="testcolor"><br><br>
+
+    <img src="./1.jpg" width="100" height="132">
+    <p class="clear">This is also some text. This is also some text. This is also some text. This is also some text.
+        This is also some text. This is also some text.</p>
+    <h2>caption-side: bottom:</h2>
+    <table id="example1" border="1" class="ex1">
+        <caption>Table 1.1 Customers</caption>
+        <tr>
+            <th>Company</th>
+            <th>Contact</th>
+            <th>Country</th>
+        </tr>
+        <tr>
+            <td>Alfreds Futterkiste</td>
+            <td>Maria Anders</td>
+            <td>Germany</td>
+        </tr>
+        <tr>
+            <td>Berglunds snabbköp</td>
+            <td>Christina Berglund</td>
+            <td>Sweden</td>
+        </tr>
+        <tr>
+            <td>Centro comercial Moctezuma</td>
+            <td>Francisco Chang</td>
+            <td>Mexico</td>
+        </tr>
+        <tr>
+            <td>Ernst Handel</td>
+            <td>Roland Mendel</td>
+            <td></td>
+        </tr>
+    </table>
+
+    <h2>caption-side: top (default):</h2>
+    <table id="example2" border="1">
+        <caption>Table 1.1 Customers</caption>
+        <tr>
+            <th>Company</th>
+            <th>Contact</th>
+            <th>Country</th>
+        </tr>
+        <tr>
+            <td>Alfreds Futterkiste</td>
+            <td>Maria Anders</td>
+            <td>Germany</td>
+        </tr>
+        <tr>
+            <td>Berglunds snabbköp</td>
+            <td>Christina Berglund</td>
+            <td>Sweden</td>
+        </tr>
+        <tr>
+            <td>Centro comercial Moctezuma</td>
+            <td>Francisco Chang</td>
+            <td>Mexico</td>
+        </tr>
+        <tr>
+            <td>Ernst Handel</td>
+            <td>Roland Mendel</td>
+            <td>Austria</td>
+        </tr>
+    </table><br>
+
+    <div id="example1">SHADOW</div>
+
+    <div class="parent">This div element has position: relative;
+        <div class="absolute"><strong>position: absolute and bottom 10px</strong><br>This div's bottom edge is placed 10
+            pixels above the bottom edge of the containing element.</div>
+    </div>
+    <br>
+
+    <h1>A heading with a colored top border</h1>
+    <div>The border-top-color can be specified with a color name.</div>
+
+    <span class="ex">Test</span><br>
+    <span class="ex1">CSS is<br>easy<br>to learn</span>
+    <div class="parent">This div element has position: relative;
+        <div class="absolute"><strong>position: absolute and bottom 10px</strong><br>This div's bottom edge is placed 10
+            pixels above the bottom edge of the containing element.</div>
+    </div>
+    <br>
+
+    <div id="div1">DIV1</div>
+    <div id="div2">DIV2</div>
+    <h2>webkit-selection</h2>
+    <h2>webkit-selection</h2>
+    <h2>webkit-selection</h2>
+    <p><a target="blank" href="#hellotarget">Jump to New content 1</a></p>
+    <input type="number" value="text" required><br>
+    <a target="blank" href="https://www.w3schools.com">W3Schools Home</a><br>
+    <a target="blank" href="https://www.w3schools.com/html/">W3Schools HTML Tutorial</a><br>
+    <a target="blank" href="https://www.w3schools.com/css/">W3Schools CSS Tutorial</a>
+    <p>An optional input element:<br><input></p>
+    <input type="text" name="fname" placeholder="First name">
+    <div>
+        <p>hello target</p>
+    </div>
+    <p>A readonly input element:<br>
+        <input readonly value="hello">
+    </p>
+
+    <div>
+        <p>one</p>
+    </div>
+    <p>two</p>
+    <p>three</p>
+
+    <input type="number" min="5" max="10" value="7">
+
+    <img src="./1.jpg" width="100" height="140">
+    <div id="animacia">animation</div>
+    <div id="animation2">rotate</div>
+    <div class="message success" target="_blank">All installed packages</div>
+    <div class="message failed">failed error ab cd ada bdef kh</div>
+    <div class="message warning">warning ab cd ada bdef kh</div>
+    <div class="message">warning</div>
+
+    my message
+    <h1>The align-content Property</h1>
+    <div class="exampleOne">
         <div class="backgroundRED">h1</div>
         <div class="backgroundBlue">Blue</div>
         <div style="background-color:coral;">testcolor</div>
-        </div>
-        <br>
-        <p>
-            Tis is a <a  href="https://www.google.com/">google </a>
-        Tis is a <a id="a-two" href="https://www.google.com/">google </a>
+    </div>
+    <br>
+    <p>
         Tis is a <a href="https://www.google.com/">google </a>
+        Tis is a <a id="a-two" href="https://www.google.com/">google </a>
+    <form action="">
+        First name: <input type="text" value="your name" max="6"><br>
+        Last name: <input type="text" value="your surname"><br>
+    </form>
+    Tis is a <a href="https://www.google.com/">google </a>
     </p>
-        <h2>word-break: normal (default):</h2>
-        <p class="a">1111111111111111111111111111 22. 33 44 55 66 77 88 99.</p>
-        <h2>word-break: break-all:</h2>
-        <p class="c">1111111111111111111111111111 22. 33 44 55 66 77 88 99.</p>
+    <h2>word-break: normal (default):</h2>
+    <p class="a">1111111111111111111111111111 22. 33 44 55 66 77 88 99.</p>
+    <h2>word-break: break-all:</h2>
+    <p class="c">1111111111111111111111111111 22. 33 44 55 66 77 88 99.</p>
 
-        <div class="a">Марк Аврелий Валерий Клавдий (лат. Marcus Aurelius Valerius Claudius), более известный в римской историографии как Клавдий II Готский, — римский император, правивший в 268—270 годах.
-            По происхождению иллириец, Клавдий сделал карьеру на службе в римской армии, достигнув командных должностей в правление императора Галлиена. После убийства последнего он был провозглашён императором. Клавдий подавил восстание Авреола и нанёс поражение алеманнам в 269 году, после чего сосредоточился на борьбе с вторгшейся в Иллирик и Паннонию многочисленной армией готов. В сражении при Наиссе император одержал убедительную победу над противником, нанеся ему серьёзные потери. За эту победу он был удостоен прозвища «Готский». В 270 году Клавдий отправился в Сирмий, чтобы воспрепятствовать готовящемуся вторжению ютунгов и вандалов, однако заболел чумой и скончался после непродолжительного правления. В IV веке император Константин I Великий претендовал на родство с Клавдием, но обоснованность этих претензий вызывает сомнения.
-            Клавдий II носил следующие победные титулы: «Германский Величайший» — с 268 года, «Готский Величайший» — с 269 года, «Парфянский Величайший» — с 270 года. Власть народного трибуна получал три раза: два раза в 268 году (в момент провозглашения императором и 10 декабря) и 10 декабря 269 года.</div>
+    <div class="a">Марк Аврелий Валерий Клавдий (лат. Marcus Aurelius Valerius Claudius), более известный в римской
+        историографии как Клавдий II Готский, — римский император, правивший в 268—270 годах.
+        По происхождению иллириец, Клавдий сделал карьеру на службе в римской армии, достигнув командных должностей в
+        правление императора Галлиена. После убийства последнего он был провозглашён императором. Клавдий подавил
+        восстание Авреола и нанёс поражение алеманнам в 269 году, после чего сосредоточился на борьбе с вторгшейся в
+        Иллирик и Паннонию многочисленной армией готов. В сражении при Наиссе император одержал убедительную победу над
+        противником, нанеся ему серьёзные потери. За эту победу он был удостоен прозвища «Готский». В 270 году Клавдий
+        отправился в Сирмий, чтобы воспрепятствовать готовящемуся вторжению ютунгов и вандалов, однако заболел чумой и
+        скончался после непродолжительного правления. В IV веке император Константин I Великий претендовал на родство с
+        Клавдием, но обоснованность этих претензий вызывает сомнения.
+        Клавдий II носил следующие победные титулы: «Германский Величайший» — с 268 года, «Готский Величайший» — с 269
+        года, «Парфянский Величайший» — с 270 года. Власть народного трибуна получал три раза: два раза в 268 году (в
+        момент провозглашения императором и 10 декабря) и 10 декабря 269 года.</div>
 
-        <P class="b">CSS white-space Property</P>
-        <p>my name is Armen</p>
-        <h1>The unicode-bidi Property</h1>
-        <div>mard</div>
-        <div class="ex1">mard</div>
+    <P class="b">CSS white-space Property</P>
+    <p>my name is Armen</p>
+    <h1>The unicode-bidi Property</h1>
+    <div>mard</div>
+    <div class="ex1">mard</div>
 
-        <p>Hover over the div element below, to see the transition effect:</p>
-        <section></section>
+    <p>Hover over the div element below, to see the transition effect:</p>
+    <section></section>
 
-        <div id="div1">
-            <div id="div2">HTML
+    <div id="div1">
+        <div id="div2">HTML
             <div id="div3">CSS</div>
-            </div>
-            <p>div > p</p>
-            <p>div > p</p>
         </div>
-        <p>Hover over the div element below, to see the transition effect:</p>
-        <h2>
-            <a href="#" class="animal">animal</a>
-            <a href="#" class="human">human</a>
-            <a href="#" class="human">human</a>
-            <a href="#" class="human">human</a>
-        </h2>
+        <p>div > p</p>
+        <p>div > p</p>
+    </div>
+    <p>Hover over the div element below, to see the transition effect:</p>
+    <h2>
+        <a href="#" class="animal">animal</a>
+        <a href="#" class="human">human</a>
+        <a href="#" class="human">human</a>
+        <a href="#" class="human">human</a>
+    </h2>
 
-        <div class="use">The first div element.CSS [attribute^=value] Selector</div>
-        <h2>CSS [attribute|=value] Selector</h2>
-        <p lang="en">Hello!</p>
-        <p lang="en-us">World!</p>
-        <p lang="en-gb">English!</p>
-        <p lang="us">Rus</p>
-        <p lang="no">Hei!</p>
+    <div class="use">The first div element.CSS [attribute^=value] Selector</div>
+    <h2>CSS [attribute|=value] Selector</h2>
+    <p lang="en">Hello!</p>
+    <p lang="en-us">World!</p>
+    <p lang="en-gb">English!</p>
+    <p lang="us">Rus</p>
+    <p lang="no">Hei!</p>
 
-        <p>Another list</p>
-        <ul>
-          <li>Coffee</li>
-          <li>Tea</li>
-          <li>Milk</li>
-        </ul>
+    <p>Another list</p>
+    <ul>
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Milk</li>
+    </ul>
 
-        <h2>Another list</h2>
-        <ul>
-          <li>Coffee</li>
-          <li>Tea</li>
-          <li>Milk</li>
-        </ul>
-        <div class="example">The Eurasian crag martin <br>(Ptyonoprogne rupestris) is a small swallow with brown upperparts, paler underparts, and a white-spotted square tail.</div>
-    </body>
+    <h2>Another list</h2>
+    <ul>
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Milk</li>
+    </ul>
+    <div class="example">The Eurasian crag martin <br>(Ptyonoprogne rupestris) is a small swallow with brown upperparts,
+        paler underparts, and a white-spotted square tail.</div>
+
+    <div id="hellotarget">
+        <p>hello target</p>
+    </div>
+    -->
+    <footer class="footer">
+        <div class="footer-content">
+            <a class="footer-links" href="#"> Link 1 </a>
+            <a class="footer-links" href="#"> Link 1 </a>
+        </div>
+    </footer>
+</body>
+
 </html>

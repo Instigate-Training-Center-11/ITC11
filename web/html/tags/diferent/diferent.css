@@ -1,0 +1,10 @@
+p[lang|=en]{
+    color: red;
+    background-color: royalblue;
+}
+
+
+a[href^="https"]{
+    color: black;
+    background-color:red;
+}
