@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Real Estate</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans|Roboto&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|PT+Sans|Roboto&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="fixed col-12">
+        <nav>
+            <ul>
+                <li class="inline float-left">
+                    <a href="#logo" class="pt-20 pb-20 pt-10">Logo</a>
+                </li>
+                <li class="inline float-left">
+                    <a href="#home" class="pt-20 pb-20 active pt-10">Home</a>
+                </li>
+                <li class="inline float-left">
+                    <a href="#news" class="pt-20 pb-20 pt-10">News</a>
+                </li>
+                <li class="inline float-right ml-20">
+                    <a href="#about" class="pt-20 pb-20 pt-10">About</a>
+                </li>
+                <li class="inline float-right">
+                    <a href="#contacts" class="pt-20 pb-20 pt-10">Contacts</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main class="pos-absolute top-100 col-12 color-white pb-100">
+        <section class="bg-white col-12">
+            <p class=" black tx-align-center pb-40 fs-45 bold">Services</p>
+            <section class="col-10 flex center justify-content-sp-b fs-17 bold color-white  flex-wrap-wrap">
+                <div class=" service-image overflow-hidden mb-20-s ">
+                    <img src="./images/11.jpg " alt=" ">
+                    <div class="service-hover-image pos-absolute ">
+                        <p class="pos-absolute top-75p left-38p tx-align-center ">Vacation <br>Rentals</p>
+                        <button class="service-button pos-absolute top-100p left-25p ">Learn More</button>
+                    </div>
+                </div>
+                <div class="service-image overflow-hidden mb-20-s ">
+                    <img src="./images/12.jpg " alt=" ">
+                    <div class="service-hover-image pos-absolute ">
+                        <p class="pos-absolute top-75p left-38p tx-align-center ">Roommate <br>Share</p>
+                        <button class="service-button pos-absolute top-100p left-25p ">Learn More</button>
+                    </div>
+                </div>
+                <div class="service-image overflow-hidden mb-20-s ">
+                    <img src="./images/13.jpg " alt=" ">
+                    <div class="service-hover-image pos-absolute ">
+                        <p class="pos-absolute top-75p left-38p tx-align-center ">Corporate <br>Apartments</p>
+                        <button class="service-button pos-absolute top-100p left-25p ">Learn More</button>
+                    </div>
+                </div>
+                <div class="service-image overflow-hidden mb-20-s ">
+                    <img src="./images/14.jpg " alt=" ">
+                    <div class="service-hover-image pos-absolute tx-align-center ">
+                        <p class="pos-absolute top-75p left-38p ">Unfurnished</p>
+                        <button class="service-button pos-absolute top-100p left-25p ">Learn More</button>
+                    </div>
+                </div>
+            </section>
+            <div class="flex mt-50 justify-content-center ">
+                <button class="service-button ">All Services</button>
+            </div>
+        </section>
+
+        <section class="section6 col-12 pos-relative mt-50 ">
+            <img src="./images/bg22.jpg " alt=" " class="col-12 max-height-500 ">
+            <div class="section6-text pos-absolute tx-align-center col-12 top-10p ">
+                <p class="color-white fs-45 bold mb-20 fs-18">Testimonials</p>
+                <div class="user center b-radius-50 "></div>
+                <p class="mt-20 pb-20 ">Ryan Webber</p>
+                <span class="fs-45 bold ">	&#10077;</span>
+                <p class="color-white medium fs-22 mt-20 fs-14">
+                    Thank you very much! I'm impressed with the range of your apartments.<br> The one I have rent is literally amazing, thanks again!
+                </p>
+                <div class="carusel flex justify-content-sp-b center col-1 pt-60 ">
+                    <div class="carusel-active b-radius-50 "></div>
+                    <div class="b-radius-50 "></div>
+                    <div class="b-radius-50 "></div>
+                </div>
+            </div>
+        </section>
+        <section class="contact col-12 mt-50 ">
+            <p class="fs-45 black tx-align-center pb-50 bold ">Contact Us</p>
+            <div class="contact-inputs col-9 center pb-100 ">
+                <div class="flex justify-content-sp-b ">
+                    <div class="pos-relative mb-20-s" id="name">
+                        <input type="text " placeholder="Name ">
+                        <span class="contact-span contact-span1 ">The text field is required.</span>
+                    </div>
+                    <div class="pos-relative " id="phone">
+                        <input type="text " placeholder="Phone">
+                        <span class="contact-span ">The text field is required.</span>
+                    </div>
+                </div>
+                <div class="flex justify-content-sp-b col-12 pos-relative mt-20 " id="email ">
+                    <input type="text " placeholder="Email " class="col-12 "id="email-input">
+                    <span class="contact-span ">The text field is required.</span>
+                </div>
+                <div class="flex justify-content-sp-b pb-50 col-12 pos-relative mt-20 " id="textarea ">
+                    <textarea name=" " id=" " cols="30 " rows="10 " placeholder="Message " class="col-12 "></textarea>
+                    <span class="contact-span ">The text field is required.</span>
+                </div>
+
+                <div class="col-12 tx-align-center ">
+                    <button class="section5-button service-button col-2 ">Send</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="fixed col-12 " style="bottom: 0%; z-index: 1001; ">
+        <div class="footer col-9 flex center justify-content-sp-b align-items-center fs-12 text-align-center line-height-6vh ">
+            <div>
+                <span class="marker fontAw-family medium "></span>
+                <span class="marker-text ">8901 Marmora Road, Glasgow, D04 89GR</span>
+            </div>
+            <div>
+                <span class="phone fontAw-family medium "></span>
+                <span class="phone-text ">1-800-1234-567</span>
+            </div>
+            <div class="footer-icons medium ">
+                <span class="fb fontAw-family "></span>
+                <span class="twitter fontAw-family "></span>
+                <span class="insta fontAw-family "></span>
+                <span class="google fontAw-family "></span>
+            </div>
+            <div class="footer-privacy ">
+                <span>
+                    Rentspace © Privacy Policy
+                </span>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
