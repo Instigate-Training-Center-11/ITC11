@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Unique Interactions</title>
+        <link rel="icon" type="image/jpg" href="data:image/png;base64,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">
+        <!-- Header font style -->
+        <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+        <!-- Navbar font style -->
+        <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+        <meta charset="UTF-8">
+        <meta name="description" content="Unique Interactions Wedding and Event Servieces">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="refresh" content="115">
+        <style>
+            * {
+                box-sizing: border-box;
+            
+            }
+
+            body {
+                font-family: Arial;
+                text-align: justify;
+                text-justify: inter-word;
+            }
+
+            .top {
+                position:fixed;
+                left: 0;
+                top: 0;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                width: 100%;
+                height: 40px;
+                border: 1px solid rgb(211, 211, 202);
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .top div {
+                width: 100%;
+                height: 100%;
+            }
+
+            .head {
+                position: fixed;
+                left: 0;
+                top: 40px;
+                font-family: 'Great Vibes', cursive;
+                font-size: 40px;
+                padding-left: 100px;
+                padding-top: 10px;
+                width: 100%;
+                height: 160px;
+                background-color: white;
+                border: 1px solid rgb(110, 20, 122);
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .head img {
+                position: absolute;
+                right: 40px;
+            }
+            .head div {
+                width: 100%;
+                height: 100%;
+            }
+
+            .navbar {
+                position: fixed;
+                left: 0;
+                top: 200px;
+                width: 100%;
+                height: 40px;
+                border: 1px solid  rgb(110, 20, 122);
+                background-color: rgb(110, 20, 122);
+                display: flex;
+                flex-wrap: wrap;
+                font-family: 'Lobster', cursive;
+                justify-content: center;
+                align-items: center;
+                font-size: 20px;
+                color: white;
+                padding: 10px 5px 1px 5px;
+            }
+            .navbar div {
+                color: white;
+                padding: 1px;
+                text-decoration: none;
+                text-align: center;
+            }
+            .navbar div:hover {
+                background-color: #ddd;
+                color: black;
+            }
+            .navbar div:nth-of-type(1) {flex-grow: 1;}
+            .navbar div:nth-of-type(2) {flex-grow: 1;}
+            .navbar div:nth-of-type(3) {flex-grow: 1;}
+            .navbar div:nth-of-type(4) {flex-grow: 1;}
+            .navbar div:nth-of-type(5) {flex-grow: 36;}
+
+            .row {
+                display: flex;
+                flex-wrap: wrap;
+                /* margin-top: 1px; */
+                height: calc(100vh - 40px);
+                overflow-y: scroll;
+
+            }
+
+            .side {
+                position:relative;
+                top: 240px;
+                z-index:-1;
+                flex: 30%;
+                background: #e6cafd;
+                padding: 20px 20px 50px 20px;
+                font-family: 'Lobster', cursive;
+                font-size: 25px;
+            }
+            
+            .main {
+                position:relative;
+                top: 240px;
+                z-index:-1;        
+                flex: 70%;
+                background: linear-gradient(to right, #e6cafd 0%, #ffffff 100%);
+                padding: 20px 20px 50px 20px;
+                font-family: 'Lobster', cursive;
+                font-size: 20px;
+            }
+            .main img {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .img {
+                background-color: #aaa;
+                width: 100%;
+                padding: 20px;
+            }
+
+            .footer {
+                position: fixed;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                height: 40px;
+                text-align: center;
+                background: rgb(110, 20, 122);
+            }
+
+            @media screen and (max-width: 700px) {
+                .row, .navbar {   
+                flex-direction: column;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="top" style="background-color:rgb(110, 20, 122);; padding: 5px">
+        </div>
+
+        <div class="head">
+            <p text-align="center">We would love to have a Unique Interaction with you soon...♡</p>
+            <img src="https://unique-interactions.com/wp-content/uploads/2016/11/logo-no-grad.png" maxwidth="100%" height="140px" style="float: right;">
+        </div>
+
+        <div class="navbar">
+            <div style="background-color:rgb(110, 20, 122);;">About</div>
+            <div style="background-color:rgb(110, 20, 122);;">Services</div>
+            <div style="background-color:rgb(110, 20, 122);;">Portfolio</div>
+            <div style="background-color:rgb(110, 20, 122);;">Blog</div>
+            <div style="background-color:rgb(110, 20, 122);;"></div>
+        </div>
+
+        <div class="row">
+            <div class="side">
+                <h2>Wedding Planning Services</h2>
+                <p>
+                    <ul>
+                        <li>Decoration</li>
+                        <li>Wedding Gown(s)</li>
+                        <li>Bridesmaids Dresses</li>
+                        <li>Photographer</li>
+                        <li>Production DJ/Sound Engineer</li>
+                        <li>Florals </li>
+                        <li>The Cake </li>
+                        <li>Transportation </li>
+                    </ul>
+                </p>
+                <img src="p8.jpg" width="90%" height="auto"><br>
+            </div>
+
+            <div class="main">
+                <h1> &hearts; Why us?</h1><hr color="rgb(110, 20, 122)"><br>
+                <p>Moments…</p>
+                <p>Life is not about how many breaths you take, but about how many moments in life take your breath away…”<br><br>
+                    At “Your Day” Weddings & Events, Inc., we are focused on providing 
+                    ‘Start to Finish’ Wedding Planning, Coordination, and Design services
+                    with the highest levels of customer satisfaction & we will go above and
+                    beyond to do everything we can to meet your expectations, and beyond!</p>
+                    <img src="p1.jpg" maxwidth="100%" height="auto">
+
+                <h1>Tell Your Story  &hearts;</h1><hr  color="rgb(110, 20, 122)">
+                <p>We want you to tell us about your dream event in detail so we can help you put together 
+                    your perfect vision. With the information you provide us we will generate an estimate fee,
+                    sign a contract and begin our journey!</p>
+                    <img src="p2.jpg" maxwidth="100%" height="auto">
+                    <hr  color="rgb(110, 20, 122)">
+                
+                <h1>Save Your Date &hearts;</h1><hr  color="rgb(110, 20, 122)">
+                <p>Once we’ve collected information like, number of guests, budget and use of venue we can start 
+                    planning what days this event will take place by creating a draft program of the main events!</p>
+                    <img src="p3.jpg" maxwidth="100%" height="auto">
+                    <hr  color="rgb(110, 20, 122)">
+
+                    <h1>Find Your Location &hearts;</h1><hr  color="rgb(110, 20, 122)">
+                    <p>If you are unable to travel to see the locations we will send you a bespoke presentation
+                    of the venues suggested, making it simple to choose the right place for your ceremony and party!</p>
+                    <img src="p4.jpg" maxwidth="100%" height="auto">
+                    <hr  color="rgb(110, 20, 122)">
+
+                <h1>Plan Your Details &hearts;</h1><hr  color="rgb(110, 20, 122)">
+                    <p>Add little touches of personality and style to your event by choosing some extra services
+                        like catering, stationery, accommodations, decorations, and photography to bring your event together!</p>
+                    <img src="p5.jpg" maxwidth="100%" height="auto">
+                    <hr  color="rgb(110, 20, 122)">
+
+                <h1>Your Final Steps &hearts;</h1><hr  color="rgb(110, 20, 122)">
+                    <p>Your invitations will be sent out with the appropriate information
+                        for all your guests and your vendors will be confirmed with your deposit payments all in order!</p>
+                    <img src="p6.jpg" maxwidth="100%" height="auto">
+                    <hr  color="rgb(110, 20, 122)">
+
+                <h1>Enjoy Your Event &hearts;</h1><hr  color="rgb(110, 20, 122)">
+                    <p>With everything organized and planned out you can relax and enjoy your event. 
+                        Venice First will accompany you throughout the entire day for constant support 
+                        so you can have peace of mind knowing everything is running perfectly and your guests are happy!</p>
+                    <img src="p7.jpg" maxwidth="100%" height="auto">
+                    <hr  color="rgb(110, 20, 122)">
+
+            </div>
+        </div>
+
+    <div class="footer">
+        <p>COPYRIGHT © 2020 UNIQUE INTERACTIONS | DESIGN BY ANI SHAKHKYAN </p>
+    </div> 
+
+    </body>
+</html>
