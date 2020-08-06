@@ -16,8 +16,10 @@ header {
     width: 100%;    
 }
 footer{
-    position: fixed;    
+    position:fixed;
+    bottom:0;    
     width: 100%;
+    height: 100px;
     background-color: #000;      
 }
 footer > p {
@@ -53,6 +55,9 @@ nav {
     padding: 14px 16px;
     font-size: 15px;
 }
+.topnav > :nth-last-child(2){
+    margin-right: auto;
+}
 .topnav a:hover {
     border-bottom: 2px solid #000;
 }
@@ -67,6 +72,7 @@ nav {
     display: flex;
     justify-content: center;
     padding: auto;
+    margin-bottom: 200px;
 }
 .advantages {
     padding-top: 30px;
