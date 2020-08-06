@@ -58,6 +58,25 @@ h1 {
     color: rgb(0, 0, 0);
 }
 
+/* nav - item --> search */
+.nav-item {
+    margin-left: auto;
+    order: 2;
+    padding: 10px;
+    background-color: rgb(218, 211, 211);
+    outline: none;
+    border: none;
+    border-radius: 3px;
+    margin-top: 6px;
+    margin-right: 3px;
+    font-style: italic;
+}
+
+.inp {
+    margin-left: auto;
+    order: 2;
+}
+
 /* Container */
 .page {
     display: flex;
@@ -137,6 +156,17 @@ h4 {
         flex-direction: column;
     }
 
+    /* nav item in right */
+    .nav-item {
+        margin: unset;
+        margin-bottom: 3px;
+    }
+
+    .inp {
+        text-align: center;
+        margin: unset;
+    }
+
     /* font */
     p {
         font-size: 14px;
@@ -157,5 +187,10 @@ h4 {
     /* font */
     p {
         font-size: 10px;
+    }
+
+    /* nav item in right */
+    .nav-item {
+        display: none;
     }
 }
