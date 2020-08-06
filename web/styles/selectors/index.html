@@ -14,6 +14,20 @@
         <!-- class_name -->
         <h1 class="class_name">Header</h1>
 
+        <!-- Task 2: What difference [lang|=en] vs a[href^="https"] -->
+        <h4>Task 2: What difference [lang|=en] vs a[href^="https"]</h4>
+        <p>
+            <b>[lang|=en]</b> selects all elements with a lang attribute value starting
+            with "en". It will select the element, if attribute value is only
+            'en' or 'en-*'. 
+        </p>
+        <p>
+            <b>a[href^="https"]</b> selects every 'a' element whose href attribute value
+            begins with "https". It will select the element, if attribute value is
+            'en', 'en-*', 'en_*', 'en*', 'en* abc def', ...
+        </p>
+        <hr>
+
         <!-- class_name1 class_name2 -->
         <p>.class1.class2</p>
         <ul>

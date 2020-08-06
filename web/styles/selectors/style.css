@@ -77,24 +77,25 @@ img[alt="image"] {
     border: 5px solid firebrick;
 }
 
-/* attribute ~= value */
+/* attribute ~= value */Ye
 [attr~="first"] {
     color: red;
 }
 
 /* attribute |= value */
-[size|="max"] {
+[size|="maxoooooo"] {
     background-color: salmon;
-    background-origin: 5px, 10px;
+    /* background-origin: 5px, 10px;
     border: 3px solid purple;
-    width: 200px;
+    width: 200px; */
 }
 
 /* attribute ^= value */
-[col^="test"] {
-    text-decoration: underline;
+[size^="max"] {
+    /* text-decoration: underline;
     color: red;
-    font-size: 20px;
+    font-size: 20px; */
+    background-color: red;
 }
 
 /* attribute $= value */
