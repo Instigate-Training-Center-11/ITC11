@@ -1,0 +1,48 @@
+img {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: -1;
+  }
+  .div1 {
+      color: red;
+    writing-mode: vertical-rl; 
+    unicode-bidi: bidi-override;
+  }
+.div2 {
+    color: red;
+    width: 80px;
+    word-wrap: break-word;
+    word-spacing: 30px;
+    text-indent: 50px;
+}
+p.a {
+    white-space: pre;
+    visibility: hidden;
+    user-select: none;
+  }
+  .div3 {
+    width: 100px;
+    height: 100px;
+    background: red;
+    transition: width 2s;
+    transition-timing-function: linear;
+  }
+  .div3:hover {
+    width: 300px;
+  }
+  div.a {
+    width: 150px;
+    height: 80px;
+    background-color: yellow;
+    -ms-transform: rotate(20deg); /* IE 9 */
+    transform: rotate(20deg);
+  }
+  div.c {
+    position: absolute;
+    top: 50px;
+    border: 3px solid green;
+  } 
+  div.c {
+    text-shadow: 2px 2px #FF0000;
+  }

@@ -1,0 +1,22 @@
+<!--|= checks if the attribute starts with corresponding text and after that is -
+^= checks if the attribute starts with the text everything else can be after-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            [lang^=en] {
+              background: yellow;
+            }
+            [lang|=en] {
+              background: rgb(165, 7, 7);
+            }
+            </style>
+    </head>
+    <body>
+        <p lang="english">Hello!</p>
+        <p lang="en-us">Hi!</p>
+        <p lang="en-gb">Ello!</p>
+        <p lang="enenene">Hi!</p>
+        <p lang="nengli">Hei!</p>
+    </body>
+</html>
