@@ -8,6 +8,21 @@
     </head>
     <body>
         <header>CSS selectors</header>
+        
+        <!-- [lang|=en] vs a[href^="https"] -->
+        <div>
+            <h1>What difference: >>> [lang|=en] vs a[href^="https"]</h1>
+            <h2>
+                [lang|=en] --- selects that elements, which lang attribute_value
+                starts whit "en". [lang|=en] will select all elements, which
+                attribute_value is only 'en' or 'en-*'.
+                a[href^="https"] --- selects that 'a' elements, which 'href'
+                attribute_value starts whit "https". a[href^="https"] will select
+                all elements, which attribute_value is: 'en-*', 'en_', 'en_ text',
+                'en* text', 'en', 'en*'.
+            </h2>
+        </div>
+        
         <!-- Table -->
         <table border="1" class="size">
             <tr class="class1 class2">
