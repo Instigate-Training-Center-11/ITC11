@@ -1,0 +1,235 @@
+body {
+    margin: 0;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"
+}
+
+/* nav-bar */
+#nav-bar {
+
+
+    height: 42px;
+    padding: 15px 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    background: #e9e8e6;
+    box-shadow: 0px 0px 25px 0 rgba(0, 0, 0, 0.08);
+    z-index: 997;
+    width: 100%;
+}
+
+.navbar-content {
+    height: 42px;
+    padding: 0 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.color-logo {
+    font-size: 32px;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    font-weight: 400;
+    color: black;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.header-content {
+    min-width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.nav-bar-links {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 15px;
+    position: relative;
+    color:#888888;
+    transition: color 0.1 linear;
+}
+
+.text-decoration-none {
+    text-decoration: none;
+}
+.color-Light-Sea-Green {
+    color: #34b7a7;
+}
+
+.nav-bar-links::after {
+    content: "";
+    display: block;
+    width: 50%;
+    /*transition: 2s;*/
+    height: 2px;
+    background-color:#34b7a7;
+    opacity: 0;
+
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+    /*transition: opacity 1s linear;*/
+
+}
+
+.nav-bar-links:hover {
+    color: black;
+}
+
+.nav-bar-links:hover::after {
+    opacity: 1;
+}
+
+.social-share-icons {
+    padding: 3px;
+    text-decoration: blink;
+}
+.social-share-svg:hover {
+    fill: #34b7a7;
+    transition: 0.5s;
+}
+
+/* nav-bar */
+
+
+/*content*/
+
+.content {
+/*
+    background-image: url('./assets/img/hero-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    padding: 60px 0;
+    */
+    display: flex !important;
+    width: 100%;
+    height: 90vh;
+    background: url('./assets/img/hero-bg.jpg') top right;
+    background-image: url(./assets/img/hero-bg.jpg);
+    background-attachment: fixed;
+    background-clip:border-box;
+    background-color: rgba(0, 0, 0, 0);
+    background-origin: padding-box;
+    background-repeat: no-repeat;
+    line-height: 24px;
+    padding-bottom: 60px;
+    padding-top: 60px;
+    background-size: cover;
+    align-items: center;
+}
+
+
+.content-item{
+    display: flex !important;
+    width: 930px;
+    height: 164px;
+    flex-direction: column !important;
+    position: relative;
+    padding: 70px 15px 0 15px;
+    padding-top: 70px;
+    align-items: center !important;
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+
+    color:rgb(68, 68, 68);
+
+}
+
+
+
+h2 {
+    margin: 0;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 56px;
+    color: #222222;
+    font-family: "Raleway", sans-serif;
+    display: block;
+    align-items: center;
+}
+
+
+/*content*/
+.footer {
+    background: #e9e8e6;
+    padding: 30px 0;
+    color: #222222;
+    font-size: 14px;
+    transition: 0.5s;
+    text-align: center;
+}
+
+/*button*/
+
+.button-about {
+    font-family: "Raleway", sans-serif;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 12px 40px;
+    border-radius: 50px;
+    transition: 0.5s;
+    margin-top: 30px;
+    color: #fff;
+    background: #34b7a7;
+}
+
+.button-about:hover{
+    background-color:#44beb0;
+}
+
+.back-to-top {
+    position: fixed;
+    display: none;
+    right: 15px;
+    bottom: 15px;
+    z-index: 99999;
+    padding: 1px 6px 1px 6px;
+}
+
+
+.back-to-top i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    background: #34b7a7;
+    color: #fff;
+    transition: all 0.4s;
+}
+bx {
+    font-family: 'boxicons'!important;
+    font-weight: normal;
+    font-style: normal;
+    font-variant: normal;
+    line-height: 1;
+    display: inline-block;
+    text-transform: none;
+
+    -webkit-font-smoothing: antialiased;
+}
+
+
+element.style {
+    display: inline;
+}
+
+.bx-up-arrow-alt:before {
+    content: "\ec1e";
+}
+
+
