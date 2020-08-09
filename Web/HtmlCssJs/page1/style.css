@@ -1,0 +1,153 @@
+.fa {
+    padding: 9px;
+    font-size: 25px;
+    width: 25px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px;
+    border-radius: 50%;
+    background-color: #0c5460;
+    color: white;
+}
+#logo {
+    float: left;
+}
+#footer {
+    text-align: center;
+    flex-grow: 2;
+}
+#link {
+    color: #149ddd;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+}
+body>header {
+    flex-grow: 0.1;
+    background-color: rgba(194, 196, 200, 0.2);
+}
+main {
+    flex-grow: 12;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+}
+.fa:hover {
+    opacity: 0.7;
+}
+#profile>div {
+    text-align: center;
+}
+#circle_image {
+    border: 7px solid #0c5460;
+
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+#profile {
+    overflow-y: scroll;
+    padding-top: 15px;
+}
+#name {
+    position: relative;
+    color: white;
+    padding-left: 35%;
+
+}
+
+#header {
+    display: flex;
+    flex-direction: column;
+    flex-basis: auto;
+    background-color: #3c3c3c;
+}
+nav>a>p {
+    padding-left: 3%;
+    font-size: 30px;
+    color: white;
+}
+nav>a {
+    color: #3c3c3c;
+}
+nav>a>p:hover {
+    color: #0c5460;
+}
+span {
+    font-size: 20px;
+    font-weight: bold;
+    color: #0c5460;
+}
+span:hover {
+    color: white;
+}
+#page {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    flex-basis: auto;
+    overflow-y: scroll;
+    background-color: floralwhite;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 13px;
+    width: 50%;
+    font-size: 200%;
+}
+td {
+    background-color: #0c5460;
+}
+input {
+    width: 100%;
+    font-size: 70%;
+    border: 3px solid #149ddd;
+    box-sizing: border-box;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+#animation {
+    flex: 0 0 30em;
+    background-image: url("girl.jpg");
+}
+#animation h1 {
+    padding-top: 13%;
+    padding-left: 7%;
+    color: white;
+    font-size: 300%;
+}
+#animation h2 {
+    padding-left: 7%;
+    color: white;
+    font-family: monospace;
+    overflow: hidden;
+    white-space: nowrap;
+    animation:
+            typing 7s steps(50, end),
+            blink-caret .7s step-end infinite;
+}
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+.under_line {
+    color: white;
+    text-decoration: underline #149ddd;
+}
+.menu {
+    font-size: 200%;
+    padding-top: 10%;
+    padding-left: 3%;
+    color: #0c5460;
+    text-decoration: underline #149ddd;
+}

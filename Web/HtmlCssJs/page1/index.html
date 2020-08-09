@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>F</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <header>
+            <br><br><br>
+        </header>
+        <main>
+            <section id="header">
+                <div id="profile">
+                    <div><img  id="circle_image" src="girl.jpg"></div>
+                    <h2 id="name">Ella Smith</h2>
+                    <div class="social-link">
+                        <a href="#" class="fa fa-facebook"></a>
+                        <a href="#" class="fa fa-twitter"></a>
+                        <a href="#" class="fa fa-skype"></a>
+                        <a href="#" class="fa fa-instagram"></a>
+                        <a href="#" class="fa fa-leanpub"></a>
+                    </div>
+
+                    <nav class="nav-menu">
+                        <a href="#"><p>&#8962;  <span> Home</span></p></a>
+                        <a href="#"><p>&#128372; <span> About</span></p></a>
+                        <a href="#"><p>&#128462; <span> Resume</span></p></a>
+                        <a href="#"><p>&#19921; <span> Portfolio</span></p></a>
+                    </nav>
+                </div>
+                <footer id="footer">
+                    <p><h4>&copy; Copyright</h4></p>
+                    <p><h5>Designed  by <a href="#" id="link">it is a secret</a></h5></p>
+                </footer>
+            </section>
+            <section id="page">
+                <div id="animation">
+                    <div>
+                        <h1>Ella Smith</h1>
+                        <h2>I'm a <span class="under_line">poor developer</span></h2>
+                    </div>
+                </div>
+                <div class="menu">
+                    <h1>Portfolio</h1>
+                </div>
+                <div id="km_mile">
+                    <table>
+                        <tr>
+                            <th>km</th>
+                            <th>mile</th>
+                        </tr>
+                        <tr>
+                            <td><input type="number" id="km" type="number" placeholder="Please input" oninput="myFunction(this.value)" onchange="myFunction(this.value)"></td>
+                            <td id="mile">0</td>
+                        </tr>
+                    </table>
+                </div>
+                <script>
+                    function myFunction() {
+                        var x = document.getElementById("km").value / 1.6;
+                        document.getElementById("mile").innerHTML = x;
+                    }
+                </script>
+            </section>
+        </main>
+    </body>
+</html>
