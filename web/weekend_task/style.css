@@ -1,0 +1,498 @@
+/*----- Header -----*/
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.contenier {
+    display: flex;
+    padding: 10px 0;
+    background-color: white;
+    top: 0;
+    width: 100%;
+    display: flex;
+    position: fixed;
+    z-index: 1;
+}
+
+.logo {
+    font-size: 30px;
+    margin: 5px 0 5px 60px; 
+    font-weight: 600;
+}
+
+.logo a {
+    color: #65db89;
+}
+
+h1 a {
+    text-decoration: none;
+}
+
+/*----- Navigation Menu for desktop -----*/
+
+.nav-menu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav-menu > ul {
+    display: flex;
+}
+
+.nav-menu > ul > li {
+    flex: 1;
+    position: relative;
+    white-space: nowrap;
+    padding: 14px 0 6px 18px;
+}
+
+.nav-menu a {
+    display: flex;
+    position: relative;
+    color: black;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+.nav-menu a:hover, .nav-menu .active > a, .nav-menu li:hover > a {
+    color: #40b362;
+}
+
+.nav-menu .drop-down ul {
+    flex-direction: column;
+    position: absolute;
+    z-index: 1;
+    opacity: 0;
+    left: 24px;
+    padding: 10px 0;
+    background: white;
+    box-shadow: 0px 0px 30px rgba(88, 105, 143, 0.25);
+}
+
+.nav-menu .drop-down:hover ul {
+    opacity: 1;
+    top: 100%;
+}
+
+.nav-menu .drop-down li {
+    min-width: 150px;
+    position: relative;
+}
+
+.nav-menu .drop-down ul a {
+    padding: 10px 20px;
+    font-size: 15px;
+    color: black;
+}
+
+.nav-menu .drop-down ul a:hover, .nav-menu .drop-down ul .active > a, .nav-menu .drop-down ul li:hover > a {
+    color: #40b362;
+}
+
+.nav-menu .drop-down > a:after {
+    content: ">";
+    padding-left: 5px;
+}
+
+.nav-menu .drop-down .drop-down > a {
+    padding-right: 35px;
+}
+
+.nav-menu .drop-down .drop-down ul {
+    top: 0;
+    left: calc(100% - 390px);
+}
+
+.nav-botton {
+    display: flex;
+    margin-left: 18px;
+    background: #65db89;
+    color:white;
+    border-radius: 50px;
+    padding: 15px 25px 15px 25px;
+    text-decoration: none;
+}
+
+.nav-botton:hover {
+    background: #40b362;
+    color: wheat;
+}
+
+/*----- Navigation Menu for mobile and laptop -----*/
+
+@media screen and (max-width: 900px) {
+    .nav-menu {
+        display: none;
+    }
+
+    .nav-botton {
+        display: none;
+    }
+
+    .logo {
+        display: none;
+    }
+}
+
+/*----- Img parallax for deskstop -----*/
+
+.parallax {
+    background-image: url("img/hero-bg.jpg");
+    min-height: 500px; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 60vh;
+}
+
+.parallax h1 {
+    padding-top: 150px;
+    margin-left: 60px;
+    font-size: 50px;
+    font-weight: 800;
+    line-height: 55px;
+    color: rgb(255, 255, 255);
+    letter-spacing: 1px;
+}
+
+.parallax p {
+    letter-spacing: 1px;
+    color: rgb(255, 255, 255);
+    margin-top: -35px;
+    margin-left: 60px;
+    font-size: 25px;
+    letter-spacing: 1px;
+}
+
+.parallax .btn {
+    font-size: 14px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 10px 35px;
+    border-radius: 50px;
+    transition: .5s;
+    margin-left: 60px;
+    border: 2px solid white;
+    color: white;
+    text-decoration: none;
+}
+
+.parallax .btn:hover {
+    background: #40b362;
+    border: 2px solid #40b362;
+}
+
+/*----- Img parallax for mobile and laptop -----*/
+
+@media screen and (max-width: 900px) {
+    .parallax h1 {
+        margin-left: 20px;
+        margin-bottom: 20px;
+        font-size: 20px;
+        line-height: 25px;
+    }
+
+    .parallax p {
+        margin-left: 20px;
+        margin-top: 0;
+        font-size: 14px;
+        line-height: 12px;
+    }
+
+    .parallax .btn {
+        margin-left: 20px;  
+    }                                   
+}
+
+/*----- General -----*/
+
+section {
+    padding: 30px 0;
+    overflow: hidden;
+}
+
+.section-title {
+    margin-top: 20px;
+    padding-bottom: 30px;
+}
+
+.section-title h4 {
+    font-size: 15px;
+    margin-bottom: 10px;
+    margin-left: 60px;
+    margin: 0 0 10px 60px;
+    color: #868b8b;
+}
+
+.section-title h4::after {
+    content: "";
+    width: 100px;
+    height: 1px;
+    display: inline-block;
+    background: #65db89;
+    margin: 5px 10px;
+}
+
+.section-title h1 {
+    margin: 10px 0 20px 60px;
+    font-size: 40px;
+    font-weight: 600;
+    color: black;
+    letter-spacing: 0;
+}
+
+/*----- About -----*/
+
+.about .about-contenier {
+    display: flex;
+}
+
+.about .about-contenier .img {
+    flex: 1;
+    margin: 0 60px 0 10px;
+}
+
+.about .about-contenier .content {
+    flex: 1;
+    margin: -30px 10px 0 60px;
+    color: grey
+}
+
+.about .about-contenier .img img {
+    width: 100%;
+}
+
+.about .content h3 {
+    font-weight: 600;
+    font-size: 25px;
+    color: black;
+    opacity: 0.6;
+}
+
+.about .content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.about .content ul li {
+    padding-bottom: 10px;
+}
+
+.about .content ul i {
+    font-size: 20px;
+    padding-right: 5px;
+    color: #65db89;
+}
+
+.about .content .about-btn {
+    background: #65db89;
+    color: white;
+    border-radius: 50px;
+    padding: 8px 25px;
+    transition: 0.3s;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+.about .content .about-btn:hover {
+    background: #40b362;
+    color: white;
+}
+
+/*----- General for mobile and laptop -----*/
+
+@media screen and (max-width: 900px) {
+    .about .about-contenier { 
+        flex-direction: column-reverse;
+    }
+    
+    .about .about-contenier .img {
+        flex: 1;
+        margin: 0 20px 20px 10px;
+    }
+}
+
+/*----- Numbers -----*/
+
+.numbers-contanier {
+    display: flex;
+    transition: 0.9s;
+}
+  
+.numbers-contanier div {
+    padding: 30px 0;
+    background-color: rgb(240, 240, 240);
+    flex: 1;
+} 
+
+.numbers-contanier div span {
+    padding: 0 40px;
+    margin: 0 50px;
+    font-size: 50px;
+    display: block;
+    color: #65db89;
+    font-weight: 600;
+}
+
+.numbers-contanier div p {
+    text-align: center;
+    padding: 0;
+    margin: 0 0 20px 0;
+    font-size: 15px;
+    font-weight: 600;
+    color: grey;
+}
+
+/*----- Numbers for mobile and laptop -----*/
+
+@media screen and (max-width: 900px) {
+    .numbers-contanier {
+        flex-wrap: wrap;
+    }
+}
+
+/*----- Why -----*/
+
+.why {
+    display: flex;
+}
+
+.why .rows {
+    flex: 12;
+    margin: 0 60px 0 10px;
+}
+
+.why .content {
+    flex: 5;
+    padding: 0 30px;
+    margin: 0 10px 0 60px;
+    background: #65db89;
+    border-radius: 5px;
+    color: white;
+}
+
+.why .content h3 {
+    font-weight: 600;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.why .content p {
+    margin-bottom: 30px;
+}
+
+.why .content .why-btn {
+    display: block;
+    background: rgba(133, 115, 115, 0.247);
+    padding: 8px 10px;
+    margin: 0 60px;
+    color: white;
+    border-radius: 50px;
+    transition: 0.5s;
+    text-decoration: none;
+}
+
+.why .content .why-btn i {
+    font-size: 14px;
+}
+
+.why .content .why-btn:hover {
+    color: #40b362;
+    background: white;
+}
+
+.why .box {
+    text-align: center;
+    background: white;
+    padding: 80px 30px;
+    margin-top: 20px;
+    width: auto;
+    border: 1px solid rgb(212, 202, 202);
+}
+
+.why .box i {
+    font-size: 30px;
+    padding: 18px;
+    color: #65db89;
+    margin-bottom: 30px;
+    background: white;
+    border-radius: 50px;
+}
+
+.why .box h4 {
+    color: rgb(59, 56, 56);
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0 0 30px 0;
+}
+
+.why .box p {
+    font-size: 15px;
+    color: grey;
+}
+
+/*----- Why for mobile and laptop -----*/
+
+@media screen and (max-width: 900px)  {
+    .why {
+        flex-direction: column;
+    }
+
+    .why .content, .why .rows {
+        margin: 0 20px 0 10px;
+    }
+}
+
+/*----- Tables -----*/
+
+.tables {
+    display: flex;
+    flex-direction: column;
+    padding-top: 0px;
+    margin: 30px 50px 0 50px;
+}
+
+.tables .row {
+    display: flex;
+}
+
+.tables .row .box {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    padding: 20px;
+    margin: 10px;
+    transition: 0.5s;
+    border: 1px solid rgb(191, 211, 210);
+}
+  
+.tables .row .box i {
+    flex: 1;
+    font-size: 25px;
+    padding-right: 10px;
+}
+  
+.tables .row .box span {
+    flex: 4;
+    font-weight: 600;
+    line-height: 1;
+    font-size: 15px;
+}
+  
+.tables .row .box span a {
+    color: rgb(68, 65, 65);
+    text-decoration: none;
+    transition: 0.5s;
+}
+  
+.tables .row .box:hover {
+    border-color: #40b362;
+}
+  
+.tables .row .box:hover span a {
+    color: #40b362;
+}
