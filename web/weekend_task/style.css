@@ -496,3 +496,30 @@ section {
 .tables .row .box:hover span a {
     color: #40b362;
 }
+
+/*-------- Currency -------*/
+
+input[type=text] {
+    width: 20%;
+    padding: 12px 20px;
+    margin: 8px;
+    box-sizing: border-box;
+}
+
+input[type=button] {
+    background-color: #233744;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+label {
+    width: 50px;
+    padding: 0 10px;
+    font-size: 30px;
+}

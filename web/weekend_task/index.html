@@ -215,6 +215,28 @@
                 </div>
             </section>
             <!------- End Table ------->
+
+            <!------- Currency ------->
+            <section>
+                <form action="">       
+                    <label for="dram">Dram</label>
+                    <input type="text" value="0" name="dram" id="dram"><br>
+                    <div>
+                        <input type="button" onclick="convUsa()" value="USA">
+                        <div id="usa"></div>
+                    </div>
+                    <div>
+                        <input type="button" onclick="convEuro()" value="Convert">
+                        <div id="euro"></div>
+                    </div>
+                    <div>
+                        <input type="button" onclick="convPound()" value="Convert">
+                        <div id="pound"></div>
+                    </div>           
+                </form>
+                <script src="script.js"></script>
+            </section>
+            <!------- End Currency ------->
             
             <!-------- Courses ------->
             <section>  
@@ -223,7 +245,7 @@
                     <h1>POPULAR COURSES</h1>
                 </div>
             </section>            
-            <!-------- End Courses ------->
+            <!--------End  Courses ------->
         
     </body>
 </html>
