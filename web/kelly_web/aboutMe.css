@@ -1,0 +1,159 @@
+body {
+    margin: 0;
+    font-family: "Open Sans", sans-serif;
+    color: #444444;
+}
+
+/* nav-bar */
+#nav-bar {
+
+    height: 42px;
+    padding: 15px 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    background: #e9e8e6;
+    box-shadow: 0px 0px 25px 0 rgba(0, 0, 0, 0.08);
+    z-index: 997;
+    width: 100%;
+    font-family: "Raleway", sans-serif;
+}
+
+
+.navbar-content {
+    height: 42px;
+    padding: 0 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.color-logo {
+    font-family: "Raleway",sans-serif;
+    font-size: 32px;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    font-weight: 300;
+    color: black;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.header-content {
+   /* min-width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;*/
+
+    display: block;
+    position: relative;
+    color: #888888;
+    transition: 0.3s;
+    font-size: 15px;
+    font-family: "Raleway", sans-serif;
+    font-weight: 600;
+}
+
+.nav-bar-links {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 15px;
+    position: relative;
+    color:#888888;
+    transition: color 0.7s linear;
+}
+
+.text-decoration-none {
+    text-decoration: none;
+}
+.color-Light-Sea-Green {
+    color: #34b7a7;
+}
+
+.nav-bar-links::after {
+    content: "";
+    display: block;
+    width: 50%;
+    transition: 0.5s;
+    height: 2px;
+    background-color:#34b7a7;
+    opacity: 0;
+
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+    transition: opacity 0.5s linear;
+
+}
+
+.nav-bar-links:hover {
+    color: black;
+}
+
+.nav-bar-links:hover::after {
+    opacity: 1;
+}
+
+.social-share-icons {
+    padding: 3px;
+    text-decoration: blink;
+}
+.social-share-svg:hover {
+    fill: #34b7a7;
+    transition: 0.3s;
+}
+
+
+
+
+.footer {
+    background: #e9e8e6;
+    padding: 30px 0;
+    color: #222222;
+    font-size: 14px;
+    transition: 0.5s;
+    text-align: center;
+}
+
+
+.content {
+    /*
+    background-image: url('./assets/img/hero-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    padding: 60px 0;
+    */
+    display: flex !important;
+    width: 100%;
+    height: 90vh;
+    background-attachment: fixed;
+    background-clip:border-box;
+    background-color: rgba(0, 0, 0, 0);
+    background-origin: padding-box;
+    background-repeat: no-repeat;
+    line-height: 24px;
+    padding-bottom: 60px;
+    padding-top: 60px;
+    background-size: cover;
+    align-items: center;
+}
+.content-item{
+    display: flex;
+    width: 930px;
+    height: 164px;
+    flex-direction: column;
+    position: relative;
+    padding: 70px 15px 0 15px;
+    padding-top: 70px;
+    align-items: center;
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color:rgb(68, 68, 68);
+    flex: auto;
+}
