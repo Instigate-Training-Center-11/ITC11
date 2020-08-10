@@ -257,7 +257,8 @@ header {
 }
 
 .about h1::before, .about h1::after, .cards div h1::before, .cards div h1::after,
-.features-title h1::before, .features-title h1::after {
+.features-title h1::before, .features-title h1::after, .calculator-title::before,
+.calculator-title::after {
     content: "";
     margin: 10px 15px;
     display: inline-block;
@@ -566,6 +567,48 @@ i[class*=smile] ~ p, i[class*=file] ~ p {
     letter-spacing: 1.5px;
 }
 /* ICONS row ENd */
+
+/* Calculator start */
+.calculator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.calculator table {
+    flex: 1;
+}
+
+.calculator-title {
+    text-align: center;
+}
+
+tr td input, .inp {
+    background-color: #dce9f5;
+    border: none;
+    color: rgb(73, 73, 73);
+    padding: 10px 50px;
+    text-align: center;
+    display: inline-block;
+    font-size: 28px;
+    font-weight: bold;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.size {
+    width: 394px;
+}
+
+.calculator-result {
+    width: 510px;
+    height: 50px;
+    border: 3px solid #6d6e81;
+    text-align: right;
+    font-size: 28px;
+    color: rgb(44, 49, 49);
+}
+/* Calculator END */
 
 /* Media (middle) */
 @media (max-width: 900px) {

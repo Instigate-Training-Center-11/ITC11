@@ -338,6 +338,44 @@
         </section>
         <!-- Icons row END -->
 
+        <!-- CALCULYATOR start -->
+        <h1 class="calculator-title">CALCULATOR</h1>
+        <section class="container calculator">
+            <form id="calc">
+                <input name="numbers" type="text" value="0" class="calculator-result" readonly>
+                <table>
+                    <tr>
+                        <td><input type="button" value="7" onclick="press(7)"></td>
+                        <td><input type="button" value="8" onclick="press(8)"></td>        
+                        <td><input type="button" value="9" onclick="press(9)"></td>
+                        <td><input type="button" value="del" onclick="del()"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="button" value="4" onclick="press(4)"></td>
+                        <td><input type="button" value="5"onclick="press(5)"></td>        
+                        <td><input type="button" value="6" onclick="press(6)"></td>
+                        <td><input type="button" value="+/- " onclick="neg()"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="button" value="1" onclick="press(1)"></td>
+                        <td><input type="button" value="2" onclick="press(2)"></td>        
+                        <td><input type="button" value="3" onclick="press(3)"></td>
+                        <td><input type="button" value="  .  " onclick="dote()"></td>  
+                    </tr>
+                    <tr>
+                        <td><input type="button" value="+" onclick="operation('+')"></td>
+                        <td><input type="button" value="*" onclick="operation('*')"></td>                         
+                        <td><input type="button" value="-" onclick="operation('-')"></td>  
+                        <td><input type="button" value="  /  " onclick="operation('/')"></td>
+                    </tr>
+                </table>
+                <input class="inp" type="button" value="0" onclick="press(0)">
+                <input class="inp size" type="button" value="=" onclick="operation('=')">           
+            </form>
+        </section>
+        <!-- Calculyator END -->
+
         <footer></footer>
+        <script src="script.js"></script>
     </body>
 </html>
