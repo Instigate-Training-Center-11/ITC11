@@ -1,62 +1,65 @@
 img {
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    z-index: -1;
-  }
-  .div1 {
-      color: red;
-    writing-mode: vertical-rl; 
-    unicode-bidi: bidi-override;
-  }
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: -1;
+}
+.div1 {
+  color: red;
+  writing-mode: vertical-rl;
+  unicode-bidi: bidi-override;
+}
 .div2 {
-    color: red;
-    width: 80px;
-    word-wrap: break-word;
-    word-spacing: 30px;
-    text-indent: 50px;
+  color: red;
+  width: 80px;
+  word-wrap: break-word;
+  word-spacing: 30px;
+  text-indent: 50px;
 }
 p.a {
-    white-space: pre;
-    visibility: hidden;
-    user-select: none;
-  }
-  .div3 {
-    width: 100px;
-    height: 100px;
-    background: red;
-    transition: width 2s;
-    transition-timing-function: linear;
-  }
-  .div3:hover {
-    width: 300px;
-  }
-  div.a {
-    width: 150px;
-    height: 80px;
-    background-color: yellow;
-    -ms-transform: rotate(20deg); /* IE 9 */
-    transform: rotate(20deg);
-  }
-  div.c {
-    position: absolute;
-    top: 50px;
-    border: 3px solid green;
-  } 
-  div.c {
-    text-shadow: 2px 2px #FF0000;
-  }
-  .all-scroll {cursor: all-scroll;}
-  #anim {
-      width: 100px;
-      height: 100px;
-      background: grey;
-      color: white;
-      animation: mymove1 2s infinite linear alternate;
-      align-self: center;
-      border: 4px dotted blue
-  }
-  #title {
+  white-space: pre;
+  visibility: hidden;
+  user-select: none;
+}
+.div3 {
+  width: 100px;
+  height: 100px;
+  background: red;
+  transition: width 2s;
+  transition-timing-function: linear;
+}
+.div3:hover {
+  width: 300px;
+}
+div.a {
+  width: 150px;
+  height: 80px;
+  background-color: yellow;
+  -ms-transform: rotate(20deg);
+  /* IE 9 */
+  transform: rotate(20deg);
+}
+div.c {
+  position: absolute;
+  top: 50px;
+  border: 3px solid green;
+}
+div.c {
+  text-shadow: 2px 2px #FF0000;
+}
+.all-scroll {
+  cursor: all-scroll;
+}
+#anim {
+  width: 100px;
+  height: 100px;
+  background: grey;
+  color: white;
+  animation: mymove1 2s infinite linear alternate;
+  align-self: center;
+  border: 4px dotted blue
+}
+#title {
   width: 300px;
   height: 100px;
   background: cadetblue;
@@ -64,7 +67,7 @@ p.a {
   /* animation: mymove 20s infinite; */
   animation-name: mymove;
   animation-delay: 2s;
-  animation-direction:alternate-reverse;
+  animation-direction: alternate-reverse;
   animation-iteration-count: 2;
   animation-duration: 20s;
   animation-fill-mode: backwards;
@@ -74,235 +77,219 @@ p.a {
   border-color: darkcyan;
   border-style: double;
   border-bottom: 5px solid green;
+}
+@keyframes mymove {
+  from {
+    left: 0px;
   }
-  @keyframes mymove {
-      from {left: 0px;}
-      to {left: 100%; background-color: cornflowerblue;}
+  to {
+    left: 100%;
+    background-color: cornflowerblue;
   }
-  @keyframes mymove1 {
-      to {transform: rotateY(180deg);}
+}
+@keyframes mymove1 {
+  to {
+    transform: rotateY(180deg);
   }
-  div.txt {
-      width: 150px;
-      height: 80px;
-      background-color: yellow;
-      transform: rotate(45deg);
-      word-wrap: break-word;
-      writing-mode: vertical-rl;
+}
+div.txt {
+  width: 150px;
+  height: 80px;
+  background-color: yellow;
+  transform: rotate(45deg);
+  word-wrap: break-word;
+  writing-mode: vertical-rl;
+}
+div.rot {
+  width: 150px;
+  height: 80px;
+  transform: rotate(45deg);
+  transform-origin: 20% 40%;
+}
+#table {
+  border-top-style: dotted;
+  border-top-width: thin;
+  border-top-color: yellow;
+  border-right-style: solid;
+  border-right-width: thick;
+  border-right-color: green;
+  border-left-style: dashed;
+  border-left-width: thick;
+  border-left-color: blueviolet;
+  column-rule-style: double;
+  border-collapse: separate;
+}
+.col1 {
+  column-rule-width: 10px;
+  column-count: 2;
+  column-gap: 50px;
+  column-rule-style: solid;
+  column-rule-color: brown;
+  column-fill: balance;
+  font: italic small-caps bold 12px/30px Georgia, serif;
+}
+.txt1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: large;
+  font-kerning: normal;
+  text-shadow: 2px 2px #ff0000;
+}
+.txt2 {
+  font-size-adjust: 0.58;
+  font-stretch: expanded;
+  text-decoration-line: overline underline;
+  text-decoration-style: wavy;
+  text-decoration-color: cornsilk;
+  text-indent: -2em;
+  text-transform: capitalize;
+}
+p.ex3 {
+  display: block;
+}
+.txt3 {
+  columns: 100px 3;
+  font-variant: small-caps;
+  font-weight: lighter;
+  border-style: dotted;
+  border-left: double;
+  border-right: double;
+  box-sizing: border-box;
+  border-color: violet;
+  word-spacing: 30px;
+}
+.txt4 {
+  font-variant-caps: all-small-caps;
+  font-weight: bold;
+  border: 1px solid red;
+  margin: 35px;
+  text-align: justify;
+  text-justify: newspaper;
+  padding-bottom: 50px;
+  padding-top: 10px;
+  padding-left: 20px;
+  padding-right: 30px;
+}
+.txt5 {
+  white-space: nowrap;
+  width: 50px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border: 1px solid #000000;
+}
+#borderimg1 {
+  border: 10px solid transparent;
+  padding: 15px;
+  border-image: url("https://www.pngonly.com/wp-content/uploads/2017/06/Decorative-Border-PNG.png") 30 round;
+}
+#borderimg2 {
+  border-image-outset: 15px;
+  border: solid transparent;
+  padding: 15px;
+  border-image: url("https://www.w3schools.com/cssref/border.png");
+  border-image-repeat: round;
+  border-image-slice: 30;
+  border-image-width: 30px;
+}
+a::after {
+  content: " (" attr(href) ")";
+}
+@media print {
+  h2 {
+    page-break-before: always;
   }
-
-  div.rot {
-      width: 150px;
-      height: 80px;
-      transform: rotate(45deg);
-      transform-origin: 20% 40%;
-  }
-
-  #table {
-      border-top-style: dotted;
-      border-top-width: thin;
-      border-top-color: yellow;
-      border-right-style: solid;
-      border-right-width: thick;
-      border-right-color: green;
-      border-left-style: dashed;
-      border-left-width: thick;
-      border-left-color: blueviolet;
-      column-rule-style: double;
-      border-collapse: separate;
-
-  }
-  .col1 {
-      column-rule-width: 10px ;
-      column-count: 2;
-      column-gap: 50px;
-      column-rule-style: solid;
-      column-rule-color: brown;
-      column-fill: balance;
-      font: italic small-caps bold 12px/30px Georgia, serif;
-  }
-  .txt1 {
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: large;
-      font-kerning: normal;
-      text-shadow: 2px 2px #ff0000;
-  }
-  .txt2 {
-      font-size-adjust: 0.58;
-      font-stretch: expanded;
-      text-decoration-line: overline underline;
-      text-decoration-style: wavy;
-      text-decoration-color: cornsilk;
-      text-indent: -2em;
-      text-transform: capitalize;
-  }
-  p.ex3 {
-      display: block;
-  }
-  .txt3 {
-      columns: 100px 3;
-      font-variant: small-caps;
-      font-weight:lighter;
-      border-style:dotted;
-      border-left:double;
-      border-right:double;
-      box-sizing: border-box;
-      border-color: violet;
-      word-spacing: 30px;
-  }
-  .txt4 {
-      font-variant-caps: all-small-caps;
-      font-weight: bold;   
-      border: 1px solid red; 
-      margin: 35px; 
-      text-align: justify;
-      text-justify:newspaper;
-      padding-bottom: 50px;
-      padding-top: 10px;
-      padding-left: 20px;
-      padding-right: 30px;        
-  }
-  .txt5 {
-      white-space: nowrap; 
-      width: 50px; 
-      overflow: hidden;
-      text-overflow: ellipsis; 
-      border: 1px solid #000000;
-  }
-  #borderimg1 { 
-      border: 10px solid transparent;
-      padding: 15px;
-      border-image: url("https://www.pngonly.com/wp-content/uploads/2017/06/Decorative-Border-PNG.png") 30 round;
-  }
-
-  #borderimg2 {
-      border-image-outset: 15px;
-      border: solid transparent;
-      padding: 15px;
-      border-image: url("https://www.w3schools.com/cssref/border.png");
-      border-image-repeat: round;  
-      border-image-slice: 30;
-      border-image-width: 30px; 
-  }
-
-
-  a::after {
-      content: " (" attr(href) ")";
-  }
-
-  @media print {
-      h2 {page-break-before: always;}
-  }
-
-
-  span {
-      border: 5px solid red;
-      padding:  0em 1em;
-      border-radius: 16px;
-      font-size: 24px;
-      line-height: 2;
-  }
-  span.box1 { 
-      -webkit-box-decoration-break: clone;
-      -o-box-decoration-break: clone;
-      box-decoration-break: clone;
-      box-shadow: 5px 10px #888888;
-      
-  }
-
-
-  #line {
-      border-bottom-style: solid;
-      border-bottom-color: coral;
-      border-bottom-width: thick;
-  }
-  #main {
-      width: 70px;
-      height: 300px;
-      border: 1px solid #c3c3c3;
-      display: flex;
-      flex-wrap: wrap;
-      align-content: center;
-  }
-
-  #main div {
-      width: 70px;
-      height: 70px;
-  }
-
-  #ex2 {
-      position: relative;
-      height: 150px;
-      width: 150px;
-      margin-left: 60px;
-      border: 1px solid blue;
-      perspective: 100px;
-  }
-  #ex3 {
-      padding: 50px;
-      position: absolute;
-      border: 1px solid black;
-      background-color: red;
-      background: whitesmoke; 
-      transform-style: preserve-3d;
-      transform: rotateX(45deg);
-  }
-
-  #trans1 {
-      width: 100px;
-      height: 100px;
-      background: yellowgreen;
-      transition: width 2s;
-  }
-
-  #trans1:hover {
-      width: 200px;
-  }
-
-  #trans2 {
-      width: 100px;
-      height: 100px;
-      background: green;
-      transition-property:all;
-      transition-delay: 2s;
-      transition-duration: 10s;
-      transition-timing-function:steps(2);
-  }
-
-  #trans2:hover {
-      width: 500px;
-  }
-
-  
-  img {
-      position: absolute;
-      left: 0px;
-      top: 0px;
-      z-index: -1;
-  }
-
-
-  ul  {
-      list-style-image: url("https://upload.wikimedia.org/wikipedia/commons/b/b9/Arrow-right-small.svg");
-      list-style-position: outside;
-      list-style-type: circle;
-  }
-
-  .grid1 {
-      display: grid;
-      grid-template-columns: auto auto auto auto;
-      grid-gap: 20px;
-      background-color: blue;
-      padding: 10px;
-  }
-
-  .grid1 > div {
-      background-color: yellow;
-      text-align: center;
-      padding: 20px 0;
-      font-size: 10px;
-  }
-
-  .item1 {
-      grid-area: 3 / 1 / span 2 / span 3;
-  }
+}
+span {
+  border: 5px solid red;
+  padding: 0em 1em;
+  border-radius: 16px;
+  font-size: 24px;
+  line-height: 2;
+}
+span.box1 {
+  -webkit-box-decoration-break: clone;
+  -o-box-decoration-break: clone;
+  box-decoration-break: clone;
+  box-shadow: 5px 10px #888888;
+}
+#line {
+  border-bottom-style: solid;
+  border-bottom-color: coral;
+  border-bottom-width: thick;
+}
+#main {
+  width: 70px;
+  height: 300px;
+  border: 1px solid #c3c3c3;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+}
+#main div {
+  width: 70px;
+  height: 70px;
+}
+#ex2 {
+  position: relative;
+  height: 150px;
+  width: 150px;
+  margin-left: 60px;
+  border: 1px solid blue;
+  perspective: 100px;
+}
+#ex3 {
+  padding: 50px;
+  position: absolute;
+  border: 1px solid black;
+  background-color: red;
+  background: whitesmoke;
+  transform-style: preserve-3d;
+  transform: rotateX(45deg);
+}
+#trans1 {
+  width: 100px;
+  height: 100px;
+  background: yellowgreen;
+  transition: width 2s;
+}
+#trans1:hover {
+  width: 200px;
+}
+#trans2 {
+  width: 100px;
+  height: 100px;
+  background: green;
+  transition-property: all;
+  transition-delay: 2s;
+  transition-duration: 10s;
+  transition-timing-function: steps(2);
+}
+#trans2:hover {
+  width: 500px;
+}
+img {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: -1;
+}
+ul {
+  list-style-image: url("https://upload.wikimedia.org/wikipedia/commons/b/b9/Arrow-right-small.svg");
+  list-style-position: outside;
+  list-style-type: circle;
+}
+.grid1 {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-gap: 20px;
+  background-color: blue;
+  padding: 10px;
+}
+.grid1>div {
+  background-color: yellow;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 10px;
+}
+.item1 {
+  grid-area: 3 / 1 / span 2 / span 3;
+}
