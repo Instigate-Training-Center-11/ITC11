@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="task1.js"></script>
+    <script src="task3.js"></script>
+    <script src="task4.js"></script>
+    <script>
+        function print_current_page() {
+            window.print();
+        }
+        function animate_string(id) {
+            var element = document.getElementById(id);
+            var textNode = element.childNodes[0]; // assuming no other children
+            var text = textNode.data;
+            setInterval(function () {
+                text = text[text.length - 1] + text.substring(0, text.length - 1);
+                textNode.data = text;
+            }, 100);
+        }
+        function leapyear(year) {
+            console.log("Task 6  " + year + "  is")
+            return (year % 100 === 0) ? (year % 400 === 0) : (year % 4 === 0);
+        }
+        console.log(leapyear(2016));
+        console.log(leapyear(2000));
+        console.log(leapyear(1700));
+        console.log("Task 7");
+        for (var year = 2014; year <= 2050; year++) {
+            var d = new Date(year, 0, 1);
+            if (d.getDay() === 0)
+                console.log("1st January is being a Sunday  " + year);
+        }
+        console.log("Task 8");
+        const num = Math.ceil(Math.random() * 10);
+        console.log(num);
+        const gnum = prompt('Guess the number between 1 and 10 inclusive');
+        if (gnum == num)
+            console.log('Matched');
+        else
+            console.log('Not matched, the number was ' + gnum);
+        console.log("Task 9");
+        today = new Date();
+        var cmas = new Date(today.getFullYear(), 11, 25);
+        if (today.getMonth() == 11 && today.getDate() > 25) {
+            cmas.setFullYear(cmas.getFullYear() + 1);
+        }
+        var one_day = 1000 * 60 * 60 * 24;
+        console.log(Math.ceil((cmas.getTime() - today.getTime()) / (one_day)) +
+            " days left until Christmas!");
+        function multiplyBy() {
+            num1 = document.getElementById("firstNumber").value;
+            num2 = document.getElementById("secondNumber").value;
+            document.getElementById("result").innerHTML = num1 * num2;
+        }
+        function divideBy() {
+            num1 = document.getElementById("firstNumber").value;
+            num2 = document.getElementById("secondNumber").value;
+            document.getElementById("result").innerHTML = num1 / num2;
+        }
+        console.log("Task 11");
+        function cToF(celsius) {
+            var cTemp = celsius;
+            var cToFahr = cTemp * 9 / 5 + 32;
+            var message = cTemp + '\xB0C is ' + cToFahr + ' \xB0F.';
+            console.log(message);
+        }
+        function fToC(fahrenheit) {
+            var fTemp = fahrenheit;
+            var fToCel = (fTemp - 32) * 5 / 9;
+            var message = fTemp + '\xB0F is ' + fToCel + '\xB0C.';
+            console.log(message);
+        }
+        cToF(60);
+        fToC(45);
+        console.log("Task 12");
+        console.log(document.URL);
+        console.log("Task 13");
+        var var_name = 'user';
+        var n = 120;
+        this[var_name] = n;
+        console.log(user)
+        console.log("Task 14");
+        filename = "test.js"
+        console.log(filename.split('.').pop());
+        console.log("Task 15");
+        function difference(n) {
+            if (n <= 13)
+                return 13 - n;
+            else
+                return (n - 13) * 2;
+        }
+        console.log(difference(32))
+        console.log(difference(11))
+        console.log("Task 16");
+        function sumTriple(x, y) {
+            if (x == y) {
+                return 3 * (x + y);
+            } else {
+                return (x + y);
+            }
+        }
+        console.log(sumTriple(10, 20));
+        console.log(sumTriple(10, 10));
+        console.log("Task 17");
+        function diff_num(n) {
+            if (n <= 19) {
+                return (19 - n);
+            } else {
+                return (n - 19) * 3;
+            }
+        }
+        console.log(diff_num(12));
+        console.log(diff_num(19));
+        console.log(diff_num(22));
+        console.log("Task 18");
+        function test50(x, y) {
+            return ((x == 50 || y == 50) || (x + y == 50));
+        }
+        console.log("Task 19");
+        function testhundred(x) {
+            return ((Math.abs(100 - x) <= 20) ||
+                (Math.abs(400 - x) <= 20));
+        }
+        console.log(testhundred(10));
+        console.log(testhundred(90));
+        console.log("Task 20");
+        function positive_negative(x, y) {
+            if ((x < 0 && y > 0) || x > 0 && y < 0) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+        console.log(positive_negative(2, 2));
+        console.log(positive_negative(-2, 2));
+        console.log("Task 21");
+        function string_check(str1) {
+            if (str1 === null || str1 === undefined || str1.substring(0, 2) === 'Py') {
+                return str1;
+            }
+            return "Py" + str1;
+        }
+        console.log(string_check("Python"));
+        console.log(string_check("thon"));
+        console.log("Task 22");
+        function remove_character(str, char_pos) {
+            part1 = str.substring(0, char_pos);
+            part2 = str.substring(char_pos + 1, str.length);
+            return (part1 + part2);
+        }
+
+        console.log(remove_character("Python", 0));
+        console.log(remove_character("Python", 3));
+    </script>
+</head>
+
+<body onload="animate_string('target')" <pre id="target">Task 5 </pre>
+    <div>Task 2</div>
+    <button onclick="print_current_page()">Print this page</button>
+    <div>Task 10</div>
+    <form>
+        1st Number : <input type="text" id="firstNumber" /><br>
+        2nd Number: <input type="text" id="secondNumber" /><br>
+        <input type="button" onClick="multiplyBy()" Value="Multiply" />
+        <input type="button" onClick="divideBy()" Value="Divide" />
+    </form>
+    <p>The Result is : <br>
+        <span id="result"></span>
+    </p>
+</body>
+
+</html>
