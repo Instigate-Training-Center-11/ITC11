@@ -242,3 +242,115 @@ console.log(checkThreeNumbers(10, 20, 30));
     Note: Strict mode -> 10, 15, 31 : Soft mode -> 24, 22, 31 or 22, 22, 31*/
 let checkStrict = (a, b, c) => (c - b) > (b - a);
 console.log(checkStrict(10, 15, 31));
+
+/*43. Write a JavaScript program to check from three given numbers (non negative integers) that two or all of them have the same rightmost digit.*/
+
+
+
+/*44. Write a JavaScript program to check from three given integers that whether a number is greater than or equal to 20 and less than one of the others.*/
+
+
+/*45. Write a JavaScript program to check two given integer values and return true if one of the number is 15 or if their sum or difference is 15.*/
+
+/*46. Write a JavaScript program to check two given non-negative integers that whether one of the number (not both) is multiple of 7 or 11.*/
+let mult = (a, b) => (a % 7 === 0 || b %7 === 0) ^ (a % 11 === 0 || b % 11 === 0);
+console.log(mult(7, 11));
+console.log(mult(7, 12));
+console.log(mult(5, 22));
+
+/*47. Write a JavaScript program to check whether a given number is presents in the range 40..10000.
+
+    For example 40 presents in 40 and 4000*/
+let checkInRange = (a) => a >= 40 && a <=10000;
+
+/*48. Write a JavaScript program to reverse a given string.*/
+let reverseStr = (s) => {
+    let temp = "";
+    for(let i = s.length - 1; i >= 0; --i){
+        temp +=  s[i];
+    }
+    return temp;
+};
+console.log(reverseStr("abcd"));
+
+/*49. Write a JavaScript program to replace every character in a given string with the character following it in the alphabet.*/
+let replaceCh = (s) => {
+    let temp = "";
+    for(let i = 0; i < s.length; ++i){
+        temp += String.fromCharCode(s[i].charCodeAt() + 1) ;
+    }
+    return temp;
+};
+console.log(replaceCh("ab"));
+/*50. Write a JavaScript program to capitalize the first letter of each word of a given string.*/
+let toCapital = (s) => {
+    let temp = "";
+    let words = s.split(' ');
+    words.forEach((w) => temp += w[0].toUpperCase() + w.slice(1, w.length)) + " ";
+    return temp;
+};
+console.log(toCapital("kh in kjn"))
+
+/*51. Write a JavaScript program to convert a given number to hours and minutes.*/
+let toHours = (n) => console.log(Math.trunc(n / 60) + " : " + n % 60);
+toHours(65);
+toHours(119);
+toHours(123);
+
+/*52. Write a JavaScript program to convert the letters of a given string in alphabetical order.*/
+
+
+/*53. Write a JavaScript program to check whether the characters a and b are separated by exactly 3 places anywhere (at least once) in a given string.*/
+
+
+/*54. Write a JavaScript program to count the number of vowels in a given string.*/
+let countOfVowels = (s) => {
+    let count = 0;
+    for(let i = 0; i < s.length; ++i) {
+      if(s[i] === 'a' || s[i] === 'e' || s[i] === 'i' || s[i] ==='o' || s[i] === 'u') {
+          ++count;
+      }
+    }
+    console.log(count);
+};
+countOfVowels("aeioubbbbbbbbbbbb");
+
+/*55. Write a JavaScript program to check whether a given string contains equal number of p's and t's.*/
+let isEqualsSimb = (s) => {
+    let countOfp = 0;
+    let countOft = 0;
+    for(let i = 0; i < s.length; ++i) {
+        s[i] === 'p' ? ++countOfp : s[i] === 't' ? ++countOft : 0;
+    }
+    console.log(countOft === countOfp);
+};
+isEqualsSimb("ppp ttt");
+isEqualsSimb("ppp tttt");
+
+/*56. Write a JavaScript program to divide two positive numbers and return a string with properly formatted commas.*/
+
+
+/*57. Write a JavaScript program to create a new string of specified copies (positive number) of a given string.*/
+
+
+/*58. Write a JavaScript program to create a new string of 4 copies of the last 3 characters of a given original string. The length of the given string must be 3 and above.*/
+
+
+/*59. Write a JavaScript program to extract the first half of a string of even length.*/
+let extractHalfPast = (s) => s.slice(0, s.length / 2);
+console.log(extractHalfPast("assa"));
+
+/*60. Write a JavaScript program to create a new string without the first and last character of a given string.*/
+let withoutFL = (s) => s.slice(1, s.length - 1);
+console.log(withoutFL("abcd"));
+
+/*61. Write a JavaScript program to concatenate two strings except their first character.*/
+let concatTwoStr = (a, b) => a.slice(1, a.length) + b.slice(1, b.length);
+console.log(concatTwoStr("abc", "abc"));
+
+
+/*62. Write a JavaScript program to move last three character to the start of a given string. The string length must be greater or equal to three.*/
+let moveCh = (s) => s.length >= 3 ? s.slice(s.length - 3, s.length) + s.slice(0, s.length - 3) : s;
+console.log(moveCh("abcd"));
+console.log(moveCh("abc"));
+
