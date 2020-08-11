@@ -1,32 +1,41 @@
 const homework = {};
 const tasks = {};
 
-// *** Homework ***
-
-// Implement object copy (should also support nested).
+// Implement object copy (should also support nested)
 homework.copyV1 = function(obj1, obj2) {
     obj1 = JSON.parse(JSON.stringify(obj2));
     return obj1;
 };
 
-homework.copyV2 = function(obj1, obj2) {
-    for (key in obj2) {
-        if (typeof obj2[key] === "object" && obj2[key] !== null && Array.isArray(obj2[key])) {
-            obj1[key] = obj2[key];
-            homework.copyV2(obj1, obj2[key]);
-        } else {
-            obj1[key] = obj2[key];
-        }
+homework.copyV2 = function(obj2) {
+    // Returns the value, if obj2 is not an object
+    if (typeof obj2 !== "object" || obj2 === null) {
+        return obj2;
     }
+
+    // Create return object
+    let obj1;
+    // init return object an array- if value is array
+    // Else create object
+    if (Array.isArray(obj2)) {
+        obj1 = [];
+    } else {
+        obj1 = {};
+    }
+
+    // Copy obj2 to obj1 recursively
+    for (let key in obj2) {
+        obj1[key] = homework.copyV2(obj2[key])
+    }
+
     return obj1;
 }
 
 // Symbol
-
 homework.symbol = function() {
     var sym1 = Symbol();
-    var sym2 = Symbol("foo");
-    var sym3 = Symbol("foo");
+    var sym2 = Symbol("some");
+    var sym3 = Symbol("some");
 
     // false
     if (sym3 == sym2) {
@@ -42,6 +51,130 @@ homework.symbol = function() {
     let symObj = Object(sym);
     // object
     typeof symObj;
+}
+
+// *** Data structures ***
+homework.map = function() {
+    // Map can have any types of key
+    // Elements maintains the insertion order
+    // Maps are iterable
+    let map = new Map();
+    map.set("1", "Kolibri");
+    map.set(1, "Mane");
+    console.log(map);
+    // We can get size
+    console.log(map.size);
+    map.get(1);
+    // False
+    map.has("some");
+    // True
+    map.has("1");
+    // Iteration
+    map.values();
+    // Delete all key-values from array
+    map.clear();
+}
+
+homework.map = function() {
+    let set = new Set([1, 2, 3, 4]);
+    // Does not added
+    set.add(4);
+    // Added
+    set.add(6);
+    set.delete(4);
+    // has not value 4
+    console.log(set);
+    // Is element exists
+    set.has(6);
+    // Get set size
+    set.size
+    // Clear set (delete all elements)
+    set.clear();
+}
+
+homework.map = function() {
+    let set = new Set([1, 2, 3, 4]);
+    // Does not added
+    set.add(4);
+    // Added
+    set.add(6);
+    set.delete(4);
+    // has not value 4
+    console.log(set);
+    // Is element exists
+    set.has(6);
+    // Get set size
+    set.size
+    // Clear set (delete all elements)
+    set.clear();
+}
+
+homework.weakMap = function() {
+    // weakMap must has only object keys
+    const wm1 = new WeakMap(),
+    wm2 = new WeakMap(),
+    wm3 = new WeakMap();
+
+    const o1 = {},
+    o2 = function(){},
+    o3 = window,
+    o4 = [1, 2, 3];
+
+    wm1.set(o1, 37);
+    wm1.set(o2, 'Mane');
+    // Value can be anything, including object and function
+    wm2.set(o1, o2);
+    wm2.set(o3, undefined);
+
+    // keys and values can be objects. Even weak-map)
+    wm2.set(wm1, wm2);
+    // 'Mane'
+    wm1.get(o2);
+    // undefined, not value for 02 in wm2
+    wm2.get(o2);
+    // undefined, this was initialized
+    wm2.get(o3);
+
+    // true
+    wm1.has(o2);
+    // false
+    wm2.has(o2);
+    // true (even value equal to 'undefined')
+    wm2.has(o3);
+
+    wm3.set(o1, 37);
+    // 37
+    wm3.get(o1);
+
+    // true
+    wm1.has(o1);
+    wm1.delete(o1);
+    // false
+    wm1.has(o1);
+}
+
+tasks.weakSet = function() {
+    let weakMap = new WeakMap();
+    let obj = {};
+
+    // working
+    // has object key
+    weakMap.set(obj, "ok");
+
+    // Can't use string for key
+    // error, because "test" is not an object
+    //weakMap.set("test", "Whoops");
+
+    let foo = function() {
+        let john = { name: "John" };
+        let weakMap = new WeakMap();
+        weakMap.set(john, "...");
+
+        // rewriting link on object
+        john = null;
+        // Object john deleted from memory automatically!
+    }
+    foo();
 }
 
 // 1. Current day and time

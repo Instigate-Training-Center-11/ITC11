@@ -68,6 +68,6 @@ class Cat {
 }
 
 // 9. But if we use function to create class, this is function
-Animal.prototype.speak = function() {
+Cat.prototype.speak = function() {
     return this;
 }
