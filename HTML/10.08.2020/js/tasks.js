@@ -911,7 +911,6 @@ function sum_adjacent_difference(arr) {
 const build_Palindrome = function(str) {
     let dict = new Map();
 
-    //dict-i meja qcum amen tar u ira index@ , ete et taric eli ka na el
     for(let i = 0; i < str.length; ++i){
         if(str.indexOf(str[i], i + 1) !== -1) {
             dict.set(i, str[i]);
@@ -956,11 +955,54 @@ const build_Palindrome = function(str) {
     return str;
 }
 
-// =============================Task__90=======================================
+// =============================Task__98=======================================
+const change_case =function(str) {
+    let numUpperCase = 0;
+    let numLowerCase = 0;
 
+    for (var i = 0; i < str.length; i++) {
+        if (/[A-Z]/.test(str[i])) {
+            numUpperCase++;
+        } else {
+            y++;
+        }
+    }
 
+    if (numLowerCase > numUpperCase) {
+        return str.toLowerCase();
+    }
 
+    return str.toUpperCase();
+}
 
+// =============================Task__99=======================================
+const rearrangement_characters =function(str1, str2) {
+    let firstSymbols = str1.split('');
+    let secondSymbols = str2.split('');
+    let result = true;
+
+    firstSymbols.sort();
+    secondSymbols.sort();
+
+    for (let i = 0; i < Math.max(firstSymbols.length, secondSymbols.length); ++i) {
+        if(firstSymbols[i] !== secondSymbols[i]) {
+            result = false;
+        }
+    }
+
+    return result;
+}
+
+// =============================Task__100=======================================
+const check_common_element = function(arra1, arra2) {
+    for (let i = 0; i < arra1.length; ++i) {
+        if(arra2.indexOf(arra1[i]) != -1) {
+            return true;
+        }
+    }
+
+    return false;
+}
 
 
 
