@@ -1,0 +1,273 @@
+const homework = {};
+const tasks = {};
+
+// *** Homework ***
+
+// Implement object copy (should also support nested).
+homework.copyV1 = function(obj1, obj2) {
+    obj1 = JSON.parse(JSON.stringify(obj2));
+    return obj1;
+};
+
+homework.copyV2 = function(obj1, obj2) {
+    for (key in obj2) {
+        if (typeof obj2[key] === "object" && obj2[key] !== null && Array.isArray(obj2[key])) {
+            obj1[key] = obj2[key];
+            homework.copyV2(obj1, obj2[key]);
+        } else {
+            obj1[key] = obj2[key];
+        }
+    }
+    return obj1;
+}
+
+// Symbol
+
+homework.symbol = function() {
+    var sym1 = Symbol();
+    var sym2 = Symbol("foo");
+    var sym3 = Symbol("foo");
+
+    // false
+    if (sym3 == sym2) {
+        console.log("true")
+    } else {
+        console.log("false")
+    }
+
+    // to create symbol-object
+    let sym = Symbol("foo");
+    // symbol
+    typeof sym;
+    let symObj = Object(sym);
+    // object
+    typeof symObj;
+}
+
+// 1. Current day and time
+tasks.date = function() {
+    let now = new Date();
+    let day = now.getDay();
+    let week = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+
+    console.log("Today is :", week[day - 1]);
+    let time = now.getHours();
+
+    if (time > 12) {
+        time += " PM ";
+    } else {
+        time += " AM : ";
+    }
+
+    time += now.getMinutes() + " : " + now.getSeconds();
+    console.log("Current time is : ", time)
+};
+
+// 2. Print the contents of the current window
+tasks.content = function() {
+    let dom = document.getElementsByTagName("*");
+    let size = dom.length;
+
+    for (let i = 0; i < size; ++i) {
+        console.log(dom[i]);
+    }
+};
+
+// 3. Current date.
+tasks.currentData = function() {
+    let today = new Date();
+
+    let dateV1 = today.getMonth() + 1 + '-' + + today.getDate() + '-' + today.getFullYear();
+    let dateV2 = today.getMonth() + 1 + '/' + + today.getDate() + '/' + today.getFullYear();
+
+    let date = dateV1 + ', ' + dateV2;
+    console.log(date);
+};
+
+// 4. Find the area of a triangle, where lengths of the three sides are 5, 6, 7.
+tasks.area = function() {
+    let a = 5;
+    let b = 6;
+    let c = 7;
+
+    let p = (a + b + c) / 2;
+    let s = p * (p - a) * (p - b) * (p - c);
+
+    console.log("Area is:", s);
+};
+
+// 5. Rotate the string 'w3resource' in right direction by periodically
+//  removing one letter from the end of the string and attaching it to the front.
+tasks.rotateString = function(string) {
+    let size = string.length;
+    let rotated = "";
+
+    for (let i = 0; i < size; ++i) {
+        rotated = string[size - 1] + string.substring(0, size - 1);
+        string = rotated;
+        console.log(string)
+    }
+
+    // console.log(rotated);
+}
+
+// 6. Determine whether a given year is a leap year in the Gregorian calendar.
+tasks.calendar = function(year) {
+    let isLeap = (year % 4 === 0)? (year % 100 === 0)? (year % 400 === 0)? true: false: true: false;
+    if (isLeap) {
+        console.log(year, 'is leap');
+    } else {
+        console.log(year, 'is not leap');
+    }
+}
+
+// 7.Find 1st January is being a Sunday between 2014 and 2050.
+tasks.firstSunday = function() {
+    for (let year = 2014; year < 2050; ++year) {
+        let day = new Date("January 1," + year);
+        if (day.getDay() === 6) {
+            console.log(year);
+            break;
+        }
+    }
+}
+
+// 8. The program takes a random integer between 1 to 10,
+// the user is then prompted to input a guess number.
+// If the user input matches with guess number,
+// the program will display a message "Good Work" otherwise display a message "Not matched".
+var randomNum = function() {
+    let value = document.getElementById("number").value;
+    let number = Math.floor(Math.random() * 10);
+    console.log(number);
+    if (parseInt(value) === number) {
+        document.getElementById("text").innerHTML = "Good work";
+    } else {
+        document.getElementById("text").innerHTML = "Not matched";
+    }
+}
+
+// 9. calculate days left until next Christmas.
+tasks.untilChristmas = function() {
+    let today = new Date();
+    let xMas = new Date(today.getFullYear(), 11, 31);
+    if (parseInt(today.getMonth()) === 11 && parsInt(today.getDate()) === 31) {
+        xMas.setFullYear(xMas.getFullYear());
+    }
+
+    // one day to ms
+    let dayMS = 24 * 3600 * 1000;
+    let untilChristmas = Math.ceil(xMas.getTime() - today.getTime());
+    console.log("Days until Christmas are: ", parseInt(untilChristmas / dayMS));
+}
+
+// 10. Calculate multiplication and division of two numbers (input from user).
+var getMulDiv = function() {
+    let num1 = document.getElementById("num1").value;
+    let num2 = document.getElementById("num2").value;
+    document.getElementById("mul").innerHTML = "Mul: " + num1 * num2;
+    document.getElementById("div").innerHTML = "Div: " + num1 / num2;
+}
+
+// 11. Convert temperatures to and from Celsius, Fahrenheit.
+var convert = function(string) {
+    let num = document.getElementById("t").value;
+    if (string === 'cel') {
+        let cel = 5 * (num - 32) / 9;
+        document.getElementById("label").innerHTML = "Cel: " + cel;
+    } else {
+        let fah = 9 * num / 5 + 32;
+        document.getElementById("label").innerHTML = "Fah: " + fah;
+    }
+}
+
+// 12. Get the website URL (loading page).
+var getURL = function() {
+    document.getElementById("url").innerHTML = window.location.href;
+}
+
+// 13. Create a variable using a user-defined name.
+var createVar = function() {
+    let string = document.getElementById("inp").value;
+    window[string] = 8;
+    console.log(window[string]);
+}
+
+// 14. Exercise to get the extension of a filename.
+tasks.extension = function(filename) {
+    let index = filename.lastIndexOf(".");
+    let extension = filename.substring(index);
+    console.log(extension);
+}
+
+// 15. Get the difference between a given number and 13,
+// if the number is greater than 13 return double the absolute difference.
+tasks.extension = function(number) {
+    const num = 13;
+    if (num > number) {
+        console.log(num - number);
+        return num - number;
+    } else if (num < number) {
+        console.log((number - num) * 2);
+        return (number - num) * 2;
+    } else {
+        console.log("Are equal");
+        return 0;
+    }
+}
+
+// 16. Compute the sum of the two given integers.
+// If the two values are same, then returns triple their sum.
+
+tasks.sum = function(a, b) {
+    if (a === b) {
+        console.log(6 * a);
+        return 6 * a;
+    } else {
+        console.log(a + b);
+        return a + b;
+    }
+}
+
+// 17. Compute the absolute difference between a specified number and 19.
+// Returns triple their absolute difference if the specified number is greater than 19.
+tasks.diff = function(a) {
+    a = Math.abs(a);
+    const b = 19;
+    if (a > b) {
+        console.log((a - b) * 3);
+        return (a - b) * 3;
+    } else {
+        console.log(a - b);
+        return a - b;
+    }
+}
+
+// 18. Check two given numbers and return true if one of the number is 50 or if their sum is 50.
+tasks.check = function(a, b) {
+    if (a === 50 || b === 50 || a + b === 50) {
+        console.log(true);
+        return true;
+    } else {
+        console.log(false);
+        return false;
+    }
+}
+
+// 19. Check whether a given integer is within 20 of 100 or 400.
+tasks.checkRange = function(num) {
+    if (num >= 80 && num <= 120) {
+        console.log("To 100");
+    } else if (num >= 380 && num <= 420) {
+        console.log("To 400");
+    }
+}
+
+// Check from two given integers, whether one is positive and another one is negative.
+tasks.isPositiveNegative = function(a, b) {
+    if ((a > 0 && b < 0) || (a < 0 && b > 0)) {
+        console.log("Good pair");
+    } else {
+        console.log("Bad pair");
+    }
+}
