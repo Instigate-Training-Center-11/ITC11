@@ -164,4 +164,210 @@ const createVariable = function() {
     console.log(name + ' = ' + this[name]);
 }
 
-createVariable()
+// =============================Task__14=======================================
+const getFileExtension = function(fName='task.js') {
+    const extension = fName.split('.');
+    console.log(fName + ' file extension is: ' + extension[1]);
+}
+
+
+// =============================Task__15=======================================
+const difference = function (num) {
+    if (num <= 13) {
+        return 13 - num;
+    }
+
+    return (num - 13) * 2;
+}
+
+// =============================Task__16=======================================
+const sum = function(num1, num2) {
+    if(num1 === num2) {
+        return num1 * 3;
+    }
+
+    return num1 + num2;
+}
+
+// =============================Task__17=======================================
+const differenceTwo = function(num) {
+    if(num <= 19) {
+        return 19 - num;
+    }
+
+    return (num - 19) * 3;
+}
+
+// =============================Task__18=======================================
+const checkFor50 = function(num1, num2) {
+    return (num1 === 50 || num2 === 50 || (num1 + num2) === 50);
+}
+
+// =============================Task__19=======================================
+const numRange = function (num) {
+    return ((Math.abs(100 - num) <= 20) || (Math.abs(400 - num) <= 20));
+}
+
+// =============================Task__20=======================================
+const checkNum = function(num1, num2) {
+    if(num1 * num2 < 0) {
+        return true;
+    }
+    return false;
+}
+
+// =============================Task__21=======================================
+const addPy = function(str) {
+    if(str.substr(0, 2) === 'py') {
+        return str;
+    }
+
+    return 'py' + str;
+}
+
+// =============================Task__22=======================================
+const removeSymbolInPosition = function(str, pos) {
+    if(pos >= str.length) {
+        return 'incorrect position';
+    }
+
+    return str.slice(0, pos) + str.slice(pos + 1, str.length);
+}
+
+// =============================Task__23=======================================
+const changingPosition = function(str) {
+    if(str.lastYear <= 1) {
+        return str;
+    }
+
+    return str[str.length - 1] + str.slice(1, str.length - 1) + str[0];
+}
+
+// =============================Task__24=======================================
+const changeString = function(str) {
+    return str[0] + str + str[0];
+}
+
+// =============================Task__25=======================================
+const multiple3or7 = function(num) {
+    return (num % 7 === 0 || num % 3 === 0);
+}
+
+// =============================Task__26=======================================
+const changeString1 = function(str) {
+    if(str.length < 3) {
+        return str;
+    }
+
+    return str.slice(str.length  - 3, str.length) + str;
+}
+
+// =============================Task__27=======================================
+const checkJava = function(str) {
+    return str.slice(0, 4) === 'java';
+}
+
+// =============================Task__28=======================================
+const check55From99and = function(num1, num2) {
+    return (num1 >= 55 && num1 <= 99) && (num2 >= 55 && num2 <= 99);
+}
+
+// =============================Task__29=======================================
+const check55From99or = function(num1, num2) {
+    return (num1 >= 55 && num1 <= 99) || (num2 >= 55 && num2 <= 99);
+}
+
+// =============================Task__30=======================================
+const checkScript = function(str) {
+    if (str.length < 6) {
+        return str;
+    }
+
+    if (str.substring(10, 4) == 'Script') {
+        return str.substring(0, 4) + str.substring(10,str.length);
+    }
+
+    return ' ';
+}
+
+// =============================Task__31=======================================
+const max = function(num1, num2, num3) {
+    if(num1 > num2 ) {
+        if(num1 > num3) {
+            return num1;
+        } else {
+            return num3;
+        }
+    } else if(num2 > num3) {
+        return num2;
+    } else {
+        return num3;
+    }
+}
+
+// =============================Task__32=======================================
+const near_100 = function(num1, num2) {
+    if(num1 !== num2) {
+        absNum1 = Math.abs(num1 - 100);
+        absNum2 = Math.abs(num2 - 100);
+
+        if(num1 > num2) {
+            return num1;
+        }
+
+        if(num2 > num1) {
+            return num2;
+        }
+
+        return 0;
+    }
+
+    return false;
+}
+
+
+// =============================Task__33=======================================
+const numbersRanges = function (num1, num2) {
+    if ((num1 >= 40 && num1 <= 60 && num2 >= 40 && num2 <= 60) || (num1 >= 70 && num1 <= 100 && num2 >= 70 && num2 <= 100)) {
+      return true;
+    }
+
+    return false;
+}
+
+// =============================Task__34=======================================
+const maxTowNumbersRange = function(num1, num2){
+    if( (num1 >= 40) && (num1 <= 60) && (num2 >= 40 && num2 <= 60) ){
+        if(num1 === num2){
+            return "Numbers are the same";
+        }else if (num1 > num2){
+            return num1;
+        }else{
+            return num2;
+        }
+    }else{
+        return "Numbers don't fit in range";
+    }
+}
+
+// =============================Task__35=======================================
+const checkChar = function (str, char) {
+    for(let i = 1; i < 4; ++i) {
+        if(str[i] === char) {
+            return true
+        }
+    }
+
+    return false;
+}
+
+// =============================Task__36=======================================
+const lastDigit = function(num1, num2, num3) {
+    if(num1 > 0 && num2 > 0 && num3 > 0) {
+        return (num1 % 10 == num2 % 10 && num2 % 10 == num3 % 10 && num1 % 10 == num3 % 10)
+    }
+
+    return false;
+}
+
+console.log(max(15, 7, 9));
