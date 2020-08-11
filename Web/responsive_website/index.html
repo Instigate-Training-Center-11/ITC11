@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My website</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="example">
+        <meta name="keywords" content="HTML, CSS, example">
+        <meta name="author" content="Artashes Sargsyan">
+        <meta name="viewport" content="width=device-width">
+        <meta http-equiv=”refresh” content="1" />
+        <link href="./styles.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="./assets/animations.css" type="text/css">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <!-- ============ HEADER ============ -->
+        <header class="header-main">
+            <div class="opas" id="home">
+                <label class="mobile" for="toggle"><strong>&#9776;</strong></label>
+                <input type="checkbox" id="toggle"/>
+                <nav class="menu">
+                    <a name="Home" class="link home__link" href="#home">
+                        <svg class="svg-size" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M20 7.093v-5.093h-3v2.093l3 3zm4 5.907l-12-12-12 12h3v10h7v-5h4v5h7v-10h3zm-5 8h-3v-5h-8v5h-3v-10.26l7-6.912 7 6.99v10.182z"/>
+                        </svg>
+                    </a>
+
+                    <a name="About" class="link" href="#about">
+                        <svg class="svg-size" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M12 2c2.757 0 5 2.243 5 5.001 0 2.756-2.243 5-5 5s-5-2.244-5-5c0-2.758 2.243-5.001 5-5.001zm0-2c-3.866 0-7 3.134-7 7.001 0 3.865 3.134 7 7 7s7-3.135 7-7c0-3.867-3.134-7.001-7-7.001zm6.369 13.353c-.497.498-1.057.931-1.658 1.302 2.872 1.874 4.378 5.083 4.972 7.346h-19.387c.572-2.29 2.058-5.503 4.973-7.358-.603-.374-1.162-.811-1.658-1.312-4.258 3.072-5.611 8.506-5.611 10.669h24c0-2.142-1.44-7.557-5.631-10.647z"/>
+                        </svg>
+                    </a>
+
+                    <a name="Resume" class="link" href="#resume">
+                        <svg class="svg-size" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M4 22v-20h16v11.543c0 4.107-6 2.457-6 2.457s1.518 6-2.638 6h-7.362zm18-7.614v-14.386h-20v24h10.189c3.163 0 9.811-7.223 9.811-9.614zm-5-1.386h-10v-1h10v1zm0-4h-10v1h10v-1zm0-3h-10v1h10v-1z"/>
+                        </svg>
+                    </a>
+
+                    <a name="Portfolio" class="link" href="#portfolio">
+                        <svg class="svg-size" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M9 2c-1.104 0-2 .896-2 2v2h2v-1.5c0-.276.224-.5.5-.5h5c.276 0 .5.224.5.5v1.5h2v-2c0-1.104-.896-2-2-2h-6zm12.561 12l-1.2 6h-16.721l-1.2-6h19.121zm2.439-2h-24l2 10h20l2-10zm-1-5v3h-2v-1h-18v1h-2v-3h22z"/>
+                        </svg>
+                    </a>
+
+                    <a name="Services" class="link" href="#services">
+                        <svg class="svg-size" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M24 24l-6-5.269-6 5.269v-24h12v24zm-14-23h-10v2h10v-2zm0 5h-10v2h10v-2zm0 5h-10v2h10v-2zm0 5h-10v2h10v-2z"/>
+                        </svg>
+                    </a>
+
+                    <a name="Contact" class="link" href="#contact">
+                        <svg class="svg-size" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M0 3v18h24v-18h-24zm6.623 7.929l-4.623 5.712v-9.458l4.623 3.746zm-4.141-5.929h19.035l-9.517 7.713-9.518-7.713zm5.694 7.188l3.824 3.099 3.83-3.104 5.612 6.817h-18.779l5.513-6.812zm9.208-1.264l4.616-3.741v9.348l-4.616-5.607z"/>
+                        </svg>
+                    </a>
+
+                    <a name="Coverter" class="link" href="#converter">
+                        <svg class="svg-size" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M24 10.935v2.131l-8 3.947v-2.23l5.64-2.783-5.64-2.79v-2.223l8 3.948zm-16 3.848l-5.64-2.783 5.64-2.79v-2.223l-8 3.948v2.131l8 3.947v-2.23zm7.047-10.783h-2.078l-4.011 16h2.073l4.016-16z"/>
+                        </svg>
+                    </a>
+                </nav>
+               <div class="caver"></div>
+            </div>
+        </header>
+
+        <section class="social__head">
+                <h1>Brandon Johnson</h1>
+                <div class="social">
+                    <a class="social__item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                            <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                        </svg>
+                    </a>
+
+                    <a class="social__item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                            <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/>
+                        </svg>
+                    </a>
+
+                    <a class="social__item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                        </svg>
+                    </a>
+
+                    <a class="social__item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                            <path d="M22.987 13.966c1.357-7.765-5.416-14.412-13.052-12.979-5.821-3.561-12.503 3.226-8.935 9.029-1.387 7.747 5.384 14.48 13.083 13.01 5.832 3.536 12.493-3.26 8.904-9.06zm-10.603 5.891c-3.181 0-6.378-1.448-6.362-3.941.005-.752.564-1.442 1.309-1.442 1.873 0 1.855 2.795 4.837 2.795 2.093 0 2.807-1.146 2.807-1.944 0-2.886-9.043-1.117-9.043-6.543 0-2.938 2.402-4.962 6.179-4.741 3.602.213 5.713 1.803 5.917 3.289.101.971-.542 1.727-1.659 1.727-1.628 0-1.795-2.181-4.6-2.181-1.266 0-2.334.528-2.334 1.674 0 2.395 8.99 1.005 8.99 6.276-.001 3.039-2.423 5.031-6.041 5.031z"/>
+                        </svg>
+                    </a>
+
+                    <a class="social__item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                            <path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z"/>
+                        </svg>
+                    </a>
+                </div>
+        </section>
+
+        <!-- ============ ABOUT ============ -->
+        <section class="about animatedParent animateOnce conteiner">
+            <div class="fact conteiner animated fadeInUp" data-id = '2' data-appear-top-offset='-300'>
+
+                <div class="about-title" id="about">
+                    <h2>ABOUT</h2>
+                    <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+                </div>
+
+                <div class="about-body">
+                    <img src="./assets/img/about-img.jpg" class="about-img">
+                    <div class="about__content">
+                        <h3>UI/UX Designer & Web Developer.</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <div class="about__content__item">
+                            <ul class="about__list">
+                                <li>
+                                    <svg class="svg__list" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"><path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"/></svg>
+                                        <strong class="strong__text">Birthday: </strong>
+                                    <span class="strong__text">1 May 1995</span>
+                                </li>
+                                <li>
+                                    <svg class="svg__list" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"><path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"/></svg>
+                                        <strong class="strong__text"> Website:</strong>
+                                    <span class="strong__text">www.example.com </span>
+                                </li>
+                                <li>
+                                    <svg class="svg__list" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"><path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"/></svg>
+                                        <strong class="strong__text"> Phone: </strong>
+                                    <span class="strong__text">+123 456 7890</span>
+                                </li>
+                                <li>
+                                    <svg class="svg__list" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"><path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"/></svg>
+                                        <strong class="strong__text">  City:</strong>
+                                    <span class="strong__text">New York, USA</span>
+                                </li>
+                            </ul>
+
+                            <ul class="about__list">
+                                <li>
+                                    <svg class="svg__list" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"><path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"/></svg>
+                                        <strong class="strong__text">Age:</strong>
+                                    <span class="strong__text">30</span>
+                                </li>
+                                <li>
+                                    <svg class="svg__list" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"><path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"/></svg>
+                                        <strong class="strong__text">Degree:</strong>
+                                    <span class="strong__text">Master </span>
+                                </li>
+                                <li>
+                                    <svg class="svg__list" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"><path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"/></svg>
+                                        <strong class="strong__text">PhEmailone:</strong>
+                                    <span class="strong__text">email@example.com </span>
+                                </li>
+                                <li>
+                                    <svg class="svg__list" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"><path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"/></svg>
+                                        <strong class="strong__text">Freelance:</strong>
+                                    <span class="strong__text">Available</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div></div>
+                        <p>Officiis eligendi itaque labore et dolorum mollitia officiis optio vero. Quisquam sunt adipisci omnis et ut. Nulla accusantium dolor incidunt officia tempore. Et eius omnis. Cupiditate ut dicta maxime officiis quidem quia. Sed et consectetur qui quia repellendus itaque neque. Aliquid amet quidem ut quaerat cupiditate. Ab et eum qui repellendus omnis culpa magni laudantium dolores.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ FACTS ============ -->
+        <section class="fact animatedParent animateOnce conteiner">
+            <div class="fact conteiner animated fadeInUp" data-id = '2' data-appear-top-offset='-300'>
+
+                <div class="section-title">
+                    <h2>FACTS</h2>
+                    <P>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</P>
+                </div>
+
+                <div class="facts__body">
+                    <div class="facts__body__item">
+                        <div class="facts__row">
+                            <svg class="facts__svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm5.507 13.941c-1.512 1.195-3.174 1.931-5.506 1.931-2.334 0-3.996-.736-5.508-1.931l-.493.493c1.127 1.72 3.2 3.566 6.001 3.566 2.8 0 4.872-1.846 5.999-3.566l-.493-.493zm-9.007-5.941c-.828 0-1.5.671-1.5 1.5s.672 1.5 1.5 1.5 1.5-.671 1.5-1.5-.672-1.5-1.5-1.5zm7 0c-.828 0-1.5.671-1.5 1.5s.672 1.5 1.5 1.5 1.5-.671 1.5-1.5-.672-1.5-1.5-1.5z"/>
+                            </svg>
+                        </div>
+                        <div class="facts__item">232</div>
+                        <span class="facts__span">Happy Clients </span>
+                    </div>
+
+                    <div class="facts__body__item">
+                        <div class="facts__row">
+                            <svg class="facts__svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <path d="M22 2v20h-20v-20h20zm2-2h-24v24h24v-24zm-4 7h-8v1h8v-1zm0 5h-8v1h8v-1zm0 5h-8v1h8v-1zm-10.516-11.304l-.71-.696-2.553 2.607-1.539-1.452-.698.71 2.25 2.135 3.25-3.304zm0 5l-.71-.696-2.552 2.607-1.539-1.452-.698.709 2.249 2.136 3.25-3.304zm0 5l-.71-.696-2.552 2.607-1.539-1.452-.698.709 2.249 2.136 3.25-3.304z"/>
+                            </svg>
+                        </div>
+                        <div class="facts__item">521</div>
+                        <span class="facts__span">Projects</span>
+                    </div>
+
+                    <div class="facts__body__item">
+                        <div class="facts__row">
+                            <svg class="facts__svg" width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd">
+                                <path d="M3.848 19h-.848c-.796 0-1.559-.316-2.121-.879-.563-.562-.879-1.325-.879-2.121v-3c0-7.175 5.377-13 12-13s12 5.825 12 13v3c0 .796-.316 1.559-.879 2.121-.562.563-1.325.879-2.121.879h-.848c-2.69 4.633-6.904 5-8.152 5-1.248 0-5.462-.367-8.152-5zm16.152-5.876c-.601.236-1.269-.18-1.269-.797 0-.304-.022-.61-.053-.915-1.761-.254-3.618-1.926-3.699-3.723-1.315 2.005-4.525 4.17-7.044 4.17 1.086-.699 1.839-2.773 1.903-3.508-.581 1.092-2.898 3.136-4.551 3.487l-.018.489c0 .619-.669 1.032-1.269.797v3.771c.287.256.632.464 1.041.594.225.072.412.224.521.424 2.206 4.046 5.426 4.087 6.438 4.087.929 0 3.719-.035 5.877-3.169-1.071.433-2.265.604-3.759.653-.37.6-1.18 1.016-2.118 1.016-1.288 0-2.333-.784-2.333-1.75s1.045-1.75 2.333-1.75c.933 0 1.738.411 2.112 1.005 1.9-.026 4.336-.334 5.888-2.645v-2.236zm-11-.624c.686 0 1.243.672 1.243 1.5s-.557 1.5-1.243 1.5-1.243-.672-1.243-1.5.557-1.5 1.243-1.5zm6 0c.686 0 1.243.672 1.243 1.5s-.557 1.5-1.243 1.5-1.243-.672-1.243-1.5.557-1.5 1.243-1.5zm5.478-1.5h1.357c-.856-5.118-4.937-9-9.835-9-4.898 0-8.979 3.882-9.835 9h1.357c.52-4.023 3.411-7.722 8.478-7.722s7.958 3.699 8.478 7.722z"/>
+                            </svg>
+                        </div>
+                        <div class="facts__item">1,463</div>
+                        <span class="facts__span">Hours Of Support</span>
+                    </div>
+
+                    <div class="facts__body__item">
+                        <div class="facts__row">
+                            <svg class="facts__svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <path d="M17.997 18h-11.995l-.002-.623c0-1.259.1-1.986 1.588-2.33 1.684-.389 3.344-.736 2.545-2.209-2.366-4.363-.674-6.838 1.866-6.838 2.491 0 4.226 2.383 1.866 6.839-.775 1.464.826 1.812 2.545 2.209 1.49.344 1.589 1.072 1.589 2.333l-.002.619zm4.811-2.214c-1.29-.298-2.49-.559-1.909-1.657 1.769-3.342.469-5.129-1.4-5.129-1.265 0-2.248.817-2.248 2.324 0 3.903 2.268 1.77 2.246 6.676h4.501l.002-.463c0-.946-.074-1.493-1.192-1.751zm-22.806 2.214h4.501c-.021-4.906 2.246-2.772 2.246-6.676 0-1.507-.983-2.324-2.248-2.324-1.869 0-3.169 1.787-1.399 5.129.581 1.099-.619 1.359-1.909 1.657-1.119.258-1.193.805-1.193 1.751l.002.463z"/>
+                            </svg>
+                        </div>
+                        <div class="facts__item">15</div>
+                        <span class="facts__span">Hard Workers</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ SKILLS ============ -->
+        <section class="skill animatedParent animateOnce conteiner">
+            <div class="conteiner animated fadeInUp" data-id = '2' data-appear-top-offset='-300'>
+
+                <div class="skills__title">
+                    <h2>SKILLS</h2>
+                    <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+                </div>
+
+                <div class="skills__body">
+                    <div class="skills__column">
+                        <div class="skills__row">
+                            <span class="skills__span">HTML</span>
+                            <span class="skills__span precent">100%</span>
+                            <progress max="100" value="100"></progress>
+                        </div>
+                        <div class="skills__row">
+                            <span class="skills__span">CSS</span>
+                            <span class="skills__span precent">90%</span>
+                            <progress max="100" value="90"></progress>
+                        </div>
+                        <div class="skills__row">
+                            <span class="skills__span">JAVASCRIPT</span>
+                            <span class="skills__span precent">75%</span>
+                            <progress max="100" value="75"></progress>
+                        </div>
+                    </div>
+
+                    <div class="skills__column">
+                        <div class="skills__row">
+                            <span class="skills__span">PHP</span>
+                            <span class="skills__span precent">80%</span>
+                            <progress max="100" value="100"></progress>
+                        </div>
+                        <div class="skills__row">
+                            <span class="skills__span">WORDPRESS/CMS</span>
+                            <span class="skills__span precent">90%</span>
+                            <progress max="100" value="90"></progress>
+                        </div>
+                        <div class="skills__row">
+                            <span class="skills__span">PHOTOSHOP</span>
+                            <span class="skills__span precent">55%</span>
+                            <progress max="100" value="75"></progress>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ RESUME ============ -->
+        <section class="resume animatedParent animateOnce conteiner">
+            <div class="resume conteiner animated fadeInUp" data-id = '2' data-appear-top-offset='-300'>
+
+                <div class="resume__title" id="resume">
+                    <h2>RESUME</h2>
+                    <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+                </div>
+
+                <div class="resume__body">
+                    <div class="body__part">
+                        <h2 class="sub__title__h2">Sumary</h2>
+                        <div class="body__left__part">
+                            <div class="box">
+                                <span class="resume__span">BRANDON JOHNSON</span>
+                                <em class="resume__em"><br>Innovative and deadline-driven Graphic Designer with 3+ years of experience designing and developing user-centered digital/print marketing material from initial concept to final, polished deliverable.</em>
+                                <ul>
+                                    <li>Portland par 127,Orlando, FL</li>
+                                    <li>(123) 456-7891</li>
+                                    <li>alice.barkley@example.com</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <h2 class="sub__title__h2">Education</h2>
+                        <div class="body__left__part">
+                        <div class="box">
+                                <span class="resume__span">MASTER OF FINE ARTS & GRAPHIC DESIGN</span><br>
+                                <h5>2015 - 2016</h5>
+                                <em class="resume__em">Rochester Institute of Technology, Rochester, NY</em>
+                                <p>Qui deserunt veniam. Et sed aliquam labore tempore sed quisquam iusto autem sit. Ea vero voluptatum qui ut dignissimos deleniti nerada porti sand markend</p>
+                                <span class="resume__span">BACHELOR OF FINE ARTS & GRAPHIC DESIGN</span>
+                                <h5>2010 - 2014</h5>
+                                <em class="resume__em"><br>Rochester Institute of Technology, Rochester, NY</em>
+                                <p>Quia nobis sequi est occaecati aut. Repudiandae et iusto quae reiciendis et quis Eius vel ratione eius unde vitae rerum voluptates asperiores voluptatem Earum molestiae consequatur neque etlon sader mart dila</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="body__part">
+                        <h2 class="sub__title__h2">Professional Experience</h2>
+                        <div class="body__right__part">
+                            <div class="box">
+                                <span class="resume__span">SENIOR GRAPHIC DESIGN SPECIALIST</span><br>
+                                <h5>2019 - Present</h5>
+                                <em class="resume__em"><br>Experion, New York, NY</em>
+                                <ul>
+                                    <li>Lead in the design, development, and implementation of the graphic, layout, and production communication materials</li>
+                                    <li>Delegate tasks to the 7 members of the design team and provide counsel on all aspects of the project.</li>
+                                    <li>Supervise the assessment of all graphic materials in order to ensure quality and accuracy of the design</li>
+                                    <li>Oversee the efficient use of production project budgets ranging from $2,000 - $25,000</li>
+                                </ul>
+                            </div>
+                            <div class="box">
+                                <span class="resume__span">GRAPHIC DESIGN SPECIALIST</span><br>
+                                <h5>2017 - 2018</h5>
+                                <em class="resume__em"><br>Stepping Stone Advertising, New York, NY</em>
+                                <ul>
+                                    <li>Developed numerous marketing programs (logos, brochures,infographics, presentations, and advertisements).</li>
+                                    <li>Managed up to 5 projects or tasks at a given time while under pressure</li>
+                                    <li>Recommended and consulted with clients on the most appropriate graphic design</li>
+                                    <li>Created 4+ design presentations and proposals a month for clients and account managers</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ PORTFOLIO ============ -->
+        <section class="porfolio animatedParent animateOnce conteiner">
+            <div class="portfolio conteiner animated fadeInUp" data-id = '2' data-appear-top-offset='-300'>
+
+                <div class="portfolio__title" id="portfolio">
+                    <h2>PORTFOLIO</h2>
+                    <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+                    <div>
+                        <ul>
+                            <li>ALL</li>
+                            <li>APP</li>
+                            <li>CARD</li>
+                            <li>WEB</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="portfolio__body animatedParent animateOnce">
+                    <div class="row portfolio-container animated fadeInUp slow" data-id = '2' data-appear-top-offset='-300'>
+                        <div class="portfoli__row__1">
+                            <div class="portfolio__image">
+                                <div class="portfolio__image__div">
+                                <img src="assets/img/portfolio/portfolio-1.jpg" width="350px" height="355px">
+                                </div>
+                            </div>
+                            <div class="portfolio__image">
+                                <div>
+                                <img src="assets/img/portfolio/portfolio-6.jpg" width="350px" height="520px">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="portfoli__row__1">
+                            <div class="portfolio__image">
+                                <div>
+                                <img src="assets/img/portfolio/portfolio-2.jpg" width="350px" height="235px">
+                                </div>
+                            </div>
+
+                            <div class="portfolio__image">
+                                <div>
+                                <img src="assets/img/portfolio/portfolio-5.jpg" width="350px" height="523px">
+                                </div>
+                            </div>
+                            <div class="portfolio__image">
+                                <div>
+                                <img src="assets/img/portfolio/portfolio-9.jpg" width="350px" height="232px">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="portfoli__row__1">
+                            <div class="portfolio__image">
+                                <div>
+                                <img src="assets/img/portfolio/portfolio-3.jpg" width="350px" height="197px">
+                                </div>
+                            </div>
+                            <div class="portfolio__image">
+                                <div>
+                                <img src="assets/img/portfolio/portfolio-4.jpg" width="350px" height="231px">
+                                </div>
+                            </div>
+                            <div class="portfolio__image">
+                                <div>
+                                <img src="assets/img/portfolio/portfolio-7.jpg" width="350px" height="231px">
+                                </div>
+                            </div>
+                            <div class="portfolio__image">
+                                <div>
+                                <img src="assets/img/portfolio/portfolio-8.jpg" width="350px" height="233px">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ SERVICES ============ -->
+        <section class="services animatedParent animateOnce conteiner">
+            <div class="services conteiner animated fadeInUp" data-id = '2' data-appear-top-offset='-300'>
+
+                <div class="services__title" id="services">
+                    <h2>SERVICES</h2>
+                    <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+                </div>
+
+                <div class="services__body animatedParent animateOnce">
+                    <div class="services__row animated fadeInUpShort slower" data-id = '2' data-appear-top-offset='-300'>
+                        <div class="services__item">
+                            <div class="services__content">
+                            <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke="none" stroke-width="0" fill="#f5f5f5" d="M300,503.46388370962813C374.79870501325706,506.71871716319447,464.8034551963731,527.1746412648533,510.4981551193396,467.86667711651364C555.9287308511215,408.9015244558933,512.6030010748507,327.5744911775523,490.211057578863,256.5855673507754C471.097692560561,195.9906835881958,447.69079081568157,138.11976852964426,395.19560036434837,102.3242989838813C329.3053358748298,57.3949838291264,248.02791733380457,8.279543830951368,175.87071277845988,42.242879143198664C103.41431057327972,76.34704239035025,93.79494320519305,170.9812938413882,81.28167332365135,250.07896920659033C70.17666984294237,320.27484674793965,64.84698225790005,396.69656628748305,111.28512138212992,450.4950937839243C156.20124167950087,502.5303643271138,231.32542653798444,500.4755392045468,300,503.46388370962813"></path>
+                            </svg>
+                            <h4>Lorem Ipsum</h4>
+                            <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
+                            </div>
+                        </div>
+
+                        <div class="services__item">
+                            <div class="services__content">
+                            <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke="none" stroke-width="0" fill="#f5f5f5" d="M300,503.46388370962813C374.79870501325706,506.71871716319447,464.8034551963731,527.1746412648533,510.4981551193396,467.86667711651364C555.9287308511215,408.9015244558933,512.6030010748507,327.5744911775523,490.211057578863,256.5855673507754C471.097692560561,195.9906835881958,447.69079081568157,138.11976852964426,395.19560036434837,102.3242989838813C329.3053358748298,57.3949838291264,248.02791733380457,8.279543830951368,175.87071277845988,42.242879143198664C103.41431057327972,76.34704239035025,93.79494320519305,170.9812938413882,81.28167332365135,250.07896920659033C70.17666984294237,320.27484674793965,64.84698225790005,396.69656628748305,111.28512138212992,450.4950937839243C156.20124167950087,502.5303643271138,231.32542653798444,500.4755392045468,300,503.46388370962813"></path>
+                            </svg>
+                            <h4>Sed Perspiciatis</h4>
+                            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
+                            </div>
+                        </div>
+
+                        <div class="services__item">
+                            <div class="services__content">
+                            <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke="none" stroke-width="0" fill="#f5f5f5" d="M300,503.46388370962813C374.79870501325706,506.71871716319447,464.8034551963731,527.1746412648533,510.4981551193396,467.86667711651364C555.9287308511215,408.9015244558933,512.6030010748507,327.5744911775523,490.211057578863,256.5855673507754C471.097692560561,195.9906835881958,447.69079081568157,138.11976852964426,395.19560036434837,102.3242989838813C329.3053358748298,57.3949838291264,248.02791733380457,8.279543830951368,175.87071277845988,42.242879143198664C103.41431057327972,76.34704239035025,93.79494320519305,170.9812938413882,81.28167332365135,250.07896920659033C70.17666984294237,320.27484674793965,64.84698225790005,396.69656628748305,111.28512138212992,450.4950937839243C156.20124167950087,502.5303643271138,231.32542653798444,500.4755392045468,300,503.46388370962813"></path>
+                            </svg>
+                            <h4>Magni Dolores</h4>
+                            <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="services__row animated fadeInUpShort slower" data-id = '2' data-appear-top-offset='-300'>
+                        <div class="services__item">
+                            <div class="services__content">
+                            <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke="none" stroke-width="0" fill="#f5f5f5" d="M300,503.46388370962813C374.79870501325706,506.71871716319447,464.8034551963731,527.1746412648533,510.4981551193396,467.86667711651364C555.9287308511215,408.9015244558933,512.6030010748507,327.5744911775523,490.211057578863,256.5855673507754C471.097692560561,195.9906835881958,447.69079081568157,138.11976852964426,395.19560036434837,102.3242989838813C329.3053358748298,57.3949838291264,248.02791733380457,8.279543830951368,175.87071277845988,42.242879143198664C103.41431057327972,76.34704239035025,93.79494320519305,170.9812938413882,81.28167332365135,250.07896920659033C70.17666984294237,320.27484674793965,64.84698225790005,396.69656628748305,111.28512138212992,450.4950937839243C156.20124167950087,502.5303643271138,231.32542653798444,500.4755392045468,300,503.46388370962813"></path>
+                            </svg>
+                            <h4>Nemo Enim</h4>
+                            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
+                            </div>
+                        </div>
+
+                        <div class="services__item">
+                            <div class="services__content">
+                            <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke="none" stroke-width="0" fill="#f5f5f5" d="M300,503.46388370962813C374.79870501325706,506.71871716319447,464.8034551963731,527.1746412648533,510.4981551193396,467.86667711651364C555.9287308511215,408.9015244558933,512.6030010748507,327.5744911775523,490.211057578863,256.5855673507754C471.097692560561,195.9906835881958,447.69079081568157,138.11976852964426,395.19560036434837,102.3242989838813C329.3053358748298,57.3949838291264,248.02791733380457,8.279543830951368,175.87071277845988,42.242879143198664C103.41431057327972,76.34704239035025,93.79494320519305,170.9812938413882,81.28167332365135,250.07896920659033C70.17666984294237,320.27484674793965,64.84698225790005,396.69656628748305,111.28512138212992,450.4950937839243C156.20124167950087,502.5303643271138,231.32542653798444,500.4755392045468,300,503.46388370962813"></path>
+                            </svg>
+                            <h4>Dele Cardo</h4>
+                            <p>Quis consequatur saepe eligendi voluptatem consequatur dolor consequuntur</p>
+                            </div>
+                        </div>
+
+                        <div class="services__item">
+                            <div class="services__content">
+                            <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke="none" stroke-width="0" fill="#f5f5f5" d="M300,503.46388370962813C374.79870501325706,506.71871716319447,464.8034551963731,527.1746412648533,510.4981551193396,467.86667711651364C555.9287308511215,408.9015244558933,512.6030010748507,327.5744911775523,490.211057578863,256.5855673507754C471.097692560561,195.9906835881958,447.69079081568157,138.11976852964426,395.19560036434837,102.3242989838813C329.3053358748298,57.3949838291264,248.02791733380457,8.279543830951368,175.87071277845988,42.242879143198664C103.41431057327972,76.34704239035025,93.79494320519305,170.9812938413882,81.28167332365135,250.07896920659033C70.17666984294237,320.27484674793965,64.84698225790005,396.69656628748305,111.28512138212992,450.4950937839243C156.20124167950087,502.5303643271138,231.32542653798444,500.4755392045468,300,503.46388370962813"></path>
+                            </svg>
+                            <h4>Divera Don</h4>
+                            <p>Modi nostrum vel laborum. Porro fugit error sit minus sapiente sit aspernatur</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ============ CONTACT ============ -->
+        <section class="contact animatedParent animateOnce conteiner">
+            <div class="contact conteiner animated fadeInUp" data-id = '2' data-appear-top-offset='-300'>
+
+                <div class="contact__title" id="contact">
+                    <h2>CONTACT</h2>
+                </div>
+
+                <div class="contact__body">
+                    <div class="contact__left">
+                        <div class="contact__info">
+                            <div class="contact__info__item">
+                                <svg class="contact__svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                    <path d="M12 0c-4.198 0-8 3.403-8 7.602 0 4.198 3.469 9.21 8 16.398 4.531-7.188 8-12.2 8-16.398 0-4.199-3.801-7.602-8-7.602zm0 11c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3-1.343 3-3 3z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4>Location:</h4>
+                                <p>A108 Adam Street, New York, NY 535022</p>
+                            </div>
+                        </div>
+
+                        <div class="contact__info">
+                            <div class="contact__info__item">
+                                <svg class="contact__svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                    <path d="M12 0c-4.198 0-8 3.403-8 7.602 0 4.198 3.469 9.21 8 16.398 4.531-7.188 8-12.2 8-16.398 0-4.199-3.801-7.602-8-7.602zm0 11c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3-1.343 3-3 3z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4>Email:</h4>
+                                <p>info@example.com</p>
+                            </div>
+                        </div>
+
+                        <div class="contact__info">
+                            <div class="contact__info__item">
+                                <svg class="contact__svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                    <path d="M12 0c-4.198 0-8 3.403-8 7.602 0 4.198 3.469 9.21 8 16.398 4.531-7.188 8-12.2 8-16.398 0-4.199-3.801-7.602-8-7.602zm0 11c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3-1.343 3-3 3z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4>Call:</h4>
+                                <p>+1 5589 55488 55s</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact__right">
+                        <div class="contact__form">
+                            <div class="name__email">
+                                <div class="contact__form__row">
+                                    <input class="name__email__item" type="text" name="name" id="name" placeholder="Your Name">
+                                </div>
+                                <div class="contact__form__row">
+                                    <input class="name__email__item" type="text" name="email" id="email" placeholder="Your Email">
+                                </div>
+                            </div>
+
+                            <div class="contact__form__row">
+                                    <input class="name__email__item" type="text" name="email" id="email" placeholder="Your Email">
+                            </div>
+
+                            <textarea class="form-control" name="message" rows="5" placeholder="Message"></textarea>
+                            <button type="submit" class="submit__button"><span class="submit__item">Send Message</span></button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ FOOTER ============ -->
+        <footer class="finally">
+            <div class="contact__title" id="contact">
+                <h2 class="footer__header">Brandon Johnson</h2>
+            </div>
+            <p class="footer__text">Et aut eum quis fuga eos sunt ipsa nihil. Labore corporis magni eligendi fuga maxime saepe commodi placeat.</p>
+            <div class="social__links">
+                <div class="link__content">
+                    <svg class="footer__svg" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24">
+                        <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                    </svg>
+                </div>
+
+                <div class="link__content">
+                    <svg class="footer__svg" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24">
+                        <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/>
+                    </svg>
+                </div>
+
+                <div class="link__content">
+                    <svg class="footer__svg" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                    </svg>
+                </div>
+
+                <div class="link__content">
+                    <svg class="footer__svg" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24">
+                        <path d="M22.987 13.966c1.357-7.765-5.416-14.412-13.052-12.979-5.821-3.561-12.503 3.226-8.935 9.029-1.387 7.747 5.384 14.48 13.083 13.01 5.832 3.536 12.493-3.26 8.904-9.06zm-10.603 5.891c-3.181 0-6.378-1.448-6.362-3.941.005-.752.564-1.442 1.309-1.442 1.873 0 1.855 2.795 4.837 2.795 2.093 0 2.807-1.146 2.807-1.944 0-2.886-9.043-1.117-9.043-6.543 0-2.938 2.402-4.962 6.179-4.741 3.602.213 5.713 1.803 5.917 3.289.101.971-.542 1.727-1.659 1.727-1.628 0-1.795-2.181-4.6-2.181-1.266 0-2.334.528-2.334 1.674 0 2.395 8.99 1.005 8.99 6.276-.001 3.039-2.423 5.031-6.041 5.031z"/>
+                    </svg>
+                </div>
+
+                <div class="link__content">
+                    <svg class="footer__svg" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24">
+                        <path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z"/>
+                    </svg>
+                </div>
+            </div>
+            <div class="footer__item">
+                <span class="footer__span">© Copyright <strong>MyResume</strong>. All Rights Reserved</span><br>
+                <span class="footer__span__small">Designed by BootstrapMade</span>
+            </div>
+        </footer>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="./assets/css3-animate-it.js"></script>
+    </body>
+</html>
