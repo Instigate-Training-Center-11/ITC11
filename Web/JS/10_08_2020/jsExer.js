@@ -1,3 +1,4 @@
+
 /*1. Write a JavaScript program to display the current day and time in the following format.
     Sample Output : Today is : Tuesday.
     Current time is : 10 PM : 30 : 38*/
@@ -245,8 +246,6 @@ console.log(checkStrict(10, 15, 31));
 
 /*43. Write a JavaScript program to check from three given numbers (non negative integers) that two or all of them have the same rightmost digit.*/
 
-
-
 /*44. Write a JavaScript program to check from three given integers that whether a number is greater than or equal to 20 and less than one of the others.*/
 
 
@@ -354,3 +353,103 @@ let moveCh = (s) => s.length >= 3 ? s.slice(s.length - 3, s.length) + s.slice(0,
 console.log(moveCh("abcd"));
 console.log(moveCh("abc"));
 
+/*63. Write a JavaScript program to create a string using the middle three characters of a given string of odd length. The string length must be greater or equal to three.*/
+let datas = {"data": [
+        {"name": "Armen", "age": 32, "job": "bugalter", "investments": 150},
+        {"name": "Artak", "age": 28, "job": "developer", "investments": 120},
+        {"name": "Karen", "age": 26, "job": "developer", "investments": 140},
+        {"name": "Ashot", "age": 45, "job": "teacher", "investments": 250},
+        {"name": "Nelli", "age": 21, "job": "teacher", "investments": 150},
+        {"name": "Hakob", "age": 16, "job": "", "investments": 80},
+        {"name": "Gevorg", "age": 20, "job": "developer", "investments": 60},
+        {"name": "Mane", "age": 18, "job": "", "investments": 120},
+        {"name": "Mariam", "age": 32, "job": "doctor", "investments": 200},
+        {"name": "Hayk", "age": 44, "job": "doctor", "investments": 250},
+        {"name": "Arman", "age": 26, "job": "police", "investments": 100},
+        {"name": "Davit", "age": 22, "job": "police", "investments": 80},
+        {"name": "Armine", "age": 17, "job": "", "investments": 140},
+        {"name": "Karine", "age": 26, "job": "teacher", "investments": 180}
+    ]
+};
+
+let totalInvestments = (i) => {
+    let sum = 0;
+    i.data.forEach((inv) => inv.age < 18 ? sum += inv.investments : 0);
+    console.log(sum);
+};
+totalInvestments(datas);
+
+let topInvestors = (i) => i.sort((m, n) => m.investments > n.investments ? -1 : 1);
+console.log(topInvestors(datas.data)[0]);
+console.log(topInvestors(datas.data)[1]);
+console.log(topInvestors(datas.data)[2]);
+
+
+/*64. Write a JavaScript program to concatenate two strings and return the result. If the length of the strings are not same then remove the characters from the longer string.*/
+let concatStr = (m, n) => m.length > n.length ? m.slice(0, n.length) + n : m + n.slice(0, m.length);
+console.log(concatStr("abc", "abcd"));
+console.log(concatStr("abcde", "abcd"));
+
+/*65. Write a JavaScript program to test whether a string end with "Script". The string length must be greater or equal to 6.*/
+let isEndsScript = s => s.length >= 6 && s.endsWith("Script") ? true : false;
+console.log(isEndsScript("kj"));
+console.log(isEndsScript("kjScript"));
+
+/*66. Write a JavaScript program to display the city name if the string begins with "Los" or "New" otherwise return blank.*/
+let isStartStr = s => s.startsWith("Los") || s.startsWith("Los") ? s : '';
+console.log(isStartStr("j"));
+console.log(isStartStr("Los Ang.."));
+
+/*67. Write a JavaScript program to create a new string from a given string, removing the first and last characters of the string if the first or last character are 'P'. Return the original string if the condition is not satisfied.*/
+let checkP = s => s[0] === 'P' ? s[s.length - 1] === 'P' ? s.slice(1, s.length - 1) : s.slice(1, s.length) : s[s.length - 1] === 'P' ? s.slice(0, s.length - 1) : s;
+console.log(checkP("PssP"));
+console.log(checkP("Pss"));
+console.log(checkP("ssP"));
+console.log(checkP("ssPn"));
+
+/*68. Write a JavaScript program to create a new string using the first and last n characters from a given sting. The string length must be greater or equal to n.*/
+let newS = (s, n) => s.length >= n ? s.slice(0, n) + s.slice(s.length - n, s.length) : s;
+console.log(newS("abcjjhde", 2));
+console.log(newS("abc", 2));
+console.log(newS("abc", 5));
+
+/*69. Write a JavaScript program to compute the sum of three elements of a given array of integers of length 3.*/
+let sumArr = a => a[0] +a[1] +a[2];
+console.log(sumArr([1, 2, 3]));
+
+/*70. Write a JavaScript program to rotate the elements left of a given array of integers of length 3.*/
+let rotateArr = a => [a[2], a[1], a[0]];
+console.log(rotateArr([1, 2, 3]));
+
+/*71. Write a JavaScript program to check whether 1 appears in first or last position of a given array of integers. The array length must be greater or equal to 1.*/
+let isAtFirstOrEnd = a => a.length >=1 && (a[0] === 1 || a[a.length - 1] === 1) ? true : false;
+console.log(isAtFirstOrEnd([1, 2, 3]));
+console.log(isAtFirstOrEnd([0, 2, 3]));
+console.log(isAtFirstOrEnd([0, 2, 3, 1]));
+
+/*72. Write a JavaScript program to check whether the first and last elements are equal of a given array of integers length 3.*/
+
+/*73. Write a JavaScript program to reverse the elements of a given array of integers length 3.*/
+let rev = n => {
+    for(let i = 0; i < n.length; ++i) {
+        n[i] = parseInt(reverseStr(n[i].toString()));
+    }
+    return n;
+};
+console.log(rev([45, 798]));
+
+/*74. Write a JavaScript program to find the larger value between the first or last and set all the other elements with that value. Display the new array.*/
+let newArr =a => {
+  let max = a[1];
+  for(let i = 2; i < a.length - 1; ++i) {
+      if(a[i] > max) {
+          max = a[i];
+      }
+  }
+    console.log(a[0]);
+    for(let i = 2; i < a.length - 1; ++i) {
+        console.log(max);
+    }
+    console.log(a[a.length - 1]);
+};
+newArr([1, 2, 3, 4, 4, 6, 7]);
