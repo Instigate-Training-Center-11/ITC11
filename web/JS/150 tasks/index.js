@@ -396,11 +396,139 @@ tasks.checkRange = function(num) {
     }
 }
 
-// Check from two given integers, whether one is positive and another one is negative.
+// 20. Check from two given integers, whether one is positive and another one is negative.
 tasks.isPositiveNegative = function(a, b) {
     if ((a > 0 && b < 0) || (a < 0 && b > 0)) {
         console.log("Good pair");
     } else {
         console.log("Bad pair");
     }
+}
+
+// 21. Create a new string adding "Py" in front of a given string.
+// If the given string begins with "Py" then return the original string.
+tasks.pyString = function(string) {
+    if (string.indexOf('py') == 0) {
+        return string;
+    } else {
+        return 'py' + string;
+    }
+}
+
+// 22. Remove a character at the specified position of a given
+// string and return the new string.
+tasks.delChar = function(string, n) {
+    if (n >= string.length) {
+        console.log(string);
+        return string;
+    } else {
+        console.log(string.substring(0, n - 1) + string.substring(n));
+        return string.substring(0, n) + string.substring(n + 1);
+    }
+}
+
+// 23. Create a new string from a given string changing the position of first
+// and last characters. The string length must be greater than or equal to 1.
+tasks.changeString = function(string) {
+    let length = string.length;
+    if (length > 0) {
+        let newString = string[length - 1] + string.substring(1, length - 1) + string[0];
+        console.log(newString);
+        return newString;
+    } else {
+        return string;
+    }
+}
+
+// 24. Create a new string from a given string with the first character of the
+// given string added at the front and back.
+tasks.FrontBackString = function(string) {
+    let newString = string[0] + string + string[0];
+    console.log(newString);
+    return newString;
+}
+
+// 25. Check whether a given positive number is a multiple of 3 or a multiple of 7.
+tasks.isMultiple = function(number) {
+    let string = "";
+    if (number % 3 === 0 && number % 7 === 0) {
+        string = "and 7 and 3";
+    } else if (number % 3 === 0) {
+        string = "not 7 but 3";
+    } else if (number % 7 === 0) {
+        string = "not 3 but 7";
+    } else {
+        string = "not 7 not 3";
+    }
+
+    console.log(string);
+    return string;
+}
+
+// 26. Create a new string from a given string taking the last 3 characters and
+// added at both the front and back. The string length must be 3 or more.
+tasks.stringChars = function(string) {
+    let size = string.length;
+    if (size < 3) {
+        return string;
+    }
+
+    let newString = string.substring(size - 3) + string + string.substring(size - 3);
+    console.log(newString);
+    return newString;
+}
+
+// 27. Check whether a string starts with 'Java' and false otherwise.
+tasks.startsJava = function(string) {
+    if (string.indexOf("java") == 0) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+// 28. Check whether two given integer values are in the range 50..99 (inclusive).
+// Return true if either of them are in the said range.
+tasks.areInRange = function(num1, num2) {
+    let bool = false;
+    if (num1 > 50 && num1 < 99) {
+        bool = true;
+    }
+
+    if (num2 > 50 && num2 < 99) {
+        bool = true;
+    }
+
+    return bool;
+}
+
+// 29. Check whether three given integer values are in the range 50..99 (inclusive).
+// Return true if one or more of them are in the said range.
+tasks.areInRangeThree = function(...numbers) {
+    let bool = false;
+
+    for (let i in numbers) {
+        if (numbers[i] > 50 && numbers[i] < 99) {
+            bool = true;
+        }
+    }
+
+    console.log(bool);
+    return bool;
+}
+
+// 30. Check whether a string "Script" presents at 5th (index 4) position in a
+// given string, if "Script" presents in the string return the string without "Script"
+// otherwise return the original one.
+tasks.script = function(...numbers) {
+    let bool = false;
+
+    for (let i in numbers) {
+        if (numbers[i] > 50 && numbers[i] < 99) {
+            bool = true;
+        }
+    }
+
+    console.log(bool);
+    return bool;
 }
