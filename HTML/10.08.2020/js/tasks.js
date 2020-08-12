@@ -1004,29 +1004,186 @@ const check_common_element = function(arra1, arra2) {
     return false;
 }
 
+// =============================Task__101=======================================
+const test_string = function(str) {
+    const is_lower_case = function(symbol) {
+        if('a' <= symbol && symbol <= 'z') {
+            return true;
+        }
 
+        return false;
+    }
 
+    const is_upper_case = function(symbol) {
+        if ('A' <= symbol && symbol <= 'Z') {
+            return true;
+        }
+        return false;
+    }
 
+    let upperCaseCount = 0;
 
+    for(let i = 0; i < str.length; ++i) {
+        if(is_upper_case(str[i])) {
+            ++upperCaseCount;
+        } else if(is_lower_case(str[i])) {
+            upperCaseCount = 0;
+        } else {
+            return false;
+        }
 
+        if(upperCaseCount == 2) {
+            return false;
+        }
+    }
 
+    return true;
+}
 
+// =============================Task__102=======================================
+const number_of_InversionsNaive = function(arr) {
+    let count = 0;
+    for(let i = 0; i < arr.length; ++i) {
+        for(let j = i + 1; j < arr.length; ++j) {
+            if(arr[i] > arr[j]) {
+                ++count;
+            }
+        }
+    }
 
+    return count;
+}
 
+// =============================Task__103=======================================
+const digit_delete = function(num) {
+    let result = 0;
+    const digits = [];
+    while (num) {
+        digits.push(num % 10);
+        num = Math.floor(num / 10);
+    }
 
+    for (let i = 0; i < digits.length; ++i) {
+        let n = 0;
+        for (let j = digits.length - 1; j >= 0; --j) {
+            if (j !== i) {
+                n = n * 10 + digits[j];
+            }
+        }
+        result = Math.max(n, result);
+    }
+    return result;
+}
 
+// =============================Task__104=======================================
+const different_values = function(ara, n) {
+    let max = -1;
+    for (let i = 0; i < ara.length; ++i) {
+        for (let j = i + 1; j < ara.length; ++j) {
+            let diff = Math.abs(ara[i] - ara[j]);
+            if (diff <= n) {
+                max = Math.max(max, diff);
+            }
+        }
+    }
 
+    return max;
+}
 
+// =============================Task__105=======================================
+const digit_to_one = function(num) {
+    const digitSum = function(num) {
+        let digit_sum = 0;
+        while (num) {
+            digit_sum += num % 10;
+            num = Math.floor(num / 10);
+        }
 
+        return digit_sum;
+    };
 
+    let result = 0;
 
+    while (num >= 10) {
+        ++result;
+        num = digitSum(num);
+    }
 
+    return result;
+}
 
+// =============================Task__106=======================================
+const divide_digit = function(num, d) {
+    if(d === 1) {
+        return num;
+    } else {
+        while(num % d === 0) {
+            num /= d;
+        }
 
+        return num;
+    }
+}
 
+// =============================Task__107=======================================
+const arr_pairs = function(arr) {
+    let result = 0;
+    for(let i = 0; i < arr.length; ++i) {
+        for(let j = i + 1; j < arr.length; ++j) {
+            if(arr[i] % arr[j] === 0 || arr[j] % arr[i] === 0) {
+                result++;
+            }
+        }
+    }
 
+    return result;
+}
 
+// =============================Task__108=======================================
+const dot_product = function (vector1, vector2) {
+    if(vector1.length > 3 || vector2.length > 3) {
+        return false;
+    }
 
+    let result = 0;
+    for (let i = 0; i < 3; ++i) {
+        result += vector1[i] * vector2[i];
+    }
 
+    return result;
+}
 
+// =============================Task__109=======================================
+const sort_prime = function(num) {
+    let prime_num1 = [];
+    let prime_num2 = [];
+    for (let i = 0; i <= num; ++i) {
+      prime_num2.push(true);
+    }
 
+    for (let i = 2; i <= num; ++i) {
+        if(prime_num2[i]) {
+            prime_num1.push(i);
+            for(let j = 1; i * j <= num; ++j) {
+                prime_num2[i * j] = false;
+            }
+        }
+    }
+
+    return prime_num1;
+}
+
+// =============================Task__110=======================================
+const find_numbers = function(arr, num) {
+    let result = 0;
+    for (let i = 0; i < arr.length; ++i) {
+        if (arr[i] % 2 === 0 && arr[i] !== num) {
+            result++;
+        }
+        if (arr[i] === num) {
+            return result;
+        }
+    }
+
+    return -1;
+}
