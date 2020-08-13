@@ -1,0 +1,18 @@
+{
+    "investmentsData": [
+        {"id": 0,  "investments": 15},
+        {"id": 1,  "investments": 32},
+        {"id": 2,  "investments": 64},
+        {"id": 3,  "investments": 25},
+        {"id": 4,  "investments": 50},
+        {"id": 5,  "investments": 80},
+        {"id": 6,  "investments": 60},
+        {"id": 7,  "investments": 20},
+        {"id": 8,  "investments": 75},
+        {"id": 9,  "investments": 82},
+        {"id": 10,  "investments": 95},
+        {"id": 11,  "investments": 82},
+        {"id": 12,  "investments": 44},
+        {"id": 13,  "investments": 18}
+    ]
+}
