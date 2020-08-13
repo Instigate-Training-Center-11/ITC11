@@ -1,0 +1,17 @@
+{"peoplesData": [
+    {"id": "0", "name": "Armen", "age": 32, "job": "bugalter"},
+    {"id": "1", "name": "Artak", "age": 28, "job": "developer"},
+    {"id": "2", "name": "Karen", "age": 26, "job": "developer"},
+    {"id": "3", "name": "Ashot", "age": 45, "job": "teacher"},
+    {"id": "4", "name": "Nelli", "age": 21, "job": "teacher"},
+    {"id": "5", "name": "Hakob", "age": 16, "job": ""},
+    {"id": "6", "name": "Gevorg", "age": 20, "job": "developer"},
+    {"id": "7", "name": "Mane", "age": 18, "job": ""},
+    {"id": "8", "name": "Mariam", "age": 32, "job": "doctor"},
+    {"id": "9", "name": "Hayk", "age": 44, "job": "doctor"},
+    {"id": "10", "name": "Arman", "age": 26, "job": "police"},
+    {"id": "11", "name": "Davit", "age": 22, "job": "police"},
+    {"id": "12", "name": "Armine", "age": 17, "job": ""},
+    {"id": "13", "name": "Karine", "age": 26, "job": "teacher"}
+  ]
+}
