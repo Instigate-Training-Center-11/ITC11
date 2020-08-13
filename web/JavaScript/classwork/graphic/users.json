@@ -1,17 +1,17 @@
 {"peoplesData": [
-    {"id": "0", "name": "Armen", "age": 32, "job": "bugalter"},
-    {"id": "1", "name": "Artak", "age": 28, "job": "developer"},
-    {"id": "2", "name": "Karen", "age": 26, "job": "developer"},
-    {"id": "3", "name": "Ashot", "age": 45, "job": "teacher"},
-    {"id": "4", "name": "Nelli", "age": 21, "job": "teacher"},
-    {"id": "5", "name": "Hakob", "age": 16, "job": ""},
-    {"id": "6", "name": "Gevorg", "age": 20, "job": "developer"},
-    {"id": "7", "name": "Mane", "age": 18, "job": ""},
-    {"id": "8", "name": "Mariam", "age": 32, "job": "doctor"},
-    {"id": "9", "name": "Hayk", "age": 44, "job": "doctor"},
-    {"id": "10", "name": "Arman", "age": 26, "job": "police"},
-    {"id": "11", "name": "Davit", "age": 22, "job": "police"},
-    {"id": "12", "name": "Armine", "age": 17, "job": ""},
-    {"id": "13", "name": "Karine", "age": 26, "job": "teacher"}
+    {"id": "0", "name": "Mane", "surname": "Kolibri", "age": 20, "job": "progremmer", "image":"./src/2.jpeg"},
+    {"id": "1", "name": "Lilia", "surname": "Kirakosyan", "age": 28, "job": "developer", "image":"./src/9.jpg"},
+    {"id": "2", "name": "Anahit", "surname": "Karhanyan", "age": 26, "job": "developer", "image":"./src/14.jpeg"},
+    {"id": "3", "name": "Lusine", "surname": "Sakanyan", "age": 45, "job": "teacher", "image":"./src/13.jpeg"},
+    {"id": "4", "name": "Nelli", "surname": "Zarinyan", "age": 21, "job": "teacher", "image":"./src/10.jpeg"},
+    {"id": "5", "name": "Hakob", "surname": "Alaverdyan", "age": 16, "job": "", "image":"./src/5.jpg"},
+    {"id": "6", "name": "Aida", "surname": "Aslikyan", "age": 20, "job": "developer", "image":"./src/8.jpeg"},
+    {"id": "7", "name": "Anna", "surname": "Amiryan", "age": 18, "job": "", "image":"./src/7.jpg"},
+    {"id": "8", "name": "Arthur", "surname": "Eghiazaryan", "age": 32, "job": "doctor", "image":"./src/6.jpeg"},
+    {"id": "9", "name": "Lala", "surname": "Mnacakanyan", "age": 44, "job": "doctor", "image":"./src/1.jpeg"},
+    {"id": "10", "name": "Ani", "surname": "Begoyan", "age": 26, "job": "police", "image":"./src/4.jpeg"},
+    {"id": "11", "name": "Katerina", "surname": "Sue", "age": 22, "job": "police", "image":"./src/15.jpg"},
+    {"id": "12", "name": "Lulu", "surname": "de Lipa", "age": 17, "job": "", "image":"./src/11.jpg"},
+    {"id": "13", "name": "Sofia", "surname": "Kapri", "age": 26, "job": "teacher", "image":"./src/12.jpeg"}
   ]
 }
