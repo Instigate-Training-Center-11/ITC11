@@ -1,0 +1,80 @@
+body {
+  font-family: sans-serif;  
+  background: #6f6d77;
+  color: #333;
+  padding: 20px 0 28px 0;
+  margin: 0;
+  background-image: linear-gradient(to right, rgba(69, 69, 73, 0.123) , rgb(241, 241, 241));
+}
+
+img {
+  max-width: 20%;
+  height: auto;
+}
+
+.app-title {  
+  text-align: center;
+  font-weight: bolder;
+  font-size: 40px;
+  font-family: "Open Sans", sans-serif;
+  color: darkblue;
+  font-style: initial;
+}
+
+.people {
+  max-width: 700px;
+  padding: 20px;
+  margin: 30px auto;
+  background-color: #fff;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.people-imageUrl {
+  float: left;
+  width: 40%;
+  margin-right: 15px;
+  border-radius: 5%;
+}
+
+.people-imageUrl:hover {
+  transform: scale(1.1);
+}
+
+.people-name {
+  font-size: 25px;
+  font-weight: normal;
+  margin: 0 0 10px 0;
+}
+
+.lastName {
+  font-size: 0.9rem;  
+  vertical-align: middle;
+}
+
+.button {
+  background-color: #7e7676;
+    color: white;
+    border-radius: 50%;
+    border: none;
+    font-size: 10px;
+    cursor: pointer;
+}
+
+.jobs-list {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  left: 17px;
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+.footer {
+  font-size: 18px;
+  color: #fcfcfc;
+  font-weight: bolder;
+  text-align: center;
+  margin: 0;
+}
+
