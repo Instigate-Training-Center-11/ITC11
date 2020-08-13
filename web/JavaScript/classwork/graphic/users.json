@@ -1,7 +1,7 @@
 {"peoplesData": [
     {"id": "0", "name": "Mane", "surname": "Kolibri", "age": 20, "job": "progremmer", "image":"./src/2.jpeg"},
     {"id": "1", "name": "Lilia", "surname": "Kirakosyan", "age": 28, "job": "developer", "image":"./src/9.jpg"},
-    {"id": "2", "name": "Anahit", "surname": "Karhanyan", "age": 26, "job": "developer", "image":"./src/14.jpeg"},
+    {"id": "2", "name": "Anahit", "surname": "Karhanyan", "age": 26, "job": "developer", "image":"./src/14.jpg"},
     {"id": "3", "name": "Lusine", "surname": "Sakanyan", "age": 45, "job": "teacher", "image":"./src/13.jpeg"},
     {"id": "4", "name": "Nelli", "surname": "Zarinyan", "age": 21, "job": "teacher", "image":"./src/10.jpeg"},
     {"id": "5", "name": "Hakob", "surname": "Alaverdyan", "age": 16, "job": "", "image":"./src/5.jpg"},
