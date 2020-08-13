@@ -67,7 +67,6 @@ Promise.all([p1, p2]).then((data) => {
   console.log(arrayInvestmentsData);
   console.log(arrayPeoplesData);
 
-  let filterArr = new Map();
   arrayFilterInvestments = arrayInvestmentsData.filter(element => element.investments >= 500).map(element => element);
   console.log(arrayFilterInvestments);
 
