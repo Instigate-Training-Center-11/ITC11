@@ -1,0 +1,68 @@
+body {
+    box-sizing: border-box;
+}
+
+.btn {
+    background-color: #4CAF50;
+    border: 1px solid blue;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    font-size: 22px;
+    margin: 5px 20px;
+    padding: 15px 25px;
+    border-radius: 15px;
+}
+
+#list {
+    display: flex;
+    flex-direction: column;
+    width:50%;
+    background-color: rgb(163, 149, 149);
+    margin: auto;
+}
+
+.person {
+    display: flex;
+    border: 1px solid blue;
+    background-color: lightblue;
+    height: 120px;
+    width: 100%;
+    margin: 10px 0;
+}
+
+.person .img {
+    margin: 10px;
+    flex-direction: column;
+    border-radius: 50px;
+    width: 100px;
+    height: 100px;
+}
+
+.person h2 {
+    margin: 10px 30px;
+    text-align: center;
+}
+
+.person p {
+    display: block;
+    margin: 10px 30px;
+    font-style: italic;
+    text-align: center;
+}
+
+.person .div0 {
+    width: 300px;
+}
+
+.person .div1 {
+    width: auto;
+}
+
+.person button {
+    margin: 50px 40px;
+    height: 25px;
+    width: 25px;
+    background-color: rgb(223, 173, 173);
+    border: 2px solid black;
+}
