@@ -1,18 +1,27 @@
-let getData1 = async function() {
-    let res1 = await fetch('https://raw.githubusercontent.com/Instigate-Training-Center-11/ITC11/Armine_Gevorgyan/HTML/12.08.2020/file1.json');
-    let data = await res1.json();
-    return data;
+function start() {
+    let getData1 = async function() {
+        let res1 = await fetch('https://raw.githubusercontent.com/Instigate-Training-Center-11/ITC11/Armine_Gevorgyan/HTML/12.08.2020/file1.json');
+        let data = await res1.json();
+        return data;
+    }
+
+    let getData2 = async function() {
+        let res1 = await fetch('https://raw.githubusercontent.com/Instigate-Training-Center-11/ITC11/Armine_Gevorgyan/HTML/12.08.2020/file2.json');
+        let data = await res1.json();
+        return data;
+    }
+
+    Promise.all([getData1(), getData2()]).then(values => {
+        let div = document.getElementById('main');
+        while(div.firstChild) {
+            div.removeChild(div.firstChild);
+        }
+
+        addElements('main', [values[0].investmentsData, values[1].peoplesData])
+    })
 }
 
-let getData2 = async function() {
-    let res1 = await fetch('https://raw.githubusercontent.com/Instigate-Training-Center-11/ITC11/Armine_Gevorgyan/HTML/12.08.2020/file2.json');
-    let data = await res1.json();
-    return data;
-}
 
-Promise.all([getData1(), getData2()]).then(values => {
-    addElements('main', [values[0].investmentsData, values[1].peoplesData])
-})
 
 function addElements(id, data) {
     for(let i = 0; i < data[0].length; ++i) {
@@ -51,7 +60,7 @@ function createData(data, i, j) {
     rBin.className = 'rBin';
     rBin.src = './rBin.png';
     rBin.addEventListener('click', function(){
-        content.style.display = 'none';
+        content.parentNode.removeChild(content);
     })
     img.src = data[1][j].img;
 
