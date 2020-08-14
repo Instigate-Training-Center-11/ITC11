@@ -1,16 +1,17 @@
+
+let getData1 = async function() {
+    let res1 = await fetch('https://raw.githubusercontent.com/Instigate-Training-Center-11/ITC11/Armine_Gevorgyan/HTML/12.08.2020/file1.json');
+    let data = await res1.json();
+    return data;
+}
+
+let getData2 = async function() {
+    let res1 = await fetch('https://raw.githubusercontent.com/Instigate-Training-Center-11/ITC11/Armine_Gevorgyan/HTML/12.08.2020/file2.json');
+    let data = await res1.json();
+    return data;
+}
+
 function start() {
-    let getData1 = async function() {
-        let res1 = await fetch('https://raw.githubusercontent.com/Instigate-Training-Center-11/ITC11/Armine_Gevorgyan/HTML/12.08.2020/file1.json');
-        let data = await res1.json();
-        return data;
-    }
-
-    let getData2 = async function() {
-        let res1 = await fetch('https://raw.githubusercontent.com/Instigate-Training-Center-11/ITC11/Armine_Gevorgyan/HTML/12.08.2020/file2.json');
-        let data = await res1.json();
-        return data;
-    }
-
     Promise.all([getData1(), getData2()]).then(values => {
         let div = document.getElementById('main');
         while(div.firstChild) {
