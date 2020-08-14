@@ -58,6 +58,8 @@ function createData(data, i, j) {
                 rBin.addEventListener('click', function(){
                     content.style.display = 'none';
                 })
+
+                console.log(data[1][j]);
                 img.src = data[1][j].img;
                 document.getElementById('main').appendChild(content);
                 content.appendChild(imageDiv);
