@@ -1,5 +1,3 @@
-
-
 let a = fetch('https://raw.githubusercontent.com/Instigate-Training-Center-11/ITC11/Armine_Gevorgyan/HTML/12.08.2020/file1.json')
 .then((res) => {
     return res.json()
