@@ -7,7 +7,7 @@
     {"id": "12340853-4c1c-4c68-bdfa-c46c9a21b752", "name": "Nelli","surname":"Vardanyan", "age": 21, "job": "teacher","img":"https://www.film.ru/sites/default/files/people/1458109-1160374.jpg"},
     {"id": "bcc35ab6-3759-4c29-803a-07189763ec12", "name": "Hakob","surname":"Zoryan", "age": 16, "job": "","img":"","img":"https://www.film.ru/sites/default/files/people/1458109-1160374.jpg"},
     {"id": "1d1be76a-ffbf-4654-9db6-d7464f2abd40", "name": "Gevorg","surname":"Mikoyan", "age": 20, "job": "developer","img":"https://www.film.ru/sites/default/files/people/1458109-1160374.jpg"},
-    {"id": "4a914765-48ce-41ac-a412-be31eee81bb2", "name": "Mane","surname":"Poxosyan", "age": 18, "job": "https://www.film.ru/sites/default/files/people/1458109-1160374.jpg"},
+    {"id": "4a914765-48ce-41ac-a412-be31eee81bb2", "name": "Mane","surname":"Poxosyan", "age": 18, "job":"teacher", "img":"https://www.film.ru/sites/default/files/people/1458109-1160374.jpg"},
     {"id": "9d25bfe2-59d1-498c-8293-072b0d148684", "name": "Mariam","surname":"Hovsepyan", "age": 32, "job": "doctor","img":"https://www.film.ru/sites/default/files/people/1458109-1160374.jpg"},
     {"id": "faddc483-fd54-457e-8121-a8fab5e6e970", "name": "Hayk","surname":"Ericyan", "age": 44, "job": "doctor","img":"https://www.film.ru/sites/default/files/people/1458109-1160374.jpg"},
     {"id": "bb546d56-218c-467a-b827-c7c2b89b6f66", "name": "Arman","surname":"Margaryan", "age": 26, "job": "police","img":"https://www.film.ru/sites/default/files/people/1458109-1160374.jpg"},
