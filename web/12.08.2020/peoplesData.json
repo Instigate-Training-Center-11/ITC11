@@ -1,6 +1,6 @@
 {
   "peoplesData": [
-    {"id": "49e9e1db-161c-4988-b3ab-e1779286b65f", "name": "Al","surname":"Pachino", "age": 32, "job": "bugalter","img":"https://www.film.ru/sites/default/files/people/1458109-1160374.jpg"},
+    {"id": "49e9e1db-161c-4988-b3ab-e1779286b65f", "name": "Armen","surname":"Ashotyan", "age": 40, "job": "bugalter","img":"https://images.generated.photos/oz_KkZbMmkFPeCuT4VvY83KdTt08PGgFG5GQHTqtQu4/rs:fit:512:512/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yz/XzA3MTczMjYuanBn.jpg"},
     {"id": "7a43da8c-0f54-4105-a869-692790024d71", "name": "Artak","surname":"Axayan","age": 28, "job": "developer","img":"https://images.generated.photos/0MFjVW3kRQ5VXTM9NSaxitLBMtSEPWyzcVZ3L1-fnoA/rs:fit:512:512/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yz/XzAzMzI2ODkuanBn.jpg"},
     {"id": "18eecfd2-2f9f-4675-bed3-8192094fe968", "name": "Karen","surname":"Balayan", "age": 26, "job": "developer","img":"https://images.generated.photos/dK0aEt2qoDKbJdsC44cKywSKL3Z9OyiGfgyH-iV1mfg/rs:fit:512:512/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yy/XzA0MzIzMTEuanBn.jpg"},
     {"id": "383c0b79-0b62-416d-aec3-8e904f1c77cc", "name": "Ashot","surname":"Davtyan", "age": 45, "job": "teacher","img":"https://images.generated.photos/7iklktLHQgFXOF0wbDMPDf6F-8HGqdtGbkyOuq7b2QA/rs:fit:512:512/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yy/XzAxNjAwNTkuanBn.jpg"},
