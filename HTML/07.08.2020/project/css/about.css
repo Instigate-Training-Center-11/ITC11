@@ -35,7 +35,7 @@
     padding-bottom: 0;
 }
 
-.main__team__title, .teams , .main__skills__title {
+.main__team__title, .teams , .main__skills__title, .main__pricing__title {
     width: 90%;
     margin: 0 auto;
     padding-bottom: 40px;

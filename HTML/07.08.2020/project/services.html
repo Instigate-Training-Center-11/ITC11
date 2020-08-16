@@ -68,6 +68,17 @@
                         break;
                 }
             }
+
+            setInterval(function() {
+                let scrollTop = document.getElementById('wrapper').scrollTop;
+                if(scrollTop > 200) {
+                    document.getElementById('main__button').style.display = 'flex';
+                }
+
+                if(scrollTop < 200) {
+                    document.getElementById('main__button').style.display = 'none';
+                }
+            }, 300)
         </script>
     </head>
     <body>
@@ -113,7 +124,7 @@
             </div>
         </header>
 
-        <div class="wrapper">
+        <div class="wrapper" id="wrapper">
             <nav>
                 <section  class="navbar">
                     <ul>
@@ -160,9 +171,6 @@
                         </li>
                         <li>
                             <a href="#">Pricing</a>
-                        </li>
-                        <li>
-                            <a href="#">Blog</a>
                         </li>
                         <li>
                             <a href="contacts.html">Contact</a>
@@ -302,7 +310,7 @@
                 </div>
             </section>
 
-            <a class="main__button" href="#main">
+            <a class="main__button" href="#main" id="main__button">
                 <i class="icofont-simple-up"></i>
             </a>
 

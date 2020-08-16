@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Promise</title>
+        <meta charset="utf-8">
+        <!-- <link rel="stylesheet" href="style.css" type="text/css"> -->
+        <style>
+            input {
+                padding: 10px;
+                margin-left: 20px;
+            }
+            button {
+                padding: 10px;
+                /* margin-top: 25px; */
+            }
+
+            form {
+                display: block;
+                width: 300px;
+                text-align: center;
+            }
+
+            div {
+                width: 300px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 25px;
+            }
+        </style>
+
+
+    </head>
+
+    <body>
+        <form action="text.php">
+            <div>
+                <label for="email">Email</label>
+                <input type="email" placeholder="Email" id="email" name="email" onkeyup="setEmail(this)">
+            </div>
+           <div>
+                <label for="password">Password</label>
+                <input type="password" placeholder="Password" min='6' max='12' id="password" name="password" onkeyup="setPassword(this)">
+           </div>
+            <button>Login</button>
+        </form>
+
+        <script>
+            let email = '';
+            let pass = '';
+            function setEmail(e) {
+                email = e.value;
+                console.log(email);
+            }
+            function setPassword(e) {
+                pass = e.value;
+                console.log(pass);
+            }
+
+            let email1 = document.getElementById('email').value;
+            let pass1 = document.getElementById('password').value;
+        </script>
+    </body>
+</html>

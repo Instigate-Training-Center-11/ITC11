@@ -1,4 +1,3 @@
-
 let getData1 = async function() {
     let res1 = await fetch('https://raw.githubusercontent.com/Instigate-Training-Center-11/ITC11/Armine_Gevorgyan/HTML/12.08.2020/file1.json');
     let data = await res1.json();
@@ -14,6 +13,9 @@ let getData2 = async function() {
 function start() {
     Promise.all([getData1(), getData2()]).then(values => {
         let div = document.getElementById('main');
+        document.getElementById('searchDiv').style.display = 'flex';
+        document.getElementById('click').innerText = 'Reset';
+
         while(div.firstChild) {
             div.removeChild(div.firstChild);
         }
@@ -22,7 +24,33 @@ function start() {
     })
 }
 
+function search() {
+    Promise.all([getData1(), getData2()]).then(values => {
+        let div = document.getElementById('main');
+        let str = document.getElementById('search').value;
+        while(div.firstChild) {
+            div.removeChild(div.firstChild);
+        }
 
+        addElementsSearch('main', [values[0].investmentsData, values[1].peoplesData], str);
+    })
+}
+
+function addElementsSearch(id, data, str) {
+    let search = str.split(' ')
+    for(let i = 0; i < data[0].length; ++i) {
+        for(let j = 0; j < data[1].length; ++j) {
+            console.log(search.length);
+            if(data[0][i].id == data[1][j].id && (data[1][j].lname.toUpperCase().indexOf(search[0].toUpperCase()) !== -1 || data[1][j].name.toUpperCase().indexOf(search[0].toUpperCase()) !== -1)) {
+                if(search.length === 2 && (data[0][i].id == data[1][j].id && (data[1][j].lname.toUpperCase().indexOf(search[1].toUpperCase()) !== -1 || data[1][j].name.toUpperCase().indexOf(search[1].toUpperCase()) !== -1)) ) {
+                    createData(data, i, j);
+                } else if(search.length === 1) {
+                    createData(data, i, j);
+                }
+            }
+        }
+    }
+}
 
 function addElements(id, data) {
     for(let i = 0; i < data[0].length; ++i) {

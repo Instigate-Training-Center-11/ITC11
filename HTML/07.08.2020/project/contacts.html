@@ -4,13 +4,26 @@
         <title>FlexBox</title>
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="icofont/icofont.css">
         <link rel="stylesheet" href="icofont/icofont.min.css">
         <link rel="stylesheet" href="./css/style.css">
         <link rel="stylesheet" href="./css/contacts.css">
         <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+        <script>
+            setInterval(function() {
+                let scrollTop = document.getElementById('wrapper').scrollTop;
+                if(scrollTop > 200) {
+                    document.getElementById('main__button').style.display = 'flex';
+                }
+
+                if(scrollTop < 200) {
+                    document.getElementById('main__button').style.display = 'none';
+                }
+            }, 300)
+        </script>
     </head>
     <body>
         <header class="header">
@@ -54,17 +67,22 @@
                 </ul>
             </div>
         </header>
-        <div class="wrapper">
+        <div class="wrapper" id="wrapper">
             <nav>
+
                 <section  class="navbar">
+                    <div class="navbar__logo">
+                        <a href="#">SAILOR</a>
+                    </div>
+
+
                     <ul>
-                        <li class="navbar__logo">
-                            <a href="#">SAILOR</a>
-                        </li>
+                        <!-- <li class="navbar__logo">
+                        </li> -->
                         <li>
                             <a href="index.html">Home</a>
                         </li>
-                        <li style="position: relative;" class="navbar__drop__down">
+                        <li class="navbar__drop__down">
                             <a href="#">
                                 About
                                 <i class="icofont-simple-down"></i>
@@ -100,12 +118,9 @@
                             <a href="portfolio.html" class="navbar__active">Portfolio</a>
                         </li>
                         <li>
-                            <a href="#">Pricing</a>
+                            <a href="pricing.html">Pricing</a>
                         </li>
-                        <li>
-                            <a href="#">Blog</a>
-                        </li>
-                        <li>
+                        <li class="navbar__active">
                             <a href="contacts.html">Contact</a>
                         </li>
                     </ul>
@@ -118,7 +133,7 @@
                     <div >
                         <h2>Contact</h2>
                         <p><a href="index.html">Home</a> <span>/ Contact</span> </p>
-                      </div>
+                    </div>
                 </section>
 
                 <section class="google__map">
@@ -148,16 +163,34 @@
                                 </div>
 
                             </div>
-
-                            <div>
-                                <iframe style="border:0; width: 100%; height: 270px;" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" allowfullscreen=""></iframe>
-                            </div>
                         </div>
 
+                        <form action="">
+                            <div class="form__row">
+                                <div>
+                                    <input type="text" name="name"  id="name" placeholder="Your Name" minlength="4" maxlength="20" required >
+                                </div>
+
+                                <div>
+                                    <input type="email" name="email" id="email" placeholder="Your Email" required>
+                                </div>
+                            </div>
+
+                            <div class="form__group">
+                                <input type="text"  name="subject" id="subject" placeholder="Subject" min="4" required >
+                            </div>
+
+                            <div class="form__group">
+                                <textarea placeholder="Message" name="message" rows="5" required></textarea>
+                            </div>
+
+                            <div class="form__button"><button type="submit">Send Message</button></div>
+
+                        </form>
                     </div>
                 </section>
 
-                <a class="main__button" href="#main__info">
+                <a class="main__button" href="#main" id="main__button">
                     <i class="icofont-simple-up"></i>
                 </a>
 

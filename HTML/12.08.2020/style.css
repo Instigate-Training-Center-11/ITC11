@@ -21,6 +21,13 @@ button {
     color: #fff;
 }
 
+#searchDiv {
+    align-items: center;
+    justify-content:space-between;
+    width: 40%;
+    margin:0 auto ;
+    display: none;
+}
 div[id^='content'] {
     background-image: url('./ice_screenshot_20200405-165348.png');
     background-size: 100%;
@@ -31,9 +38,8 @@ div[id^='content'] {
     margin: 0 auto;
     padding: 25px;
     justify-content: space-around;
-    margin-bottom: 35px;
+    margin-bottom: 50px;
     position: relative;
-    /* border: 2px solid #fff; */
     box-shadow: 0px 0px 8px 7px #888888;
 }
 

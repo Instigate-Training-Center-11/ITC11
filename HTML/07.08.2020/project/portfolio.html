@@ -4,12 +4,60 @@
         <title>FlexBox</title>
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="icofont/icofont.css">
         <link rel="stylesheet" href="icofont/icofont.min.css">
         <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="./css/portfolio.css">
         <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+        <script>
+            let changeImage = function(val) {
+                document.getElementById('all__works').style.display = 'none';
+                document.getElementById('app').style.display = 'none';
+                document.getElementById('card').style.display = 'none';
+                document.getElementById('web').style.display = 'none';
+                val.style.display = 'flex';
+
+                document.getElementById('web__li').classList.remove('portfolio__row__active');
+                document.getElementById('app__li').classList.remove('portfolio__row__active');
+                document.getElementById('card__li').classList.remove('portfolio__row__active');
+                document.getElementById('all__li').classList.remove('portfolio__row__active');
+
+                switch (val.id) {
+                    case 'all__works':
+                        document.getElementById('all__li').className += ' portfolio__row__active'
+                        break;
+
+                    case 'app':
+                        document.getElementById('app__li').className += ' portfolio__row__active'
+                        break;
+
+                    case 'card':
+                        document.getElementById('card__li').className += ' portfolio__row__active'
+                        break;
+
+                    case 'web':
+                        document.getElementById('web__li').className += ' portfolio__row__active'
+                        break;
+
+                    default:
+                        break;
+                }
+            }
+
+            setInterval(function() {
+                let scrollTop = document.getElementById('wrapper').scrollTop;
+                if(scrollTop > 200) {
+                    document.getElementById('main__button').style.display = 'flex';
+                }
+
+                if(scrollTop < 200) {
+                    document.getElementById('main__button').style.display = 'none';
+                }
+            }, 300)
+        </script>
     </head>
     <body>
         <header class="header">
@@ -53,14 +101,14 @@
                 </ul>
             </div>
         </header>
-        <div class="wrapper">
+        <div class="wrapper" id="wrapper">
             <nav>
                 <section  class="navbar">
                     <ul>
                         <li class="navbar__logo">
                             <a href="#">SAILOR</a>
                         </li>
-                        <li class="navbar__active">
+                        <li>
                             <a href="index.html">Home</a>
                         </li>
                         <li style="position: relative;" class="navbar__drop__down">
@@ -95,14 +143,11 @@
                         <li>
                             <a href="services.html">Services</a>
                         </li>
-                        <li>
+                        <li class="navbar__active">
                             <a href="portfolio.html">Portfolio</a>
                         </li>
                         <li>
-                            <a href="#">Pricing</a>
-                        </li>
-                        <li>
-                            <a href="#">Blog</a>
+                            <a href="pricing.html">Pricing</a>
                         </li>
                         <li>
                             <a href="contacts.html">Contact</a>
@@ -119,169 +164,359 @@
                       </div>
                 </section>
 
-                <section class="portfolio__works" style="height: 1120px;">
-                    <div class="portfolio__works__1">
-                        <img src="./images/portfolio-1.jpg" alt="">
-                        <div class="portfolio__works__wrapper">
-                            <div class="portfolio__works__info">
-                                <h4>App 1</h4>
-                                <p>App</p>
-                                <div>
-                                    <a href="./images/portfolio-1.jpg">
-                                        <i class="icofont-plus"></i>
-                                    </a>
-                                    <a href="portfolio-details.html">
-                                        <i class="icofont-link"></i>
-                                    </a>
+                <div class="portfolio__row">
+                    <ul>
+                        <li class="portfolio__row__active" onclick="changeImage(all__works)" id="all__li">All</li>
+                        <li onclick="changeImage(app)" id="app__li">App</li>
+                        <li onclick="changeImage(card)" id="card__li">Card</li>
+                        <li onclick="changeImage(web)" id="web__li">Web</li>
+                    </ul>
+                </div>
+
+                <section class="portfolio__works">
+                    <div class="all__works" id="all__works">
+                        <div style="display: flex; flex-direction: column; ">
+                            <div class="portfolio__works__1">
+                                <img src="./images/portfolio-1.jpg" alt="">
+                                <div class="portfolio__works__wrapper">
+                                    <div class="portfolio__works__info">
+                                        <h4>App 1</h4>
+                                        <p>App</p>
+                                        <div>
+                                            <a href="./images/portfolio-1.jpg">
+                                                <i class="icofont-plus"></i>
+                                            </a>
+                                            <a href="portfolio-details.html">
+                                                <i class="icofont-link"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="portfolio__works__4">
+                                <img src="./images/portfolio-6.jpg" alt="">
+                                <div class="portfolio__works__wrapper">
+                                    <div class="portfolio__works__info">
+                                        <h4>Web 3</h4>
+                                        <p>Web</p>
+                                        <div>
+                                            <a href="./images/portfolio-6.jpg">
+                                                <i class="icofont-plus"></i>
+                                            </a>
+                                            <a href="portfolio-details.html">
+                                                <i class="icofont-link"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="portfolio__works__2">
+                                <img src="./images/portfolio-2.jpg" alt="">
+                                <div class="portfolio__works__wrapper">
+                                    <div class="portfolio__works__info">
+                                        <h4>Web 3</h4>
+                                        <p>Web</p>
+                                        <div>
+                                            <a href="./images/portfolio-2.jpg">
+                                                <i class="icofont-plus"></i>
+                                            </a>
+                                            <a href="portfolio-details.html">
+                                                <i class="icofont-link"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="portfolio__works__5">
+                                <img src="./images/portfolio-5.jpg" alt="">
+                                <div class="portfolio__works__wrapper">
+                                    <div class="portfolio__works__info">
+                                        <h4>Web 3</h4>
+                                        <p>Web</p>
+                                        <div>
+                                            <a href="./images/portfolio-5.jpg">
+                                                <i class="icofont-plus"></i>
+                                            </a>
+                                            <a href="portfolio-details.html">
+                                                <i class="icofont-link"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="portfolio__works__7">
+                                <img src="./images/portfolio-9.jpg" alt="">
+                                <div class="portfolio__works__wrapper">
+                                    <div class="portfolio__works__info">
+                                        <h4>Web 3</h4>
+                                        <p>Web</p>
+                                        <div>
+                                            <a href="./images/portfolio-9.jpg">
+                                                <i class="icofont-plus"></i>
+                                            </a>
+                                            <a href="portfolio-details.html">
+                                                <i class="icofont-link"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div>
+                            <div class="portfolio__works__3">
+                                <img src="./images/portfolio-3.jpg" alt="">
+                                <div class="portfolio__works__wrapper">
+                                    <div class="portfolio__works__info">
+                                        <h4>Web 3</h4>
+                                        <p>Web</p>
+                                        <div>
+                                            <a href="./images/portfolio-3.jpg">
+                                                <i class="icofont-plus"></i>
+                                            </a>
+                                            <a href="portfolio-details.html">
+                                                <i class="icofont-link"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="portfolio__works__6">
+                                <img src="./images/portfolio-4.jpg" alt="">
+                                <div class="portfolio__works__wrapper">
+                                    <div class="portfolio__works__info">
+                                        <h4>Web 3</h4>
+                                        <p>Web</p>
+                                        <div>
+                                            <a href="./images/portfolio-4.jpg">
+                                                <i class="icofont-plus"></i>
+                                            </a>
+                                            <a href="portfolio-details.html">
+                                                <i class="icofont-link"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="portfolio__works__8">
+                                <img src="./images/portfolio-7.jpg" alt="">
+                                <div class="portfolio__works__wrapper">
+                                    <div class="portfolio__works__info">
+                                        <h4>Web 3</h4>
+                                        <p>Web</p>
+                                        <div>
+                                            <a href="./images/portfolio-7.jpg">
+                                                <i class="icofont-plus"></i>
+                                            </a>
+                                            <a href="portfolio-details.html">
+                                                <i class="icofont-link"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="portfolio__works__9">
+                                <img src="./images/portfolio-8.jpg" alt="">
+                                <div class="portfolio__works__wrapper">
+                                    <div class="portfolio__works__info">
+                                        <h4>Web 3</h4>
+                                        <p>Web</p>
+                                        <div>
+                                            <a href="./images/portfolio-8.jpg">
+                                                <i class="icofont-plus"></i>
+                                            </a>
+                                            <a href="portfolio-details.html">
+                                                <i class="icofont-link"></i>
+                                            </a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="portfolio__works__2">
-                        <img src="./images/portfolio-2.jpg" alt="">
-                        <div class="portfolio__works__wrapper">
-                            <div class="portfolio__works__info">
-                                <h4>Web 3</h4>
-                                <p>Web</p>
-                                <div>
-                                    <a href="./images/portfolio-2.jpg">
-                                        <i class="icofont-plus"></i>
-                                    </a>
-                                    <a href="portfolio-details.html">
-                                        <i class="icofont-link"></i>
-                                    </a>
+                    <div class="app" id="app">
+                        <div class="portfolio__works__1">
+                            <img src="./images/portfolio-1.jpg" alt="">
+                            <div class="portfolio__works__wrapper">
+                                <div class="portfolio__works__info">
+                                    <h4>App 1</h4>
+                                    <p>App</p>
+                                    <div>
+                                        <a href="./images/portfolio-1.jpg">
+                                            <i class="icofont-plus"></i>
+                                        </a>
+                                        <a href="portfolio-details.html">
+                                            <i class="icofont-link"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="portfolio__works__3">
+                            <img src="./images/portfolio-3.jpg" alt="">
+                            <div class="portfolio__works__wrapper">
+                                <div class="portfolio__works__info">
+                                    <h4>Web 3</h4>
+                                    <p>Web</p>
+                                    <div>
+                                        <a href="./images/portfolio-3.jpg">
+                                            <i class="icofont-plus"></i>
+                                        </a>
+                                        <a href="portfolio-details.html">
+                                            <i class="icofont-link"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="portfolio__works__4">
+                            <img src="./images/portfolio-6.jpg" alt="">
+                            <div class="portfolio__works__wrapper">
+                                <div class="portfolio__works__info">
+                                    <h4>Web 3</h4>
+                                    <p>Web</p>
+                                    <div>
+                                        <a href="./images/portfolio-6.jpg">
+                                            <i class="icofont-plus"></i>
+                                        </a>
+                                        <a href="portfolio-details.html">
+                                            <i class="icofont-link"></i>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="portfolio__works__3">
-                        <img src="./images/portfolio-3.jpg" alt="">
-                        <div class="portfolio__works__wrapper">
-                            <div class="portfolio__works__info">
-                                <h4>Web 3</h4>
-                                <p>Web</p>
-                                <div>
-                                    <a href="./images/portfolio-3.jpg">
-                                        <i class="icofont-plus"></i>
-                                    </a>
-                                    <a href="portfolio-details.html">
-                                        <i class="icofont-link"></i>
-                                    </a>
+                    <div class="card" id="card">
+                        <div class="portfolio__works__6">
+                            <img src="./images/portfolio-4.jpg" alt="">
+                            <div class="portfolio__works__wrapper">
+                                <div class="portfolio__works__info">
+                                    <h4>Web 3</h4>
+                                    <p>Web</p>
+                                    <div>
+                                        <a href="./images/portfolio-4.jpg">
+                                            <i class="icofont-plus"></i>
+                                        </a>
+                                        <a href="portfolio-details.html">
+                                            <i class="icofont-link"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="portfolio__works__8">
+                            <img src="./images/portfolio-7.jpg" alt="">
+                            <div class="portfolio__works__wrapper">
+                                <div class="portfolio__works__info">
+                                    <h4>Web 3</h4>
+                                    <p>Web</p>
+                                    <div>
+                                        <a href="./images/portfolio-7.jpg">
+                                            <i class="icofont-plus"></i>
+                                        </a>
+                                        <a href="portfolio-details.html">
+                                            <i class="icofont-link"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="portfolio__works__9">
+                            <img src="./images/portfolio-8.jpg" alt="">
+                            <div class="portfolio__works__wrapper">
+                                <div class="portfolio__works__info">
+                                    <h4>Web 3</h4>
+                                    <p>Web</p>
+                                    <div>
+                                        <a href="./images/portfolio-8.jpg">
+                                            <i class="icofont-plus"></i>
+                                        </a>
+                                        <a href="portfolio-details.html">
+                                            <i class="icofont-link"></i>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="portfolio__works__4">
-                        <img src="./images/portfolio-6.jpg" alt="">
-                        <div class="portfolio__works__wrapper">
-                            <div class="portfolio__works__info">
-                                <h4>Web 3</h4>
-                                <p>Web</p>
-                                <div>
-                                    <a href="./images/portfolio-6.jpg">
-                                        <i class="icofont-plus"></i>
-                                    </a>
-                                    <a href="portfolio-details.html">
-                                        <i class="icofont-link"></i>
-                                    </a>
+                    <div class="web" id="web">
+                        <div class="portfolio__works__2">
+                            <img src="./images/portfolio-2.jpg" alt="">
+                            <div class="portfolio__works__wrapper">
+                                <div class="portfolio__works__info">
+                                    <h4>Web 3</h4>
+                                    <p>Web</p>
+                                    <div>
+                                        <a href="./images/portfolio-2.jpg">
+                                            <i class="icofont-plus"></i>
+                                        </a>
+                                        <a href="portfolio-details.html">
+                                            <i class="icofont-link"></i>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="portfolio__works__5">
-                        <img src="./images/portfolio-5.jpg" alt="">
-                        <div class="portfolio__works__wrapper">
-                            <div class="portfolio__works__info">
-                                <h4>Web 3</h4>
-                                <p>Web</p>
-                                <div>
-                                    <a href="./images/portfolio-5.jpg">
-                                        <i class="icofont-plus"></i>
-                                    </a>
-                                    <a href="portfolio-details.html">
-                                        <i class="icofont-link"></i>
-                                    </a>
+                        <div class="portfolio__works__5">
+                            <img src="./images/portfolio-5.jpg" alt="">
+                            <div class="portfolio__works__wrapper">
+                                <div class="portfolio__works__info">
+                                    <h4>Web 3</h4>
+                                    <p>Web</p>
+                                    <div>
+                                        <a href="./images/portfolio-5.jpg">
+                                            <i class="icofont-plus"></i>
+                                        </a>
+                                        <a href="portfolio-details.html">
+                                            <i class="icofont-link"></i>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="portfolio__works__6">
-                        <img src="./images/portfolio-4.jpg" alt="">
-                        <div class="portfolio__works__wrapper">
-                            <div class="portfolio__works__info">
-                                <h4>Web 3</h4>
-                                <p>Web</p>
-                                <div>
-                                    <a href="./images/portfolio-4.jpg">
-                                        <i class="icofont-plus"></i>
-                                    </a>
-                                    <a href="portfolio-details.html">
-                                        <i class="icofont-link"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="portfolio__works__7">
-                        <img src="./images/portfolio-9.jpg" alt="">
-                        <div class="portfolio__works__wrapper">
-                            <div class="portfolio__works__info">
-                                <h4>Web 3</h4>
-                                <p>Web</p>
-                                <div>
-                                    <a href="./images/portfolio-9.jpg">
-                                        <i class="icofont-plus"></i>
-                                    </a>
-                                    <a href="portfolio-details.html">
-                                        <i class="icofont-link"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="portfolio__works__8">
-                        <img src="./images/portfolio-7.jpg" alt="">
-                        <div class="portfolio__works__wrapper">
-                            <div class="portfolio__works__info">
-                                <h4>Web 3</h4>
-                                <p>Web</p>
-                                <div>
-                                    <a href="./images/portfolio-7.jpg">
-                                        <i class="icofont-plus"></i>
-                                    </a>
-                                    <a href="portfolio-details.html">
-                                        <i class="icofont-link"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="portfolio__works__9">
-                        <img src="./images/portfolio-8.jpg" alt="">
-                        <div class="portfolio__works__wrapper">
-                            <div class="portfolio__works__info">
-                                <h4>Web 3</h4>
-                                <p>Web</p>
-                                <div>
-                                    <a href="./images/portfolio-8.jpg">
-                                        <i class="icofont-plus"></i>
-                                    </a>
-                                    <a href="portfolio-details.html">
-                                        <i class="icofont-link"></i>
-                                    </a>
+                        <div class="portfolio__works__7">
+                            <img src="./images/portfolio-9.jpg" alt="">
+                            <div class="portfolio__works__wrapper">
+                                <div class="portfolio__works__info">
+                                    <h4>Web 3</h4>
+                                    <p>Web</p>
+                                    <div>
+                                        <a href="./images/portfolio-9.jpg">
+                                            <i class="icofont-plus"></i>
+                                        </a>
+                                        <a href="portfolio-details.html">
+                                            <i class="icofont-link"></i>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </section>
+
+                <a class="main__button" href="#main" id="main__button">
+                    <i class="icofont-simple-up"></i>
+                </a>
             </main>
             <footer>
                 <section class="footer__top">
