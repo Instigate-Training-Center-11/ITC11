@@ -1,0 +1,12 @@
+body {
+    color: darkblue;
+    text-align: center;
+    font-family: "Open Sans", sans-serif;
+}
+.myDiv {
+    border: 5px outset rgb(194, 229, 227);
+    background-color: rgb(231, 188, 233);
+    text-align: center;
+    height: 1000px;
+}
+  

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <title> First html page </title>
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
+        <meta charset="UTF-8">
+        <meta name="desciption" content="Using html tags">
+        <meta name="keywords" content="HTML">
+        <meta name="viewport" content="width = device-width, initial-scale = 1.0">
+        <base href="https://github.com/" target="_blank">
+    </head>
+    <body>
+        <div class="myDiv">
+            <p> <cite> HTML PAGE </cite></p>
+            <button type="button" onclick="alert('Hello from web page')">Some alert!</button> <br><br>
+            <form action="/action_page.php">
+                <fieldset>
+                    <legend><i><b>Enter your name, surname, email and birthday, please...</b></i></legend>
+                    <br>
+                    <label for="form_name">First name:</label>
+                    <input class="inp" type="text" id="form_name" name="form_name" value="Name"><br><br>
+                    <label for="label_name">Last name:</label>
+                    <input class="inp" type="text" id="label_name" name="label_name" value="Surname"><br><br>
+                    <label for="email">Email:</label>
+                    <input class="inp" type="email" id="email" name="email" value="Email"><br><br>
+                    <label for="birthday">Birthday:</label>
+                    <input class="inp" type="date" id="birthday" name="birthday"><br><br>
+                    <input type="submit" value="Register" onclick="myFunction()">
+                </fieldset>
+            </form>
+            <br>
+            <h3>See result bellow</h3>
+            <p id="demo"></p>
+            <p id="demo1"></p>
+            <p id="demo2"></p>
+            <p id="demo3"></p>
+        </div>
+    </body>
+</html>
