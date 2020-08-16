@@ -12,9 +12,8 @@ const bindAllData = (arrayInvestmentsData, arrayPeoplesData) => arrayPeoplesData
 function deleteElement(content){
   content.parentElement.style = 'display: none';
 }
-function searchPeoples() {
-  alert("hello");
-}
+
+
 function createUsers(dataUsers){
   dataUsers.forEach(element => {
     let chat = document.getElementById("chat");
@@ -66,4 +65,14 @@ Promise.all([jsonDataInvestments(), jsonDataPeoples()]).then(data => {
     console.log(bindAllData(arrayInvestmentsData,arrayPeoplesData));
     createUsers(dataUsers);
 
+});
+
+
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#chat *").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+    });
+  });
 });
