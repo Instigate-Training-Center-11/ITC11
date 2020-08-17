@@ -188,3 +188,80 @@ html {
     border: none;
     background-color: #a00909;
 }
+
+.group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.find {
+    padding: 5px;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border: solid 1px #474a4e;
+    background-color: #474a4e;
+    opacity: 0.5;
+    color: #ffffff;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 30px;
+    margin-left: 0;
+}
+
+.find:hover {
+    border: solid 1px #87c232;
+    opacity: 0.6;
+}
+
+.find_button {
+    border: solid 1px #87c232;
+    border: none;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    font-size: 30px;
+    background-color: #87c232;
+    color: #ffffff;
+    padding: 5px 25px;
+    font-family: 'Open Sans Condensed', sans-serif;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0;
+}
+
+.find_button:hover {
+    border: solid 1px #608930;
+    background-color:#608930;
+}
+
+.find_button:active {
+    border: solid 1px #87c232;
+    background-color: #87c232;
+}
+
+.info {
+    color: #ffffff;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 20px;
+    border: none;
+}
+
+.getAllUsers {
+    border: none;
+    border-radius: 25px;
+    font-size: 30px;
+    background-color: #87c232;
+    color: #ffffff;
+    padding: 5px 25px;
+    font-family: 'Open Sans Condensed', sans-serif;
+    justify-content: center;
+    align-items: center;
+}
+
+.getAllUsers:hover {
+    background-color:#608930;
+}
+
+.getAllUsers:active {
+    background-color: #87c232;
+}

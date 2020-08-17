@@ -34,60 +34,104 @@ const render = function(data) {
     main.appendChild(titleOne);
     main.appendChild(titleTwo);
 
-    let box = document.createElement('div');
-    box.id = "box";
-    box.title = "#profile";
-    box.className = "box";
-    data.forEach(elem => {
-        let profile = document.createElement('div');
-        profile.className = "profile";
-        profile.id = elem.id;
-        let image = document.createElement('img');
-        image.src = elem.image;
-        image.title = "#image";
-        image.className = "picture";
+    if (data.length > 0) {
+        let group = document.createElement('div');
+        group.className = "group";
 
-        let info = document.createElement('div');
-        info.className = "info";
+        let find = document.createElement('input');
+        find.type = "text";
+        find.id = "input";
+        find.placeholder = "Find users";
+        find.className = "find";
 
-        let name = document.createElement('h3');
-        name.className = "name";
-        name.innerHTML = elem.name + ' ' + elem.surname;
-        info.appendChild(name);
+        let getUsers = document.createElement("button");
+        getUsers.id = "button";
+        getUsers.className = "getAllUsers";
+        getUsers.onclick = handleClick;
+        getUsers.innerHTML = "Get All Users";
+        main.appendChild(getUsers);
 
-        let id = document.createElement('h6');
-        id.className = "text";
-        id.innerHTML = 'ID: ' + elem.id;
-        info.appendChild(id);
-
-        let age = document.createElement('h6');
-        age.className = "text";
-        age.innerHTML = 'Age: ' + elem.age;
-        info.appendChild(age);
-
-        let job = document.createElement('h6');
-        job.className = "text";
-        job.innerHTML = 'Job: ' + elem.job;
-        info.appendChild(job);
-
-        let investments = document.createElement('h6');
-        investments.className = "text";
-        investments.innerHTML = 'Investments: ' + elem.investments;
-        info.appendChild(investments);
-
-        let button = document.createElement("button");
-        button.className = "close";
-        button.title = '#remove';
-        button.onclick = () => {
-            document.getElementById(elem.id).style.display = "none";
+        let search = document.createElement('button');
+        search.id = "find";
+        search.innerHTML = 'Find';
+        search.className = "find_button";
+        search.onclick = () => {
+            let value = document.getElementById("input").value;
+            let values = data.filter(elem => elem.name.toLowerCase().includes(value)
+                || elem.surname.toLowerCase().includes(value));
+            render(values);
         }
-        button.innerHTML = "X";
 
-        profile.appendChild(image);
-        profile.appendChild(info);
-        profile.appendChild(button);
-        box.appendChild(profile);
-    });
-    main.appendChild(box)
+        group.appendChild(find);
+        group.appendChild(search);
+        main.appendChild(group);
+        let box = document.createElement('div');
+        box.id = "box";
+        box.title = "#profile";
+        box.className = "box";
+        data.forEach(elem => {
+            let profile = document.createElement('div');
+            profile.className = "profile";
+            profile.id = elem.id;
+            let image = document.createElement('img');
+            image.src = elem.image;
+            image.title = "#image";
+            image.className = "picture";
+
+            let info = document.createElement('div');
+            info.className = "info";
+
+            let name = document.createElement('h3');
+            name.className = "name";
+            name.innerHTML = elem.name + ' ' + elem.surname;
+            info.appendChild(name);
+
+            let id = document.createElement('h6');
+            id.className = "text";
+            id.innerHTML = 'ID: ' + elem.id;
+            info.appendChild(id);
+
+            let age = document.createElement('h6');
+            age.className = "text";
+            age.innerHTML = 'Age: ' + elem.age;
+            info.appendChild(age);
+
+            let job = document.createElement('h6');
+            job.className = "text";
+            job.innerHTML = 'Job: ' + elem.job;
+            info.appendChild(job);
+
+            let investments = document.createElement('h6');
+            investments.className = "text";
+            investments.innerHTML = 'Investments: ' + elem.investments;
+            info.appendChild(investments);
+
+            let button = document.createElement("button");
+            button.className = "close";
+            button.title = '#remove';
+            button.onclick = () => {
+                document.getElementById(elem.id).style.display = "none";
+            }
+            button.innerHTML = "X";
+
+            profile.appendChild(image);
+            profile.appendChild(info);
+            profile.appendChild(button);
+            box.appendChild(profile);
+        });
+        main.appendChild(box)
+    } else {
+        let info = document.createElement('p');
+        info.innerHTML = "Can't find users";
+        info.className = "info";
+        main.appendChild(info);
+
+        let getUsers = document.createElement("button");
+        getUsers.id = "button";
+        getUsers.className = "getAllUsers";
+        getUsers.onclick = handleClick;
+        getUsers.innerHTML = "Get All Users";
+        main.appendChild(getUsers);
+    }
     document.body.appendChild(main);
 }
