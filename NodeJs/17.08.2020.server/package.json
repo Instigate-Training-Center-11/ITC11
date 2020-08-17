@@ -1,0 +1,22 @@
+{
+  "name": "node_server",
+  "version": "1.0.0",
+  "description": "send data json http",
+  "main": "index.js",
+  "dependencies": {
+    "chalk": "^4.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "keywords": [
+    "node",
+    "nodejs"
+  ],
+  "author": "Armen Nersesyan <armennersesyan95@gmail.com>",
+  "license": "ISC"
+}
