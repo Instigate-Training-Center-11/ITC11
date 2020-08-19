@@ -1,0 +1,36 @@
+/***************************************************/
+/*                                                 */
+/*   Welcome to Mane Antonyan's homework folder    */
+/*                                                 */
+/***************************************************/
+
+# PROJECT DESCRIPTION
+    - Program connected to MySQL databases (using Sequelize ORM system).
+    - Defined user's schema and investment schema.
+    - Insert the JSON files data into corresponding tables.
+      users.json into the user's table and investments.json
+      into investments table.
+    - Following  APIs using the express module.
+        - /users/<users id>.
+            Example: /users/30bb2609-c7b9-47d9-b7d4-a83fd894af8e
+            Get one user data by id
+        - /users
+            Get all users list
+        - /investments/<investment id>
+            Example:  /investments/a0e3de35-c99d-4174-add2-d87063bc2609
+            Get one row from investments data by id
+        - /investments
+            Get all investments list
+    - All APIs gets data from the database.
+
+# GETTING STARTED
+    - Production mode : npm run prod
+    - Development mode: npm run dev
+
+# Directory structure
+.
+├── ids.json        // Data - investments
+├── index.js        // main point
+├── package.json    // information about project
+├── Readme          // Mini documentation
+└── user.json       // Data - users
