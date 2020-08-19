@@ -1,5 +1,5 @@
 const { Sequelize, DataTypes } = require('sequelize');
-const sequelize = new Sequelize('itc11', 'root', 'arsen98ak', {
+const sequelize = new Sequelize('itc11', 'root', 'root', {
     host: 'localhost',
     dialect: 'mysql'
 });
@@ -7,7 +7,8 @@ const sequelize = new Sequelize('itc11', 'root', 'arsen98ak', {
 const Offices = sequelize.define('Offices', {
     id: {
         type: DataTypes.INTEGER,
-        primaryKey: true
+        primaryKey: true,
+        autoIncrement: true
     },
     name: {
         type: DataTypes.STRING,
@@ -66,16 +67,6 @@ const Cities = sequelize.define('Cities', {
 }, {
 });
 
-/*const Uss = sequelize.define('Uss', {
-    firstName: {
-        type: DataTypes.STRING,
-        allowNull: false
-    },
-    lastName: {
-        type: DataTypes.STRING
-    }
-}, {
-});*/
 
 module.exports={
     Offices: Offices,
