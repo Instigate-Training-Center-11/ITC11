@@ -1,0 +1,18 @@
+{
+    "peoplesData": [
+        {"name": "Armen", "lastName": "Hovsepyan", "age": 32, "cityID": 4, "officeID": 2, "job": "bugalter", "photo": "https://api.time.com/wp-content/uploads/2017/12/terry-crews-person-of-year-2017-time-magazine-2.jpg"},
+        {"name": "Artak", "lastName": "Harutyunyan","age": 28, "cityID": 1, "officeID": 2, "job": "developer", "photo": "https://www.biography.com/.image/ar_8:10%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cg_faces:center%2Cq_auto:good%2Cw_620/MTY4MzU0NDMzMjc5NzMxNjcw/julian-castro-sergio-floresbloomberg-via-getty-images-square.jpg"},
+        {"name": "Karen", "lastName": "Hovhannisyan","age": 26,"cityID": 2, "officeID": 1, "job": "developer", "photo": "https://www.gannett-cdn.com/-mm-/e29a608cd143f94f2cfcad5a76f3490ce64e841b/c=0-24-3000-1719/local/-/media/2018/08/19/USATODAY/USATODAY/636702793780946824-1019169704.jpg"},
+        {"name": "Ashot", "lastName": "Mkrtumyan","age": 45, "cityID": 4, "officeID": 3, "job": "teacher", "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Pierre-Person.jpg/1200px-Pierre-Person.jpg"},
+        {"name": "Nelli", "lastName": "Sargsyan","age": 21,"cityID": 3, "officeID": 3, "job": "teacher", "photo": "https://res.cloudinary.com/demo/image/upload/q_auto:low/woman.jpg"},
+        {"name": "Hakob", "lastName": "Patrosyan","age": 16,"cityID": 3, "officeID": 1, "job": "developer", "photo": "https://brand.issworld.com/m/2af1a8c921bc741d/webimage-DK-People-Henrik-Seier.png"},
+        {"name": "Gevorg", "lastName": "Gasparyan","age": 20,"cityID": 2, "officeID": 2, "job": "developer", "photo": "https://static-16.sinclairstoryline.com/resources/media/b18ba64e-3a31-42f2-aa45-e91b1927c03a-b18ba64e3a3142f2aa45e91b1927c03arendition_1_JimGrimesheadshotfinal.png?1547570373818"},
+        {"name": "Mane", "lastName": "Ohanyan","age": 18,"cityID": 2, "officeID": 2, "job": "teacher", "photo": "https://www.westernunion.com/content/dam/wu/jm/responsive/send-money-in-person-from-jamaica-resp.png"},
+        {"name": "Mariam", "lastName": "Mnacakanyan","age": 32,"cityID": 1, "officeID": 1, "job": "doctor", "photo": "https://image.shutterstock.com/image-photo/beautiful-african-american-girl-afro-260nw-720115051.jpg"},
+        {"name": "Hayk", "lastName": "Avoyan","age": 44,"cityID": 1, "officeID": 1, "job": "doctor", "photo": "https://manofmany.com/wp-content/uploads/2019/06/50-Long-Haircuts-Hairstyle-Tips-for-Men-2.jpg"},
+        {"name": "Arman", "lastName": "Grigoryan","age": 26,"cityID": 2, "officeID": 1, "job": "police", "photo": "https://media.gq.com/photos/57035dbb894afeac7ebf53fb/master/pass/kit-harrington-curly-hair.jpg"},
+        {"name": "Davit", "lastName": "Nshanyan","age": 22, "cityID": 3, "officeID": 2, "job": "police", "photo": "https://pricheska-strizhka.ru/wp-content/uploads/2019/12/18.jpeg"},
+        {"name": "Armine", "lastName": "Mkrtchyan","age": 17, "cityID": 4, "officeID": 3, "job": "developer", "photo": "https://www.mckinsey.com/~/media/McKinsey/About%20Us/Who%20we%20are/Diversity%20and%20Inclusion/women-in-business_thumb_1536x1536.jpg"},
+        {"name": "Karine", "lastName": "Xachatryan","age": 26,"cityID": 4, "officeID": 3, "job": "teacher", "photo": "https://www.liberaldictionary.com/wp-content/uploads/2018/11/women.jpg"}
+    ]
+}
