@@ -142,4 +142,4 @@ app.get('/investments/:id',findInvestmentsById);
 app.get('/users/:id',findUsersById);
 
 connect();
-app.listen(3000);
+app.listen(3002);
