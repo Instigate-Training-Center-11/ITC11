@@ -1,0 +1,52 @@
+[
+  {
+    "name": "Armen",
+    "lastName": "Antonyan",
+    "age": 32,
+    "job": "bugalter",
+    "imageUrl": "./image/team-2.jpg",
+    "cityID": 1,
+    "email": "armen@gmail.com",
+    "password": "armen20"
+  },
+  {
+    "name": "Artak",
+    "lastName": "Hakobyan",
+    "age": 28,
+    "job": "developer",
+    "imageUrl": "./image/team-1.jpg",
+    "cityID": 2,
+    "email": "artak@gmail.com",
+    "password": "artak25"
+  },
+  {
+    "name": "Karen",
+    "lastName": "Arshakyan",
+    "age": 26,
+    "job": "developer",
+    "imageUrl": "./image/team-2.jpg",
+    "cityID": 3,
+    "email": "karen@gmail.com",
+    "password": "karen26"
+  },
+  {
+    "name": "Ashot",
+    "lastName": "Hunanyan",
+    "age": 45,
+    "job": "teacher",
+    "imageUrl": "./image/team-3.jpg",
+    "cityID": 4,
+    "email": "ashot@gmail.com",
+    "password": "ashot20"
+  },
+  {
+    "name": "Nelli",
+    "lastName": "Hakobyan",
+    "age": 21,
+    "job": "teacher",
+    "imageUrl": "./image/team-1.jpg",
+    "cityID": 5,
+    "email": "ashot@gmail.com",
+    "password": "ashot20"
+  }
+]
