@@ -1,19 +1,19 @@
 const { DataTypes } = require('sequelize');
 const { sequelize } = require('./connection');
 
-const id = sequelize.define('ids',{
+const office = sequelize.define('offices', {
     id: {
         type: DataTypes.INTEGER,
         allowNull: false,
         primaryKey: true,
         autoIncrement: true
     },
-    investments: {
-        type: DataTypes.INTEGER,
+    name: {
+        type: DataTypes.STRING,
         allowNull: false
     }
 }, {
     timestamps: false
 });
 
-module.exports = { id };
+module.exports = { office };

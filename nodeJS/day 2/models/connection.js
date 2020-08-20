@@ -7,6 +7,4 @@ const sequelize = new Sequelize(configs.database, configs.user, configs.password
     dialect: configs.dialect
 });
 
-module.exports = {
-    sequelize: sequelize
-}
+module.exports = { sequelize };

@@ -5,7 +5,8 @@ const user = sequelize.define('users', {
     id: {
         type: DataTypes.INTEGER,
         allowNull: false,
-        primaryKey: true
+        primaryKey: true,
+        autoIncrement: true
     },
     name: {
         type: DataTypes.STRING,
@@ -24,26 +25,19 @@ const user = sequelize.define('users', {
     },
     image: {
         type: DataTypes.STRING
-    }
-  }, {
-});
-const id = sequelize.define('ids', {
-    id: {
+    },
+    cityID: {
         type: DataTypes.INTEGER,
         allowNull: false,
-        primaryKey: true
+        defaultValue: 0,
     },
-    investments: {
+    officeID: {
         type: DataTypes.INTEGER,
-        allowNull: false
+        allowNull: false,
+        defaultValue: 0,
     }
-  }, {
+}, {
+    timestamps: false
 });
 
-module.exports = {
-    id : id
-};
-
-module.exports = {
-    user : user
-};
+module.exports = { user };

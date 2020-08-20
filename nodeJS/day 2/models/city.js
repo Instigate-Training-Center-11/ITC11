@@ -1,14 +1,23 @@
 const { DataTypes } = require('sequelize');
 const { sequelize } = require('./connection');
 
-const id = sequelize.define('ids',{
+const city = sequelize.define('cities', {
     id: {
         type: DataTypes.INTEGER,
         allowNull: false,
         primaryKey: true,
         autoIncrement: true
     },
-    investments: {
+    name: {
+        type: DataTypes.STRING,
+        allowNull: false
+    },
+    isCapital: {
+        type: DataTypes.BOOLEAN,
+        allowNull: false,
+        defaultValue: false
+    },
+    population: {
         type: DataTypes.INTEGER,
         allowNull: false
     }
@@ -16,4 +25,4 @@ const id = sequelize.define('ids',{
     timestamps: false
 });
 
-module.exports = { id };
+module.exports = { city };

@@ -6,10 +6,10 @@
 
 # PROJECT DESCRIPTION
     - Program connected to MySQL databases (using Sequelize ORM system).
-    - Defined user's schema and investment schema.
+    - Defined users, investments, offices, cities schemas.
     - Insert the JSON files data into corresponding tables.
-      users.json into the user's table and investments.json
-      into investments table.
+        users.json into the user's table and investments.json
+        into investments table.
     - Following  APIs using the express module.
         - /users/<users id>.
             Example: /users/30bb2609-c7b9-47d9-b7d4-a83fd894af8e
@@ -29,8 +29,26 @@
 
 # Directory structure
 .
-├── ids.json        // Data - investments
-├── index.js        // main point
-├── package.json    // information about project
-├── Readme          // Mini documentation
-└── user.json       // Data - users
+├── app.js                  // Start point
+├── configs
+│   └── config.js           // Data to use for connection
+├── controllers
+│   ├── ids.controller.js   // Ids apis
+│   └── user.controller.js  // User apis
+├── models
+│   ├── city.js             // Table cities
+│   ├── connection.js       // Sequelize connect
+│   ├── id.js               // Table ids
+│   ├── mysql.js            // Create and init tables
+│   ├── office.js           // Table offices
+│   └── user.js             // Table users
+├── package.json            // Configurations, setting
+├── package-lock.json       // Node modules info
+├── Readme                  // Mini documentation
+├── routers
+│   └── router.js           // Api routing
+└── src
+    ├── cities.json         // City data
+    ├── ids.json            // Id data
+    ├── offices.json        // Office data
+    └── user.json           // User data
