@@ -12,26 +12,15 @@ const services = require('./services');
 const app = express();
 const { auth, verifyBody } = services;
 const { signUp, allUsers, signIn, addCity } = controllers;
-
 app.use(bodyParser.json(), verifyBody);
-
-/*Vercnum en citi modele ev useri modele */
 const { Users, Cities } = models;
-
-//app.post('/users', createUsers);
-
 app.post('/signin', signIn);
 app.post('/signup', signUp);
 app.get('/users', auth, allUsers);
 app.get('/cities', addCity);
 
-//app.post('/users', function(req, res){
-//     createUsers
-//   });
-
-/*sync e anum db het */
+/*sync to database */
 const sync = async () => {
-
     try {
         await Users.sync()
         await Cities.sync()
@@ -56,7 +45,6 @@ const sync = async () => {
             isCapital: false,
             population: 20000
         })
-
         await Users.create({
             name: 'Admin',
             surname: 'Admin',
@@ -66,7 +54,7 @@ const sync = async () => {
             cityID: 1,
             email: 'admin@gmail.com',
             isAdmin: true,
-            password: hash /* stex hashe poxem */
+            password: hash /* to insert hash */
         })
 
         for (let i = 0; i < users.length; ++i) {
@@ -74,24 +62,20 @@ const sync = async () => {
 
                 console.log('New User ', {
                     ...users[i],
-                    password: hash  /* stex hashe poxem */
+                    password: hash  /* to insert hash */
                 })
 
                 await Users.create({
                     ...users[i],
-                    password: hash /* stex hashe poxem */
+                    password: hash /* to insert hash */
                 })
             });
-
         }
-
         console.log('Connection has been established successfully.');
     } catch (error) {
         console.error('Unable to connect to the database:', error);
     }
 }
 sync()
-
 app.listen(configs.port)
-
 console.log(`Srever listen port ${configs.port}`)

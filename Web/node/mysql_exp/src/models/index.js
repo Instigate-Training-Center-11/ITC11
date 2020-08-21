@@ -2,17 +2,15 @@ const { Sequelize, DataTypes } = require('sequelize');
 //const configs = require('../configs');
 const { host_name, db_name, db_user, db_password } = require('../configs');
 
-// const {host_name, db_name, db_user, db_password} = configs;
-
-/* Kap hastatel db het */
+/* to connect to database */
 const sequelize = new Sequelize(db_name, db_user, db_password, {
     host: host_name,
-    dialect: 'mysql' /* te inch tesaki db het e ashxatum */
+    dialect: 'mysql' /* whisch kind database will we use */
 });
 
-const Users = sequelize.define('users', { /*sxema haytararvum e define fuctioni mijocov */
-    id: {                                /* arajin parame-anun, II param - colomi nkaragrutyun */
-        type: DataTypes.UUID,           /* tiperi haytararum,anhraj depqum default arjeq */
+const Users = sequelize.define('users', { /* to create table with function define */
+    id: {                                /* the first param is the name of param, second is the type */
+        type: DataTypes.UUID,           /* sometimes we need to declare defaultvalue */
         defaultValue: DataTypes.UUIDV4,
         primaryKey: true,
         unique: true,
@@ -41,9 +39,8 @@ const Users = sequelize.define('users', { /*sxema haytararvum e define fuctioni 
     }
 
 }, {
-    /*stex karayinq obyekt tayinq, voronq inqe avelacner mer colome sarqelu jmanak*/
+    /* we can give the object to addition into our table */
 });
-
 const Cities = sequelize.define('cities', {
     id: {
         type: DataTypes.INTEGER,
@@ -54,16 +51,13 @@ const Cities = sequelize.define('cities', {
         type: DataTypes.STRING,
         allowNull: false
     }
-},{
-    /*stex karayinq obyekt tayinq, voronq inqe avelacner mer colome sarqelu jmanak*/
+}, {
+    /* we can give the object to addition into our table */
 });
-
-/* kapi stexcume keyi mijocov: Usersi mej avelacnum enq cityID 
-anunov colom kapi stexcman hamar*/
-Users.belongsTo(Cities, {foreignKey: 'cityID'}) 
-
+/* to connect two tables with a key: we are adding an colom into the user table with name cityID */
+Users.belongsTo(Cities, { foreignKey: 'cityID' })
 module.exports = {
     Users: Users,
     Cities: Cities,
-//    db: sequelize
+    //    db: sequelize
 }

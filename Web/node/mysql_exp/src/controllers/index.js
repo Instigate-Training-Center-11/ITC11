@@ -1,24 +1,23 @@
-const bcsrypt = require('bcript');
-const models = require('../models');
-const configs = require('../configs');
+const { Op } = require('sequelize');
+const bcrypt = require('bcrypt');
 const jwt = require('jwt-simple');
-
+const configs = require('../configs');
+const HttpStatus = require('http-status-codes');
+const dotenv = require('dotenv');
 const { Users, Cities } = models;
 
-const allUsers = async (req, res) => {
+const getAllUsers = async (req, res) => {
     try {
-        const users = await Users.findAll({ /* Selecti nman */
-            include: [{ model: Cities, as: 'city', attributes: ['name'] }
-            ],
-            attributes: { exclude: ['cityID'] } /* stanum enq bolore, baci citiID*/
-        })
-        res.send(users)
-    } catch (e) {
-        res.status(500);
-        res.send('Internal error');
+        const users = await Users.findAll({
+            where: { isAdmin: { [Op.ne]: true } },
+            attributes: { exclude: ['cityID', 'password', 'isAdmin'] },
+            include: [{ model: Cities, as: 'city', attributes: ['name'] }],
+        });
+        res.send(users);
+    } catch (err) {
+        handleErrors(res, err);
     }
-}
-
+};
 const signIn = (req, res) => {
     try {
         const { email, password } = req.body
@@ -27,7 +26,6 @@ const signIn = (req, res) => {
                 email: email
             }
         })
-
         bcsrypt.compare(password, user.dataValues.password, function (err, result) {
             if (result) {
                 const payload = {
@@ -44,7 +42,6 @@ const signIn = (req, res) => {
 
     }
 }
-
 const signUp = async (req, res) => {
     try {
         const { name, surname, age, job, image, email, password, city: cityName } = req.body
@@ -58,7 +55,7 @@ const signUp = async (req, res) => {
             res.status(400);
             res.send('No such city');
         }
-        bcsrypt.hash(password, configs.saltRounds, async function (err, hash) {
+        bcrypt.hash(password, configs.saltRounds, async function (err, hash) {
             const newUser = await Users.create({
                 name,
                 surname,

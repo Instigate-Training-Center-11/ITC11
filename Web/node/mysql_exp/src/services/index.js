@@ -1,5 +1,6 @@
 const jwt = require('jwt-simple');
 const configs = require('../configs');
+require('dotenv').config();
 
 const auth = (req, res, next) => {
 
