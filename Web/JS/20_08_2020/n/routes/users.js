@@ -16,8 +16,13 @@ router.post('/', function(req, res, next) {
 });*/
 
 router.get('/', function(req, res, next) {
-    Users.findAll({attributes: ['name', 'surname', 'email']}).then(n => res.send(n));
+    if(req.hasOwnProperty('headers') && req.headers.hasOwnProperty('authorization')) {
+        Users.findAll({attributes: ['name', 'surname', 'email']}).then(n => res.send(n));
+    } else {
+        res.send('Please authorized!');
+    }
 });
 
 
 module.exports = router;
+
