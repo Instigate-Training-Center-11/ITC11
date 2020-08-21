@@ -1,0 +1,40 @@
+{
+    "peoplesData":
+    [
+        {
+            "officeID": 1,
+            "name": "Armen",
+            "lastName": "Hovsepyan",
+            "age": 32,
+            "job": "bugalter",
+            "photo": "1.jpg",
+            "cityID": 3,
+            "email": "Armen@mail.com",
+            "password": "Armen32"
+        },
+
+        {
+            "officeID": 2,
+            "name": "Artak",
+            "lastName": "Harutyunyan",
+            "age": 28,
+            "job": "developer",
+            "photo": "2.jpg",
+            "cityID": 4,
+            "email": "Artak@mail.com",
+            "password": "Artak28"
+        },
+
+        {
+            "officeID": 3,
+            "name": "Karen",
+            "lastName": "Hovhannisyan",
+            "age": 26,
+            "job": "developer",
+            "photo": "3.jpg",
+            "cityID": 4,
+            "email": "Karen@mail.com",
+            "password": "Karen26"
+        }
+    ]
+}
