@@ -26,7 +26,8 @@ const Offices = sequelize.define('Offices', {
 
 const Users = sequelize.define('Users',{
     id:{
-        type:DataTypes.UUID,
+        type: DataTypes.UUID,
+        defaultValue: Sequelize.UUIDV4,
         primaryKey:true,
         unique:true
     },
@@ -46,6 +47,7 @@ const Users = sequelize.define('Users',{
         type:DataTypes.STRING,
         allowNull:false
     }
+
 }, {
 
 });
@@ -53,7 +55,7 @@ const Users = sequelize.define('Users',{
 
 const Cities = sequelize.define('Cities', {
     id:{
-        type:DataTypes.INTEGER,
+        type: DataTypes.INTEGER,
         primaryKey:true,
         autoIncrement:true
     },
@@ -75,7 +77,7 @@ const Cities = sequelize.define('Cities', {
 })
 
 
-Users.belongsTo(Offices,{foreignKey:'officeID'});
+// Users.belongsTo(Offices,{foreignKey:'officeID'});
 Users.belongsTo(Cities,{foreignKey:'cityID'});
 
 module.exports = {

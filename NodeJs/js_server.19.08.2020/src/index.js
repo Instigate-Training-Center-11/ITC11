@@ -22,19 +22,19 @@ app.use (bodyParser.json(),exp);
 const {Users,Cities,Offices} = models;
 
 
-app.post('/users',createUsers);
 app.post('/cities',createCities);
 app.post('/offices',createOffices);
+app.post('/users',createUsers);
 
 
 const sync = async () => {
 
     try {
-
         await Cities.sync();
+        // await Offices.sync();
         await Users.sync();
-        await Offices.sync();
         console.log('Connection has been established successfully.');
+        console.log(`Server listen port  ${configs.port}`);
     } catch (error) {
         console.error('Unable to connect to the database:', error);
     }
@@ -47,11 +47,10 @@ app.get('/users/:id', getUsersById);
 
 /*
 const deleteUsers = (req,res) => {
-
+    To Do
 };
 */
 
 sync();
 
 app.listen(configs.port);
-console.log(`Server listen port  ${configs.port}`)
