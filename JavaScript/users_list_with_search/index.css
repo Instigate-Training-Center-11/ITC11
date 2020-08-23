@@ -1,0 +1,79 @@
+html,
+body {
+  height: 80%;
+}
+
+#root {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+}
+
+.search-box {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+}
+
+button {
+  height: 44px;
+  padding: 0px 15px;
+  border: none;
+  background: cornflowerblue;
+  outline: none;
+  cursor: pointer;
+  color: white;
+  font-size: 17px;
+}
+
+.card {
+  margin: 15px 30px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  width: 20%; */
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-item {
+  display: flex;
+}
+
+.image-box {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  background-color: rgba(105, 147, 255, 0.7);
+  /* width: %; */
+}
+
+img {
+  width: 200px;
+  height: 200px;
+  padding: 20px;
+}
+
+.delete {
+  width: 30px;
+  height: 30px;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.container {
+  padding: 2px 16px;
+}
+
+#search {
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  outline: none;
+}

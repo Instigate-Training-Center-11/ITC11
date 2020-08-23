@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="auth.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/auth.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="row m-0 p-0 h_100">
+        <div class="col-xl-3 col-lg-4 col-md-12 left-content d-flex flex-column justify-content-between">
+            <p>Welcome</p>
+        </div>
+        <div class="col-xl-9 col-lg-8 col-md-12 right-content">
+            <div class="d-flex justify-content-end signUp">
+                <span>Don't have an account yet?</span>
+                <a href="#" class="pl-2">Sign Up!</a>
+            </div>
+            <div class="d-flex flex-column justify-content-center align-items-center  form-block">
+                <div class="login-form">
+                    <div class="text-center login-account">
+                        <p class="mb-0">Login Account</p>
+                        <span>Enter your username and password</span>
+                    </div>
+                    <form action="#" onsubmit="login()">
+                        <div class="d-flex flex-column mb-4">
+                            <input type="text" placeholder="Email" class="form-control login-input" id="email">
+                            <!-- <span class="requered-field">Required field</span> -->
+                        </div>
+                        <div class="d-flex flex-column mb-4">
+                            <input type="password" placeholder="Password" class="form-control login-input" id="password">
+                            <!-- <span class="requered-field">Required field</span> -->
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <!-- <a href="#" class="forgot-pass">Forgot Password</a> -->
+                            <button class="btn btn-primary pl-4 pr-4 pt-2 pb-2">Sign In</button>
+                        </div>
+                        <!-- <label class="container">
+                                <span>I agree the</span>
+                                <a href="#"> Terms & Conditions.</a>
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label> -->
+                    </form>
+                </div>
+
+            </div>
+            <span class=" out-rocks">© 2020 Output Rocks</span>
+        </div>
+    </div>
+
+</body>
+
+</html>
