@@ -1,1 +1,8 @@
 node_modules
+*.out
+.vscode/*
+*.vscode/settings.json
+*/.vscode/*
+out
+/build
+build
