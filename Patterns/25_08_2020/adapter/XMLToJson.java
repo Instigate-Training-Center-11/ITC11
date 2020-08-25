@@ -1,11 +1,14 @@
 package adapter;
 
+
+import org.json.XML;
+
 public class XMLToJson {
     private Json json;
 
     public XMLToJson(XML xml) {
         this.json = new Json();
-        json.setJson(xml.toString() + ":");
+        json.setJson(XML.toJsonObject(xml.getDoc()));
     }
 
     public Json getJson() {
