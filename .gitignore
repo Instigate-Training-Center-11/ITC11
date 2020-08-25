@@ -1,7 +1,4 @@
 *.out
-.vscode/*
-*.vscode/settings.json
-*/.vscode/*
-out
-/build
-build
+.vscode/
+build/
+node_modules/
