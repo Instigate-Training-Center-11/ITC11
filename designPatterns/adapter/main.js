@@ -5,7 +5,7 @@ const myData = require('./data.json');
 const fields = ['carModel', 'price'];
 
 // Converter xml to json
-fs.readFile( './data.xml', function(err, data) {
+fs.readFile('./data.xml', function(err, data) {
     if (err) {
         console.log("Can not read xml file!");
         throw err;
