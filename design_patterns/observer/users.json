@@ -1,11 +1,11 @@
 {"users": [
-    { "id": 0, "name": "Armen", "followers": [1, 2, 3, 4], "subscriptions": [2, 3], "isActive": "not active"},
-    { "id": 1, "name": "Gevorg", "followers": [0, 4], "subscriptions": [5, 6, 3], "isActive": "not active"},
-    { "id": 2, "name": "Ashot", "followers": [3, 4], "subscriptions": [0, 1, 6], "isActive": "not active"},
-    { "id": 3, "name": "Arevik", "followers": [3], "subscriptions": [0], "isActive": "not active"},
-    { "id": 4, "name": "Lusy", "followers": [1, 3, 4], "subscriptions": [5, 6, 0, 2], "isActive": "not active"},
-    { "id": 5, "name": "Nare", "followers": [1, 2, 7], "subscriptions": [2, 3], "isActive": "not active"},
-    { "id": 6, "name": "Sofia", "followers": [8, 3, 4, 0, 5], "subscriptions": [5, 4, 2, 1, 0], "isActive": "not active"},
-    { "id": 7, "name": "Levon", "followers": [6, 8], "subscriptions": [5, 4, 2, 1, 0], "isActive": "not active"},
-    { "id": 8, "name": "Sevak", "followers": [7, 5, 3, 1], "subscriptions": [5, 4, 2, 1, 0], "isActive": "not active"}
+    { "id": 0, "name": "Armen", "followers": [1, 2, 3, 4], "subscriptions": [2, 3], "isActive": false},
+    { "id": 1, "name": "Gevorg", "followers": [0, 4], "subscriptions": [5, 6, 3], "isActive": false},
+    { "id": 2, "name": "Ashot", "followers": [3, 4], "subscriptions": [0, 1, 6], "isActive": false},
+    { "id": 3, "name": "Arevik", "followers": [3], "subscriptions": [0], "isActive": false},
+    { "id": 4, "name": "Lusy", "followers": [1, 3, 4], "subscriptions": [5, 6, 0, 2], "isActive": false},
+    { "id": 5, "name": "Nare", "followers": [1, 2, 7], "subscriptions": [2, 3], "isActive": false},
+    { "id": 6, "name": "Sofia", "followers": [8, 3, 4, 0, 5], "subscriptions": [5, 4, 2, 1, 0], "isActive": false},
+    { "id": 7, "name": "Levon", "followers": [6, 8], "subscriptions": [5, 4, 2, 1, 0], "isActive": false},
+    { "id": 8, "name": "Sevak", "followers": [7, 5, 3, 1], "subscriptions": [5, 4, 2, 1, 0], "isActive": false}
 ]}
