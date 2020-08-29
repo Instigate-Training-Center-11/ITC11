@@ -35,13 +35,18 @@ class ConcreteCarCreator2 extends Creator {
   }
 }
 
-function initialize(creator: Creator) {
-  console.log(creator.anOperation());
+function initialize(type: string) {
+  if (type === "car1") {
+    return new ConcreteCarCreator1();
+  } else if (type === "car2") {
+    return new ConcreteCarCreator2();
+  }
 }
 
 function main() {
-  initialize(new ConcreteCarCreator1());
-  initialize(new ConcreteCarCreator2());
+  const carFactory = initialize("car1");
+  const car = carFactory.anOperation();
+  console.log(car);
 }
 
 main();

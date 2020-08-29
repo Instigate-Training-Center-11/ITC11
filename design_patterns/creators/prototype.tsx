@@ -15,13 +15,26 @@ abstract class Ceil {
 class Prototype extends Ceil {
   color: string;
 
+  private asdf(): void {
+    console.log("asdf");
+  }
+
+  fdsa() {
+    this.asdf();
+  }
+
   constructor(color: string) {
     super();
     this.color = color;
   }
 
-  clone(): Prototype {
-    return { ...this };
+  public clone(): Prototype {
+    var cloned = Object.create(Prototype.prototype || null);
+    Object.keys(this).map((key: string) => {
+      cloned[key] = this[key];
+    });
+
+    return cloned;
   }
 }
 
@@ -30,6 +43,8 @@ function main() {
   const ceilClone = ceil.clone();
   console.log(ceil);
   console.log(ceilClone);
+  ceil.fdsa();
+  ceilClone.fdsa();
 }
 
 main();

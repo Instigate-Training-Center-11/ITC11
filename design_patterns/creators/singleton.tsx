@@ -2,8 +2,8 @@ class LogManager {
   private static instance: LogManager;
   private constructor() {}
   public static getInstance(): LogManager {
-    if (!LogManager.instance) {
-      LogManager.instance = new LogManager();
+    if (!this.instance) {
+      this.instance = new LogManager();
     }
 
     return LogManager.instance;
