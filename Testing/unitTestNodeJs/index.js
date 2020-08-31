@@ -1,4 +1,6 @@
-const add = function(num1, num2) {
+const math = {};
+
+math.add = function(num1, num2) {
     try {
         return parseFloat(num1) + parseFloat(num2);
     } catch (error) {
@@ -6,7 +8,7 @@ const add = function(num1, num2) {
     }
 }
 
-const sub = function(num1, num2) {
+math.sub = function(num1, num2) {
     try {
         return parseFloat(num1) - parseFloat(num2);
     } catch (error) {
@@ -14,7 +16,7 @@ const sub = function(num1, num2) {
     }
 }
 
-const mul = function(num1, num2) {
+math.multiply = function(num1, num2) {
     try {
         return parseFloat(num1) * parseFloat(num2);
     } catch (error) {
@@ -22,7 +24,7 @@ const mul = function(num1, num2) {
     }
 }
 
-const div = function(num1, num2) {
+math.div = function(num1, num2) {
     try {
         if(parseFloat(num2) !== 0) {
             return parseFloat(num1) / parseFloat(num2);
@@ -35,46 +37,4 @@ const div = function(num1, num2) {
 
 }
 
-const testForAdd = function(val1, val2, res) {
-    const result = add(val1, val2);
-    if(res == result || result === "Not a Number") {
-        console.log("Functional test for addition function is ready (", val1, " + ", val2, " = ", result, ")");
-    } else {
-        console.log("Functional test for addition function is fail (", val1, " + ", val2, " != '", res, "')");
-    }
-}
-
-const testForSub = function(val1, val2, res) {
-    const result = sub(val1, val2);
-
-    if(res == result || result === "Not a Number") {
-        console.log("Functional test for subscription function is ready (", val1, " - ", val2, " = ", result, ")");
-    } else {
-        console.log("Functional test for subscription function is fail (", val1, " - ", val2, " != '", res, "')");
-    }
-}
-
-const testForMul = function(val1, val2, res) {
-    const result = mul(val1, val2);
-
-    if(res == result || result === "Not a Number") {
-        console.log("Functional test for multiplication function is ready (", val1, " * ", val2, " = ", result, ")");
-    } else {
-        console.log("Functional test for multiplication function is fail (", val1, " * ", val2, " != '", res, "')");
-    }
-}
-
-const testForDiv = function(val1, val2, res) {
-    const result = div(val1, val2);
-
-    if(res == result || result === "Not a Number" || result === "Can not division by 0") {
-        console.log("Functional test for division function is ready (", val1, " / ", val2, " = ", result, ")");
-    } else {
-        console.log("Functional test for division function is fail (", val1, " / ", val2, " != '", res, "')");
-    }
-}
-
-testForAdd('4', 5, 'a');
-testForDiv(8, '0');
-testForMul('4', 5, 'aaa');
-testForSub(32, 24, 8);
+module.exports = math;
