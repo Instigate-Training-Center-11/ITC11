@@ -38,9 +38,9 @@ const div = function(num1, num2) {
 const testForAdd = function(val1, val2, res) {
     const result = add(val1, val2);
     if(res == result || result === "Not a Number") {
-        console.log("Functional test for add function is ready");
+        console.log("Functional test for addition function is ready (", val1, " + ", val2, " = ", result, ")");
     } else {
-        console.log("Functional test for add function is fail");
+        console.log("Functional test for addition function is fail (", val1, " + ", val2, " != '", res, "')");
     }
 }
 
@@ -48,9 +48,9 @@ const testForSub = function(val1, val2, res) {
     const result = sub(val1, val2);
 
     if(res == result || result === "Not a Number") {
-        console.log("Functional test for subscription function is ready");
+        console.log("Functional test for subscription function is ready (", val1, " - ", val2, " = ", result, ")");
     } else {
-        console.log("Functional test for subscription function is fail");
+        console.log("Functional test for subscription function is fail (", val1, " - ", val2, " != '", res, "')");
     }
 }
 
@@ -58,9 +58,9 @@ const testForMul = function(val1, val2, res) {
     const result = mul(val1, val2);
 
     if(res == result || result === "Not a Number") {
-        console.log("Functional test for multiplication function is ready");
+        console.log("Functional test for multiplication function is ready (", val1, " * ", val2, " = ", result, ")");
     } else {
-        console.log("Functional test for multiplication function is fail");
+        console.log("Functional test for multiplication function is fail (", val1, " * ", val2, " != '", res, "')");
     }
 }
 
@@ -68,9 +68,9 @@ const testForDiv = function(val1, val2, res) {
     const result = div(val1, val2);
 
     if(res == result || result === "Not a Number" || result === "Can not division by 0") {
-        console.log("Functional test for division function is ready");
+        console.log("Functional test for division function is ready (", val1, " / ", val2, " = ", result, ")");
     } else {
-        console.log("Functional test for division function is fail");
+        console.log("Functional test for division function is fail (", val1, " / ", val2, " != '", res, "')");
     }
 }
 
