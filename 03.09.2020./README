@@ -1,0 +1,20 @@
+TEST SEARCH FUNCTION OF GOOGLE PAGE
+
+
+This example tests an example of a Google search engine.
+The file WebDriverSettings.java conteins steps @Before and @After.
+
+Background
+You need to install the following programs, tools and frameworks:
+IntelliJ IDEA (version 2020.1.1 (Community Edition))
+յdk (version 14.0.2)
+Maven (version 4.0.0)
+Selenium webdriver (version 3.141.59)
+JUnit framework (version 4.13)
+
+Notes
+OS - Ubuntu 16.04
+Browser - Google Chrome 84.0.4147.89 (Official Build) (64-bit).
+
+Author
+Armenuhi Kocharyan
