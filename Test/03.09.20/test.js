@@ -6,12 +6,5 @@ describe('testing', () => {
     })
     it('test1',() => {
       cy.get('[data-hveid] h3').first().contains('Testing').click()
-
-      
-      
     })
 })
-
-
-
-// [data-hveid] h3
