@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html class="no-js">
+  <html>
+    <head>
+      <meta charset="utf-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <title>Donation Platform</title>
+    </head>
+    <body>
+      {% if projects %} {% for project in projects %}
+      <a href="{% url 'project:detail' project.id %}"><h3>{{ project }}</h3></a>
+      <p>{{ project.description }}</p>
+      {% endfor %} {% endif %}
+    </body>
+  </html>
+</html>
